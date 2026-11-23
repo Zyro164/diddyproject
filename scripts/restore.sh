@@ -153,6 +153,13 @@ cmd_secrets() {
       sudo -n cp -a "$out/etc/$f" "/etc/$f" && sudo -n chown root:shadow "/etc/$f" && \
         sudo -n chmod 640 "/etc/$f" && ok "/etc/$f"
     done
+    [[ -f "$out/etc/security/opasswd" ]] && \
+      sudo -n mkdir -p /etc/security && \
+      sudo -n cp -a "$out/etc/security/opasswd" /etc/security/opasswd && ok /etc/security/opasswd
+    if [[ -d "$out/etc/ssl/private" && -n "$(ls -A "$out/etc/ssl/private" 2>/dev/null)" ]]; then
+      sudo -n mkdir -p /etc/ssl/private
+      sudo -n cp -a "$out/etc/ssl/private/." /etc/ssl/private/ && ok /etc/ssl/private
+    fi
   fi
   [[ -f "$out/rootfs/bash_history" ]] && cp -a "$out/rootfs/bash_history" "$HOME_DIR/.bash_history" && ok "~/.bash_history"
   chmod 700 "$HOME_DIR/.ssh" "$HOME_DIR/.gnupg" 2>/dev/null || true
