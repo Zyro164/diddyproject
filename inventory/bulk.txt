@@ -8,4 +8,3 @@
 32717697  4873a5c16b490ac29bf57fab4484c749a1ec4fb0abf7d3fe43161f8e285d5cf1  unique  Downloads/1345576.jpeg
 160374384  2d9d1e664efd60343c77324c836be402cbe57ce12549975584dfa7d073f156a5  refetchable  Downloads/brave-browser_1.100.58_amd64.deb
 41189536  fa7cff06d4db9eee98e00b10ac93beebfe1822109ac04a6cbbf9d806c21d0073  refetchable  .local/bin/gh
-31248384  6c878797e774401c52b24fe596519b8afd9603cb533af76449c7cbb7a1eb74ca  unique  .local/share/opencode/opencode.db

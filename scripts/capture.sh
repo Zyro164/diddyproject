@@ -100,6 +100,7 @@ while read -r f; do
   # secrets stay out of git
   case "$f" in
     /etc/shadow|/etc/gshadow|/etc/shadow-|/etc/gshadow-|/etc/security/opasswd) continue ;;
+    /etc/ssl/private/*) continue ;;   # TLS keys are SECRET-class: encrypted bundle only
   esac
   if sudo -n test -f "$f" && sudo -n test -r "$f"; then
     mkdir -p "$REPO/inventory/$(dirname "$rel")"

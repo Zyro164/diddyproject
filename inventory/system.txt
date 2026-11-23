@@ -1,4 +1,4 @@
-# system snapshot — generated 2026-11-23T02:07:32Z
+# system snapshot — generated 2026-11-23T02:13:17Z
 
 ## os-release
   PRETTY_NAME="Ubuntu 26.04.1 LTS"
@@ -24,19 +24,19 @@ HOME=/config  SHELL=/bin/bash  PATH=/config/.deepai-code/userdata/deepai/pi/deep
 ## cpu/mem
 4
                total        used        free      shared  buff/cache   available
-Mem:            15Gi       2.6Gi       1.6Gi       124Mi        11Gi        13Gi
-Swap:          1.0Gi       115Mi       908Mi
+Mem:            15Gi       2.7Gi       429Mi       115Mi        12Gi        12Gi
+Swap:          1.0Gi       116Mi       907Mi
 ## disk
 Filesystem      Size  Used Avail Use% Mounted on
-overlay          98G   36G   58G  39% /
+overlay          98G   37G   56G  40% /
 tmpfs            64M     0   64M   0% /dev
-shm             8.0G   42M  8.0G   1% /dev/shm
-/dev/vda         98G   36G   58G  39% /config
+shm             8.0G   45M  8.0G   1% /dev/shm
+/dev/vda         98G   37G   56G  40% /config
 tmpfs           7.9G     0  7.9G   0% /proc/acpi
 tmpfs           7.9G     0  7.9G   0% /proc/scsi
 tmpfs           7.9G     0  7.9G   0% /sys/firmware
 ## clock
-Mon Nov 23 02:07:32 AM UTC 2026
+Mon Nov 23 02:13:17 AM UTC 2026
 ## locale/timezone
 LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8

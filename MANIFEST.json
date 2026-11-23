@@ -1,10 +1,10 @@
 {
   "schema": "diddyproject-backup/1",
   "snapshot": {
-    "generated_at": "2026-11-23T02:13:09Z",
-    "stamp": "20261123T021309Z",
+    "generated_at": "2026-11-23T02:14:21Z",
+    "stamp": "20261123T021421Z",
     "repo": "https://github.com/Zyro164/diddyproject.git",
-    "commit": "449b6b7e288fab28cdd7a9911cf517e273bf598e",
+    "commit": "1f4c5a81c1553efc2dd4e939a2b049cc3a5a2d90",
     "branch": "t3/cbadc05a",
     "hostname": "4552801cdcb3",
     "user": "abc",
@@ -101,12 +101,6 @@
       "sha256": "fa7cff06d4db9eee98e00b10ac93beebfe1822109ac04a6cbbf9d806c21d0073",
       "class": "refetchable",
       "path": ".local/bin/gh"
-    },
-    {
-      "size": 31248384,
-      "sha256": "6c878797e774401c52b24fe596519b8afd9603cb533af76449c7cbb7a1eb74ca",
-      "class": "unique",
-      "path": ".local/share/opencode/opencode.db"
     }
   ],
   "bulk_dirs": [
@@ -121,14 +115,13 @@
       "archive": "assets/local-share-icons-Win11-dark-actions.tar.zst"
     },
     {
-      "sha256": "ddca2e0528062e873d49ec44f17a23cbfeb33f6485a5dccc72cdbb4fb47c5fe7",
+      "sha256": "ad0d40239d38f2e6d64e8970e3b0acba3899b7e79352a7fc844110feb4d035f8",
       "restore_to": ".local/share/icons/Win11",
       "archive": "assets/local-share-icons-Win11.tar.zst"
     }
   ],
   "kept_out_of_git_for_credentials": [
     "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/declarative_performance_observer.db",
-    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/GPUPersistentCache/GPUCache/XWDUPTCYQ7L4CUCWZRTWVUR4HQJRVS3V/cache.db",
     "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/drafts.sqlite",
     "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/deepai-code-v2/declarative_performance_observer.db"
   ],
@@ -656,8 +649,8 @@
     },
     {
       "path": "assets/local-share-icons-Win11.tar.zst",
-      "size": 4034278,
-      "sha256": "ddca2e0528062e873d49ec44f17a23cbfeb33f6485a5dccc72cdbb4fb47c5fe7"
+      "size": 3848765,
+      "sha256": "ad0d40239d38f2e6d64e8970e3b0acba3899b7e79352a7fc844110feb4d035f8"
     },
     {
       "path": "home/.Xresources",
@@ -827,12 +820,12 @@
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager",
       "size": 40960,
-      "sha256": "d1a093fc7a2972ea299064112714a6f0fc9a83dd2ee830bc5420fb6413b655ca"
+      "sha256": "27b86c8553a894dfa6f738d169028a3f627cc021eb2051200bbff1cd112f8b33"
     },
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager-journal",
-      "size": 8720,
-      "sha256": "11480260f1084bf036fb44b3451facdc3ea248d714c89963b6d0c8e90e8019ef"
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "home/.config/deepai-code-v2/declarative_performance_observer.db-journal",
@@ -15577,12 +15570,12 @@
     {
       "path": "inventory/bulk-dirs.txt",
       "size": 435,
-      "sha256": "69fec7ffdbd7da3a87b6b201eea7a4a78958a91a814a9bb04b28206e55586917"
+      "sha256": "dfcd207d194d6de68f0b12c32eddf5950b513a0b4108ea5656c1baf9a2271890"
     },
     {
       "path": "inventory/bulk.txt",
-      "size": 1135,
-      "sha256": "1c96c6c8fb72226c73eedd5147798e544a96c9bd1a9ad096667a615f67dd523f"
+      "size": 1017,
+      "sha256": "a62e2d57b4addd72f293f641ebc9064677bdc53b1a4fc06f0d7579826f68a3dc"
     },
     {
       "path": "inventory/download-hints.md",
@@ -17971,8 +17964,8 @@
     },
     {
       "path": "inventory/home-tree.txt",
-      "size": 128640,
-      "sha256": "fa5a4c207b4b4ad22d58558eb9552f07266711f3f5db8f681d54095f8486dba7"
+      "size": 129742,
+      "sha256": "1cf08d7772505b8e6601efcb6a24c8d59b466d14061a3d41c93c437a7c4c1eea"
     },
     {
       "path": "inventory/host-config.txt",
@@ -17986,8 +17979,8 @@
     },
     {
       "path": "inventory/recent-changes.txt",
-      "size": 50802,
-      "sha256": "c4d1bddacaffcddd5b9d0b4ccae412c41f9ac8c6080ed066be87d4aead824a1d"
+      "size": 51004,
+      "sha256": "247647f836c2f9b648e04ed5e53f7aa250a77b5a80f7fadd279984bddcd2e3b5"
     },
     {
       "path": "inventory/release-assets.txt",
@@ -17996,8 +17989,8 @@
     },
     {
       "path": "inventory/secrets-sweep.txt",
-      "size": 658,
-      "sha256": "3ae932acb3728701a9591586355b79efee473f8e2055b986d7067e05eb56f1d5"
+      "size": 499,
+      "sha256": "0b710fa33493ee23ea59d764cdd8b5e16574141759ee859063a61b561e01eece"
     },
     {
       "path": "inventory/services.txt",
@@ -18007,7 +18000,7 @@
     {
       "path": "inventory/system.txt",
       "size": 3325,
-      "sha256": "0a4109d52cb28d5b30171d31af498aff038380077f5e02e1fb144904ce3f8efb"
+      "sha256": "5adb8f81388d9522b10917f5468bc617768dace5d342af574fd229487a00df6a"
     },
     {
       "path": "inventory/users.txt",
@@ -18061,8 +18054,8 @@
     },
     {
       "path": "scripts/capture.sh",
-      "size": 15923,
-      "sha256": "a5d716f500b00a1875e85de76901fe1d0acbaaea7569881f6087eb4fe81732c9"
+      "size": 16012,
+      "sha256": "a3353ddd899e7cd4e84b59eb939cff6f8ea787feaa60f82662e7c5e4e825240e"
     },
     {
       "path": "scripts/manifest.sh",
@@ -18081,8 +18074,8 @@
     },
     {
       "path": "secrets/secrets.manifest.txt",
-      "size": 26334,
-      "sha256": "c367f6c114f498314b9fa088fbfa075377934b1d36bed17a606e6b1fe18b286d"
+      "size": 26288,
+      "sha256": "b3f3ce30103d0bb5ef44ff7cf295c0d6889e6bd76ceb20bfd6260c9057b97783"
     }
   ],
   "symlinks": [
