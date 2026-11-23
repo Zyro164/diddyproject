@@ -1,0 +1,5 @@
+# Encrypted assets uploaded to the GitHub release 'backup-20261123T0120Z'
+# Fetch: gh release download backup-20261123T0120Z --repo Zyro164/diddyproject --dir assets-remote
+# size_bytes  sha256  asset
+26793  6e66d578d2529eafa83a2ef223fd25097d7c966f253919c3c0a64fdd2868c767  secrets-20261123T011834Z.tar.zst.gpg
+187061873  901ff5c126cfe4e0cf6bb20b0599176754e04c58adedf6c2d9d6e01e5a010ca9  userdata-20261123T011834Z.tar.zst.gpg

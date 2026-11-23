@@ -7,6 +7,7 @@
 #   ./scripts/restore.sh project [dest]         # L3: the working project tree
 #   ./scripts/restore.sh secrets  <bundle.gpg>  # L4: keys, tokens, shadow (needs passphrase)
 #   ./scripts/restore.sh userdata <bundle.gpg>  # L5: browser/app state, unique media
+#   ./scripts/restore.sh assets [dir]           # download + verify the encrypted release assets
 #   ./scripts/restore.sh plan                   # L?: print what would be done, change nothing
 #
 # Requires: git, jq (or python3), zstd, gnupg, sudo for /etc and packages.
@@ -175,6 +176,18 @@ cmd_userdata() {
   ok "userdata applied"
 }
 
+cmd_assets() { # download the newest release's encrypted bundles next to this repo
+  command -v gh >/dev/null || die "gh CLI required (or download the Release assets manually)"
+  local dir="${1:-$REPO_DIR/../assets-remote}"
+  local tag; tag="$(gh release list --repo Zyro164/diddyproject --limit 1 --json tagName -q '.[0].tagName')"
+  [[ -n "$tag" ]] || die "no release found on Zyro164/diddyproject"
+  say "downloading assets of $tag → $dir"
+  mkdir -p "$dir"
+  gh release download "$tag" --repo Zyro164/diddyproject --dir "$dir" --clobber
+  ( cd "$dir" && sha256sum -c *.sha256 ) && ok "assets verified"
+  ls -lh "$dir"
+}
+
 cmd_plan() {
   say "snapshot: $(grep -m1 generated_at "$REPO_DIR/MANIFEST.json" 2>/dev/null | tr -d ' ",' | cut -d: -f2- || echo unknown)"
   printf '  home/      %s files, %s\n' "$(find "$REPO_DIR/home" -type f 2>/dev/null | wc -l)" "$(du -sh "$REPO_DIR/home" 2>/dev/null | cut -f1)"
@@ -191,6 +204,7 @@ case "${1:-}" in
   project)  shift; cmd_project  "$@" ;;
   secrets)  shift; cmd_secrets  "$@" ;;
   userdata) shift; cmd_userdata "$@" ;;
+  assets)   shift; cmd_assets   "$@" ;;
   plan)     shift; cmd_plan     "$@" ;;
   *) sed -n '2,16p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'; exit 2 ;;
 esac

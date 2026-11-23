@@ -74,6 +74,9 @@ cmd_secrets() {
   for p in "$HOME_DIR/.ssh" "$HOME_DIR/.gnupg" "$HOME_DIR/.config/gh" "$HOME_DIR/ssl" \
            "$HOME_DIR/.deepai-code/userdata/secrets" \
            "$HOME_DIR/.deepai-code/userdata/account-clients" \
+           "$HOME_DIR/.local/share/pki" \
+           "$HOME_DIR/.config/ai.opencode.desktop/Cookies" \
+           "$HOME_DIR/.config/ai.opencode.desktop/Local State" \
            "$HOME_DIR/.config/deepai-code-v2/Local Storage" \
            /etc/shadow /etc/gshadow /etc/security/opasswd; do
     stage_path "$stage" "$p"

@@ -2,6 +2,7 @@
 77f38ee17664afe26a5e13184a594dabc515712f728e99c15cda7d49fd7f898f  ./assets/local-share-icons-Win11-actions.tar.zst
 4ac6aa818ed8104814b5f229922e58c8761e62b2d2edad40e6e2a1fc13cb92d4  ./assets/local-share-icons-Win11-dark-actions.tar.zst
 40a7120efb9d88a03d3b11de50f80997e97b1eca22277e04370f2e665b612fe8  ./assets/local-share-icons-Win11.tar.zst
+e9358df8417685b1e4a2ad1e1ff65fea11543a633f5b1668280f9d2adf0fabc6  ./BACKUP-PROMPT.md
 b7f4b730bfb5203fdfc5a9b538621a0ab5a64a7b04897075bd7f54746b8f132f  ./core
 c4ded48818bd78e2f74e556756d40234e7b12fb3d337176e5ac423e743dc6852  ./.gitignore
 fd73f8fb5338625b6029e293147a4cc4df9f97706fa0d40c80e88a5159881979  ./home/.bash_history.redacted
@@ -3501,6 +3502,7 @@ a6ac23baa5611dcf14f07f50ee5f8239f1948a02c4b515d46e14228d1c6d4959  ./inventory/ho
 34347262c4e49a358f4d64dab8e6c9cfa21f8469d536983c155158fab3e83ced  ./inventory/host-config.txt
 40bdbd6308b09e885f530743934e18dfe7f91d08e2d98f765e62febced0915d5  ./inventory/packages.txt
 06ef9e77e376d0ab2e858e647626f5416f20e09789dc28397aceadbbd63dd1e1  ./inventory/recent-changes.txt
+92ee024c43ec25cfbccf7c324c72a119d7447a996195bcab781129296fb55a72  ./inventory/release-assets.txt
 46d172861d88b6bd1612aa417dc9477ef643aebefe3978c1f78891bfd7b8ad1e  ./inventory/secrets-sweep.txt
 c3b6393b4b2ef9905c564e723230b074b411c15c5698915a9bfb809d0d9431bc  ./inventory/services.txt
 93c1b11540dc61ef9a4aa30c5f6114f9547c4a424f73684226c49df06c2a3208  ./inventory/system.txt
@@ -3515,9 +3517,9 @@ bfd295e4674646db1f00bdf5545eebace800effccb56cdb5b2dc94b9121ee0df  ./project/mobi
 3322c49416052af95663e3471997c119ecf89251ddb314edb96f846160c6180a  ./project/picom_12.5-1build1_amd64.deb
 f76c4bdc0c592a1ddf2cf46ffb77a7e6dbf5e40e5f148e9528d3a65a18672306  ./README.md
 4df70bb3215018fa39eed80bb34bf0ed6fb383c1952119475528660879535802  ./RESTORE.md
-601dd2860ab374ef0a020943d7ba2f6e0726b944e2c9f9a38388d8e067cb56af  ./scripts/bundle.sh
+ed3013f16c53a2c06798a9b57f59a0809597452057ecab7e53fa3467e8b6b0a4  ./scripts/bundle.sh
 f30b573f8ec9fa795ca291876855ac1deeb69a77f58fcf9c27797821b5efd856  ./scripts/capture.sh
 273258f61ac88efa9fd74375fc3b99c19b08ca94b7d364080c614f78a8dd5bb6  ./scripts/manifest.sh
-1beaa778f11d83f818f35d6e20c363063bc9c15ee464e53f773ea118e6657326  ./scripts/restore.sh
+c53555fc41d0f6ebcfa8874374cb1f2e3be1d51f6d51783a694413d472cd4e05  ./scripts/restore.sh
 90809244fb2fc4ea02ad250e0ea8fcb7c69ec29dfdbc1c224f2c61eb6584b7a8  ./secrets/README.md
 b362830a13c066c5506d0909b37c660fdf5b0be5ab7c74f445b1483f78e72d94  ./secrets/secrets.manifest.txt

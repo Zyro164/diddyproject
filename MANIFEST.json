@@ -1,10 +1,10 @@
 {
   "schema": "diddyproject-backup/1",
   "snapshot": {
-    "generated_at": "2026-11-23T01:18:18Z",
-    "stamp": "20261123T011818Z",
+    "generated_at": "2026-11-23T01:20:55Z",
+    "stamp": "20261123T012055Z",
     "repo": "https://github.com/Zyro164/diddyproject.git",
-    "commit": "cdbae4033fbaf7a932605e8ac3d79a173a285a6a",
+    "commit": "3b48325a3a3857bf0b9613f2d723db74a2cf6ebc",
     "branch": "main",
     "hostname": "4552801cdcb3",
     "user": "abc",
@@ -627,8 +627,8 @@
     },
     {
       "path": ".sha256sums",
-      "size": 489541,
-      "sha256": "8cbc060b8d0909b313cdea2f6ce3f872a25a9268d468c2af9f23637b28e68ad3"
+      "size": 489723,
+      "sha256": "aa697a634186cd0141e2dd12eff6f233a93048e396d4359cae47f7d181d1f6ea"
     },
     {
       "path": "AGENTS.md",
@@ -636,9 +636,14 @@
       "sha256": "3cf598517e1a63f850700322f294e8a9c92505e7a25863d66c4b1e4d3bd70ea3"
     },
     {
+      "path": "BACKUP-PROMPT.md",
+      "size": 3753,
+      "sha256": "e9358df8417685b1e4a2ad1e1ff65fea11543a633f5b1668280f9d2adf0fabc6"
+    },
+    {
       "path": "MANIFEST.json",
-      "size": 204220,
-      "sha256": "056e7e64692ee8dd0b472c6bc7a1cbd1c724063ddbc423a04d8cfe77f5d01a85"
+      "size": 1034904,
+      "sha256": "9a00696d58819a3110f29aea997070f090c3ee918a4aedc59b8a432cfd762680"
     },
     {
       "path": "README.md",
@@ -25296,6 +25301,11 @@
       "sha256": "06ef9e77e376d0ab2e858e647626f5416f20e09789dc28397aceadbbd63dd1e1"
     },
     {
+      "path": "inventory/release-assets.txt",
+      "size": 426,
+      "sha256": "92ee024c43ec25cfbccf7c324c72a119d7447a996195bcab781129296fb55a72"
+    },
+    {
       "path": "inventory/secrets-sweep.txt",
       "size": 518,
       "sha256": "46d172861d88b6bd1612aa417dc9477ef643aebefe3978c1f78891bfd7b8ad1e"
@@ -25352,8 +25362,8 @@
     },
     {
       "path": "scripts/bundle.sh",
-      "size": 6827,
-      "sha256": "601dd2860ab374ef0a020943d7ba2f6e0726b944e2c9f9a38388d8e067cb56af"
+      "size": 6995,
+      "sha256": "ed3013f16c53a2c06798a9b57f59a0809597452057ecab7e53fa3467e8b6b0a4"
     },
     {
       "path": "scripts/capture.sh",
@@ -25367,8 +25377,8 @@
     },
     {
       "path": "scripts/restore.sh",
-      "size": 9130,
-      "sha256": "1beaa778f11d83f818f35d6e20c363063bc9c15ee464e53f773ea118e6657326"
+      "size": 9894,
+      "sha256": "c53555fc41d0f6ebcfa8874374cb1f2e3be1d51f6d51783a694413d472cd4e05"
     },
     {
       "path": "secrets/README.md",
