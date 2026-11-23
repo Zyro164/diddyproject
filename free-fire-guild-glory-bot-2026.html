@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Free Fire guild glory bots — a due-diligence report, Nov 2026</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --background: #0f1115;
+    --foreground: #e6e8ec;
+    --muted-foreground: #98a2ae;
+    --border: #272c34;
+    --secondary: #1a1f27;
+    --code-background: #171b22;
+    --code-foreground: #dbe1e8;
+    --accent: #8ab4f8;
+    --success: #4cc38a;
+    --warning: #e0a44a;
+    --destructive: #e5726f;
+    --chart-1: #5ba3d0;
+    --chart-2: #4a9d7f;
+    --chart-3: #a985cc;
+    --chart-4: #c9a227;
+    --chart-5: #c98a3f;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--background); }
+  ::selection { background: color-mix(in oklab, var(--accent) 30%, transparent); }
+  body {
+    margin: 0;
+    font-family: var(--font-sans, system-ui, -apple-system, "Segoe UI", sans-serif);
+    color: var(--foreground);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 100%; }
+  h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+  h2 { font-size: 1rem; margin: 24px 0 7px; }
+  h3 { font-size: 0.92rem; margin: 16px 0 4px; }
+  p { margin: 8px 0; }
+  .sub { color: var(--muted-foreground); font-size: 0.84rem; margin: 0 0 16px; }
+  .lede { color: var(--muted-foreground); }
+  code, pre { font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace); }
+  code { font-size: 0.85em; background: var(--code-background); color: var(--code-foreground);
+         padding: 1px 4px; border-radius: 4px; }
+  pre { background: var(--code-background); color: var(--code-foreground); padding: 11px 12px;
+        border-radius: var(--radius, 10px); overflow-x: auto; font-size: 0.76rem; line-height: 1.55;
+        margin: 8px 0; border: 1px solid var(--border); }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  .stamp { display: inline-block; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
+           color: var(--muted-foreground); border: 1px solid var(--border); border-radius: 999px;
+           padding: 2px 9px; margin-bottom: 10px; }
+
+  /* stack diagram */
+  .stacks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0 4px; }
+  .stack { border: 1px solid var(--border); border-radius: var(--radius, 10px); padding: 10px 9px; }
+  .stack h4 { margin: 0 0 2px; font-size: 0.76rem; letter-spacing: 0.02em; }
+  .stack .who { font-size: 0.68rem; color: var(--muted-foreground); margin-bottom: 8px; min-height: 2.2em; }
+  .layer { font-size: 0.7rem; line-height: 1.25; padding: 5px 6px; border-radius: 5px; margin-bottom: 4px; }
+  .layer.solid { border: 1px solid var(--border); }
+  .layer.host { border: 1px dashed var(--border); color: var(--muted-foreground); }
+  .layer small { display: block; opacity: 0.7; font-size: 0.92em; }
+  .stack.a .layer.solid { background: color-mix(in oklab, var(--chart-2) 18%, transparent); }
+  .stack.b .layer.solid { background: color-mix(in oklab, var(--chart-1) 18%, transparent); }
+  .stack.c .layer.solid { background: color-mix(in oklab, var(--chart-3) 18%, transparent); }
+  .stack.d .layer.solid { background: color-mix(in oklab, var(--chart-4) 18%, transparent); }
+  .stack .note { font-size: 0.66rem; color: var(--muted-foreground); margin-top: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 10px 0 4px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.78rem; }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em;
+             color: var(--muted-foreground); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  td strong { font-weight: 600; }
+  caption { caption-side: bottom; text-align: left; font-size: 0.7rem; color: var(--muted-foreground); padding-top: 6px; }
+  .yes { color: var(--success, #2e9e6b); font-weight: 600; }
+  .no { color: var(--destructive, #c04a4a); font-weight: 600; }
+  .part { color: var(--warning, #a8761f); font-weight: 600; }
+  .muted { color: var(--muted-foreground); }
+
+  figure { margin: 12px 0 4px; }
+  figcaption { font-size: 0.72rem; color: var(--muted-foreground); margin-top: 7px; }
+  .bars { display: grid; grid-template-columns: 132px 1fr; gap: 7px 10px; align-items: center; font-size: 0.76rem; }
+  .track { position: relative; height: 15px; background: var(--secondary); border-radius: 4px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 3px; }
+  .fill.gpu { background: var(--chart-2, #4a9d7f); }
+  .fill.sw { background: var(--chart-5, #c98a3f); }
+  .val { position: absolute; right: 6px; top: 0; font-size: 0.7rem; line-height: 15px; color: var(--muted-foreground); }
+  .legend { display: flex; gap: 14px; font-size: 0.72rem; color: var(--muted-foreground); flex-wrap: wrap; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; }
+
+  .callout { border-left: 2px solid var(--accent, var(--border)); padding: 1px 0 1px 11px; margin: 12px 0;
+             color: var(--muted-foreground); font-size: 0.84rem; }
+  ul { margin: 6px 0 8px 17px; padding: 0; }
+  li { margin: 4px 0; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px 20px; }
+  .src { font-size: 0.71rem; color: var(--muted-foreground); columns: 2; column-gap: 24px; padding-left: 16px; }
+  .src li { margin: 0 0 4px; break-inside: avoid; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
+  .picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 12px 0 2px; }
+  .pick { border: 1px solid var(--border); border-radius: var(--radius, 10px); padding: 9px 10px; }
+  .pick .tag { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent, var(--muted-foreground)); }
+  .pick h4 { margin: 2px 0 3px; font-size: 0.84rem; }
+  .pick p { margin: 0; font-size: 0.74rem; color: var(--muted-foreground); line-height: 1.45; }
+  @media (max-width: 640px) {
+    .src { columns: 1; }
+    .stacks { grid-template-columns: repeat(2, 1fr); }
+    .bars { grid-template-columns: 104px 1fr; gap: 6px 8px; }
+  }
+  /* report-specific additions */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+  .stat { border: 1px solid var(--border); border-radius: var(--radius, 10px); padding: 10px 11px; }
+  .stat b { display: block; font-size: 1.32rem; line-height: 1.15; letter-spacing: -0.02em; font-weight: 650; }
+  .stat span { font-size: 0.69rem; color: var(--muted-foreground); display: block; margin-top: 2px; line-height: 1.35; }
+  .verdict { border: 1px solid var(--border); border-left: 2px solid var(--destructive); border-radius: var(--radius, 10px);
+             padding: 12px 14px; margin: 16px 0; background: color-mix(in oklab, var(--destructive) 7%, transparent); }
+  .verdict p { margin: 5px 0; font-size: 0.86rem; }
+  blockquote { margin: 10px 0; padding: 2px 0 2px 12px; border-left: 2px solid var(--border);
+               color: var(--code-foreground); font-size: 0.82rem; font-style: italic; }
+  .stacks.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 720px) { .stacks.three { grid-template-columns: 1fr; } }
+  .bars.wide { grid-template-columns: 190px 1fr; }
+  @media (max-width: 640px) { .bars.wide { grid-template-columns: 118px 1fr; } }
+  .fill.claim { background: var(--destructive, #c04a4a); }
+  .fill.ceil { background: var(--chart-2, #4a9d7f); }
+  .fill.real { background: var(--chart-5, #c98a3f); }
+  .tagline { font-size: 0.7rem; color: var(--muted-foreground); }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<span class="stamp">Deep research · 22 Nov 2026</span>
+<h1>Free Fire guild glory bots</h1>
+<p class="sub">What the services actually do, what the arithmetic says, and what happens to the guild afterwards.</p>
+
+<p class="lede">“Guild glory bot” names three unrelated things that are constantly conflated: a <strong>real in-game metric with hard daily caps</strong>, a <strong>cottage industry of cloud-phone farms and resold APIs</strong>, and a <strong>YouTube-to-Telegram funnel</strong> that mostly sells attention. The useful move is separating them — and that is possible with arithmetic, because the metric is capped. Garena’s own rules limit a player to roughly 80 glory a day from matches. Four bots therefore top out near 320 a day. Vendors advertise <strong>2,00,000 glory per ₹100 credit</strong>.</p>
+
+<div class="verdict">
+  <p><strong>Verdict:</strong> do not buy. Not primarily on ethics grounds — on unit economics and enforcement risk.</p>
+  <p>• The advertised yield is <strong>120–330× the per-hour maximum</strong> the game allows. Either the number is fiction, or delivery happens server-side (packet forgery / API injection), which is the one thing Garena bans <em>devices</em> for.</p>
+  <p>• Enforcement went <strong>guild-level in 2026</strong>: Garena’s Abuse Policy authorises removal of guild points, tournament disqualification and permanent disbandment for “coordinated use of prohibited tools”.</p>
+  <p>• At its <em>honest</em> yield, ₹100 buys about <strong>3% of a single early level-up</strong> — roughly what four recruited players produce for free in a day.</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><b>80</b><span>glory / player / day cap (matches)</span></div>
+  <div class="stat"><b>10</b><span>glory max per match, by placement</span></div>
+  <div class="stat"><b>320</b><span>glory / day ceiling for a 4-bot credit</span></div>
+  <div class="stat"><b>₹8.4</b><span>cost of 1 glory via diamonds (100💎 = ₹84)</span></div>
+  <div class="stat"><b>0</b><span>vendors with an auditable delivery log</span></div>
+</div>
+
+<h2>1. The product on sale</h2>
+
+<p>Every offer in this market resolves to the same shape: pay ₹95–₹200, submit a <em>Guild ID</em> (not a login), and a group of accounts plays matches inside your guild for 8–12 hours. The differences between vendors are marketing, region, and whether they also sell cheat licences.</p>
+
+<div class="scroll">
+<table style="min-width:720px">
+  <caption>Public offers checked 22 Nov 2026. Prices are list prices; “claims” are vendor claims, not verified outcomes.</caption>
+  <thead><tr><th>Offer</th><th>Price</th><th>Claim</th><th>What it structurally is</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>guildglory.com</strong></td><td>₹100 standard (IN/BD/PK/BR)<br>₹200 premium (ME/SG)</td>
+      <td>4 bots · 8–12 h · auto-refund if 0 glory in 2 h</td>
+      <td>Prepaid-credit dashboard, UPI only. Its own counters render “Trusted by <strong>0+</strong> players” and “<strong>0.9%</strong> bot uptime”; testimonials repeat verbatim. ScamAdviser flags a recently registered domain with little traffic.</td>
+    </tr>
+    <tr>
+      <td><strong>ff-glory.xyz</strong></td><td>₹100 (4 bots) · ₹180 (8 bots) · ₹19 likes</td>
+      <td>“2,00,000 glory / 5–7 h”, “100% anti-ban protected”</td>
+      <td>Full reseller REST API (<code>/api/v1/guild/launch</code>, bearer keys, 60 req/min). Same account also sells <em>Pro Mod Menu / VIP panel keys</em> — i.e. cheat licences with hourly tiers.</td>
+    </tr>
+    <tr>
+      <td><strong>ffglory.xyz</strong></td><td>quote-based</td>
+      <td>“40–100+ glory per match”</td>
+      <td>Their FAQ describes “external cloud nodes … queue tournament matches using temporary guest profiles … credit glory to the clan … no account logged into, credential-free.”</td>
+    </tr>
+    <tr>
+      <td><strong>guildglory.pro / ffglory.in</strong></td><td>₹95 starter</td>
+      <td>“10–50K glory avg”, 4 bots, auto-refund</td>
+      <td>Same template, different brand. Regional pricing pages.</td>
+    </tr>
+    <tr>
+      <td><strong>glorypro.in</strong></td><td>wallet packages</td>
+      <td>“daily glory farming”, 5–10% variance</td>
+      <td>UPI top-up wallet. Terms explicitly disclaim liability for “guild disband, account ban (game side)” and threaten action against chargebacks.</td>
+    </tr>
+    <tr>
+      <td><strong>“Free source code” videos</strong></td><td>₹0</td>
+      <td>“100% working, OB52/OB53”</td>
+      <td>Termux + Python scripts. Either a thin client for one of the paid APIs above, or pure progress-bar theatre. The funnel ends at Telegram, not at a working tool.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">The adjacent products matter for judging the market: the same panels sell <strong>profile likes</strong> and <strong>mod-menu keys</strong> alongside “guild glory”. A vendor whose other SKU is an aimbot licence cannot credibly underwrite a “100% anti-ban guarantee” — the anti-ban claim is the product, not the infrastructure.</div>
+
+<h2>2. What glory actually is — the caps nobody quotes</h2>
+
+<p>Garena runs two overlapping systems and its own documentation has not kept up with the client. <strong>Glory</strong> is the legacy level currency described in the still-published help articles. <strong>Activity Points</strong> replaced it as the level driver in the OB42 “Guild System 2.0” patch (Oct 2023), with <em>dynamic weekly settlement</em> and decay. Community trackers now show guilds up to Lv.7 with ~50–55 slots, while Garena’s own 2024 help page still says “level 4, 35 members”. Vendors quote whichever number is larger.</p>
+
+<div class="scroll">
+<table style="min-width:680px">
+  <caption>Official rules, from Garena support (EN + PT) and patch notes. These are the constraints any bot must obey.</caption>
+  <thead><tr><th>Rule</th><th>Value</th><th>Consequence</th></tr></thead>
+  <tbody>
+    <tr><td>Glory per match</td><td>up to <strong>10</strong>, by placement</td><td>Yield is time-bound: matches are 8–20 min</td></tr>
+    <tr><td>Guildmate bonus</td><td>+4 per match, cap <strong>80/day</strong></td><td>Team-ups are the only repeatable lever</td></tr>
+    <tr><td>Per-player daily cap</td><td><strong>80</strong> glory from matches</td><td>A bot cannot out-earn a human</td></tr>
+    <tr><td>Guild daily cap</td><td>proportional to max member slots</td><td>Past the cap, extra bots add <strong>zero</strong></td></tr>
+    <tr><td>Diamond route</td><td>1 glory / <strong>10💎</strong> (EN) or <strong>30💎</strong> (PT)</td><td>₹8.4–₹25.2 per glory — the market price anchor</td></tr>
+    <tr><td>Membership churn</td><td>120-min lockout after joining; leaving resets personal glory</td><td>Bot accounts can’t be recycled fast</td></tr>
+    <tr><td>Level settlement</td><td>Mon 04:00, activity decay to hold level</td><td>One-off spikes decay; spend must be continuous</td></tr>
+    <tr><td>Dog Tag tournament</td><td>1,800 tags → Room Card; boxes grant 500/800/1,200/1,800 glory</td><td>~4,300 glory/week for free, guild-wide</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The third row is the one that guts the business model. Glory is not a currency you can inject — it is a <em>rate-limited telemetry output</em>. Four bots are four players. They earn what four players earn, no matter how the vendor describes the “engine”.</p>
+
+<h2>3. The arithmetic</h2>
+
+<p>Take the most aggressive public offer — 2,00,000 glory, 4 bots, 5–7 hours, ₹100 — and convert it into the game’s own units.</p>
+
+<div class="scroll">
+<table style="min-width:660px">
+  <caption>Vendor claims against the documented ceiling. “Per bot-hour” is the only comparable unit.</caption>
+  <thead><tr><th>Claim</th><th>Implied rate</th><th>Ceiling from the game’s rules</th><th>Overstatement</th></tr></thead>
+  <tbody>
+    <tr><td>2,00,000 glory / 5 h / 4 bots</td><td><strong>10,000</strong> glory per bot-hour</td><td rowspan="2">~30–60 glory/bot-hour<br><span class="muted">(10 per match, 8–20 min matches)</span></td><td class="no">≈ 170–330×</td></tr>
+    <tr><td>2,00,000 glory / 7 h / 4 bots</td><td><strong>7,143</strong> glory per bot-hour</td><td class="no">≈ 120–240×</td></tr>
+    <tr><td>“40–100+ glory per match”</td><td>4–10× the per-match cap</td><td>10 per match</td><td class="no">4–10×</td></tr>
+    <tr><td>4 bots, 8–12 h</td><td>≤ 320 per day (4 × 80)</td><td>320 per day</td><td class="yes">consistent</td></tr>
+  </tbody>
+</table>
+</div>
+
+<figure>
+  <div class="bars wide">
+    <div>Advertised per credit</div><div class="track"><div class="fill claim" style="width:100%"></div><span class="val">2,00,000</span></div>
+    <div>Ceiling, 4 bots × 1 day</div><div class="track"><div class="fill ceil" style="width:47%"></div><span class="val">320</span></div>
+    <div>Realistic 10 h session</div><div class="track"><div class="fill real" style="width:45%"></div><span class="val">200–320</span></div>
+  </div>
+  <figcaption>Log scale — otherwise the two real bars would be invisible. Linear ratio of the top bar to the middle one is <strong>625×</strong>.</figcaption>
+</figure>
+
+<div class="grid2">
+  <div>
+    <h3>What ₹100 actually buys</h3>
+    <ul>
+      <li><strong>~250–320 glory</strong> at the ceiling — about <strong>3%</strong> of the 10,000 needed for Lv.2.</li>
+      <li>One day of four ghost members in a roster that likely has 20–55 slots.</li>
+      <li>Compared with the diamond route, ~17,000× cheaper — which is exactly why the 2-lakh number cannot be real. At Garena’s own price, 2,00,000 glory costs <strong>₹16.8 lakh</strong> (10💎:1) to <strong>₹50.4 lakh</strong> (30💎:1). Nobody sells a ₹16-lakh asset for ₹100.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>The 625-day problem</h3>
+    <ul>
+      <li>To deliver one advertised credit honestly, the vendor needs <strong>625 bot-days</strong> — 4 bots running 24/7 for <strong>1.7 years</strong>.</li>
+      <li>Or: 2,500 bot-accounts playing one capped day each, which requires 2,500 guild slots that do not exist.</li>
+      <li>Or: they aren’t playing matches at all, in which case the glory is arriving through the server API, not through gameplay — a different crime with a much shorter detection latency.</li>
+    </ul>
+    <p class="tagline">This trilemma is the whole report in one paragraph.</p>
+  </div>
+</div>
+
+<div class="callout"><strong>Second-order reality check.</strong> If your guild is already active, the daily cap may be exhausted before the bots log in — vendors’ “0-glory auto-refund” is measured on <em>their</em> dashboard, so a capped guild silently converts ₹100 into zero and the refund tripwire (total zero in 2 h) is the only protection. A 45-member roster at cap earns 3,600/day; four extra bots are worth at most <strong>+8.9%</strong>, and 0% after the cap.</div>
+
+<h2>4. How these things are actually built</h2>
+
+<p>Three architectures, in descending order of engineering effort and ascending order of how often you meet them in the wild.</p>
+
+<div class="stacks three">
+  <div class="stack a">
+    <h4>A · Cloud-phone farm</h4>
+    <div class="who">Real APK on emulators or hosted Android</div>
+    <div class="layer solid">Official Free Fire client</div>
+    <div class="layer solid">Input automation<small>ADB taps, scrcpy, Appium, AutoJS</small></div>
+    <div class="layer solid">Mass-registered guest accounts</div>
+    <div class="layer host">Cloud phones / VM hosts</div>
+    <div class="note">Honest yield, terrible economics: 80 glory/day/bot. Detected by VM policy + AFK behaviour + device clusters.</div>
+  </div>
+  <div class="stack b">
+    <h4>B · Protocol client</h4>
+    <div class="who">No renderer, no gameplay</div>
+    <div class="layer solid">Protobuf messages</div>
+    <div class="layer solid">AES-CBC wrapped requests</div>
+    <div class="layer solid">Guest JWT auth → guild join → queue</div>
+    <div class="layer host">Game TCP/HTTP endpoints</div>
+    <div class="note">What the public repos do (FreeFireApi, OB55 TCP bot, Frida guest capture). Detected by telemetry inconsistency.</div>
+  </div>
+  <div class="stack c">
+    <h4>C · Theatre</h4>
+    <div class="who">YouTube → Telegram → APK</div>
+    <div class="layer solid">Termux Python “source”</div>
+    <div class="layer solid">Progress bar / fake success log</div>
+    <div class="layer solid">Sometimes: login prompt</div>
+    <div class="layer host">Your phone or guild ID</div>
+    <div class="note">Delivers a Telegram subscription and, on the APK branch, occasionally a credential harvester.</div>
+  </div>
+</div>
+
+<p><strong>Architecture A</strong> is the only one that can honestly claim “real matches”. It is also the one the 2026 ban waves target by name: “accounts using hacks, modified files or <em>virtual machines</em> are now being permanently removed.” <strong>Architecture B</strong> skips gameplay entirely — it authenticates guest accounts, joins the guild, and posts match-result traffic. That is reverse engineering of the client protocol (ToS §4.2(j)) and, more practically, it is visible to the server as <em>glory credited without corresponding match telemetry</em>, which is a server-side check, not a client-side one. <strong>Architecture C</strong> is why the phrase “guild glory bot source code” has 30-second YouTube Shorts and no reproducible results.</p>
+
+<div class="callout">Worth crediting the one honest design decision in this market: “Guild-ID-only, credential-free” services genuinely reduce what <em>you</em> can lose, because they never hold your login. It does not make the service real — it means the loss is confined to money and the guild, rather than the account.</div>
+
+<h2>5. Enforcement: it is no longer aimed at the bot</h2>
+
+<p>Garena’s Abuse Policy was updated in March 2026 with a section that exists specifically for this traffic. It is worth reading verbatim, because it changes who pays.</p>
+
+<blockquote>“Coordinated Unfair Play for Guilds. Guilds found to have engaged in organized rule-breaking — including, but not limited to, collusion, score manipulation, or the coordinated use of prohibited tools or software — will be subject to enforcement action commensurate with the severity and scale of the violation.”</blockquote>
+
+<p>The listed penalties, in escalating combination: <strong>removal of accumulated Guild Activeness and Guild War points</strong>; <strong>disqualification and ban from Guild Tournament leaderboards</strong>; <strong>permanent disbandment of the guild</strong> — “all members will lose their guild affiliation upon disbandment” — with <strong>associated accounts subject to further individual penalties</strong>.</p>
+
+<div class="scroll">
+<table style="min-width:640px">
+  <caption>Reported enforcement volume. Figures come from regional official channels relayed by fan media; treat as order-of-magnitude, not audited totals.</caption>
+  <thead><tr><th>Period</th><th>Accounts</th><th>Stated scope</th></tr></thead>
+  <tbody>
+    <tr><td>27 Jan – 11 Feb 2026</td><td><strong>7,662,229</strong></td><td>hacks, modified files, virtual machines</td></tr>
+    <tr><td>by 3 Feb 2026</td><td>600,000–700,000</td><td>compromised accounts, exploit patterns</td></tr>
+    <tr><td>26 Feb – 12 Mar 2026</td><td><strong>543,685</strong></td><td>hacks, modified APKs, app cloning</td></tr>
+    <tr><td>May 2026 (Eclipse)</td><td>299,175</td><td>prohibited software</td></tr>
+    <tr><td>1 Aug – 10 Sep 2026</td><td><strong>5,371,000+</strong></td><td>hacks, modified files, VMs</td></tr>
+    <tr><td>13 – 29 Sep 2026</td><td>752,419</td><td>“hackers and panel users”</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>What the detector can see that a “private engine” cannot hide</h3>
+<div class="scroll">
+<table style="min-width:640px">
+  <thead><tr><th>Signal</th><th>Why a glory bot emits it</th><th>Blast radius</th></tr></thead>
+  <tbody>
+    <tr><td>AFK / zero-input matches</td><td>Bots must sit in live BR and CS lobbies with real players to earn glory</td><td>Honor score, reports, account ban</td></tr>
+    <tr><td>Device &amp; IP clustering</td><td>Four instances per credit, thousands of guest accounts per vendor</td><td><strong>Device</strong> ban — one host takes every account with it</td></tr>
+    <tr><td>Virtual machine / cloud-phone fingerprint</td><td>The entire architecture A supply chain</td><td>Named in 2026 ban scope</td></tr>
+    <tr><td>Glory without match telemetry</td><td>Protocol bots (B) credit points the server never saw played</td><td>Server-side flag, instant</td></tr>
+    <tr><td>Roster / leaderboard anomaly</td><td>4 unknown accounts, 24/7 uptime, identical loadouts</td><td>Guild points removed, DQ, disband</td></tr>
+    <tr><td>Human reports</td><td>Garena’s stated detector is trained on report volume; rivals can see your Guild ID</td><td>Guild + members</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Note the asymmetry: the seller’s risk is a banned throwaway farm. Yours is a <strong>disbanded guild</strong> — the one asset in this transaction that cannot be re-registered, and which every member of your roster shares.</p>
+
+<h2>6. Risk register for a buyer</h2>
+
+<div class="scroll">
+<table style="min-width:680px">
+  <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Credit consumed, ~0 glory delivered</td><td class="no">high</td><td>₹95–₹2,000</td><td>Refund only triggers on <em>total</em> zero inside 2 h, judged by their dashboard; capped guilds sit in the gap.</td></tr>
+    <tr><td>Guild sanction (points removed, tournament DQ, disband)</td><td class="part">medium</td><td class="no">guild-wide</td><td>Explicit in the Abuse Policy; also the outcome no vendor will reimburse.</td></tr>
+    <tr><td>Member accounts banned</td><td class="part">medium</td><td class="no">permanent, device-level</td><td>Any account seen in the same match cluster is exposed.</td></tr>
+    <tr><td>Credential theft (login-sharing or APK route)</td><td class="part">medium on C</td><td class="no">total</td><td>The funnel’s APK branch asks for Facebook/Google sign-in; that is the payload.</td></tr>
+    <tr><td>Malware on your phone</td><td class="part">medium on C</td><td>high</td><td>Accessibility-service abuse is the standard vector for “bot APK” builds.</td></tr>
+    <tr><td>Payment exposure</td><td class="no">certain</td><td>low–medium</td><td>Anonymous UPI VPAs, no receipts that survive a dispute; sellers’ own terms threaten action if you charge back.</td></tr>
+    <tr><td>Reputational</td><td class="part">medium</td><td>medium</td><td>Bot rosters are visible; rival leaders screenshot them.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>7. The same outcome, without the exposure</h2>
+
+<p>The honest comparison is not “bots vs nothing”. It is “bots vs the roster you already have” — because four bots are, mechanically, four members.</p>
+
+<div class="scroll">
+<table style="min-width:660px">
+  <caption>Cost per 1,000 glory. The bot row assumes the service works at its own ceiling, which no vendor documents.</caption>
+  <thead><tr><th>Route</th><th>₹ / 1,000 glory</th><th>Time</th><th>Policy risk</th></tr></thead>
+  <tbody>
+    <tr><td>4-bot credit (honest yield)</td><td>₹310</td><td>~3 days</td><td class="no">ban / disband</td></tr>
+    <tr><td>4-bot credit (advertised yield)</td><td>₹0.50</td><td>hours</td><td class="no">same — and it doesn’t exist</td></tr>
+    <tr><td>Diamonds, 10💎:1</td><td>₹8,400</td><td>instant</td><td class="yes">none</td></tr>
+    <tr><td>Diamonds, 30💎:1</td><td>₹25,200</td><td>instant</td><td class="yes">none</td></tr>
+    <tr><td>25 members playing ~1 h</td><td>₹0</td><td>&lt; 1 day</td><td class="yes">none</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="grid2">
+  <div>
+    <h3>The playbook that actually moves the bar</h3>
+    <ul>
+      <li><strong>Never queue solo.</strong> Two-guildmate teams earn ~10 activity points/minute; each additional guildmate adds 20%.</li>
+      <li><strong>Dog Tags beat everything.</strong> 1,800 tags/week unlocks the Room Card, and the four boxes pay 500 + 800 + 1,200 + 1,800 glory — about 4,300/week, free, guild-wide.</li>
+      <li><strong>Daily missions</strong> are 10 points each and take minutes. Twenty members doing two = 400/day.</li>
+      <li><strong>Wars: Tue / Thu / Sat.</strong> BR counts your best five matches (1st = 12 points, each elimination = 4); CS pays 100 per win. Quitting or a ban <em>deducts</em>.</li>
+      <li><strong>Diamonds are a booster, not a strategy</strong> — ₹8.4 per glory is ~27× the honest bot rate and ~17,000× the advertised one.</li>
+      <li><strong>Consistency &gt; spikes.</strong> Settlement is Monday 04:00 with decay; a burst that decays by Friday bought nothing.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What to do instead, by goal</h3>
+    <ul>
+      <li><strong>Reach Lv.2 (10,000)</strong> — 35 members × 4 days at cap, or one dog-tag cycle plus missions. ₹0.</li>
+      <li><strong>Weekly Room Card</strong> — 1,800 tags ≈ 200 guild-wide matches. Recruit for <em>daily</em> play, not level.</li>
+      <li><strong>Regional top-100</strong> — a stable 40+ roster beats any burst; leaderboards are audited (Garena has already removed 289 accounts for rank fraud).</li>
+      <li><strong>“I want it while I sleep”</strong> — nothing legitimate exists. The risk-adjusted answer is no, and the cost of the alternative is four recruitment posts.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>8. If you buy anyway</h2>
+<p>Then price it as a lottery ticket, not a purchase: never share a login or install an APK (that is where the real loss lives); expect zero and treat any glory as a bonus; never run it on the same guild you would be heartbroken to lose; and assume the guild ID is public and the roster visible. The one thing not to do is the “cheap” version: a free APK or a “source code” from a Telegram channel is the only branch of this market that can cost you the account you actually play on.</p>
+
+<h2>9. Bottom line</h2>
+<p>Guild glory is telemetry, not currency: capped per player, capped per guild, settled weekly, and decaying. That design is precisely why a bot cannot be a shortcut — it can only be <em>another member</em>. Once you price four ghost members at 320 glory/day, the ₹100 credit is revealed as either a fiction or a server-side exploit, and the second option has been the target of every major ban wave of 2026. The guild-level enforcement clause means the person holding the bill is not the vendor but the leader who pasted the ID.</p>
+
+<hr>
+<h2>10. Method, confidence, and what I could not verify</h2>
+
+<div class="grid2">
+  <div>
+    <h3>How this was assembled</h3>
+    <ul>
+      <li>Primary: Garena support articles (Guilds FAQ, Abuse Policy, Account Ban, Anti-Hack FAQ, Game Security FAQ), Garena ToS, the Portuguese support article with the level/glory table, OB42 patch notes, and the follow-up patch note on team-up point rates.</li>
+      <li>Secondary: fan media (Free Fire Mania) for ban-wave figures; ScamAdviser/Gridinsoft for domain signals; GitHub repos for architecture evidence.</li>
+      <li>Tertiary: vendor sites and docs (treated as <em>claims</em>), plus SEO explainers — useful only as evidence of what the market says, never as fact.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Confidence and gaps</h3>
+    <ul>
+      <li><strong>High:</strong> the caps (multiple official pages), the enforcement text (verbatim), the arithmetic.</li>
+      <li><strong>Medium:</strong> current level/slot ceilings — Garena’s help pages are stale; community trackers disagree; I used ranges.</li>
+      <li><strong>Medium:</strong> ban totals — relayed from regional official graphics by fan media, not audited.</li>
+      <li><strong>Unverifiable:</strong> whether any specific vendor delivers anything at all. No vendor publishes match-level logs, and no independent test with a control guild exists. Anyone claiming otherwise is selling something.</li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+<h2>Sources</h2>
+<ul class="src">
+  <li>Garena Free Fire — Guilds FAQ (glory, caps, diamond conversion, tournament) · ffsupport.garena.com/hc/en-us/articles/4412928332186</li>
+  <li>Garena Free Fire — Abuse Policy, upd. 09 Mar 2026 (guild coordinated-unfair-play penalties) · ffsupport.garena.com/hc/en-us/articles/4412928339866</li>
+  <li>Garena Free Fire — Account Ban / Anti-Hack FAQ (device bans, unauthorized tools) · …/4412913789978, …/4412913831194</li>
+  <li>Garena Free Fire — Game Security FAQ (definitions of cheating / unauthorized software) · …/4412920960922</li>
+  <li>Garena Terms of Service §4.2 (reverse engineering, unauthorised clients) · content.garena.com/legal/tos/tos_en.html</li>
+  <li>Garena PT support — “Como subir o nível da guilda” (10 glory/match; 10k/40k/100k; 20–35 slots; 30💎:1 in PT) · ffsuporte.garena.com/…/154000130657</li>
+  <li>Garena — Patch Notes OB42 Guild System 2.0, 30 Oct 2023 (dynamic weekly level, decay, settlement)</li>
+  <li>Garena — Patch Notes article 1332 (team-up activity rates: 10 pts/min per pair, +20% per extra guildmate; war days)</li>
+  <li>Garena Fair Play — “How Detection System Works” (report-trained detection; AFK / force-quit penalties) · fairplay.freefiremobile.com/NA_en/article/70</li>
+  <li>Free Fire Mania — 7.66M bans (Feb 2026, incl. virtual machines), 543,685 bans (Mar 2026), 299,175 Eclipse bans + 289 rank-fraud removals (May 2026)</li>
+  <li>FF Keeda / GamingNewsLab / BitTopup — 5.37M (Sep 2026), 752,419 (Sep 2026), 600–700k (Feb 2026) ban tallies (relayed official graphics)</li>
+  <li>guildglory.com — product, pricing, counters, terms (accessed 22 Nov 2026)</li>
+  <li>ff-glory.xyz — landing + developer API docs (4-bot launch endpoint, mod-menu key SKU)</li>
+  <li>ffglory.xyz — FAQ (“cloud nodes”, “temporary guest profiles”, 40–100+ glory/match claim)</li>
+  <li>guildglory.pro, ffglory.in, glorypro.in (glory-quest-shop) — pricing and terms/liability disclaimers</li>
+  <li>GitHub — siambhau/FreeFireApi; subhajit-maji/free-fire-guild-bot-tcp (OB55, protobuf/TCP); kaifcodec/freefire-like-and-guest-api (Frida guest capture, AES-CBC)</li>
+  <li>ScamAdviser / Gridinsoft — guildglory.com domain signals (recent registration, low traffic)</li>
+  <li>Superhappen / Topuplist / BitTopup — 100💎 ≈ ₹84 in-game (used for the ₹-per-glory anchor)</li>
+  <li>Sportskeeda, GuruGamer, GamesKeys — dog-tag reward boxes (500/800/1,200/1,800 glory + Room Card at 1,800)</li>
+</ul>
+
+</div>
+</body>
+</html>

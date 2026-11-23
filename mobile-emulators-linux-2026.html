@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Mobile emulators on Linux — state of the art, Nov 2026</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --background: #0f1115;
+    --foreground: #e6e8ec;
+    --muted-foreground: #98a2ae;
+    --border: #272c34;
+    --secondary: #1a1f27;
+    --code-background: #171b22;
+    --code-foreground: #dbe1e8;
+    --accent: #8ab4f8;
+    --success: #4cc38a;
+    --warning: #e0a44a;
+    --destructive: #e5726f;
+    --chart-1: #5ba3d0;
+    --chart-2: #4a9d7f;
+    --chart-3: #a985cc;
+    --chart-4: #c9a227;
+    --chart-5: #c98a3f;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--background); }
+  ::selection { background: color-mix(in oklab, var(--accent) 30%, transparent); }
+  body {
+    margin: 0;
+    font-family: var(--font-sans, system-ui, -apple-system, "Segoe UI", sans-serif);
+    color: var(--foreground);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 100%; }
+  h1 { font-size: 1.5rem; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+  h2 { font-size: 1rem; margin: 24px 0 7px; }
+  h3 { font-size: 0.92rem; margin: 16px 0 4px; }
+  p { margin: 8px 0; }
+  .sub { color: var(--muted-foreground); font-size: 0.84rem; margin: 0 0 16px; }
+  .lede { color: var(--muted-foreground); }
+  code, pre { font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace); }
+  code { font-size: 0.85em; background: var(--code-background); color: var(--code-foreground);
+         padding: 1px 4px; border-radius: 4px; }
+  pre { background: var(--code-background); color: var(--code-foreground); padding: 11px 12px;
+        border-radius: var(--radius, 10px); overflow-x: auto; font-size: 0.76rem; line-height: 1.55;
+        margin: 8px 0; border: 1px solid var(--border); }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  .stamp { display: inline-block; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
+           color: var(--muted-foreground); border: 1px solid var(--border); border-radius: 999px;
+           padding: 2px 9px; margin-bottom: 10px; }
+
+  /* stack diagram */
+  .stacks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0 4px; }
+  .stack { border: 1px solid var(--border); border-radius: var(--radius, 10px); padding: 10px 9px; }
+  .stack h4 { margin: 0 0 2px; font-size: 0.76rem; letter-spacing: 0.02em; }
+  .stack .who { font-size: 0.68rem; color: var(--muted-foreground); margin-bottom: 8px; min-height: 2.2em; }
+  .layer { font-size: 0.7rem; line-height: 1.25; padding: 5px 6px; border-radius: 5px; margin-bottom: 4px; }
+  .layer.solid { border: 1px solid var(--border); }
+  .layer.host { border: 1px dashed var(--border); color: var(--muted-foreground); }
+  .layer small { display: block; opacity: 0.7; font-size: 0.92em; }
+  .stack.a .layer.solid { background: color-mix(in oklab, var(--chart-2) 18%, transparent); }
+  .stack.b .layer.solid { background: color-mix(in oklab, var(--chart-1) 18%, transparent); }
+  .stack.c .layer.solid { background: color-mix(in oklab, var(--chart-3) 18%, transparent); }
+  .stack.d .layer.solid { background: color-mix(in oklab, var(--chart-4) 18%, transparent); }
+  .stack .note { font-size: 0.66rem; color: var(--muted-foreground); margin-top: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 10px 0 4px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.78rem; }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  thead th { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em;
+             color: var(--muted-foreground); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  td strong { font-weight: 600; }
+  caption { caption-side: bottom; text-align: left; font-size: 0.7rem; color: var(--muted-foreground); padding-top: 6px; }
+  .yes { color: var(--success, #2e9e6b); font-weight: 600; }
+  .no { color: var(--destructive, #c04a4a); font-weight: 600; }
+  .part { color: var(--warning, #a8761f); font-weight: 600; }
+  .muted { color: var(--muted-foreground); }
+
+  figure { margin: 12px 0 4px; }
+  figcaption { font-size: 0.72rem; color: var(--muted-foreground); margin-top: 7px; }
+  .bars { display: grid; grid-template-columns: 132px 1fr; gap: 7px 10px; align-items: center; font-size: 0.76rem; }
+  .track { position: relative; height: 15px; background: var(--secondary); border-radius: 4px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 3px; }
+  .fill.gpu { background: var(--chart-2, #4a9d7f); }
+  .fill.sw { background: var(--chart-5, #c98a3f); }
+  .val { position: absolute; right: 6px; top: 0; font-size: 0.7rem; line-height: 15px; color: var(--muted-foreground); }
+  .legend { display: flex; gap: 14px; font-size: 0.72rem; color: var(--muted-foreground); flex-wrap: wrap; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; }
+
+  .callout { border-left: 2px solid var(--accent, var(--border)); padding: 1px 0 1px 11px; margin: 12px 0;
+             color: var(--muted-foreground); font-size: 0.84rem; }
+  ul { margin: 6px 0 8px 17px; padding: 0; }
+  li { margin: 4px 0; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px 20px; }
+  .src { font-size: 0.71rem; color: var(--muted-foreground); columns: 2; column-gap: 24px; padding-left: 16px; }
+  .src li { margin: 0 0 4px; break-inside: avoid; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 22px 0; }
+  .picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 12px 0 2px; }
+  .pick { border: 1px solid var(--border); border-radius: var(--radius, 10px); padding: 9px 10px; }
+  .pick .tag { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent, var(--muted-foreground)); }
+  .pick h4 { margin: 2px 0 3px; font-size: 0.84rem; }
+  .pick p { margin: 0; font-size: 0.74rem; color: var(--muted-foreground); line-height: 1.45; }
+  @media (max-width: 640px) {
+    .src { columns: 1; }
+    .stacks { grid-template-columns: repeat(2, 1fr); }
+    .bars { grid-template-columns: 104px 1fr; gap: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<span class="stamp">Deep research · 22 Nov 2026</span>
+<h1>Mobile emulators &amp; virtual devices on Linux</h1>
+<p class="sub">What works, what it costs you, and which one to pick — Android, iOS, and the long tail of mobile OSes.</p>
+
+<p class="lede">“Mobile emulator on Linux” is not one product category. It is four different technologies that each put a phone UI on your screen: <strong>OS containers</strong> (Android userspace on your kernel), <strong>full-system VMs</strong> (KVM), <strong>bare-metal Android-on-PC</strong>, and <strong>remote devices</strong> (real hardware or hosted VMs streamed to your desktop). They differ by 1–2 orders of magnitude in speed, and almost entirely in what they can emulate — sensors, DRM, ARM-only binaries, Play Integrity. Picking the wrong tier is the usual reason people conclude “emulation on Linux doesn’t work”.</p>
+
+<h2>1. Four families, four structural trade-offs</h2>
+
+<div class="stacks">
+  <div class="stack a">
+    <h4>A · Container</h4>
+    <div class="who">Waydroid, redroid, Anbox Cloud</div>
+    <div class="layer solid">Apps + Play services</div>
+    <div class="layer solid">Android framework + HAL</div>
+    <div class="layer solid">binder + Mesa passthrough</div>
+    <div class="layer host">Your kernel 6.x<small>no guest kernel, no KVM</small></div>
+    <div class="note">Native CPU speed. One Android per kernel, so weaker isolation.</div>
+  </div>
+  <div class="stack b">
+    <h4>B · Virtual machine</h4>
+    <div class="who">AVD, Genymotion, Cuttlefish</div>
+    <div class="layer solid">Android</div>
+    <div class="layer solid">Guest kernel</div>
+    <div class="layer solid">QEMU + gfxstream</div>
+    <div class="layer host">KVM (/dev/kvm)<small>host kernel + GPU underneath</small></div>
+    <div class="note">High fidelity: own kernel, own drivers, snapshots. Costs RAM and I/O.</div>
+  </div>
+  <div class="stack c">
+    <h4>C · Bare metal</h4>
+    <div class="who">Bliss OS, Android-x86</div>
+    <div class="layer solid">Android desktop ROM</div>
+    <div class="layer solid">Android kernel</div>
+    <div class="layer host">Real hardware<small>no Linux at runtime</small></div>
+    <div class="note">Best GPU fidelity, worst maintenance. Dual-boot or spare PC.</div>
+  </div>
+  <div class="stack d">
+    <h4>D · Remote</h4>
+    <div class="who">Device farms, cloud simulators</div>
+    <div class="layer solid">Real phone or hosted VM</div>
+    <div class="layer solid">Rack / datacenter</div>
+    <div class="layer solid">WebRTC / scrcpy stream</div>
+    <div class="layer host">Your desktop<small>a browser tab</small></div>
+    <div class="note">Real silicon and real DRM, with network latency and a meter.</div>
+  </div>
+</div>
+
+<h2>2. The options that matter</h2>
+
+<div class="scroll">
+<table style="min-width:660px">
+  <caption>Versions checked 21–22 Nov 2026 against project docs, release notes and package repos.</caption>
+  <thead>
+    <tr><th>Option</th><th>Android</th><th>Host requirement</th><th>GPU</th><th>Use it for</th><th>Main limitation</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Waydroid</strong> 1.6.x</td><td>13 official · 14–17 community</td>
+      <td>Wayland session + kernel binder</td><td>Mesa (Intel/AMD)</td>
+      <td class="yes">Android apps as Linux windows</td><td class="part">Integrity checks block banking apps</td>
+    </tr>
+    <tr>
+      <td><strong>redroid</strong></td><td>8.1 → 16</td>
+      <td>Linux + binder/ashmem, privileged Docker</td><td>host or SwiftShader</td>
+      <td class="yes">CI, device farms, screenshots</td><td class="part">Headless; adb is the only interface</td>
+    </tr>
+    <tr>
+      <td><strong>Android Studio AVD</strong> 37.3</td><td>2.3 → 17 (API 37)</td>
+      <td>KVM, 16 GB RAM, 32 GB disk</td><td>host GL/Vulkan, Lavapipe, SwiftShader</td>
+      <td class="yes">Real app development and debugging</td><td class="part">Heavy; 1–3 instances per workstation</td>
+    </tr>
+    <tr>
+      <td><strong>Genymotion Desktop</strong> 3.11</td><td>5 → 16 (16 paid)</td>
+      <td>Ubuntu 24.04+/Debian 13+/Fedora 40+, x86_64</td><td>host GL</td>
+      <td class="yes">GUI-driven manual QA</td><td class="part">x86_64 only, lags new APIs</td>
+    </tr>
+    <tr>
+      <td><strong>Cuttlefish</strong></td><td>AOSP trunk</td>
+      <td>KVM + Debian packages, ~4 cores / 8 GB each</td><td>gfxstream</td>
+      <td class="yes">Platform, HAL, CTS work</td><td class="part">Steep setup, no Play services</td>
+    </tr>
+    <tr>
+      <td><strong>Anbox Cloud</strong> 1.30</td><td>13 / 14+</td>
+      <td>Ubuntu + LXD, GPU for streaming</td><td>GPU + WebRTC</td>
+      <td class="yes">Commercial Android streaming</td><td class="part">Licensed, ops-heavy</td>
+    </tr>
+    <tr>
+      <td><strong>Bliss OS / Android-x86</strong></td><td>9 shipped; trees in flux</td>
+      <td>Spare PC or partition</td><td>native</td>
+      <td class="yes">Kiosks, retro Android gaming</td><td class="no">No current public builds</td>
+    </tr>
+    <tr>
+      <td><strong>DeviceFarmer STF</strong> 3.9</td><td>2.3 → 15 (real)</td>
+      <td>Linux host + USB hubs + phones</td><td>device-side</td>
+      <td class="yes">Self-hosted real-device farm</td><td class="part">You own the hardware</td>
+    </tr>
+    <tr>
+      <td><strong>DDP (Google Cloud)</strong></td><td>emulator + physical</td>
+      <td>nothing local — API/CLI</td><td>n/a</td>
+      <td class="yes">Managed CI after Firebase Test Lab</td><td class="part">Metered, preview</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>3. Containers: Waydroid and redroid</h2>
+<p>Both run a real Android userspace on your kernel through namespaces and Android’s binder IPC, with Mesa passing graphics through. There is no guest kernel, so there is no CPU emulation and no VM exit: x86_64 code runs at native speed and an aarch64 host runs aarch64 images natively. That is why container Android feels like an app rather than a simulation.</p>
+
+<h3>Waydroid — the desktop integration story</h3>
+<ul>
+  <li><strong>Version 1.6.x</strong> (1.6.0 in Nov 2025 added notification forwarding, ADB secure-by-default and log rotation; 1.6.3 in May 2026).</li>
+  <li><strong>Official image is Android 13 / LineageOS 20.</strong> Android 14–17 exists only as community builds — the WayDroid-ATV project publishes A13→A17 images with VA-API and pinch-to-zoom, but documents broken <code>waydroid app install</code> (use <code>adb install</code>) and poor ARM translation on A15.</li>
+  <li><strong>Hard requirements:</strong> a Wayland session (X11 is unsupported), kernel binder (mainline <code>rust_binder</code> on recent kernels, else the <code>binder_linux</code> DKMS module with <code>devices=binder,hwbinder,vndbinder</code>), and an ACL-capable home filesystem for Android 13+ — a BTRFS <code>systemd-homed</code> mount with <code>noacl</code> is the classic silent failure.</li>
+  <li><strong>Packaging is finally boring:</strong> official repos on Debian 14+/Ubuntu 26.10+, backports on Debian 13, <code>dnf install waydroid</code> on Fedora and its immutable variants, plus Arch, Void, NixOS, postmarketOS and Sailfish. No more curl-a-repo ritual.</li>
+  <li><strong>GPU:</strong> Intel/AMD through Mesa is the supported fast path. Docs still steer NVIDIA to software rendering; 2026 reports show proprietary 575+ working with GL/Vulkan, but 3D titles can silently fall back to CPU. Dual-GPU laptops garble output unless you pin the right card.</li>
+</ul>
+
+<pre><code>sudo apt install waydroid          # or: sudo dnf install waydroid
+sudo waydroid init                 # add -s GAPPS for Play services
+sudo systemctl enable --now waydroid-container
+waydroid session start &amp;
+waydroid app install app.apk       # or: adb install app.apk
+waydroid show-full-ui</code></pre>
+
+<h3>redroid — Android as a container workload</h3>
+<p>The server-side answer: a Docker image that boots Android with only adb exposed, so you get one instance per CI worker or a hundred on a GPU node. It publishes <strong>Android 8.1 through 16</strong>, bundles <code>libndk_translation</code> in the shipped images so ARM apps run on x86, and supports overlayfs to share one base <code>/data</code> across instances with per-instance diffs.</p>
+
+<pre><code>sudo modprobe binder_linux devices="binder,hwbinder,vndbinder"
+sudo modprobe ashmem_linux
+docker run -itd --rm --privileged -v ~/data:/data -p 5555:5555 \
+  redroid/redroid:16.0.0-latest \
+  androidboot.redroid_width=1080 androidboot.redroid_height=1920 \
+  androidboot.redroid_gpu_mode=host
+adb connect localhost:5555 &amp;&amp; scrcpy -s localhost:5555</code></pre>
+
+<p class="callout">Never expose port 5555 beyond localhost: an unauthenticated adb port plus <code>--privileged</code> is a short path from container to host.</p>
+
+<h3>What software rendering actually costs</h3>
+<p>A November 2026 test ran Android 14 redroid on a 4 vCPU server with a shared Intel UHD 770, <code>redroid_gpu_mode=host</code> (Mesa) against <code>guest</code> (ANGLE on SwiftShader):</p>
+
+<figure>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--chart-2,#4a9d7f)"></span>GPU (host, Mesa)</span>
+    <span><span class="dot" style="background:var(--chart-5,#c98a3f)"></span>software (SwiftShader)</span>
+  </div>
+  <div class="bars" style="margin-top:9px">
+    <span class="muted">SuperTuxKart 1080p</span>
+    <div class="track"><div class="fill gpu" style="width:100%"></div><span class="val">60.0 fps</span></div>
+    <span></span>
+    <div class="track"><div class="fill sw" style="width:32%"></div><span class="val">19.2 fps</span></div>
+    <span class="muted">Raymarching shader</span>
+    <div class="track"><div class="fill gpu" style="width:97%"></div><span class="val">58.4 fps</span></div>
+    <span></span>
+    <div class="track"><div class="fill sw" style="width:12%"></div><span class="val">7.2 fps</span></div>
+    <span class="muted">Settings scroll (server CPU)</span>
+    <div class="track"><div class="fill gpu" style="width:4.2%"></div><span class="val">4.2 %</span></div>
+    <span></span>
+    <div class="track"><div class="fill sw" style="width:17.3%"></div><span class="val">17.3 %</span></div>
+  </div>
+  <figcaption>60 Hz cap; CPU share of the whole 4-vCPU server. Under software 3D work took 95–98 % of all four cores; memory was ~1.4 GB per instance either way. Source: linuxgpu.eu, Nov 2026.</figcaption>
+</figure>
+
+<p>Two lessons transfer to every option here: a 2D Android UI is cheap enough that “it feels smooth” proves nothing about 3D, and GPU passthrough is the difference between one instance per four cores and a dozen.</p>
+
+<h2>4. Virtual machines: the fidelity tier</h2>
+
+<h3>Android Studio AVD — still the reference</h3>
+<p>Stable is <strong>37.3.10 (19 Nov 2026)</strong>. The Linux-relevant facts:</p>
+<ul>
+  <li><strong>API 37 (Android 17)</strong> images are current; from API 37 the AVD minimum VM RAM is raised to <strong>4 GB</strong> and smaller allocations get rewritten.</li>
+  <li><strong>gfxstream</strong> with Vulkan 1.3 (from API 34) and host GL/Vulkan forwarding; since 36.4 (Feb 2026) <strong>Lavapipe</strong> is the default software Vulkan renderer, which killed a long tail of “Vulkan not supported” Linux failures.</li>
+  <li><strong>Next-gen engine in preview:</strong> from Android Studio “Rabbit 3” Canary 1, eligible API 37 AVDs run on <strong>upstream QEMU v11+</strong> instead of Google’s QEMU 2 fork, with engine/UI process separation — faster boots, fewer wedged sessions. Existing AVDs stay on the classic engine.</li>
+  <li><strong>arm64 hosts:</strong> the emulator cross-compiles for Linux aarch64 and runs arm64 images under KVM, but the documented graphics path is SwiftShader-only and snapshots are unreliable. Android Studio the IDE explicitly does not support ARM Linux — this is the Asahi/ARM-server route, not a polished one.</li>
+  <li><strong>Requirements:</strong> 64-bit distro with GNOME/KDE/Unity, glibc ≥ 2.31, 16 GB RAM for Studio + emulator (32 GB recommended), VT-x/AMD-V, roughly NVIDIA GTX 10-series / Radeon RX 5000 or newer (8 GB VRAM recommended), 16 GB free disk. A missing <code>libXdmcp</code>/<code>libbsd</code> used to break startup; 37.3 ships a hermetic <code>libxcb-aemu.so</code>.</li>
+</ul>
+<p>Things that cost people hours: <code>emulator -accel-check</code> reports whether KVM is usable, <code>kvm</code> group membership matters, and on Wayland the emulator runs through XWayland — fine on GNOME/KDE, but there are open reports of a grey window with detached controls on COSMIC. Headless CI wants <code>-no-window -no-audio -no-snapshot -gpu swiftshader_indirect</code>.</p>
+
+<pre><code>sdkmanager "system-images;android-37.0;google_apis_playstore;x86_64"
+avdmanager create avd -n api37 -k "system-images;android-37.0;google_apis_playstore;x86_64" -d pixel_9
+$ANDROID_HOME/emulator/emulator -avd api37 -accel on -gpu host -no-snapshot-save</code></pre>
+
+<h3>Genymotion Desktop — the commercial middle ground</h3>
+<p><strong>3.11.0</strong>, Linux x86_64 only, tested on Ubuntu 24.04+, Debian 13+ and Fedora 40+ (Arch, Mint and Kali are unsupported; ARM has been “coming soon” for years). Since 3.9 the default hypervisor on Linux is <strong>QEMU with KVM</strong>; VirtualBox remains selectable but is not recommended, and Android 15/16 are documented as slow on it. Android 16 images are <strong>paid-only</strong>: the free personal licence stops at Android 15 and forbids professional use.</p>
+<p>It still earns its keep for curated device profiles, a GUI non-CLI teammates can use, and documented sensor/camera simulation. It loses on API freshness, architecture (x86_64 only) and price.</p>
+
+<h3>Cuttlefish — the AOSP reference device</h3>
+<p>If the question is “does this match AOSP on a CTS-passing device”, Cuttlefish is the answer, and it is Linux-native on x86_64 and arm64. Install Debian packages from Google’s Artifact Registry (<code>cuttlefish-base</code>, plus <code>cuttlefish-user</code> for the browser UI), add your user to <code>kvm,cvdnetwork,render</code>, launch with <code>cvd start</code>. It is the only local option that boots a build you compiled, and it now supports multi-device topologies via a shared virtual network backplane.</p>
+<p>It is also the hungriest: KVM mandatory, roughly <strong>4 cores and 8 GB per instance</strong>, and Google’s own on-prem reference for 40 instances is 128–160 cores with 320–512 GB RAM. Platform work only.</p>
+
+<h3>QEMU/GSI DIY</h3>
+<p>Booting a generic system image in plain <code>qemu-system-*</code> is possible and occasionally necessary (odd kernel configs, custom HALs, research), but you hand-assemble virtio-gpu and SwiftShader and get no Google services. Emulating <em>arm64</em> on x86_64 through TCG is the slowest option in this entire document — use it only when the CPU model must be ARM and neither a device nor an ARM cloud runner is available.</p>
+
+<h2>5. Bare metal: in a trough, not dead</h2>
+<p>Android-x86’s last public release is still <strong>9.0</strong>. Bliss OS — which carried the x86_64 desktop-Android banner — has <strong>paused public images</strong> while rebuilding its tree: no ETA, and existing installs cannot upgrade (clean install required). Related trees (BlissRoms-x86, Android-Generic, Boringdroid/Smart Dock, Bass:Lineout) remain active, and Android 16 work exists in a TV-oriented tree.</p>
+<p>The honest read for 2026: bare metal gives the best GPU fidelity and the worst maintenance — you run 2019-era Android or an unshipped development tree. For nearly everyone, a container on the Linux they already have beats a second OS with no security updates.</p>
+
+<h2>6. Remote: the only iOS answer, the sane scale answer</h2>
+<p><strong>iOS has no local Linux story, and it is not a gap tooling will close.</strong> Apple’s Simulator is a macOS framework inside Xcode — a simulator, not an emulator, licensed to macOS. Darling-style layers do not run SpringBoard or CoreSimulator. On Linux you either rent a Mac (MacStadium, AWS EC2 Mac with its 24-hour minimum) or drive a hosted simulator over an API: BrowserStack, Sauce Labs, Corellium, Revyl, Expo Simulators, Appetize. Corellium is the outlier worth knowing — a real ARM hypervisor with jailbreak-level introspection, browser-accessible, priced per device-hour (~$3/device-hour entry tier, enterprise plans quoting 1,250 device-hours/month).</p>
+<p>On Android the cloud landscape moved twice in a year:</p>
+<ul>
+  <li><strong>Firebase Test Lab is deprecated</strong>, supported until <strong>30 September 2027</strong>. Its replacement is <strong>Developer Device Platform (DDP)</strong> on Google Cloud, public preview since August 2026: <code>gcloud beta device-run</code> for parallel runs, a Device Streaming API for interactive sessions, and “agent skills” aimed at AI coding agents. Preview pricing ≈ $0.017/device-minute for emulators, more for physical streaming.</li>
+  <li><strong>Self-hosted farms are viable again.</strong> DeviceFarmer STF 3.9 (Oct 2026) covers Android 2.3–15 over USB with no root, ships arm64 Docker images, and added <em>experimental iOS support on a Linux USB host</em> (signed WebDriverAgent, no Mac node). redroid, Anbox Cloud 1.30 (full Android VMs alongside containers since June 2026) and Cuttlefish + Cloud Orchestrator cover the virtual side.</li>
+  <li><strong>List prices, Nov 2026:</strong> AWS Device Farm $0.17/device-minute after 1,000 free, or $250/month per unmetered slot; BrowserStack App Live from ~$39/month annually and App Automate from ~$175/month per parallel session; DDP metered per minute.</li>
+</ul>
+
+<h2>7. The constraints that actually decide it</h2>
+
+<div class="scroll">
+<table style="min-width:720px">
+  <thead><tr><th>Constraint</th><th>AVD</th><th>Waydroid</th><th>redroid</th><th>Genymotion</th><th>Real device</th></tr></thead>
+  <tbody>
+    <tr><td>ARM-only app</td><td class="yes">arm64 image, or libndk</td><td class="part">libndk only</td><td class="yes">libndk bundled</td><td class="part">partial</td><td class="yes">native</td></tr>
+    <tr><td>Play Store, certified</td><td class="yes">Play images</td><td class="part">GAPPS + device ID</td><td class="part">manual</td><td class="yes">built in</td><td class="yes">native</td></tr>
+    <tr><td>Play Integrity DEVICE/STRONG</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="no">no</td><td class="yes">yes</td></tr>
+    <tr><td>Widevine L1 (HD streaming)</td><td class="no">L3 at best</td><td class="part">L3, flaky</td><td class="no">no</td><td class="no">L3</td><td class="yes">yes</td></tr>
+    <tr><td>NFC / eSIM / BLE</td><td class="part">simulated</td><td class="no">no</td><td class="no">no</td><td class="part">partial</td><td class="yes">yes</td></tr>
+    <tr><td>Camera, sensors, GPS</td><td class="yes">full simulation</td><td class="part">GPS + host camera</td><td class="no">no</td><td class="yes">good widgets</td><td class="yes">real</td></tr>
+    <tr><td>Snapshot / fast reset</td><td class="yes">Quick Boot</td><td class="part">copy data dir</td><td class="yes">overlayfs diffs</td><td class="yes">yes</td><td class="no">reflash</td></tr>
+    <tr><td>Instances per host</td><td class="no">1–3</td><td class="no">1</td><td class="yes">dozens</td><td class="no">1–2</td><td class="no">1 per phone</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>The ARM-translation trap</h3>
+<p>Most Play Store apps ship arm64-only, so x86_64 Android needs a native bridge. Two blobs circulate: <strong>libndk_translation</strong> (Google, from guybrush firmware, faster on AMD) and <strong>libhoudini</strong> (Intel, from Windows Subsystem for Android, broader compatibility). Two 2026 developments matter. First, <strong>libhoudini appears to have hit a timebomb</strong>: on <strong>1 January 2026</strong> houdini-backed ARM apps stopped launching across Waydroid and its helper scripts, consistent with an expiring build — libndk is now the practical default. Second, <strong>libndk’s optimiser can deadlock</strong>: ARM64 titles such as Warframe Mobile freeze with one thread spinning in <code>HeavyOptimizeRegion</code>, and the workaround is <code>setprop ndk_translation.mode light-translate-or-interpret</code>, trading JIT speed for not hanging.</p>
+<p>Translation is also structurally partial: it converts CPU instructions, not GPU drivers, so an ARM game calling a Mali/Adreno-specific Vulkan extension can fail even with a perfect interpreter.</p>
+
+<h3>Integrity, DRM, and “why won’t my bank app work”</h3>
+<p>Since Android 13, Play Integrity’s DEVICE verdict requires hardware-backed proof of a locked bootloader. No container or emulator can produce it, so apps demanding DEVICE/STRONG — Google Wallet tap-to-pay, most banks, some streaming apps — refuse to run by design. Utilities, social apps, F-Droid software and most games without kernel anti-cheat work fine. Plan for one cheap physical phone covering the 5 % that must be real.</p>
+
+<h2>8. Decision matrix</h2>
+<div class="scroll">
+<table style="min-width:600px">
+  <thead><tr><th>Job</th><th>Pick</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Android development and debugging</td><td><strong>AVD</strong>, Waydroid as second opinion</td><td>Certified API 37 images, sensors, telephony, foldables, Studio integration.</td></tr>
+    <tr><td>Android apps on your Linux desktop</td><td><strong>Waydroid</strong></td><td>Native windows, near-native CPU, no VM tax. Banking apps will not work.</td></tr>
+    <tr><td>CI, Appium/Espresso, screenshot farms</td><td><strong>redroid</strong> or <strong>DDP</strong></td><td>Seconds to boot, ~1.4 GB each; DDP where Firebase Test Lab is today.</td></tr>
+    <tr><td>ROM / HAL / CTS work</td><td><strong>Cuttlefish</strong></td><td>AOSP reference device, your own build, multi-device topologies.</td></tr>
+    <tr><td>Manual QA on real hardware</td><td><strong>STF</strong> or a commercial cloud</td><td>Real radios and DRM; STF is free but you own the USB hubs.</td></tr>
+    <tr><td>iOS from Linux</td><td>Hosted simulator or rented Mac</td><td>No local option; simulators also never exercise camera, push or touch latency.</td></tr>
+    <tr><td>Reverse engineering / malware</td><td><strong>Cuttlefish</strong> or <strong>redroid</strong> + Frida</td><td>Root by construction, snapshot/restore, no integrity pretence.</td></tr>
+    <tr><td>Kiosk / signage / embedded</td><td>Bare metal on the target SoC</td><td>VMs and containers lose on GPU and boot determinism — budget for the maintenance trough.</td></tr>
+    <tr><td>Sailfish, Tizen</td><td>Sailfish SDK 3.13; Tizen VS Code extension</td><td>Sailfish emulates 5.1 in VirtualBox; Tizen Studio is deprecated and TV-centric.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>9. Prerequisites</h2>
+<div class="grid2">
+  <div>
+    <h3>Everyone</h3>
+    <ul>
+      <li><code>grep -c -w vmx\\|svm /proc/cpuinfo</code> ≥ 1 and a usable <code>/dev/kvm</code> (<code>kvm-ok</code>, <code>kvm</code> group).</li>
+      <li>16 GB RAM for one AVD, 32 GB if Studio and a browser run too; redroid needs ~1.5–2 GB per instance.</li>
+      <li>SSD — boot and snapshot restore are I/O-bound, not CPU-bound.</li>
+      <li>Intel/AMD iGPU or dGPU with working Mesa; NVIDIA means proprietary drivers plus per-app verification.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Waydroid only</h3>
+    <ul>
+      <li>Wayland session (GNOME, KDE, Sway, Hyprland); X11 needs a nested compositor.</li>
+      <li>binder: mainline <code>rust_binder</code>, or <code>binder_linux</code> DKMS with the three device names.</li>
+      <li>ACL-capable home filesystem; no <code>noacl</code> on BTRFS.</li>
+      <li>AppArmor may block dnsmasq’s pid file under <code>/run/waydroid-lxc</code> — two-line profile fix.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>10. Bottom line</h2>
+<p>For development, Google’s emulator remains unbeatable, and its Linux story genuinely improved in 2026 — the upstream-QEMU engine, Lavapipe by default, API 37 images, and a hermetic xcb shim all landed. For treating Android as a desktop environment, Waydroid is the only serious answer and is now packaged by distributions rather than bolted on. For scale, the container tier (redroid, Anbox Cloud) has become the de facto standard, and Google is rebuilding its cloud device story around emulators just as Firebase Test Lab sunsets in September 2027. For iOS, stop looking for a local emulator: the only question is whether you rent a Mac or rent a simulator.</p>
+
+<hr>
+<h2>Sources</h2>
+<ul class="src">
+  <li>Android Emulator release notes 37.3.10 / 37.1.11 / archive (ARM64 hosts, gfxstream, Lavapipe, API 37 RAM) — developer.android.com/studio/releases/emulator</li>
+  <li>Android Studio Linux requirements; KVM acceleration — developer.android.com/studio/install, /studio/run/emulator-acceleration</li>
+  <li>Waydroid site, install docs, known issues, releases 1.5.0–1.6.3; ArchWiki rust_binder notes — waydro.id, docs.waydro.id, wiki.archlinux.org</li>
+  <li>redroid docs and image tags (A8.1–A16, GPU modes, overlayfs, libndk) — github.com/remote-android/redroid-doc</li>
+  <li>redroid GPU vs SwiftShader measurement, Nov 2026 — linuxgpu.eu/en/blog/android-cloud-redroid-gpu-app-testing</li>
+  <li>WayDroid-ATV A13–A17 images and caveats — github.com/WayDroid-ATV/waydroid-builds</li>
+  <li>libhoudini expiry thread; libndk optimiser workaround — waydroid_script #257, waydroid #2446</li>
+  <li>Genymotion 3.11 download, requirements, pricing, changelog — genymotion.com, docs.genymotion.com, support.genymotion.com</li>
+  <li>Cuttlefish get-started, on-prem sizing, host packages — source.android.com/docs/devices/cuttlefish, github.com/google/android-cuttlefish</li>
+  <li>Anbox archive notice; Anbox Cloud 1.30 / virtualized Android (Jun 2026) — github.com/anbox/anbox, canonical.com/anbox-cloud, ubuntu.com/blog</li>
+  <li>Bliss OS status page; Android-x86 release history — blissos.org/status.html, android-x86.org</li>
+  <li>Firebase Test Lab deprecation FAQ; DDP announcement (Aug 2026) — firebase.google.com/docs/test-lab/migrate-faq, cloud.google.com/blog</li>
+  <li>Device Farm, BrowserStack, Corellium list pricing — aws.amazon.com/device-farm/pricing, browserstack.com/pricing, support.corellium.com</li>
+  <li>STF 3.9 (experimental iOS on Linux USB host) — github.com/devicefarmer/stf</li>
+  <li>iOS Simulator macOS-only; cloud routes — docs.expo.dev/eas/simulators, revyl.com/compare/cloud-ios-simulator-linux-ci</li>
+  <li>Sailfish SDK 3.13.5; Tizen Studio deprecation — forum.sailfishos.org, developer.samsung.com</li>
+  <li>GitHub-hosted runner KVM support — docs.github.com/en/actions/reference/runners, github.blog changelog</li>
+  <li>Play Integrity DEVICE/STRONG on Android 13+ — developer.android.com Play Integrity docs</li>
+</ul>
+
+</div>
+</body>
+</html>
