@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Regenerate .sha256sums + MANIFEST.json from the staged tree so a commit can
+# never ship a checksum file that disagrees with it (that breaks restore.sh verify).
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+./scripts/manifest.sh >/dev/null
+git add .sha256sums MANIFEST.json
