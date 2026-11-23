@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Search
+Comment=Search installed applications and files
+Exec=xfce4-appfinder --collapsed
+Icon=system-search
+Terminal=false
+Categories=Utility;
+StartupNotify=false
+X-XFCE-Source=file:///config/.local/share/applications/win11-search.desktop

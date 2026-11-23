@@ -159,6 +159,7 @@ if (( CAPTURE_HOME )); then
     --exclude='./.config/ai.opencode.desktop/GPUCache'
     --exclude='./.config/ai.opencode.desktop/compile-cache'
     --exclude='./.config/ai.opencode.desktop/logs'
+    --exclude='./.local/share/opencode'
     --exclude='./.config/sober'     --exclude='./.config/pulse'
     --exclude='./.deepai-code'      --exclude='./.dbus'
     --exclude='./.XDG'              --exclude='./.ICEauthority'
@@ -180,9 +181,25 @@ if (( CAPTURE_HOME )); then
     --exclude='Network' --exclude='key4.db' --exclude='cert9.db' --exclude='pkcs11.txt'
     --exclude='*.dmp' --exclude='*.key' --exclude='*.pem'
     --exclude='./.local/share/pki'
+    # ---- regenerable caches under any profile (gotcha 9)
+    --exclude='DawnGraphiteCache' --exclude='DawnWebGPUCache' --exclude='GPUCache'
+    --exclude='GrShaderCache' --exclude='ShaderCache' --exclude='Crashpad'
+    --exclude='component_crx_cache' --exclude='GPUPersistentCache'
+    --exclude='icon-theme.cache' --exclude='./.local/share/gvfs-metadata'
   )
   ( cd "$HOME_DIR" && tar -cf - "${EXCLUDES[@]}" . 2>/dev/null ) \
     | ( cd "$REPO/home" && tar -xf - 2>/dev/null ) || true
+  # app-profile GPU/shader/browser caches are REGENERABLE — never user data. Prune them
+  # from the staged tree (older snapshots tracked a few; tar alone cannot delete).
+  rm -rf "$REPO"/home/.config/*/Dawn*Cache \
+         "$REPO"/home/.config/*/GPUCache \
+         "$REPO"/home/.config/*/GrShaderCache \
+         "$REPO"/home/.config/*/ShaderCache \
+         "$REPO"/home/.config/*/Crashpad \
+         "$REPO"/home/.config/*/GPUPersistentCache \
+         "$REPO"/home/.config/*/component_crx_cache \
+         "$REPO"/home/.local/share/gvfs-metadata
+  find "$REPO/home" -name 'icon-theme.cache' -delete 2>/dev/null || true
   # never keep empty junk dirs in git
   find "$REPO/home" -type d -empty -delete 2>/dev/null || true
 
@@ -274,7 +291,7 @@ say "secrets: indexing (no contents copied to git)"
            "$HOME_DIR/ssl" "$HOME_DIR/.deepai-code/userdata" \
            "$HOME_DIR/.config/chromium" "$HOME_DIR/.config/BraveSoftware" \
            "$HOME_DIR/.config/chromium-headless" "$HOME_DIR/.config/deepai-code-v2/Partitions" \
-           /etc/shadow /etc/gshadow; do
+           /etc/shadow /etc/gshadow /etc/ssl/private; do
     [[ -e "$p" ]] || continue
     if [[ -f "$p" ]]; then
       printf '%s\t%s\t%s\n' "$(stat -c%s "$p")" "$(sudo -n sha256sum "$p" 2>/dev/null | cut -d' ' -f1)" "$p"

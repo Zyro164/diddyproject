@@ -27,6 +27,9 @@ configs:
     "/config/Desktop/chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop":
       row: 1
       col: 1
+    "/config/Desktop/core":
+      row: 4
+      col: 0
     "/config":
       row: 0
       col: 0

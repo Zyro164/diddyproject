@@ -36,7 +36,10 @@ outside this repo. Without either, report which level is blocked and continue wi
 * `home/` mirrors `$HOME` with these exclusions, in order of importance:
   * secrets (`~/.ssh`, `~/.gnupg`, `~/.config/gh`, `~/ssl`, app signing keys) → L4
   * browser profiles and app databases → L5
-  * caches (`~/.cache`, `Cache/`, `Code Cache/`, `GPUCache/`, `Service Worker/`) → not backed up
+  * caches (`~/.cache`, `Cache/`, `Code Cache/`, `GPUCache/`, `Service Worker/`, `Dawn*Cache/`,
+    `ShaderCache/`, `GrShaderCache/`, `Crashpad/`, `GPUPersistentCache/`, `component_crx_cache/`,
+    `icon-theme.cache`, `.local/share/gvfs-metadata/`) → not backed up (regenerable; the opencode
+    session store alone goes to the encrypted userdata bundle)
   * package payloads and their contents (`~/.local/share/flatpak`, `squashfs-root/`) → reinstall
   * anything >8 MB → `inventory/bulk.txt`, carried by L5 or refetched
 * `inventory/etc/` holds `/etc` files that differ from the base image, captured with `sudo` and

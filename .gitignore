@@ -9,6 +9,20 @@ core
 *.AppImage
 *.iso
 
+# regenerable app-profile caches: never user data (see AGENTS.md exclusions)
+home/.config/*/Dawn*Cache
+home/.config/*/GPUCache
+home/.config/*/GrShaderCache
+home/.config/*/ShaderCache
+home/.config/*/Crashpad
+home/.config/*/GPUPersistentCache
+home/.config/*/component_crx_cache
+home/.local/share/gvfs-metadata
+home/.local/share/icons/*/icon-theme.cache
+
+# opencode session store: app state, carried by the encrypted userdata bundle
+home/.local/share/opencode/
+
 # never commit decrypted secret material
 .bk.pass
 secrets/*.tar*

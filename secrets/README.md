@@ -42,6 +42,7 @@ gpg --decrypt secrets-<stamp>.tar.zst.gpg | zstd -dc | tar -tvf - | less   # loo
 | `~/.deepai-code/userdata/account-clients/sessions.sqlite` | login sessions |
 | `~/.config/deepai-code-v2/Local Storage/` | bearer tokens in browser storage |
 | `/etc/shadow`, `/etc/gshadow` | password hashes (root-owned, restored with sudo) |
+| `/etc/ssl/private/` | TLS private keys incl. the snakeoil key (kept out of git since 2026-11-23T02:09Z) |
 | `rootfs/bash_history` | full shell history (git only gets a redacted copy) |
 
 ## Rules

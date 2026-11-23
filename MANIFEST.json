@@ -1,11 +1,11 @@
 {
   "schema": "diddyproject-backup/1",
   "snapshot": {
-    "generated_at": "2026-11-23T01:30:34Z",
-    "stamp": "20261123T013034Z",
+    "generated_at": "2026-11-23T02:12:12Z",
+    "stamp": "20261123T021212Z",
     "repo": "https://github.com/Zyro164/diddyproject.git",
-    "commit": "d9a9350dab9a6338c20458b79d8a3360ab1c7e00",
-    "branch": "main",
+    "commit": "b0859c16de450dfc228f092832b0c9afed94c9c0",
+    "branch": "t3/cbadc05a",
     "hostname": "4552801cdcb3",
     "user": "abc",
     "home": "/config",
@@ -103,14 +103,8 @@
       "path": ".local/bin/gh"
     },
     {
-      "size": 17720152,
-      "sha256": "404178e60671386476a950444642c0126c8360a4e33cb1d88d1888ee40562b87",
-      "class": "unique",
-      "path": ".local/share/opencode/opencode.db-wal"
-    },
-    {
-      "size": 31150080,
-      "sha256": "f07048f8ef52d43aab08502f70f3d197eaed319fd230832dbfe3ae94cade541d",
+      "size": 31248384,
+      "sha256": "6c878797e774401c52b24fe596519b8afd9603cb533af76449c7cbb7a1eb74ca",
       "class": "unique",
       "path": ".local/share/opencode/opencode.db"
     }
@@ -127,16 +121,16 @@
       "archive": "assets/local-share-icons-Win11-dark-actions.tar.zst"
     },
     {
-      "sha256": "40a7120efb9d88a03d3b11de50f80997e97b1eca22277e04370f2e665b612fe8",
+      "sha256": "ddca2e0528062e873d49ec44f17a23cbfeb33f6485a5dccc72cdbb4fb47c5fe7",
       "restore_to": ".local/share/icons/Win11",
       "archive": "assets/local-share-icons-Win11.tar.zst"
     }
   ],
   "kept_out_of_git_for_credentials": [
-    "/config/diddyproject/home/.config/ai.opencode.desktop/declarative_performance_observer.db",
-    "/config/diddyproject/home/.config/ai.opencode.desktop/GPUPersistentCache/GPUCache/XWDUPTCYQ7L4CUCWZRTWVUR4HQJRVS3V/cache.db",
-    "/config/diddyproject/home/.config/ai.opencode.desktop/drafts.sqlite",
-    "/config/diddyproject/home/.config/deepai-code-v2/declarative_performance_observer.db"
+    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/declarative_performance_observer.db",
+    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/GPUPersistentCache/GPUCache/XWDUPTCYQ7L4CUCWZRTWVUR4HQJRVS3V/cache.db",
+    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/drafts.sqlite",
+    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/deepai-code-v2/declarative_performance_observer.db"
   ],
   "etc_modified": [
     "/etc/alternatives/README",
@@ -627,13 +621,13 @@
     },
     {
       "path": ".gitignore",
-      "size": 327,
-      "sha256": "fd83645257ce27b931855e03b47ae55826e78a5f62757b1ef9b2001dca4673e9"
+      "size": 786,
+      "sha256": "ab7c1d79805f135f2a2c88487b2dedfe26fd3edfc6de8ec4a0dafe058abf7e10"
     },
     {
       "path": "AGENTS.md",
-      "size": 4555,
-      "sha256": "3cf598517e1a63f850700322f294e8a9c92505e7a25863d66c4b1e4d3bd70ea3"
+      "size": 4813,
+      "sha256": "e7247f5a63f43c9e1b89ed416354610dfba1e2103fb7e85a85711a2d96115e27"
     },
     {
       "path": "BACKUP-PROMPT.md",
@@ -642,8 +636,8 @@
     },
     {
       "path": "README.md",
-      "size": 3537,
-      "sha256": "f76c4bdc0c592a1ddf2cf46ffb77a7e6dbf5e40e5f148e9528d3a65a18672306"
+      "size": 3849,
+      "sha256": "89ca1e78aa653ee7bfe7871af837d05041b4fd1238bbd8188c90d16f743196e0"
     },
     {
       "path": "RESTORE.md",
@@ -662,8 +656,8 @@
     },
     {
       "path": "assets/local-share-icons-Win11.tar.zst",
-      "size": 4034141,
-      "sha256": "40a7120efb9d88a03d3b11de50f80997e97b1eca22277e04370f2e665b612fe8"
+      "size": 4034278,
+      "sha256": "ddca2e0528062e873d49ec44f17a23cbfeb33f6485a5dccc72cdbb4fb47c5fe7"
     },
     {
       "path": "home/.Xresources",
@@ -696,24 +690,9 @@
       "sha256": "da1e91c8c99c23ecb64d2126e1054d8caf77c734bb8d3219f131a17c9bdb8510"
     },
     {
-      "path": "home/.config/ai.opencode.desktop/Crashpad/client_id",
-      "size": 36,
-      "sha256": "036e9297706282f293e34951bed8bcd7a724591ec683d26990d2c9c5414bb1a9"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/Crashpad/pending/4fc00b1b-129d-4dd0-9c56-9e9276f48d7f.meta",
-      "size": 32,
-      "sha256": "55adb15dda7a529a2b0ef257406873d83382d8c65cbcb8dd9949c116f72d4239"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/Crashpad/settings.dat",
-      "size": 40,
-      "sha256": "7150c1d4c0c23f1b39e40f9f317b2cacc1c17d6c9d96d61724ce3ad68bdbee77"
-    },
-    {
       "path": "home/.config/ai.opencode.desktop/DIPS",
       "size": 36864,
-      "sha256": "ab38b48ff4b9d9c67c1e8c0c0066327064a1db7a7cc51aa72a6a63838ed1bfb9"
+      "sha256": "4681bfc40ddea2193591905d73af6a6a6264e9bfd8d54a7d362042a90f8ab870"
     },
     {
       "path": "home/.config/ai.opencode.desktop/DIPS-wal",
@@ -721,69 +700,14 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "home/.config/ai.opencode.desktop/DawnGraphiteCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnGraphiteCache/data_1",
-      "size": 270336,
-      "sha256": "66dd257ea79f78329c8bd54c000dd47f60c307404174745b7afdec7b4b9dea6c"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnGraphiteCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnGraphiteCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnGraphiteCache/index",
-      "size": 262512,
-      "sha256": "0fc95bafad8e53084dcd693896ae80c39baf8a126d2823bd45b0ff4147bf3ff8"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnWebGPUCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnWebGPUCache/data_1",
-      "size": 270336,
-      "sha256": "64f43567df69d1022076ed7369f77b4af73c787eff79389dfbef6cd15d84fa4e"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnWebGPUCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnWebGPUCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/DawnWebGPUCache/index",
-      "size": 262512,
-      "sha256": "eb2b32252423c9dfc2573cff407661a48ab445412ee4302c1c94706194098496"
-    },
-    {
       "path": "home/.config/ai.opencode.desktop/Dictionaries/en-US-10-1.bdic",
       "size": 451968,
       "sha256": "a075b01d9b015c616511a9e87da77da3d9881621db32f584e4606ddabf1c1100"
     },
     {
-      "path": "home/.config/ai.opencode.desktop/GPUPersistentCache/GPUCache/XWDUPTCYQ7L4CUCWZRTWVUR4HQJRVS3V/cache.db-wal",
-      "size": 12392,
-      "sha256": "b5ed1a115e902cded55b6befcbd71e7949ff283943dfcdf20b5768122eb27385"
-    },
-    {
       "path": "home/.config/ai.opencode.desktop/Network Persistent State",
-      "size": 711,
-      "sha256": "df544a6201412c85f6967d288970a6723d049efd171c89f606dc4cf629774844"
+      "size": 712,
+      "sha256": "09daf1383fa432f789650e6b4d8f872adb483ae1967f9d16f67dc057d208ae2f"
     },
     {
       "path": "home/.config/ai.opencode.desktop/Preferences",
@@ -813,7 +737,7 @@
     {
       "path": "home/.config/ai.opencode.desktop/TransportSecurity",
       "size": 187,
-      "sha256": "0ba5722d4f287fc787b2d786ed669b7a17317a14ddf26261bcb60cae0631eb56"
+      "sha256": "24e6d41d52fa4ec838a7ba8c14c720940904c15a2e30f4b45ed11f3ff06e6aab"
     },
     {
       "path": "home/.config/ai.opencode.desktop/WebStorage/QuotaManager",
@@ -847,8 +771,8 @@
     },
     {
       "path": "home/.config/ai.opencode.desktop/window-state-167133ed-ee88-4ce6-abfc-23bf2ba1fdeb.json",
-      "size": 135,
-      "sha256": "2d4da2c6db09140ba7b7b4673d9c93c4a32c1d1b730d9fe6dd1faac8d810e3df"
+      "size": 137,
+      "sha256": "94d101546ea4000a9c3951ea1187a2beaa2075e5f6e1d95fbb4e56214ad03cc2"
     },
     {
       "path": "home/.config/dconf/user",
@@ -856,19 +780,9 @@
       "sha256": "a779f55c40e513c7c41eab939097495d390f6ad88c12b22cf4f40619f4bd4372"
     },
     {
-      "path": "home/.config/deepai-code-v2/Crashpad/client_id",
-      "size": 36,
-      "sha256": "0ce3240794c895346a69e2999ee91401c130ab99bf0555c0bd3a77b4c552dac8"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/Crashpad/settings.dat",
-      "size": 40,
-      "sha256": "9c2e6b1b3c013fc93327bfb7de3c9761b63cab4c2726180f865834080063d829"
-    },
-    {
       "path": "home/.config/deepai-code-v2/DIPS",
       "size": 36864,
-      "sha256": "4a9a7098f17c0ddb52d95e306c3d14a9084eaa0f5fff98db52c330eee81302b4"
+      "sha256": "0259d9436289ead5ab54fa0191ef6e521f6cb8d566c528f444fae631f396bd9d"
     },
     {
       "path": "home/.config/deepai-code-v2/DIPS-wal",
@@ -876,109 +790,9 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "home/.config/deepai-code-v2/DawnGraphiteCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnGraphiteCache/data_1",
-      "size": 270336,
-      "sha256": "f51b6c921f8838d37becac489358004c58fcc96ec1f941ce04baa7ae15b40d56"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnGraphiteCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnGraphiteCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnGraphiteCache/index",
-      "size": 262512,
-      "sha256": "ff345e317749b2b29720b088e6247a0c9d7c0bc7975f91019c31f867bd2b7c12"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnWebGPUCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnWebGPUCache/data_1",
-      "size": 270336,
-      "sha256": "707702f1c7ca770d9fcea3021eabd53de0a0bc3e0f022eb6dd196ef668c92432"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnWebGPUCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnWebGPUCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/DawnWebGPUCache/index",
-      "size": 262512,
-      "sha256": "64b14273ed882af288793b51011e67993789b6e600a1622c5feb0a9670877b5c"
-    },
-    {
       "path": "home/.config/deepai-code-v2/Dictionaries/en-US-10-1.bdic",
       "size": 451968,
       "sha256": "a075b01d9b015c616511a9e87da77da3d9881621db32f584e4606ddabf1c1100"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GPUCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GPUCache/data_1",
-      "size": 270336,
-      "sha256": "2660909199b878b19388eaa3f622990e24ea02c18b16aa8aecde7d2bdf3a54d4"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GPUCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GPUCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GPUCache/index",
-      "size": 262512,
-      "sha256": "19388ff9bb6c9806d00a0a8772bfe6c33b1ba174ef29659c557e90d7c1a684c0"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GrShaderCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GrShaderCache/data_1",
-      "size": 270336,
-      "sha256": "583de494654d76b121de0842dbc83781385fd40e9c7a71993c129440be9c4019"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GrShaderCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GrShaderCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/GrShaderCache/index",
-      "size": 262512,
-      "sha256": "5f20ef6dd6274c934fd3a4079266ad0b376a489c136006835edc2df01ae578f9"
     },
     {
       "path": "home/.config/deepai-code-v2/Network Persistent State",
@@ -989,31 +803,6 @@
       "path": "home/.config/deepai-code-v2/Preferences",
       "size": 57,
       "sha256": "be4b8924ab38e8acf350e6e3b9f1f63a1a94952d8002759acd6946c4d5d0b5de"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/ShaderCache/data_0",
-      "size": 8192,
-      "sha256": "d6a5fe39cd672781b256e0e3102f7022635f1d4bb7cfcc90a80fffe4d0f3877e"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/ShaderCache/data_1",
-      "size": 270336,
-      "sha256": "ded77dcfdbdabd378e30aa7df82aa4375d32a88a04bf1ae80986956de1faf882"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/ShaderCache/data_2",
-      "size": 8192,
-      "sha256": "ec1702806f4cc7c42a82fc2b38e89835fde7c64bb32060e0823c9077ca92efb7"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/ShaderCache/data_3",
-      "size": 8192,
-      "sha256": "e09f42c398d688dce168570291f1f92d079987deda3099a34adb9e8c0522b30c"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/ShaderCache/index",
-      "size": 262512,
-      "sha256": "06445a06c9a0a37f6ae0db22b9766c3994add6348c2e8dd443712699c3e38c11"
     },
     {
       "path": "home/.config/deepai-code-v2/Shared Dictionary/cache/index",
@@ -1038,17 +827,22 @@
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager",
       "size": 40960,
-      "sha256": "2ab1265c29438edf2c7c76c577bd552a84db50ff894268587b32c34069dad3bc"
+      "sha256": "d1a093fc7a2972ea299064112714a6f0fc9a83dd2ee830bc5420fb6413b655ca"
     },
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager-journal",
       "size": 8720,
-      "sha256": "e89757463ebac9ed140ba8098c69ff01a2f8d9456de7b45851c8fd9a1f626c4f"
+      "sha256": "11480260f1084bf036fb44b3451facdc3ea248d714c89963b6d0c8e90e8019ef"
     },
     {
       "path": "home/.config/deepai-code-v2/declarative_performance_observer.db-journal",
       "size": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/gtk-3.0/gtk.css",
+      "size": 683,
+      "sha256": "a403e7f242971575f4f2d5d7a6855bf05f34efd3a70ec18666e0a443b87ba1eb"
     },
     {
       "path": "home/.config/menus/applications-merged/user-chrome-apps.menu",
@@ -1086,6 +880,11 @@
       "sha256": "7b9530cf7686decd5af5f52f87c94559da1a66595d25a7c0df5483f525e7c4f5"
     },
     {
+      "path": "home/.config/picom.conf",
+      "size": 1178,
+      "sha256": "f91377af8976aa09ce9aa3698b818a5b5e3bb452538c1b6f22107ff5532d3a93"
+    },
+    {
       "path": "home/.config/user-dirs.dirs",
       "size": 633,
       "sha256": "6a0a498fde15c3747b508f4464e82f53e16c501a49f2e0c9fb114bbfbb051887"
@@ -1107,8 +906,8 @@
     },
     {
       "path": "home/.config/xfce4/desktop/icons.screen0.yaml",
-      "size": 772,
-      "sha256": "e04951d09d4b8057cbd06b066027f109517212cd044e5f14160684818a5fe847"
+      "size": 826,
+      "sha256": "ed828627d337579d3cc217143e93ae7d335c227fa81070a0fb3841b7489535e1"
     },
     {
       "path": "home/.config/xfce4/helpers.rc",
@@ -1141,6 +940,16 @@
       "sha256": "599acdd2e0a085382d09c20fd6f598c94652194a964701b757c8aca154248e39"
     },
     {
+      "path": "home/.config/xfce4/panel/launcher-8/17953970171.desktop",
+      "size": 288,
+      "sha256": "27b6caf2f835b2e7b38a42413ca12e3d623c0a74f52869d8e4e5dccb0c093f39"
+    },
+    {
+      "path": "home/.config/xfce4/panel/scripts/win11-search.sh",
+      "size": 386,
+      "sha256": "a6554107db31c5268b69ba4aa2006d3b6b492da42ccb69df65bcad1f6d68b1c0"
+    },
+    {
       "path": "home/.config/xfce4/xfce4-screenshooter",
       "size": 270,
       "sha256": "3d10b08401fd139f169d2d31323b9732542efdb379d1efc9290c7e815a702e40"
@@ -1156,9 +965,14 @@
       "sha256": "876a889c6d1dc215f6f80caa60ef5ab9f959f0c5a63f470945ab942525797a71"
     },
     {
+      "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml",
+      "size": 329,
+      "sha256": "90c3b464df4ba9fa0b4b7a7078b5302cfd2d0b863d5ffbc6102e3b2737b444ab"
+    },
+    {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml",
-      "size": 1018,
-      "sha256": "7caeb9e7e68482b9d8b34fe55d2f26bab700ffabb1a3529faf8c6b8f94d915d2"
+      "size": 1010,
+      "sha256": "45e53752578f541c2fc66d39850facc55af626d52fa812ad0b1d871911545eb5"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml",
@@ -1172,8 +986,8 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml",
-      "size": 5323,
-      "sha256": "95c5f950794701ce9177c3e527cdf3c2c8fe69c7fac655ab82658efde4ede6e9"
+      "size": 6406,
+      "sha256": "c9949da3ddbe0f4879d4c6cd60164a352d23a1ac29c40ff35701e48aea890bf0"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screenshooter.xml",
@@ -1182,8 +996,8 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml",
-      "size": 5453,
-      "sha256": "9996c054753553b2a5b37daa54224f4387714affadaf46c725c089cd4b13bf91"
+      "size": 5452,
+      "sha256": "d294c554199660b24f22492ee1b9134424e04146a5a6bd265928eeaf3425018e"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml",
@@ -1194,6 +1008,16 @@
       "path": "home/.gitconfig",
       "size": 305,
       "sha256": "1570dc969bcb0ebf15b8b18cae7d26b44b4606c0e6be5fb2a76e9dbb121b4abf"
+    },
+    {
+      "path": "home/.local/bin/castle-dimitrescu-launch.sh",
+      "size": 194,
+      "sha256": "4a854513057e410921bcfcde8883d1b78273bd807785121d962f79a075ec697c"
+    },
+    {
+      "path": "home/.local/bin/castle-dimitrescu-run.sh",
+      "size": 143,
+      "sha256": "8375f627f9bb5b1540ad24d80488373087025e3ab2a677da4cf47e1c33012eec"
     },
     {
       "path": "home/.local/bin/jq",
@@ -1247,18 +1071,8 @@
     },
     {
       "path": "home/.local/share/desktop-directories/chrome-apps.directory",
-      "size": 86,
-      "sha256": "3bfdf9c76ef6aac56dcb7769f29c567bdd590af41ade76ff9b7d3e69b845edc3"
-    },
-    {
-      "path": "home/.local/share/gvfs-metadata/home",
-      "size": 776,
-      "sha256": "5e9b678307ac4832f6e7923f944daa30c802842633876a3c3f98c10064ca93e4"
-    },
-    {
-      "path": "home/.local/share/gvfs-metadata/root",
-      "size": 64,
-      "sha256": "9a001d55513c7436c693e5d56292986aced95b34ed94bd2e54fad7b5593d3b37"
+      "size": 84,
+      "sha256": "2dea99789c5e14452231cb1508a558e5879bdc18cfd1b8054824d4be0d3d4bdd"
     },
     {
       "path": "home/.local/share/icons/Win11-dark/AUTHORS",
@@ -4589,11 +4403,6 @@
       "path": "home/.local/share/icons/Win11-dark/emblems/symbolic/emblem-videos-symbolic.svg",
       "size": 621,
       "sha256": "a970a140bbe3b13ab602ed5554227540dc979ddf8985d98ac81e6251e2f7bdc6"
-    },
-    {
-      "path": "home/.local/share/icons/Win11-dark/icon-theme.cache",
-      "size": 887268,
-      "sha256": "fed4137b91967dcc60da4aeb68ddd6d6b297d822dbaf9e99d6fb08fab46fda8e"
     },
     {
       "path": "home/.local/share/icons/Win11-dark/index.theme",
@@ -8851,9 +8660,19 @@
       "sha256": "151dc6fd6a6aa5c2822401360c312a7df1f3b4b84ab399f37d3e8cfa85cbd9ae"
     },
     {
+      "path": "home/.local/share/icons/win11-search-light.png",
+      "size": 408,
+      "sha256": "4da7bace2d96f7e774e41da8cb0d91c08bcaf2db31f70713ccc2551d002edb51"
+    },
+    {
+      "path": "home/.local/share/icons/win11-search.png",
+      "size": 940,
+      "sha256": "1199c6806c71a105fe8bfefb2429e873037990b9a6783226a9a75b596e8f53ad"
+    },
+    {
       "path": "home/.local/share/opencode/opencode.db-shm",
-      "size": 65536,
-      "sha256": "172a0d6242c47a21c56458709b9f045035ca83c552dd29f43551cd66d45d3543"
+      "size": 32768,
+      "sha256": "c12f11a6e5aebb89db33ebd1f5e3077d13f0315e226f18ceb6f0575f53fe5933"
     },
     {
       "path": "home/.local/share/opencode/shell/0afde796bb0b866c599533a2b7c6ebd75d1a83c0/sh_205f98ef10010zq5nZN4HDVYvj.out",
@@ -9006,9 +8825,14 @@
       "sha256": "67c4650c853874d900bcc88e3f5f5aacfa57f17a37933fa71ccf3781350448be"
     },
     {
+      "path": "home/.local/state/opencode/pty/f04da232-bf27-4539-8058-e035ba378abe/service.json",
+      "size": 228,
+      "sha256": "42cd3bf9e6635849fa2ecf29119cd1cf3b8c921e7951f88cb70c87b45837065b"
+    },
+    {
       "path": "home/.local/state/opencode/service.json",
-      "size": 163,
-      "sha256": "1f8a7c6927b28637de8c878cc3a18d3df8f643fdbe84dc3fb896b2d96c44fda6"
+      "size": 162,
+      "sha256": "174e44fdc8c314265c510840b6dcc2d4003ebb1e4c960b769cb12552c6df84c4"
     },
     {
       "path": "home/.themes/Fluent-round-grey-Dark-compact/COPYING",
@@ -15611,6 +15435,26 @@
       "sha256": "804c756ad50cad8476db58622b8ef5fc9ed14c5183dcb04d4230724cf5fc4e72"
     },
     {
+      "path": "home/Pictures/Wallpapers/new-wallpaper.jpg",
+      "size": 30981,
+      "sha256": "255e92853a3b3f35bc779cae708448173b24ba9d533b70ea7e2078ebdfccddb7"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/wall2.jpg",
+      "size": 37365,
+      "sha256": "2179a2bdf9206a134da42866536d78d57a1914ccd0640040fe0c898dba79e71f"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/wall3.jpg",
+      "size": 22206,
+      "sha256": "9d8cb86cb82a6ddfb96efcb6cf305444eea8246bd054de5fe1d9433931e12866"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/wall3_hr.jpg",
+      "size": 77656,
+      "sha256": "0c33193dc04e45763ef684c5347ce98bb531c31c10b14289258de436a936ac4f"
+    },
+    {
       "path": "home/Pictures/wallpapers/README.md",
       "size": 1748,
       "sha256": "0ce512b4584390a322bcf69f4295b57e28e6365f4560f4c5a0c16bed2a58ff7a"
@@ -15733,12 +15577,12 @@
     {
       "path": "inventory/bulk-dirs.txt",
       "size": 435,
-      "sha256": "014983d348cb197ca22f7ac902288609edf7ef03e764690ed4f7314fed5965b3"
+      "sha256": "69fec7ffdbd7da3a87b6b201eea7a4a78958a91a814a9bb04b28206e55586917"
     },
     {
       "path": "inventory/bulk.txt",
-      "size": 1257,
-      "sha256": "103052951576e55e77cc954745a4d41797954252234990573a6a698918cc6e11"
+      "size": 1135,
+      "sha256": "1c96c6c8fb72226c73eedd5147798e544a96c9bd1a9ad096667a615f67dd523f"
     },
     {
       "path": "inventory/download-hints.md",
@@ -15758,7 +15602,7 @@
     {
       "path": "inventory/etc-sha256.txt",
       "size": 48322,
-      "sha256": "11101714e42c293321eae6f16cdff7972ae1a594e35a00d42d855f719f1d8746"
+      "sha256": "5136270b43d20a466dcf9506c22b84179d2c3d4d12dc54306b3785f8c944c7ca"
     },
     {
       "path": "inventory/etc/.pwd.lock",
@@ -16512,8 +16356,8 @@
     },
     {
       "path": "inventory/etc/group-",
-      "size": 733,
-      "sha256": "701ae5160cd07a0261fdffd0e68acc318e162664dc0db632921b9a538752787e"
+      "size": 749,
+      "sha256": "acdaf311d86ca4c8cc3f7bad7151531b75068e1932b4e56589e2b3cd23399a54"
     },
     {
       "path": "inventory/etc/gtk-3.0/im-multipress.conf",
@@ -16837,8 +16681,8 @@
     },
     {
       "path": "inventory/etc/passwd-",
-      "size": 1234,
-      "sha256": "6e6f1ac3820bde190201728db54bb953d87b8076daae3eb17eb0d5b3d2cb5f7b"
+      "size": 1271,
+      "sha256": "2a15d9e9b2792e0d8cf4e9f8ae1986f2bace395dae06e2810f69481b7467586c"
     },
     {
       "path": "inventory/etc/plymouth/plymouthd.conf",
@@ -17721,11 +17565,6 @@
       "sha256": "d244aaf05e647054247fb41489ddf086d35349325c7c8b1340f4f639b8e53017"
     },
     {
-      "path": "inventory/etc/ssl/private/ssl-cert-snakeoil.key",
-      "size": 1704,
-      "sha256": "32290d2b3347cca0e4979cb4e4fb3d9e33ded1e4945931f05a12b9435c62a9b7"
-    },
-    {
       "path": "inventory/etc/subgid",
       "size": 46,
       "sha256": "40eb189bb96a28ee2bd2fe3dd9d2f725eb77ffb9d574cc68bfb3911df071ffe9"
@@ -18132,8 +17971,8 @@
     },
     {
       "path": "inventory/home-tree.txt",
-      "size": 144582,
-      "sha256": "a6ac23baa5611dcf14f07f50ee5f8239f1948a02c4b515d46e14228d1c6d4959"
+      "size": 128640,
+      "sha256": "fa5a4c207b4b4ad22d58558eb9552f07266711f3f5db8f681d54095f8486dba7"
     },
     {
       "path": "inventory/host-config.txt",
@@ -18142,33 +17981,33 @@
     },
     {
       "path": "inventory/packages.txt",
-      "size": 35917,
-      "sha256": "40bdbd6308b09e885f530743934e18dfe7f91d08e2d98f765e62febced0915d5"
+      "size": 36018,
+      "sha256": "8d7e0b9fc0d4a87f78b5b500dddeaf4f085283f67c352bb803954638a7efc562"
     },
     {
       "path": "inventory/recent-changes.txt",
-      "size": 38114,
-      "sha256": "06ef9e77e376d0ab2e858e647626f5416f20e09789dc28397aceadbbd63dd1e1"
+      "size": 50802,
+      "sha256": "c4d1bddacaffcddd5b9d0b4ccae412c41f9ac8c6080ed066be87d4aead824a1d"
     },
     {
       "path": "inventory/release-assets.txt",
-      "size": 426,
-      "sha256": "92ee024c43ec25cfbccf7c324c72a119d7447a996195bcab781129296fb55a72"
+      "size": 817,
+      "sha256": "1d6a528d07fec4da2f7806a1f72af11575f411dcd29ed1b4dae8cc1ba3cf3a52"
     },
     {
       "path": "inventory/secrets-sweep.txt",
-      "size": 518,
-      "sha256": "46d172861d88b6bd1612aa417dc9477ef643aebefe3978c1f78891bfd7b8ad1e"
+      "size": 658,
+      "sha256": "3ae932acb3728701a9591586355b79efee473f8e2055b986d7067e05eb56f1d5"
     },
     {
       "path": "inventory/services.txt",
-      "size": 5220,
-      "sha256": "c3b6393b4b2ef9905c564e723230b074b411c15c5698915a9bfb809d0d9431bc"
+      "size": 5213,
+      "sha256": "a310a4eb9fc752ab6ef24ca80ed3625b742269f52f0e82b058036fe7cbe2d9de"
     },
     {
       "path": "inventory/system.txt",
       "size": 3325,
-      "sha256": "93c1b11540dc61ef9a4aa30c5f6114f9547c4a424f73684226c49df06c2a3208"
+      "sha256": "0a4109d52cb28d5b30171d31af498aff038380077f5e02e1fb144904ce3f8efb"
     },
     {
       "path": "inventory/users.txt",
@@ -18217,13 +18056,13 @@
     },
     {
       "path": "scripts/bundle.sh",
-      "size": 6995,
-      "sha256": "ed3013f16c53a2c06798a9b57f59a0809597452057ecab7e53fa3467e8b6b0a4"
+      "size": 7012,
+      "sha256": "4a237450627f9bc9914fed8df576522d0eb97e197fd1061efa2fe357e94634b4"
     },
     {
       "path": "scripts/capture.sh",
-      "size": 14881,
-      "sha256": "f30b573f8ec9fa795ca291876855ac1deeb69a77f58fcf9c27797821b5efd856"
+      "size": 15923,
+      "sha256": "a5d716f500b00a1875e85de76901fe1d0acbaaea7569881f6087eb4fe81732c9"
     },
     {
       "path": "scripts/manifest.sh",
@@ -18237,13 +18076,13 @@
     },
     {
       "path": "secrets/README.md",
-      "size": 2295,
-      "sha256": "90809244fb2fc4ea02ad250e0ea8fcb7c69ec29dfdbc1c224f2c61eb6584b7a8"
+      "size": 2403,
+      "sha256": "3013f35bed280fe1c29de15dd4ee404874a15324c05c5fae61987af2b4c11176"
     },
     {
       "path": "secrets/secrets.manifest.txt",
-      "size": 26343,
-      "sha256": "b362830a13c066c5506d0909b37c660fdf5b0be5ab7c74f445b1483f78e72d94"
+      "size": 26334,
+      "sha256": "c367f6c114f498314b9fa088fbfa075377934b1d36bed17a606e6b1fe18b286d"
     }
   ],
   "symlinks": [

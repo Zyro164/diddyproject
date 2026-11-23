@@ -931,6 +931,7 @@ vulkan-tools	1.4.341.0+dfsg1-1
 wget	1.25.0-2ubuntu4.4
 wl-clipboard	2.2.1-2build1
 wlr-randr	0.4.1-1build1
+wmctrl	1.07+git20240228.1105759-1build1
 x11-apps	7.7+11build4
 x11-common	1:7.7+26ubuntu1
 x11-session-utils	7.7+6build3
@@ -952,6 +953,7 @@ xdotool	1:3.20160805.1-5.1build1
 xfce4	4.20.1
 xfce4-appfinder	4.20.0-2build1
 xfce4-docklike-plugin	0.5.1-2
+xfce4-genmon-plugin:amd64	4.3.0-1
 xfce4-helpers	4.20.1-1ubuntu2
 xfce4-notifyd	0.9.7-2build1
 xfce4-panel	4.20.7-1
@@ -1218,6 +1220,7 @@ util-linux
 vulkan-tools
 wl-clipboard
 wlr-randr
+wmctrl
 x11-apps
 x11-common
 x11-utils
@@ -1232,6 +1235,7 @@ xdg-utils
 xdotool
 xfce4
 xfce4-docklike-plugin
+xfce4-genmon-plugin
 xfce4-notifyd
 xfce4-screenshooter
 xfce4-taskmanager

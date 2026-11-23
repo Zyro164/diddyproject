@@ -116,7 +116,6 @@ man-db
 /etc/cron.hourly:
 
 # XDG autostart
-(none)
 
 # desktop entries installed in ~/.local/share/applications
 brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop

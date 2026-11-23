@@ -61,7 +61,11 @@ git add -A && git commit -m "backup: $(date -u +%FT%TZ)" && git push
 
 * Secret material is only as recoverable as the passphrase in `/config/backups/.bk.pass`
   (or your password-manager copy). No passphrase, no secrets — that is the point of the encryption.
-* Browser profiles are captured **without** caches; open tabs survive, cached blobs do not.
+* Browser profiles are captured **without** caches — open tabs survive, cached blobs do not.
+  Regenerable app-profile caches excluded by rule: `Dawn*Cache`, `GPUCache`, `GrShaderCache`,
+  `ShaderCache`, `Crashpad`, `GPUPersistentCache`, `component_crx_cache`, `icon-theme.cache`,
+  `.local/share/gvfs-metadata`, and the `opencode` session store (the latter is inside the
+  encrypted userdata bundle).
 * `core` dumps are excluded (huge, and they leak memory contents). Their sha256 is in
   `project/core.sha256` and the dump itself is a Release asset if it ever existed.
 * A 5 GB whole-system image from an earlier run lives in the separate

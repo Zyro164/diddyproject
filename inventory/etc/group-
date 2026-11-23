@@ -54,3 +54,4 @@ pulse:x:104:
 pulse-access:x:105:
 polkitd:x:989:
 dockremap:x:1000:dockremap
+_flatpak:x:106:
