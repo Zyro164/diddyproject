@@ -1,0 +1,7 @@
+xwinwrap: window type - override
+The wid option must be an integer: WID
+Error parsing option wid (option parameter could not be parsed)
+Setting commandline option --wid=WID failed.
+Exiting... (Fatal error)
+mpv died, exit status 1
+exit: 0

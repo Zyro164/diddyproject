@@ -1,1 +1,16 @@
+# large junk that must never enter git (see inventory/bulk.txt / bulk-dirs.txt for hashes)
 core
+*.tar.zst
+*.tar.zst.gpg
+*.gpg
+*.part-*
+*.deb
+*.AppImage
+*.iso
+
+# never commit decrypted secret material
+.bk.pass
+secrets/*.tar*
+
+# packed-directory archives are intentional and small enough to keep
+!assets/*.tar.zst

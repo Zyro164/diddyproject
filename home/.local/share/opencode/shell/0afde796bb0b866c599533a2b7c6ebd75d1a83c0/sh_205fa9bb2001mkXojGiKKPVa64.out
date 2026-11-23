@@ -1,0 +1,37 @@
+total 90824
+drwxr-xr-x 25 abc  abc        4096 Nov 23 00:53 .
+drwxr-xr-x  1 root root       4096 Nov 22 05:20 ..
+-rw-------  1 abc  abc           0 Nov 22 05:20 .ICEauthority
+drwxr-xr-x 19 abc  abc        4096 Nov 22 09:26 .XDG
+-rw-r--r--  1 abc  abc          22 Nov 22 05:20 .Xresources
+-rw-------  1 abc  abc        2605 Nov 22 06:29 .bash_history
+-rw-r--r--  1 abc  abc          74 Nov 22 05:20 .bashrc
+drwx------ 17 abc  abc        4096 Nov 22 20:24 .cache
+drwxr-xr-x 18 abc  abc        4096 Nov 23 01:14 .config
+drwx------  3 abc  abc        4096 Nov 22 05:20 .dbus
+drwxr-xr-x  9 abc  abc        4096 Nov 22 07:03 .deepai-code
+-rw-r--r--  1 abc  abc         305 Nov 23 00:41 .gitconfig
+drwx------  3 abc  abc        4096 Nov 23 01:09 .gnupg
+drwxr-xr-x  5 abc  abc        4096 Nov 22 05:20 .local
+drwx------  3 abc  abc        4096 Nov 22 05:20 .ssh
+-rw-r--r--  1 abc  abc           0 Nov 22 07:12 .sudo_as_admin_successful
+drwxr-xr-x  5 abc  abc        4096 Nov 23 01:08 .themes
+drwxr-xr-x  3 abc  abc        4096 Nov 22 07:27 .var
+drwxr-xr-x  2 abc  abc        4096 Nov 22 17:32 Desktop
+drwxr-xr-x  3 abc  abc        4096 Nov 22 17:34 Documents
+drwxr-xr-x  3 abc  abc        4096 Nov 22 17:24 Downloads
+drwxr-xr-x  2 abc  abc        4096 Nov 22 05:20 Music
+drwxr-xr-x  3 abc  abc        4096 Nov 22 16:46 Pictures
+drwxr-xr-x  2 abc  abc        4096 Nov 22 05:20 Public
+drwxr-xr-x  2 abc  abc        4096 Nov 22 05:20 Templates
+drwxr-xr-x  2 abc  abc        4096 Nov 22 05:20 Videos
+drwxr-xr-x  2 abc  abc        4096 Nov 22 20:41 Zyro
+drwxr-xr-x  5 abc  abc        4096 Nov 23 01:07 backups
+-rw-------  1 abc  abc  1021956096 Nov 22 08:53 core
+drwxr-xr-x  3 abc  abc        4096 Nov 23 00:51 desktop-backup-20261123-005150
+drwxr-xr-x  9 abc  abc        4096 Nov 23 01:16 diddyproject
+-rwxr-xr-x  1 abc  abc          74 Nov 22 05:30 launch-deepai-code.sh
+drwxr-xr-x  2 abc  abc        4096 Nov 22 05:20 ssl
+---
+uid=1000(abc) gid=1000(abc) groups=1000(abc),27(sudo),100(users),990(docker)
+---

@@ -1,0 +1,2 @@
+gcc xwinwrap.c -g -Wall -L /usr/lib/x86_64-linux-gnu -lX11 -lXext -lXrender -o xwinwrap
+-rwxr-xr-x 1 abc abc 46032 Nov 23 01:17 xwinwrap

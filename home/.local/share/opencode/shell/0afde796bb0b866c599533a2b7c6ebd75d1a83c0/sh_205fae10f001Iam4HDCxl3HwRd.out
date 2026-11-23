@@ -1,0 +1,5 @@
+19:#define WIDTH  512
+142:            -fdt    - force WID window a desktop type window\n \
+296:    window.width = WIDTH;
+423:        if (strcmp (argv[i], "WID") == 0)
+710:        execvp (childArgv[0], childArgv);

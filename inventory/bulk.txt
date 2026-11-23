@@ -1,0 +1,12 @@
+# Files too large for git. sha256 lets you prove a refetched/recovered copy is identical.
+# class=refetchable ⇒ public installer, re-download it (URL hint below when known)
+# class=unique      ⇒ personal data, shipped inside the encrypted userdata bundle
+# size_bytes  sha256  class  path
+10108998  a05ad5bfc3ee0990aac9bc67a43003aebeeec2be22566aebf6f04b67002f9eb0  unique  Videos/castle-dimitrescu.mp4
+252007216  ed7000e2e1fd9b98f4367118e6d1eebef3baa9a4b02d6c6090f397dfaa787b17  refetchable  Downloads/opencode-desktop-linux-amd64.deb
+183761681  cc7f4e765443b48455a9ea7675f1ab4f3ce083b79cd8a702515407667fd4b1e1  refetchable  Downloads/DeepAI-Code-0.3.45-x86_64.AppImage
+32717697  4873a5c16b490ac29bf57fab4484c749a1ec4fb0abf7d3fe43161f8e285d5cf1  unique  Downloads/1345576.jpeg
+160374384  2d9d1e664efd60343c77324c836be402cbe57ce12549975584dfa7d073f156a5  refetchable  Downloads/brave-browser_1.100.58_amd64.deb
+41189536  fa7cff06d4db9eee98e00b10ac93beebfe1822109ac04a6cbbf9d806c21d0073  refetchable  .local/bin/gh
+17720152  404178e60671386476a950444642c0126c8360a4e33cb1d88d1888ee40562b87  unique  .local/share/opencode/opencode.db-wal
+31150080  f07048f8ef52d43aab08502f70f3d197eaed319fd230832dbfe3ae94cade541d  unique  .local/share/opencode/opencode.db

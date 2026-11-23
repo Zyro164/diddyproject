@@ -1,0 +1,11 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/config/.local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/config/.local/bin/gh auth git-credential
+[user]
+	name = Zyro164
+	email = 359758432+Zyro164@users.noreply.github.com
+[init]
+	defaultBranch = main

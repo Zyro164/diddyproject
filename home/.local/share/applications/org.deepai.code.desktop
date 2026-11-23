@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=DeepAI Code
+Exec="/config/Downloads/squashfs-root/deepai-code" %U
+Icon=/config/.local/share/icons/org.deepai.code.desktop.png
+Terminal=false
+NoDisplay=true
+StartupNotify=false
+MimeType=x-scheme-handler/deepai-code;

@@ -1,0 +1,3 @@
+uid=1000(abc) gid=1000(abc) groups=1000(abc),27(sudo),100(users),990(docker)
+sudo ok
+lrwxrwxrwx 1 root root 22 Oct  6 13:13 /usr/bin/sudo -> /etc/alternatives/sudo

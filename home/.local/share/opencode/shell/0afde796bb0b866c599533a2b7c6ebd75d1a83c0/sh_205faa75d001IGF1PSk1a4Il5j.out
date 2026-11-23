@@ -1,0 +1,5 @@
+CUPS_SERVER=/config/.XDG/selkies-cups/cups.sock
+DISPLAY=:1
+XDG_RUNTIME_DIR=/config/.XDG
+DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-ZKChGmdxDR,guid=65f2d14d0fc08c8ca95490886b027b8b
+---

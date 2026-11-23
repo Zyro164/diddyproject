@@ -1,0 +1,126 @@
+# init.d
+console-setup.sh
+cron
+cups
+dbus
+docker
+keyboard-setup.sh
+nginx
+plymouth
+plymouth-log
+procps
+pulseaudio-enable-autospawn
+x11-common
+
+# systemd units (if any)
+UNIT FILE                                    STATE    PRESET
+proc-sys-fs-binfmt_misc.automount            static   -
+dev-hugepages.mount                          static   -
+dev-mqueue.mount                             static   -
+proc-sys-fs-binfmt_misc.mount                disabled disabled
+sys-fs-fuse-connections.mount                static   -
+sys-kernel-config.mount                      static   -
+sys-kernel-debug.mount                       static   -
+sys-kernel-tracing.mount                     static   -
+tmp.mount                                    static   -
+cups.path                                    enabled  enabled
+systemd-ask-password-console.path            static   -
+systemd-ask-password-plymouth.path           static   -
+systemd-ask-password-wall.path               static   -
+apt-daily-upgrade.service                    static   -
+apt-daily.service                            static   -
+autovt@.service                              alias    -
+breakpoint-pre-basic.service                 static   -
+breakpoint-pre-mount.service                 static   -
+breakpoint-pre-switch-root.service           static   -
+breakpoint-pre-udev.service                  static   -
+capsule@.service                             static   -
+console-getty.service                        disabled disabled
+console-setup.service                        enabled  enabled
+container-getty@.service                     static   -
+containerd.service                           enabled  enabled
+cron.service                                 enabled  enabled
+cryptdisks-early.service                     masked   enabled
+cryptdisks.service                           masked   enabled
+cups.service                                 enabled  enabled
+dbus-org.freedesktop.hostname1.service       alias    -
+dbus-org.freedesktop.locale1.service         alias    -
+dbus-org.freedesktop.login1.service          alias    -
+dbus-org.freedesktop.timedate1.service       alias    -
+dbus.service                                 static   -
+debug-shell.service                          disabled disabled
+docker.service                               enabled  enabled
+dpkg-db-backup.service                       static   -
+e2scrub@.service                             static   -
+e2scrub_all.service                          static   -
+e2scrub_fail@.service                        static   -
+e2scrub_reap.service                         enabled  enabled
+emergency.service                            static   -
+flatpak-system-helper.service                static   -
+fstrim.service                               static   -
+getty-static.service                         static   -
+getty@.service                               enabled  enabled
+hwclock.service                              masked   enabled
+initrd-cleanup.service                       static   -
+initrd-parse-etc.service                     static   -
+initrd-switch-root.service                   static   -
+initrd-udevadm-cleanup-db.service            static   -
+keyboard-setup.service                       enabled  enabled
+kmod-static-nodes.service                    static   -
+kmod.service                                 alias    -
+ldconfig.service                             static   -
+man-db.service                               static   -
+modprobe@.service                            static   -
+motd-news.service                            static   -
+nftables.service                             disabled enabled
+nginx.service                                enabled  enabled
+packagekit-offline-update.service            static   -
+packagekit.service                           static   -
+pam_namespace.service                        static   -
+plymouth-halt.service                        static   -
+plymouth-kexec.service                       static   -
+plymouth-log.service                         alias    -
+plymouth-poweroff.service                    static   -
+plymouth-quit-wait.service                   static   -
+plymouth-quit.service                        static   -
+plymouth-read-write.service                  static   -
+plymouth-reboot.service                      static   -
+plymouth-start.service                       static   -
+plymouth-switch-root-initramfs.service       static   -
+plymouth-switch-root.service                 static   -
+plymouth.service                             alias    -
+polkit-agent-helper@.service                 static   -
+polkit.service                               static   -
+procps.service                               alias    -
+pulseaudio-enable-autospawn.service          masked   enabled
+
+# enabled services
+
+# crontabs
+total 0
+## crontab -l abc
+(none)
+## crontab -l dockremap
+(none)
+
+# /etc/cron.*
+/etc/cron.d:
+e2scrub_all
+
+/etc/cron.daily:
+apt-compat
+brave-browser
+dpkg
+man-db
+
+/etc/cron.hourly:
+
+# XDG autostart
+(none)
+
+# desktop entries installed in ~/.local/share/applications
+brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop
+chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop
+mimeapps.list
+mimeinfo.cache
+org.deepai.code.desktop

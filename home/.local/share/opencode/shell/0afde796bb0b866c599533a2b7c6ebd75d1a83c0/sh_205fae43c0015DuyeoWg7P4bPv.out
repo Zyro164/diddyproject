@@ -1,0 +1,61 @@
+        if (sid < 0)
+        {
+            exit(1);
+        }
+
+        chdir("/");
+        close(STDIN_FILENO);
+        close(STDOUT_FILENO);
+        close(STDERR_FILENO);
+    }
+
+    for (i = i + 1; i < argc; i++)
+    {
+        if (strcmp (argv[i], "WID") == 0)
+            addArguments (widArgv, 1);
+        else
+            addArguments (&argv[i], 1);
+    }
+
+    if (!nChildArgv)
+    {
+        fprintf (stderr, "%s: Error: couldn't create command line\n", argv[0]);
+        usage ();
+
+        return 1;
+    }
+
+    addArguments (&endArg, 1);
+
+    init_x11();
+    if (!display)
+        return 1;
+
+    if (fullscreen)
+    {
+        window.x = 0;
+        window.y = 0;
+        window.width  = DisplayWidth (display, screen);
+        window.height = DisplayHeight (display, screen);
+    }
+    int depth = 0, flags = CWOverrideRedirect | CWBackingStore;
+    Visual *visual = NULL;
+
+    if (!find_desktop_window(&window.root, &window.desktop)) {
+        fprintf (stderr, NAME": Error: couldn't find desktop window\n");
+        return 1;
+    }
+
+    if (argb && get_argb_visual(&visual, &depth))
+    {
+        have_argb_visual = true;
+        window.visual = visual;
+        window.colourmap = XCreateColormap(display,
+                                           DefaultRootWindow(display), window.visual, AllocNone);
+    }
+    else
+    {
+        window.visual = DefaultVisual(display, screen);
+        window.colourmap = DefaultColormap(display, screen);
+        depth = CopyFromParent;
+        visual = CopyFromParent;

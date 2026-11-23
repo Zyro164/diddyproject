@@ -1,0 +1,5 @@
+[Default Applications]
+x-scheme-handler/deepai-code=org.deepai.code.desktop
+x-scheme-handler/opencode=ai.opencode.desktop.desktop
+
+[Added Associations]

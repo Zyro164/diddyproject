@@ -1,0 +1,108 @@
+freebuff
+ls
+cd ..
+ls
+cd Downloads/
+chmod +x DeepAI-Code-0.3.45-x86_64.AppImage
+./DeepAI-Code-0.3.45-x86_64.AppImage
+ls
+cd ~/Downloads
+./DeepAI-Code-0.3.45-x86_64.AppImage --appimage-extract
+ls squashfs-root
+clear
+cd ~/Downloads/squashfs-root
+./AppRun
+clear
+[200~./deepai-code~
+./deepai-code
+cat > ~/Desktop/DeepAI-Code.desktop <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DeepAI Code
+Comment=AI Coding Assistant
+Exec=/home/abc/Downloads/squashfs-root/deepai-code
+Icon=/home/abc/Downloads/squashfs-root/deepai-code.png
+Terminal=false
+Categories=Development;
+EOF
+
+chmod +x ~/Desktop/DeepAI-Code.desktop
+cat > ~/Desktop/DeepAI-Code.desktop <<'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DeepAI Code
+Comment=AI Coding Assistant
+Exec=/home/abc/Downloads/squashfs-root/AppRun
+Path=/home/abc/Downloads/squashfs-root
+Icon=/home/abc/Downloads/squashfs-root/deepai-code.png
+Terminal=false
+Categories=Development;
+EOF
+
+chmod +x ~/Desktop/DeepAI-Code.desktop
+cat > ~/Desktop/DeepAI-Code.desktop <<'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DeepAI Code
+Comment=AI Coding Assistant
+Exec=/home/abc/Downloads/squashfs-root/AppRun
+Path=/home/abc/Downloads/squashfs-root
+Icon=/home/abc/Downloads/squashfs-root/deepai-code.png
+Terminal=false
+Categories=Development;
+EOF
+
+chmod +x ~/Desktop/DeepAI-Code.desktop
+cd ~/Downloads/squashfs-root
+ls -lah AppRun deepai-code
+file deepai-code
+file AppRun
+cd ~/Downloads/squashfs-root
+./deepai-code --no-sandbox
+cat > ~/launch-deepai-code.sh <<'EOF'
+#!/bin/bash
+cd "$HOME/Downloads/squashfs-root"
+exec ./AppRun --no-sandbox
+EOF
+
+chmod +x ~/launch-deepai-code.sh
+cat > ~/Desktop/DeepAI-Code.desktop <<EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DeepAI Code
+Comment=AI Coding Assistant
+Exec=$HOME/launch-deepai-code.sh
+Icon=$HOME/Downloads/squashfs-root/deepai-code.png
+Terminal=false
+Categories=Development;IDE;
+StartupNotify=true
+EOF
+
+chmod +x ~/Desktop/DeepAI-Code.desktop
+gio set ~/Desktop/DeepAI-Code.desktop metadata::trusted true
+cd ~/Downloads/squashfs-root
+ls -lah AppRun deepai-code
+file deepai-code
+file AppRun
+cd ~/Downloads/squashfs-root
+./deepai-code --no-sandbox
+bash AppRun
+clear
+ls -lah /config/.deepai-code/userdata/logs/
+find /config/.deepai-code/userdata/logs/ -type f
+grep -RniE "error|fatal|failed|exception|denied" /config/.deepai-code/userdata/logs/ | tail -60
+uname -a
+cat /etc/os-release
+node --version
+which bash
+df -h /
+clear
+ps -eo pid,ppid,args | grep -Ei '[d]eepai-code|[a]pps/server'
+~/launch-deepai-code.sh
+kill 3295 3193
+ps -eo pid,ppid,args | grep -Ei '[d]eepai-code|[a]pps/server'
+~/launch-deepai-code.sh

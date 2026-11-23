@@ -1,0 +1,25 @@
+pbmtobbnbg
+wall
+xwininfo
+---
+hyprland-plugin-hyprwinwrap - Hyprland plugin emulating xwinwrap
+bumpversion - Version-bump your software with a single command
+celluloid - simple GTK+ frontend for mpv
+elpa-mpv - control a mpv via its IPC interface from Emacs
+golang-github-darkhz-mpvipc-dev - Go implementation of mpv's IPC interface (library)
+haruna - Video player built with Qt/QML on top of libmpv
+kylin-video - Front-end for MPlayer and MPV
+libdevel-dumpvar-perl - Perl module to dump Perl variables
+libmpv-dev - video player based on MPlayer/mplayer2 (client library dev files)
+libmpv2 - video player based on MPlayer/mplayer2 (client library)
+libmpvqt-dev - Libmpv wrapper for QtQuick2 and QML development
+ubuntu-wallpapers - Ubuntu Wallpapers
+ubuntu-wallpapers-resolute - Ubuntu 26.04 Wallpapers
+azote - wallpaper manager for wlroots-based compositors and some other WMs
+breeze-wallpaper - Default Plasma wallpaper
+budgie-wallpapers - Wallpapers for Ubuntu Budgie
+budgie-wallpapers-artful - Ubuntu Budgie 17.10 Wallpapers
+budgie-wallpapers-bionic - Ubuntu Budgie 18.04 Wallpapers
+budgie-wallpapers-cosmic - Ubuntu Budgie 18.10 Wallpapers
+budgie-wallpapers-disco - Ubuntu Budgie 19.04 Wallpapers
+budgie-wallpapers-eoan - Ubuntu Budgie 19.10 Wallpapers

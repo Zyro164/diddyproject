@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///config/Pictures/Screenshot_2026-11-22_13-52-43.png" added="2026-11-22T13:52:49.526748Z" modified="2026-11-22T13:52:49.526752Z" visited="2026-11-22T13:52:49.526749Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="xfce4-screenshooter" exec="&apos;xfce4-screenshooter %u&apos;" modified="2026-11-22T13:52:49.526750Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Pictures/Screenshot_2026-11-22_16-43-36.png" added="2026-11-22T16:43:39.020504Z" modified="2026-11-22T16:43:49.406065Z" visited="2026-11-22T16:43:39.020505Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="xfce4-screenshooter" exec="&apos;xfce4-screenshooter %u&apos;" modified="2026-11-22T16:43:39.020507Z" count="1"/>
+          <bookmark:application name="Thunar" exec="&apos;thunar-real %u&apos;" modified="2026-11-22T16:43:49.406062Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Downloads/885027764309711605.jpeg" added="2026-11-22T17:24:27.531312Z" modified="2026-11-22T17:25:15.468177Z" visited="2026-11-22T17:24:27.531313Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;xdg-desktop-portal-gtk %u&apos;" modified="2026-11-22T17:25:15.468175Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/diddyproject/free-fire-guild-glory-bot-2026.html" added="2026-11-22T17:34:12.233109Z" modified="2026-11-22T17:34:12.233115Z" visited="2026-11-22T17:34:12.233110Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar-real %u&apos;" modified="2026-11-22T17:34:12.233112Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/diddyproject/desktop-backup.sh" added="2026-11-22T18:40:59.817645Z" modified="2026-11-22T18:40:59.825428Z" visited="2026-11-22T18:40:59.817646Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-shellscript"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;xdg-desktop-portal-gtk %u&apos;" modified="2026-11-22T18:40:59.825427Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Downloads/1345576.jpeg" added="2026-11-22T20:45:31.772180Z" modified="2026-11-22T20:45:31.779886Z" visited="2026-11-22T20:45:31.772181Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;xdg-desktop-portal-gtk %u&apos;" modified="2026-11-22T20:45:31.779884Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

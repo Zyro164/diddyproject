@@ -1,0 +1,17 @@
+elpa-mpv - control a mpv via its IPC interface from Emacs
+hyprland-plugin-hyprwinwrap - Hyprland plugin emulating xwinwrap
+libkdynamicwallpaper-dev - Dynamic Wallpaper Engine for Plasma (development files)
+libkdynamicwallpaper4 - Dynamic Wallpaper Engine for Plasma (shared libraries)
+libmpvqt-dev - Libmpv wrapper for QtQuick2 and QML development
+libmpvqt2 - Libmpv wrapper for QtQuick2 and QML
+mpv - video player based on MPlayer/mplayer2
+plasma-wallpaper-dynamic - Dynamic Wallpaper Engine for Plasma
+python3-mpv - Python interface to the awesome mpv media player
+smplayer-l10n - Complete front-end for MPlayer and mpv - translation files
+---
+mpv:
+  Installed: (none)
+  Candidate: 0.41.0-2ubuntu4
+  Version table:
+     0.41.0-2ubuntu4 500
+        500 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages

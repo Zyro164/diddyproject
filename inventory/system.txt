@@ -1,0 +1,129 @@
+# system snapshot — generated 2026-11-23T01:17:22Z
+
+## os-release
+  PRETTY_NAME="Ubuntu 26.04.1 LTS"
+  NAME="Ubuntu"
+  VERSION_ID="26.04"
+  VERSION="26.04.1 LTS (Resolute Raccoon)"
+  VERSION_CODENAME=resolute
+  ID=ubuntu
+  ID_LIKE=debian
+  HOME_URL="https://www.ubuntu.com/"
+  SUPPORT_URL="https://help.ubuntu.com/"
+  BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+  PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+  UBUNTU_CODENAME=resolute
+  LOGO=ubuntu-logo
+## uname
+Linux 4552801cdcb3 6.18.0+ #1 SMP PREEMPT_DYNAMIC Fri Oct 16 14:27:07 UTC 2026 x86_64 GNU/Linux
+## hostname
+4552801cdcb3
+## user
+uid=1000(abc) gid=1000(abc) groups=1000(abc),27(sudo),100(users),990(docker)
+HOME=/config  SHELL=/bin/bash  PATH=/config/.deepai-code/userdata/deepai/pi/deepai/bin:/config/Downloads/squashfs-root:/config/Downloads/squashfs-root/usr/sbin:/usr/local/games:/usr/games:/command:/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+## cpu/mem
+4
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       3.2Gi       1.5Gi       163Mi        11Gi        12Gi
+Swap:          1.0Gi       380Mi       643Mi
+## disk
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          98G   36G   58G  38% /
+tmpfs            64M     0   64M   0% /dev
+shm             8.0G   91M  8.0G   2% /dev/shm
+/dev/vda         98G   36G   58G  38% /config
+tmpfs           7.9G     0  7.9G   0% /proc/acpi
+tmpfs           7.9G     0  7.9G   0% /proc/scsi
+tmpfs           7.9G     0  7.9G   0% /sys/firmware
+## clock
+Mon Nov 23 01:17:22 AM UTC 2026
+## locale/timezone
+LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+## gpu/mesa
+## display
+DISPLAY=:1.0 XDG_SESSION_TYPE= DESKTOP_SESSION=
+## env (names only, values withheld)
+  _
+  AI_AGENT
+  BWRAP
+  CHROME_DESKTOP
+  CUPS_SERVER
+  CUSTOM_WS_PORT
+  DBUS_SESSION_BUS_ADDRESS
+  DISABLE_DRI3
+  DISPLAY
+  ELECTRON_RUN_AS_NODE
+  FC_FONTATIONS
+  GDK_BACKEND
+  __GL_SYNC_TO_VBLANK
+  GSETTINGS_SCHEMA_DIR
+  HOME
+  HOSTNAME
+  LANG
+  LANGUAGE
+  LD_LIBRARY_PATH
+  LSIO_FIRST_PARTY
+  NO_AT_BRIDGE
+  NoDefaultCurrentDirectoryInExePath
+  NODE_USE_SYSTEM_CA
+  NVIDIA_DRIVER_CAPABILITIES
+  OLDPWD
+  PATH
+  PERL5LIB
+  PGID
+  PI_CODING_AGENT
+  PI_CODING_AGENT_DIR
+  PI_MODEL
+  PI_PROVIDER
+  PI_REASONING_LEVEL
+  PI_SESSION_FILE
+  PI_SESSION_ID
+  PUID
+  PULSE_RUNTIME_PATH
+  PWD
+  S6_CMD_WAIT_FOR_SERVICES_MAXTIME
+  S6_STAGE2_HOOK
+  S6_VERBOSITY
+  SELKIES_ALLOWED_ORIGINS
+  SELKIES_COMMAND_ENABLED
+  SELKIES_ENABLE_BASIC_AUTH
+  SELKIES_ENABLE_DUAL_MODE
+  SELKIES_ENCODER
+  SELKIES_INTERPOSER
+  SELKIES_RATE_CONTROL_MODE
+  SELKIES_UI_SIDEBAR_SHOW_WEBCAM
+  SELKIES_VIDEO_STREAMING_MODE
+  SELKIES_WEBCAM_ENABLED
+  SELKIES_WEBCAM_INTERPOSER
+  SESSION_MANAGER
+  SHELL
+  SHLVL
+  SSH_AGENT_PID
+  SSH_AUTH_SOCK
+  START_DOCKER
+  T3_CHATGPT_PI_TOKEN
+  T3_CHATGPT_PI_URL
+  T3CODE_BUNDLED_PI_ENTRY
+  T3CODE_CLI_PATH
+  T3_DEEPAI_QUERY_URL
+  T3_DEEPAI_THREAD_ID
+  T3_DEEPAI_URL
+  T3_MCP_URL
+  T3_PI_EAGER_STEERING
+  T3_PI_HOST_PLATFORM
+  T3_PI_INTERACTION_MODE
+  T3_PI_MANAGED_WORKSPACE_BASE
+  T3_PI_MANAGED_WORKSPACE_ROOTS
+  T3_PI_PROTECTED_PATHS
+  T3_PI_PROVIDER_INSTANCE_ID
+  T3_PI_RUNTIME_MODE
+  TERM
+  TITLE
+  TZ
+  VIRTUAL_ENV
+  XDG_DATA_DIRS
+  XDG_RUNTIME_DIR
