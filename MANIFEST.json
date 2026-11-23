@@ -1,10 +1,10 @@
 {
   "schema": "diddyproject-backup/1",
   "snapshot": {
-    "generated_at": "2026-11-23T01:20:55Z",
-    "stamp": "20261123T012055Z",
+    "generated_at": "2026-11-23T01:21:11Z",
+    "stamp": "20261123T012111Z",
     "repo": "https://github.com/Zyro164/diddyproject.git",
-    "commit": "3b48325a3a3857bf0b9613f2d723db74a2cf6ebc",
+    "commit": "cc63eff3f480348c3c9489fd5c066d37f625942c",
     "branch": "main",
     "hostname": "4552801cdcb3",
     "user": "abc",
@@ -627,8 +627,8 @@
     },
     {
       "path": ".sha256sums",
-      "size": 489723,
-      "sha256": "aa697a634186cd0141e2dd12eff6f233a93048e396d4359cae47f7d181d1f6ea"
+      "size": 680372,
+      "sha256": "7edee20c34f07a1e89097b649bb9769c2435c1d63fa1ece89a155fb387afea07"
     },
     {
       "path": "AGENTS.md",
@@ -642,8 +642,8 @@
     },
     {
       "path": "MANIFEST.json",
-      "size": 1034904,
-      "sha256": "9a00696d58819a3110f29aea997070f090c3ee918a4aedc59b8a432cfd762680"
+      "size": 1035216,
+      "sha256": "6fb95751c2e81f7c4adf957a99bca88d87ac0365a28e1468d6314ff1394811e7"
     },
     {
       "path": "README.md",
@@ -25361,6 +25361,11 @@
       "sha256": "bfd295e4674646db1f00bdf5545eebace800effccb56cdb5b2dc94b9121ee0df"
     },
     {
+      "path": "project/picom_12.5-1build1_amd64.deb",
+      "size": 291914,
+      "sha256": "3322c49416052af95663e3471997c119ecf89251ddb314edb96f846160c6180a"
+    },
+    {
       "path": "scripts/bundle.sh",
       "size": 6995,
       "sha256": "ed3013f16c53a2c06798a9b57f59a0809597452057ecab7e53fa3467e8b6b0a4"
@@ -25372,8 +25377,8 @@
     },
     {
       "path": "scripts/manifest.sh",
-      "size": 5233,
-      "sha256": "273258f61ac88efa9fd74375fc3b99c19b08ca94b7d364080c614f78a8dd5bb6"
+      "size": 5313,
+      "sha256": "1ae10a8cdc2e8cf8b70bf43fd9a343d21969d5955dcaa62a2b32e6844f750bb3"
     },
     {
       "path": "scripts/restore.sh",

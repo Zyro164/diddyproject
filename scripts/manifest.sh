@@ -11,10 +11,11 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
 # --------------------------------------------------------------- checksums
-find . -path ./.git -prune -o -type f -print0 \
-  | sort -z \
-  | xargs -0 sha256sum \
-  | grep -vE '  \./(MANIFEST\.json|\.sha256sums)$' > .sha256sums || true
+# fingerprint exactly what git tracks — never untracked/ignored files, or the
+# checksum file would fail on a fresh clone
+git ls-files -z \
+  | grep -zvE '^(MANIFEST\.json|\.sha256sums)$' \
+  | xargs -0 -r sha256sum > .sha256sums || true
 printf '  ok %s files fingerprinted\n' "$(wc -l < .sha256sums)"
 
 # --------------------------------------------------------------- MANIFEST.json
