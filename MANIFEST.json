@@ -1,11 +1,11 @@
 {
   "schema": "diddyproject-backup/1",
   "snapshot": {
-    "generated_at": "2026-11-23T02:14:21Z",
-    "stamp": "20261123T021421Z",
+    "generated_at": "2026-11-23T10:01:44Z",
+    "stamp": "20261123T100144Z",
     "repo": "https://github.com/Zyro164/diddyproject.git",
-    "commit": "1f4c5a81c1553efc2dd4e939a2b049cc3a5a2d90",
-    "branch": "t3/cbadc05a",
+    "commit": "34c1a3bdf7d41f15728a2abfcd8596bf58e14159",
+    "branch": "t3/29238d5b",
     "hostname": "4552801cdcb3",
     "user": "abc",
     "home": "/config",
@@ -115,18 +115,21 @@
       "archive": "assets/local-share-icons-Win11-dark-actions.tar.zst"
     },
     {
-      "sha256": "ad0d40239d38f2e6d64e8970e3b0acba3899b7e79352a7fc844110feb4d035f8",
+      "sha256": "ed092919dfcabdf52473d07e2a0cd790ca09bbfbd27a3e372329cb7f93a9081c",
       "restore_to": ".local/share/icons/Win11",
       "archive": "assets/local-share-icons-Win11.tar.zst"
     }
   ],
   "kept_out_of_git_for_credentials": [
-    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/declarative_performance_observer.db",
-    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/ai.opencode.desktop/drafts.sqlite",
-    "/config/.deepai-code/worktrees/diddyproject/t3-cbadc05a/home/.config/deepai-code-v2/declarative_performance_observer.db"
+    "/config/.deepai-code/worktrees/diddyproject/t3-29238d5b/home/.config/ai.opencode.desktop/declarative_performance_observer.db",
+    "/config/.deepai-code/worktrees/diddyproject/t3-29238d5b/home/.config/ai.opencode.desktop/drafts.sqlite",
+    "/config/.deepai-code/worktrees/diddyproject/t3-29238d5b/home/.config/discord/declarative_performance_observer.db",
+    "/config/.deepai-code/worktrees/diddyproject/t3-29238d5b/home/.config/discord/installer.db",
+    "/config/.deepai-code/worktrees/diddyproject/t3-29238d5b/home/.config/deepai-code-v2/declarative_performance_observer.db"
   ],
   "etc_modified": [
     "/etc/alternatives/README",
+    "/etc/apparmor.d/discord",
     "/etc/apparmor.d/local/usr.bin.man",
     "/etc/apparmor.d/local/usr.sbin.cupsd",
     "/etc/apparmor.d/usr.sbin.cupsd",
@@ -152,6 +155,7 @@
     "/etc/bash_completion.d/git-prompt",
     "/etc/bindresvport.blacklist",
     "/etc/ca-certificates.conf",
+    "/etc/ca-certificates/update.d/jks-keystore",
     "/etc/chromium.d/dev-shm",
     "/etc/chromium/master_preferences",
     "/etc/cloud/build.info",
@@ -197,6 +201,7 @@
     "/etc/dbus-1/system.d/com.ubuntu.SoftwareProperties.conf",
     "/etc/debconf.conf",
     "/etc/debian_version",
+    "/etc/default/cacerts",
     "/etc/default/console-setup",
     "/etc/default/dbus",
     "/etc/default/docker",
@@ -253,6 +258,31 @@
     "/etc/inputrc",
     "/etc/issue",
     "/etc/issue.net",
+    "/etc/java-25-openjdk/jaxp.properties",
+    "/etc/java-25-openjdk/jaxp-strict.properties",
+    "/etc/java-25-openjdk/jaxp-strict.properties.template",
+    "/etc/java-25-openjdk/jfr/default.jfc",
+    "/etc/java-25-openjdk/jfr/profile.jfc",
+    "/etc/java-25-openjdk/jvm-amd64.cfg",
+    "/etc/java-25-openjdk/logging.properties",
+    "/etc/java-25-openjdk/management/jmxremote.access",
+    "/etc/java-25-openjdk/management/management.properties",
+    "/etc/java-25-openjdk/net.properties",
+    "/etc/java-25-openjdk/psfontj2d.properties",
+    "/etc/java-25-openjdk/psfont.properties.ja",
+    "/etc/java-25-openjdk/security/blocked.certs",
+    "/etc/java-25-openjdk/security/java.security",
+    "/etc/java-25-openjdk/security/nss.cfg",
+    "/etc/java-25-openjdk/security/policy/limited/default_local.policy",
+    "/etc/java-25-openjdk/security/policy/limited/default_US_export.policy",
+    "/etc/java-25-openjdk/security/policy/limited/exempt_local.policy",
+    "/etc/java-25-openjdk/security/policy/README.txt",
+    "/etc/java-25-openjdk/security/policy/unlimited/default_local.policy",
+    "/etc/java-25-openjdk/security/policy/unlimited/default_US_export.policy",
+    "/etc/java-25-openjdk/security/public_suffix_list.dat",
+    "/etc/java-25-openjdk/sound.properties",
+    "/etc/.java/.systemPrefs/.system.lock",
+    "/etc/.java/.systemPrefs/.systemRootModFile",
     "/etc/ld.so.cache",
     "/etc/ld.so.conf",
     "/etc/ld.so.conf.d/libc.conf",
@@ -481,6 +511,7 @@
     "/etc/skel/.xscreensaver",
     "/etc/ssh/ssh_config",
     "/etc/ssl/certs/ca-certificates.crt",
+    "/etc/ssl/certs/java/cacerts",
     "/etc/ssl/certs/ssl-cert-snakeoil.pem",
     "/etc/ssl/openssl.cnf",
     "/etc/ssl/private/ssl-cert-snakeoil.key",
@@ -649,13 +680,58 @@
     },
     {
       "path": "assets/local-share-icons-Win11.tar.zst",
-      "size": 3848765,
-      "sha256": "ad0d40239d38f2e6d64e8970e3b0acba3899b7e79352a7fc844110feb4d035f8"
+      "size": 3848175,
+      "sha256": "ed092919dfcabdf52473d07e2a0cd790ca09bbfbd27a3e372329cb7f93a9081c"
     },
     {
       "path": "home/.Xresources",
       "size": 22,
       "sha256": "db90ca762ea132a736a40fa4ebdffb0932386dfec3e5de2c34885dfeb5654d4e"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/SKILL.md",
+      "size": 48164,
+      "sha256": "679b545b31730bfc0f91ebdcb4c5d519c8368ec366eb27b852b65e17635124e6"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/android-applications.md",
+      "size": 4092,
+      "sha256": "4fe894d463daaf9175192633186160fc50fb6718b5cc8186bf853377a9f72e7f"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md",
+      "size": 19728,
+      "sha256": "b5654bf13171b6fbe0dadaeccb48764de504ea560b3c8d55cf6831838c0fa776"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/desktop-build.md",
+      "size": 51806,
+      "sha256": "7e0b1ab7ff7372d39681bc88e924b4afbabd95091d13aba72928f55668a82b17"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/environments.md",
+      "size": 22010,
+      "sha256": "1be68bc9b15e5ace9b731a64125b64eb457ab0276c7961a41b6fa1240d179007"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/evidence-workflows.md",
+      "size": 12418,
+      "sha256": "ea6eaf1d11bb6d663503017aabc18e4c82b9f1f0277c35fc41ca63dda26ae602"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/javascript-applications.md",
+      "size": 16246,
+      "sha256": "2e264fbbb39030affa692553e603f6a28bee0cc822456ebfded836936615fb0c"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/native-and-artifacts.md",
+      "size": 67757,
+      "sha256": "e68e645a6ce67f5d3379655d4afb2a283058929e0df3855e1a9a0f9948241890"
+    },
+    {
+      "path": "home/.agents/skills/reverse-engineer-anything/references/runtime-observation.md",
+      "size": 13171,
+      "sha256": "ff7ecd3d76c264e641804e025f6ec35d1cfe8b8aba006b226061ed71842a3c12"
     },
     {
       "path": "home/.bash_history.redacted",
@@ -664,18 +740,83 @@
     },
     {
       "path": "home/.bashrc",
-      "size": 74,
-      "sha256": "b36eefe304f45024a49c38a4d979097e13c2e45967edeb492863123cec3a009b"
+      "size": 259,
+      "sha256": "da936957ff897c2d65b31d2548288f4a65a5d5a7d131e406b06313bec54f6301"
     },
     {
       "path": "home/.config/Thunar/accels.scm",
-      "size": 8561,
-      "sha256": "f4a1895f413a59c1fae307fe7c1f553d313f43cf4cd5bf08bf894255b653c96d"
+      "size": 8703,
+      "sha256": "f8df391934b839efad6106362e3c39e97c74ee56502f94834d767f9aa3e3c5cf"
     },
     {
       "path": "home/.config/Thunar/uca.xml",
       "size": 419,
       "sha256": "1076287f99dd3567b96bf9f1e10b709b8b1d4ed4cd847c41331c8f38832879e8"
+    },
+    {
+      "path": "home/.config/Vencord/dist/package.json",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "home/.config/Vencord/dist/patcher.js",
+      "size": 36887,
+      "sha256": "2c2a436776d47bb8770a358f612a593ef40a998312981d41321efa903d7b1e32"
+    },
+    {
+      "path": "home/.config/Vencord/dist/patcher.js.LEGAL.txt",
+      "size": 964,
+      "sha256": "3a77a1f63d0bbc71bb238ce6a16f90288fa19aa4fe01655e23e10757526671c7"
+    },
+    {
+      "path": "home/.config/Vencord/dist/patcher.js.map",
+      "size": 235647,
+      "sha256": "bfc836f1e4971b222da6df09dc7c669f37d506e39987654d28c943dd27436ef6"
+    },
+    {
+      "path": "home/.config/Vencord/dist/preload.js",
+      "size": 2475,
+      "sha256": "a0290b6b29182b07c7289cc7f8b0b3b9fc3b0b4826021331218e93e595189e8f"
+    },
+    {
+      "path": "home/.config/Vencord/dist/preload.js.map",
+      "size": 10116,
+      "sha256": "8e22f1c6f7b194e1ea2daca52f67740a426b1cbab179b8ca9079343b41d7a114"
+    },
+    {
+      "path": "home/.config/Vencord/dist/renderer.css",
+      "size": 42458,
+      "sha256": "ab62f54de686051d40bbf9a5fdaf88a613d77e89654c69fdbb8ce3b8a89c3459"
+    },
+    {
+      "path": "home/.config/Vencord/dist/renderer.css.map",
+      "size": 90071,
+      "sha256": "c2f93eeb2f04ec52d7af6db5cc55814b3d1ca575775822dbb5f2cc61bddd6356"
+    },
+    {
+      "path": "home/.config/Vencord/dist/renderer.js",
+      "size": 712790,
+      "sha256": "83636ab1443fc0f312300c0323e10bcc27355e8b66f0ed22dc2e772852e0fd50"
+    },
+    {
+      "path": "home/.config/Vencord/dist/renderer.js.LEGAL.txt",
+      "size": 1719,
+      "sha256": "45eff05ed5011021938f095940a157ff5fc21ce82be518eae3c835a7f017bcc7"
+    },
+    {
+      "path": "home/.config/Vencord/dist/renderer.js.map",
+      "size": 3108671,
+      "sha256": "721579fd47203d0aead77878c912766bc3509be21ee5cb89622f028399131f89"
+    },
+    {
+      "path": "home/.config/Vencord/settings/quickCss.css",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/Vencord/settings/settings.json",
+      "size": 12506,
+      "sha256": "db35a4bdf6c3494367a6e17c4b5763bdef1d71a07dd82e8b3877c114dd69088b"
     },
     {
       "path": "home/.config/ai.opencode.desktop/.updaterId",
@@ -685,7 +826,7 @@
     {
       "path": "home/.config/ai.opencode.desktop/DIPS",
       "size": 36864,
-      "sha256": "4681bfc40ddea2193591905d73af6a6a6264e9bfd8d54a7d362042a90f8ab870"
+      "sha256": "bb2a8824e75d0d518c35325979b77aacbe24353b97b288bbd89de304e3fec588"
     },
     {
       "path": "home/.config/ai.opencode.desktop/DIPS-wal",
@@ -699,8 +840,8 @@
     },
     {
       "path": "home/.config/ai.opencode.desktop/Network Persistent State",
-      "size": 712,
-      "sha256": "09daf1383fa432f789650e6b4d8f872adb483ae1967f9d16f67dc057d208ae2f"
+      "size": 1422,
+      "sha256": "984ecad97d48694c0db53889492e16aedadc2f0ab2748610238b4f252c4b94aa"
     },
     {
       "path": "home/.config/ai.opencode.desktop/Preferences",
@@ -708,29 +849,9 @@
       "sha256": "000adcfcb39e1ca4b76fbd1910b525e0194a3922cf4f1d3bddb64c481296847f"
     },
     {
-      "path": "home/.config/ai.opencode.desktop/Shared Dictionary/cache/index",
-      "size": 24,
-      "sha256": "fbcfe23a2ecb82b7100c50811691dde0a33aa3da8d176be9882a9db485dc0f2d"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/Shared Dictionary/cache/index-dir/the-real-index",
-      "size": 48,
-      "sha256": "74e4716de6de5412e672d2ec7b3909130f17b3a1043f99433943175a4d6e17d8"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/Shared Dictionary/db",
-      "size": 45056,
-      "sha256": "db9734c1e3001f7abd08bcc472a7b4f5daf8076eaee708f04ba98b11bd70131d"
-    },
-    {
-      "path": "home/.config/ai.opencode.desktop/Shared Dictionary/db-journal",
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
       "path": "home/.config/ai.opencode.desktop/TransportSecurity",
-      "size": 187,
-      "sha256": "24e6d41d52fa4ec838a7ba8c14c720940904c15a2e30f4b45ed11f3ff06e6aab"
+      "size": 188,
+      "sha256": "d16f4417275955b4a361d5694701ff8182a9de2e5f59365fb09e3f9f2725a17a"
     },
     {
       "path": "home/.config/ai.opencode.desktop/WebStorage/QuotaManager",
@@ -765,22 +886,22 @@
     {
       "path": "home/.config/ai.opencode.desktop/window-state-167133ed-ee88-4ce6-abfc-23bf2ba1fdeb.json",
       "size": 137,
-      "sha256": "94d101546ea4000a9c3951ea1187a2beaa2075e5f6e1d95fbb4e56214ad03cc2"
+      "sha256": "cf6b22c053ffc5ec5d5d620c88f5d10aa82d1cedf71b269d999becc3d100f3db"
     },
     {
       "path": "home/.config/dconf/user",
-      "size": 2400,
-      "sha256": "a779f55c40e513c7c41eab939097495d390f6ad88c12b22cf4f40619f4bd4372"
+      "size": 2392,
+      "sha256": "845187bf179baad0ee2363e0da9a7d7eaa4a93a43ec31e9d15d1a56ad478d220"
     },
     {
       "path": "home/.config/deepai-code-v2/DIPS",
       "size": 36864,
-      "sha256": "0259d9436289ead5ab54fa0191ef6e521f6cb8d566c528f444fae631f396bd9d"
+      "sha256": "47d2cffc09ed2b1a7087bdae767000c9aee1f1da8582af2e9cba88d982b0931d"
     },
     {
       "path": "home/.config/deepai-code-v2/DIPS-wal",
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "size": 8272,
+      "sha256": "3a947960533701d4dd2302d34969809901e7983905a8325ef808b0b71e049e3d"
     },
     {
       "path": "home/.config/deepai-code-v2/Dictionaries/en-US-10-1.bdic",
@@ -789,38 +910,18 @@
     },
     {
       "path": "home/.config/deepai-code-v2/Network Persistent State",
-      "size": 1586,
-      "sha256": "d5e6733f2952fad64bfb9bcbaa528ba987ae575e6a70fd49697ad40d5cabf2dd"
+      "size": 1668,
+      "sha256": "df33210e3e3c46e2c8f0d49c561d14998d91a412668b8ff06441076efc1a9fd6"
     },
     {
       "path": "home/.config/deepai-code-v2/Preferences",
-      "size": 57,
-      "sha256": "be4b8924ab38e8acf350e6e3b9f1f63a1a94952d8002759acd6946c4d5d0b5de"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/Shared Dictionary/cache/index",
-      "size": 24,
-      "sha256": "fbcfe23a2ecb82b7100c50811691dde0a33aa3da8d176be9882a9db485dc0f2d"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/Shared Dictionary/cache/index-dir/the-real-index",
-      "size": 48,
-      "sha256": "042adf28ca36badf035602d932cbff1f37e39992f4d8a1a1b9210dd1e34dcd60"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/Shared Dictionary/db",
-      "size": 45056,
-      "sha256": "db9734c1e3001f7abd08bcc472a7b4f5daf8076eaee708f04ba98b11bd70131d"
-    },
-    {
-      "path": "home/.config/deepai-code-v2/Shared Dictionary/db-journal",
-      "size": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "size": 132,
+      "sha256": "2f5685d97b2f1dbbf9679e73b09bde59226ca5c329c77256a1546aed212fe25d"
     },
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager",
       "size": 40960,
-      "sha256": "27b86c8553a894dfa6f738d169028a3f627cc021eb2051200bbff1cd112f8b33"
+      "sha256": "33e4fa8fb89146c91d612dedd8e7ed6734bbbf729ef0aa88262a7bb3864d17ea"
     },
     {
       "path": "home/.config/deepai-code-v2/WebStorage/QuotaManager-journal",
@@ -831,6 +932,156 @@
       "path": "home/.config/deepai-code-v2/declarative_performance_observer.db-journal",
       "size": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/DIPS",
+      "size": 36864,
+      "sha256": "9efced96e61a60c68beef0f15c6a4462ed8924c90a1e6a4b09ec4b62ddd69c61"
+    },
+    {
+      "path": "home/.config/discord/DIPS-wal",
+      "size": 49472,
+      "sha256": "3790f656091609cabdb6ae52c9e4d75ae8cc70544a61dd7e7be7a68abfb7fa70"
+    },
+    {
+      "path": "home/.config/discord/Dictionaries/en-US-10-1.bdic",
+      "size": 451968,
+      "sha256": "a075b01d9b015c616511a9e87da77da3d9881621db32f584e4606ddabf1c1100"
+    },
+    {
+      "path": "home/.config/discord/Network Persistent State",
+      "size": 2339,
+      "sha256": "fc6cc9d2d36a0a3773d19298970ef0528524296b51aa7128259f970906fee591"
+    },
+    {
+      "path": "home/.config/discord/Preferences",
+      "size": 169,
+      "sha256": "76bf7387c19ddc06e1577ecb60021242a8be60120af425aea198b97a828fd859"
+    },
+    {
+      "path": "home/.config/discord/TransportSecurity",
+      "size": 2523,
+      "sha256": "7f2875349f9be00dad4adf7060504e9dc22e94e940606cc30f55c1d9db43e2fa"
+    },
+    {
+      "path": "home/.config/discord/VideoDecodeStats/LOCK",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/VideoDecodeStats/LOG",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/CacheStorage/index.txt",
+      "size": 91,
+      "sha256": "e41495b59c1f200b9a537cc899a5dcb880615457e244a2fe1c2ed0578a4dce7e"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/.usage",
+      "size": 24,
+      "sha256": "3a4db752b2a538c7fc574bbef055b6c8058dd066410d9b6ebb6933f9be02a90d"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/00/00000002",
+      "size": 36,
+      "sha256": "40cc52b4d607ccab57449328bb3616fa83666679d3797171c65568a552e39ff5"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/Paths/CURRENT",
+      "size": 16,
+      "sha256": "0f1bad70c7bd1e0a69562853ec529355462fcd0423263a3d39d6d0d70b780443"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/Paths/LOCK",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/Paths/LOG",
+      "size": 281,
+      "sha256": "c61695f3754716161a3ea71e76b36f2f5e32a02465966a4159deb4e036dd6684"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/Paths/LOG.old",
+      "size": 239,
+      "sha256": "95f060eede4f56480977af4e2079a29c33896cc12f144e9a264dc1158b90c38a"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/2/FileSystem/t/Paths/MANIFEST-000001",
+      "size": 41,
+      "sha256": "f9d31b278e215eb0d0e9cd709edfa037e828f36214ab7906f612160fead4b2b4"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/QuotaManager",
+      "size": 40960,
+      "sha256": "2a3aad0775df9c4cf20ddd0d0c2bb18fe325edad5fcb1d8dbe67475b6b27c7e7"
+    },
+    {
+      "path": "home/.config/discord/WebStorage/QuotaManager-journal",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/declarative_performance_observer.db-journal",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/domainMigrated",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/install-state/app.toml",
+      "size": 17,
+      "sha256": "677bcf06ad189db5fbfff4b4bed722796919b2ec8081d2795aaa68552178f8d1"
+    },
+    {
+      "path": "home/.config/discord/settings.json",
+      "size": 416,
+      "sha256": "43617fdd3461b43a8a4ee2720e8adb69a6a7f31bdc2abdc96bc21efcabbf623d"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/CURRENT",
+      "size": 16,
+      "sha256": "0f1bad70c7bd1e0a69562853ec529355462fcd0423263a3d39d6d0d70b780443"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/LOCK",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/LOG",
+      "size": 207,
+      "sha256": "421ad357b9e66b23455d31c467b930bf0323df41a1ff8adcfe6b96bc6a1f69f9"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/MANIFEST-000001",
+      "size": 41,
+      "sha256": "f9d31b278e215eb0d0e9cd709edfa037e828f36214ab7906f612160fead4b2b4"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/metadata/CURRENT",
+      "size": 16,
+      "sha256": "0f1bad70c7bd1e0a69562853ec529355462fcd0423263a3d39d6d0d70b780443"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/metadata/LOCK",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/metadata/LOG",
+      "size": 225,
+      "sha256": "65b0709ae3a67aa904c87d9d98ef94c189e0c9c25f9c5851dcc663f08d69255e"
+    },
+    {
+      "path": "home/.config/discord/shared_proto_db/metadata/MANIFEST-000001",
+      "size": 41,
+      "sha256": "f9d31b278e215eb0d0e9cd709edfa037e828f36214ab7906f612160fead4b2b4"
     },
     {
       "path": "home/.config/gtk-3.0/gtk.css",
@@ -873,6 +1124,11 @@
       "sha256": "7b9530cf7686decd5af5f52f87c94559da1a66595d25a7c0df5483f525e7c4f5"
     },
     {
+      "path": "home/.config/pavucontrol.ini",
+      "size": 108,
+      "sha256": "e2d8171570121faf1012e65d3b2f9cd29ed946fb0e807d6b3f275cf9c7312690"
+    },
+    {
       "path": "home/.config/picom.conf",
       "size": 1178,
       "sha256": "f91377af8976aa09ce9aa3698b818a5b5e3bb452538c1b6f22107ff5532d3a93"
@@ -899,8 +1155,8 @@
     },
     {
       "path": "home/.config/xfce4/desktop/icons.screen0.yaml",
-      "size": 826,
-      "sha256": "ed828627d337579d3cc217143e93ae7d335c227fa81070a0fb3841b7489535e1"
+      "size": 1238,
+      "sha256": "c856a39f2e9adf4d8a32294bd5a333a26f37697a6c716a330f94f91442a35740"
     },
     {
       "path": "home/.config/xfce4/helpers.rc",
@@ -945,7 +1201,7 @@
     {
       "path": "home/.config/xfce4/xfce4-screenshooter",
       "size": 270,
-      "sha256": "3d10b08401fd139f169d2d31323b9732542efdb379d1efc9290c7e815a702e40"
+      "sha256": "b38420d3a6e899cd2c7ff1155b76086aeae85f83b7fbaa88cf2b4cbd77b9b4a6"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/displays.xml",
@@ -954,8 +1210,8 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml",
-      "size": 324,
-      "sha256": "876a889c6d1dc215f6f80caa60ef5ab9f959f0c5a63f470945ab942525797a71"
+      "size": 614,
+      "sha256": "a7d11ced0ea363d4e31b55039c2f06d01ba34d2b342121cf5f1a69926f52aee7"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml",
@@ -964,8 +1220,8 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml",
-      "size": 1010,
-      "sha256": "45e53752578f541c2fc66d39850facc55af626d52fa812ad0b1d871911545eb5"
+      "size": 1017,
+      "sha256": "a6e0fcaa9a4de4585c5c479200b90d065abed384add5255f1e48b4bc25ff832d"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml",
@@ -974,18 +1230,23 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-notifyd.xml",
-      "size": 352,
-      "sha256": "9bb897765f5c4a397fa48e2fcf938867b30e3feacefdcffde4abbc3da280aeff"
+      "size": 454,
+      "sha256": "ba52dbdbea0e968d7e42650103aca083b585c3a5391ffce9cf44bd5decd798a1"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml",
-      "size": 6406,
-      "sha256": "c9949da3ddbe0f4879d4c6cd60164a352d23a1ac29c40ff35701e48aea890bf0"
+      "size": 6751,
+      "sha256": "654041a5b83e3f5aa7a46503a76d4feb63fb8a2d40fe0e233d03ef2de63e71ab"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screenshooter.xml",
       "size": 542,
       "sha256": "ae582a176b955adc7d0edc98159fd757c94fef2ea1ee138a34c6d720ef07252c"
+    },
+    {
+      "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-manager.xml",
+      "size": 276,
+      "sha256": "f9e89007fd3ed8792dfb8b3482d73db8f4dab2d59644f76a80b56143abe3ee71"
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml",
@@ -994,13 +1255,18 @@
     },
     {
       "path": "home/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml",
-      "size": 2027,
-      "sha256": "c4c60834ceb2bd9a2962b3d4e6845043681d81eaf88f63f38da7791e255f9a8e"
+      "size": 2026,
+      "sha256": "16da64cc3c1e86863954e7a1637db1441f5a928cc228db836a9759f683140328"
     },
     {
       "path": "home/.gitconfig",
       "size": 305,
       "sha256": "1570dc969bcb0ebf15b8b18cae7d26b44b4606c0e6be5fb2a76e9dbb121b4abf"
+    },
+    {
+      "path": "home/.java/fonts/25.0.5.1/fcinfo-1-4552801cdcb3-Ubuntu-26.04-en-US.properties",
+      "size": 169032,
+      "sha256": "3fe95c51fd59eb748b080b88f1dc8fb0a0fce5f6ade4bb804fa7eba3691fd8ca"
     },
     {
       "path": "home/.local/bin/castle-dimitrescu-launch.sh",
@@ -1048,14 +1314,24 @@
       "sha256": "d566c6055a9880cbe874fd2ccd463f3a41834cddf831f45bea50b235f61b2072"
     },
     {
+      "path": "home/.local/share/applications/discord.desktop",
+      "size": 368,
+      "sha256": "837b2f0d0d5ec6c4621713efa49b7e4761920e409b7a6849eae2a43e806a930a"
+    },
+    {
+      "path": "home/.local/share/applications/legacy-launcher.desktop",
+      "size": 326,
+      "sha256": "9471cc0c07f1c9a3806137a74a6cbc269770c4c82b35af95ea85d465ee7befe0"
+    },
+    {
       "path": "home/.local/share/applications/mimeapps.list",
       "size": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "home/.local/share/applications/mimeinfo.cache",
-      "size": 67,
-      "sha256": "c100c78b5a06cef9d9d940cdd83d722d8459d206390977d0709f4f6cc01d451d"
+      "size": 109,
+      "sha256": "6d0f92c4f25c87e3fea1d260d326ab7a39e42e5c646b27244177460d095c5a7f"
     },
     {
       "path": "home/.local/share/applications/org.deepai.code.desktop",
@@ -8794,8 +9070,8 @@
     },
     {
       "path": "home/.local/share/recently-used.xbel",
-      "size": 3656,
-      "sha256": "f29caa81f3487c2ad7c819d76e66104fe8a1b1cf434d67bded2dc9d29e750019"
+      "size": 5828,
+      "sha256": "63697af490b2daf862e690010e343198d6519a42931bcb8a87920bd9b1a7b803"
     },
     {
       "path": "home/.local/share/sober/state",
@@ -8826,6 +9102,11 @@
       "path": "home/.local/state/opencode/service.json",
       "size": 162,
       "sha256": "174e44fdc8c314265c510840b6dcc2d4003ebb1e4c960b769cb12552c6df84c4"
+    },
+    {
+      "path": "home/.minecraft/launcher_profiles.json",
+      "size": 596,
+      "sha256": "486023f43903af7bdf376cbee82cd4b5535ee5b396724d02b319dcbe6980864c"
     },
     {
       "path": "home/.themes/Fluent-round-grey-Dark-compact/COPYING",
@@ -15353,6 +15634,21 @@
       "sha256": "8a75197ac8b1fc4ffe102faf0124b060d488b84c23988e18bf876e8e41498e8a"
     },
     {
+      "path": "home/.tlauncher/legacy.properties",
+      "size": 1421,
+      "sha256": "83e123d07a541d5704c69e1c6eb6488bdff9a34c9ef296abf026d5fe261177a8"
+    },
+    {
+      "path": "home/.var/app/org.prismlauncher.PrismLauncher/.ld.so/8d54ffb9847f143661ccb60c97360c0e8881dba421ef2b6ca99833a7eed7d9d2",
+      "size": 79671,
+      "sha256": "c955d1b2865acb44fd68f8c6f5a278de783fc1ea3df991b3de60e0f0d8e6c144"
+    },
+    {
+      "path": "home/.var/app/org.prismlauncher.PrismLauncher/config/user-dirs.dirs",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "home/.var/app/org.vinegarhq.Sober/.ld.so/a503959468dd98023a668d58cbdca027a37e238f7fefad93da3dba098c2e5625",
       "size": 46475,
       "sha256": "8b66fc97e44a5a95607c9bcadbea361dce2b936eb2ea796b223cff9be6f9dc02"
@@ -15373,6 +15669,11 @@
       "sha256": "be4031bce5d9a104f9fbabb9423bca9d00f32e4db01bbf4ffc49b30ede18c8f3"
     },
     {
+      "path": "home/Desktop/W8FreeFireSpamer.apk",
+      "size": 7391712,
+      "sha256": "5439757b7e28f73d9965b85b038c665b34a29b0acffe16d00607886d4f208733"
+    },
+    {
       "path": "home/Desktop/brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop",
       "size": 341,
       "sha256": "f9abc9fc36f25a8d8a65fb27027ac4cecf50aa3d560c3c395ea70873f38f788f"
@@ -15381,6 +15682,11 @@
       "path": "home/Desktop/chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop",
       "size": 1064,
       "sha256": "d566c6055a9880cbe874fd2ccd463f3a41834cddf831f45bea50b235f61b2072"
+    },
+    {
+      "path": "home/Desktop/discord.desktop",
+      "size": 368,
+      "sha256": "837b2f0d0d5ec6c4621713efa49b7e4761920e409b7a6849eae2a43e806a930a"
     },
     {
       "path": "home/Documents/Default Project/free-fire-guild-glory-bot-report.md",
@@ -15433,6 +15739,26 @@
       "sha256": "255e92853a3b3f35bc779cae708448173b24ba9d533b70ea7e2078ebdfccddb7"
     },
     {
+      "path": "home/Pictures/Wallpapers/uploaded.png",
+      "size": 447821,
+      "sha256": "9d55ffee19c9072fea6b51449290e6aa40639a6fad26af0cb89d5da02db157b9"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/uploaded_hr.png",
+      "size": 1942160,
+      "sha256": "900da5870412682f64e488805aabc3d80051adac79bc46befec52089305be5dd"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/uploaded_sharp.png",
+      "size": 1928875,
+      "sha256": "47fedda73e64f4ef8e220058d5c8781da05f713c911231e7525792c48d60d1da"
+    },
+    {
+      "path": "home/Pictures/Wallpapers/uploaded_xbrz.png",
+      "size": 3462844,
+      "sha256": "e4a8322e2ca544a365eed315da91098135222353b905f881020edbbe4a6eb988"
+    },
+    {
       "path": "home/Pictures/Wallpapers/wall2.jpg",
       "size": 37365,
       "sha256": "2179a2bdf9206a134da42866536d78d57a1914ccd0640040fe0c898dba79e71f"
@@ -15448,9 +15774,19 @@
       "sha256": "0c33193dc04e45763ef684c5347ce98bb531c31c10b14289258de436a936ac4f"
     },
     {
+      "path": "home/Pictures/Wallpapers/wall4.jpg",
+      "size": 58869,
+      "sha256": "9684ce1f7576340ea7fec4117ab7b3551f9d51625ca9ed01e1051a051b8d1d32"
+    },
+    {
       "path": "home/Pictures/wallpapers/README.md",
-      "size": 1748,
-      "sha256": "0ce512b4584390a322bcf69f4295b57e28e6365f4560f4c5a0c16bed2a58ff7a"
+      "size": 2373,
+      "sha256": "7a708db61dd95a29d2b6061f502003073774f3673ab6f1048459189d8235b8d2"
+    },
+    {
+      "path": "home/Pictures/wallpapers/akira-red.png",
+      "size": 2470627,
+      "sha256": "8637952537a5ccddf33455649f9894e0de6e710973097d03e8bf11c940c06bdf"
     },
     {
       "path": "home/Pictures/wallpapers/anime-dusk-girl.png",
@@ -15483,6 +15819,11 @@
       "sha256": "cd33b1e79a20ffda591fc0e3d521f2cd80101370d01042833c524c87a72b7fbf"
     },
     {
+      "path": "home/Pictures/wallpapers/takamura-katana.png",
+      "size": 620624,
+      "sha256": "a8d4b9cc53d3c6b6be04f08ce244b7ab0018d8343ec6a22b898ec492c38e883a"
+    },
+    {
       "path": "home/Pictures/wallpapers/user-wallpaper.png",
       "size": 2028479,
       "sha256": "2219026356af75351203aa1c1b23e6f678b680915dce14f31fb46c44ff602af2"
@@ -15496,6 +15837,11 @@
       "path": "home/Pictures/wallpapers/win11-bloom-dark.jpg",
       "size": 1383556,
       "sha256": "d54262032574b15ccf541e40fa13475ffb39d8682c19383e917f3ed5e8bbca71"
+    },
+    {
+      "path": "home/Pictures/wallpapers/yuji-sukuna-red.png",
+      "size": 1905776,
+      "sha256": "e638a95adb9fc5ddd65575569f30a79ee5e0c1331865b5ca92aa6460bcd7b84d"
     },
     {
       "path": "home/desktop-backup-20261123-005150/xfce4/desktop/accels.scm",
@@ -15563,6 +15909,66 @@
       "sha256": "be6d1da550bce1c98c7bd192c73942b8226213710eeed7ce5ca805713e4676ba"
     },
     {
+      "path": "home/educational purpose/_widthcheck.html",
+      "size": 1283,
+      "sha256": "5e01da0461d6813642665c902182425115951cb49083287d1c8baf4ba35edc84"
+    },
+    {
+      "path": "home/educational purpose/assets/app.js",
+      "size": 14740,
+      "sha256": "0d3e3a7f0e99468fb060a7262c31c846158f6b541ecb1f4dd21e18ea20f79887"
+    },
+    {
+      "path": "home/educational purpose/assets/search-index.js",
+      "size": 8246,
+      "sha256": "6f27e43ac21e57f22e30eb65e934349219417d74021b27a13f93346b95fa88d0"
+    },
+    {
+      "path": "home/educational purpose/assets/style.css",
+      "size": 35994,
+      "sha256": "588e03e9dd8967df24b4009bfae9b758685ce4f3c9cee65acecfd84fa51d3271"
+    },
+    {
+      "path": "home/educational purpose/detection.html",
+      "size": 12820,
+      "sha256": "64f482030cd35fcb3de568ba23653fe892fac13ed885ed8ed7e0af1498586cbc"
+    },
+    {
+      "path": "home/educational purpose/farm.html",
+      "size": 13268,
+      "sha256": "1746f1111889cb5e86b2a580bbc49a15d8a7879c200e447c371e6be72a763f4e"
+    },
+    {
+      "path": "home/educational purpose/index.html",
+      "size": 17830,
+      "sha256": "29bbf95c68121106ea756acbce47582f7428e77a81c987bd4b27c645a8ff73a6"
+    },
+    {
+      "path": "home/educational purpose/method.html",
+      "size": 10848,
+      "sha256": "39b31275e9748c801c1ff24167da5f01b898a06b0b93f7082769005beabaecd9"
+    },
+    {
+      "path": "home/educational purpose/payload.html",
+      "size": 12548,
+      "sha256": "10a55631ad68a26d42fa5f994a8a7436e4c2c922c6b96e091e77da7b6475f9b7"
+    },
+    {
+      "path": "home/educational purpose/protocol.html",
+      "size": 19934,
+      "sha256": "31a9a2a31a33606453336e7876f3ea3d3ced322a37f80bf16e000a4ff0f487a4"
+    },
+    {
+      "path": "home/educational purpose/source.html",
+      "size": 11260,
+      "sha256": "d6d349e67ab7ed58fd910331a56f038362019a6aa1716a6a2d0e6e1c73f17837"
+    },
+    {
+      "path": "home/educational purpose/spam.html",
+      "size": 12503,
+      "sha256": "7dc38636cbc07db2e8b1f8b7aaa04859682c021bf9833213b1d90ef73b319e1d"
+    },
+    {
       "path": "home/launch-deepai-code.sh",
       "size": 74,
       "sha256": "1c28f9c03c22cf37eb0ece422847f442efa003196b28e2c2f2f0d9fe933f06a6"
@@ -15570,7 +15976,7 @@
     {
       "path": "inventory/bulk-dirs.txt",
       "size": 435,
-      "sha256": "dfcd207d194d6de68f0b12c32eddf5950b513a0b4108ea5656c1baf9a2271890"
+      "sha256": "8302d5e64f67460c32b799de7c5cce05858ae9243f6a4dfb7237179e3c6f106a"
     },
     {
       "path": "inventory/bulk.txt",
@@ -15584,8 +15990,8 @@
     },
     {
       "path": "inventory/etc-modified.txt",
-      "size": 17586,
-      "sha256": "3e51af760bf9256902ea64f9e2bec802dec42df6b1ddc778633eb69eacbe25d4"
+      "size": 18894,
+      "sha256": "5243bfe541d231f7b1388ea71e97bc25fddaeffb704b71d533c01650174a79b4"
     },
     {
       "path": "inventory/etc-secret-hashes.txt",
@@ -15594,8 +16000,18 @@
     },
     {
       "path": "inventory/etc-sha256.txt",
-      "size": 48322,
-      "sha256": "5136270b43d20a466dcf9506c22b84179d2c3d4d12dc54306b3785f8c944c7ca"
+      "size": 51411,
+      "sha256": "9d3786dcd1b11aace764d95d0498cbb052ed3eab5ed47070423e2a46b8d050f0"
+    },
+    {
+      "path": "inventory/etc/.java/.systemPrefs/.system.lock",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "inventory/etc/.java/.systemPrefs/.systemRootModFile",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "inventory/etc/.pwd.lock",
@@ -15888,6 +16304,11 @@
       "sha256": "a44afdb50eacfc09e45f6dac1e18ae231c179feec633c106e1060bae8ae11df1"
     },
     {
+      "path": "inventory/etc/apparmor.d/discord",
+      "size": 240,
+      "sha256": "e3d49dd7b0aec306ecd7880d6ed6e8a03518d41c90171ccb13457c4dbf51c72a"
+    },
+    {
       "path": "inventory/etc/apparmor.d/local/usr.bin.man",
       "size": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -16011,6 +16432,11 @@
       "path": "inventory/etc/ca-certificates.conf",
       "size": 5240,
       "sha256": "63747e5653ac1d4572028e60ebd2601c5f827a873fbc97873d1bce5efbafcfae"
+    },
+    {
+      "path": "inventory/etc/ca-certificates/update.d/jks-keystore",
+      "size": 758,
+      "sha256": "254a87ea1f9fe37751e3ed90a79013f3424c7a5fe26bfe59fac312abff82dbda"
     },
     {
       "path": "inventory/etc/chromium.d/dev-shm",
@@ -16238,6 +16664,11 @@
       "sha256": "3c84b36be589a13576e4d54126a87ca950fe4b01716c42ef4ceb462e7445401c"
     },
     {
+      "path": "inventory/etc/default/cacerts",
+      "size": 384,
+      "sha256": "d5384e57acae9efac67662ddeb0f5788a3660b3e05b698bf2a47632cbf282583"
+    },
+    {
       "path": "inventory/etc/default/console-setup",
       "size": 276,
       "sha256": "e6ca2e6e71a4ddb12cf456be18ed4ea6f68c17e3a1f6455689288b09593c4a31"
@@ -16438,9 +16869,124 @@
       "sha256": "afe198d6d7c2e61e3f604e9f19e806f3b5d38a294fb7321476a5a7ee5444e629"
     },
     {
+      "path": "inventory/etc/java-25-openjdk/jaxp-strict.properties",
+      "size": 4937,
+      "sha256": "3cc9b87633769414b22c24c97ecded8a15df630fe5ab12abca2398d88e31b32b"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/jaxp-strict.properties.template",
+      "size": 4937,
+      "sha256": "3cc9b87633769414b22c24c97ecded8a15df630fe5ab12abca2398d88e31b32b"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/jaxp.properties",
+      "size": 8222,
+      "sha256": "d4f45052a100e5aef02b6638a3b9c69b2bdd46155ceb58a52671e5d594c30100"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/jfr/default.jfc",
+      "size": 40505,
+      "sha256": "26f2d7bf2f8473b3849f9480629eee695edf59fd667da838890a22919237718a"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/jfr/profile.jfc",
+      "size": 40387,
+      "sha256": "3e2c847608b1e7d182337f56bbf75b6a026ba4e9634b398bd92aec865e9ea8a7"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/jvm-amd64.cfg",
+      "size": 54,
+      "sha256": "d5ad5a3e0c1cd2236d5f983f48f9a4b3612662dc7c89a6bb21994ed8327be25e"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/logging.properties",
+      "size": 2740,
+      "sha256": "8590633e1e8a7d88ffe74cc04189c5c61b1ed4703180cbc851dcd5575efcce74"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/management/jmxremote.access",
+      "size": 3997,
+      "sha256": "0c25d26ee212ca1e8c33f67c3c460d43fe849c3a1d23dbe341148517602b280c"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/management/management.properties",
+      "size": 15015,
+      "sha256": "75e60327531d34d1ce5eb507db52711a1d926b9c77d14d6b3a392d747105488d"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/net.properties",
+      "size": 7341,
+      "sha256": "f0093906820c30e079cbf79bd744d761aaf32ae917598c7ce71fac7eae16f86d"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/psfont.properties.ja",
+      "size": 3793,
+      "sha256": "5a4bd51b969bf187ff86d94f4a71fdfbfa602762975fa3c73d264b4575f7c78f"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/psfontj2d.properties",
+      "size": 11402,
+      "sha256": "cfb2f55fc4a22368567273c38f1afe3fc627ad56710a1d922ada68015710e53f"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/blocked.certs",
+      "size": 5608,
+      "sha256": "2596bb6dda83c66d96c5a252d7b2ae1f24cc1ae3f1890223b4f3591a8d52bf10"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/java.security",
+      "size": 75447,
+      "sha256": "458148af3f0c8499355e562b12e0b83ddc1fa487b4a452b9c485a47eeac99aaa"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/nss.cfg",
+      "size": 106,
+      "sha256": "84b778712c4b3f09798681f9d8ff3a298bcad76bb65ae8925ed8bd80a14621f4"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/README.txt",
+      "size": 2390,
+      "sha256": "6da0747334b0fea7592fd92614b2bbc8b126535e129b1fee483774d914e98eb5"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/limited/default_US_export.policy",
+      "size": 146,
+      "sha256": "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/limited/default_local.policy",
+      "size": 647,
+      "sha256": "2b2627548e61316150d47ffc3e6cad465ca05b3cccd4785eb7d21aa7baa0f441"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/limited/exempt_local.policy",
+      "size": 566,
+      "sha256": "8c3d7648abcd95a272ce12db870082937f4d7f6878d730d83cb7fbb31eb8b2c9"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/unlimited/default_US_export.policy",
+      "size": 146,
+      "sha256": "758b930a526fc670ab7537f8c26321527050a31f5f42149a2dda623c56a0a1a9"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/policy/unlimited/default_local.policy",
+      "size": 193,
+      "sha256": "8d8a318e6d90dfd7e26612d2b6385aa704f686ca6134c551f8928418d92b851a"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/security/public_suffix_list.dat",
+      "size": 227396,
+      "sha256": "16b42002aa6f83a7763c4cdbd399ecf738460377d447e362884495545afd60a3"
+    },
+    {
+      "path": "inventory/etc/java-25-openjdk/sound.properties",
+      "size": 1210,
+      "sha256": "299c2360b6155eb28990ec49cd21753f97e43442fe8fab03e04f3e213df43a66"
+    },
+    {
       "path": "inventory/etc/ld.so.cache",
-      "size": 54811,
-      "sha256": "3000e3caff01fc475d02e0f4674e9ae3d895bf1070068e2409411edfbb39f38d"
+      "size": 55659,
+      "sha256": "cc6a0adf965f517e0eb8f558d5b451c51653f6f5319ee976dcc818c0eba0fa76"
     },
     {
       "path": "inventory/etc/ld.so.conf",
@@ -17548,6 +18094,11 @@
       "sha256": "1ccb86565c3bf8550273b8725e17a27540243dc6bc9a336f8d690e879b7d139e"
     },
     {
+      "path": "inventory/etc/ssl/certs/java/cacerts",
+      "size": 136103,
+      "sha256": "d124ed4fa0ca5c44bec4bc4af237607f089b87ff7f0bd08f2682ded78f2ed04d"
+    },
+    {
       "path": "inventory/etc/ssl/certs/ssl-cert-snakeoil.pem",
       "size": 1090,
       "sha256": "55aec9d6245b70c831415ba8e4441bc87b1a176982239bc94e981086712eca11"
@@ -17964,8 +18515,8 @@
     },
     {
       "path": "inventory/home-tree.txt",
-      "size": 129742,
-      "sha256": "1cf08d7772505b8e6601efcb6a24c8d59b466d14061a3d41c93c437a7c4c1eea"
+      "size": 158189,
+      "sha256": "61964095a482f8069932040f4c6a47f2c49fe8aaf4943e6c9901d5b22210d2e7"
     },
     {
       "path": "inventory/host-config.txt",
@@ -17974,33 +18525,33 @@
     },
     {
       "path": "inventory/packages.txt",
-      "size": 36018,
-      "sha256": "8d7e0b9fc0d4a87f78b5b500dddeaf4f085283f67c352bb803954638a7efc562"
+      "size": 38889,
+      "sha256": "d755cfaaf85b6ff2b31af81da18e4f9bb0d32ba286840b861b7cfef6924ddbc0"
     },
     {
       "path": "inventory/recent-changes.txt",
-      "size": 51004,
-      "sha256": "247647f836c2f9b648e04ed5e53f7aa250a77b5a80f7fadd279984bddcd2e3b5"
+      "size": 51058,
+      "sha256": "2935677504f4e1957b9769411ba24b4d576c5bf46e684eb4a588f2e7010c4d4f"
     },
     {
       "path": "inventory/release-assets.txt",
-      "size": 817,
-      "sha256": "1d6a528d07fec4da2f7806a1f72af11575f411dcd29ed1b4dae8cc1ba3cf3a52"
+      "size": 1153,
+      "sha256": "8ad72c0ce22b2d311d07f7ac2e6090a49357f849a038cf64af828ab8e20d1a9c"
     },
     {
       "path": "inventory/secrets-sweep.txt",
-      "size": 499,
-      "sha256": "0b710fa33493ee23ea59d764cdd8b5e16574141759ee859063a61b561e01eece"
+      "size": 702,
+      "sha256": "4ee11a3a40c60fd97a5fa6d05afa4d984d5d495225991df4f0c343cb52845ac3"
     },
     {
       "path": "inventory/services.txt",
-      "size": 5213,
-      "sha256": "a310a4eb9fc752ab6ef24ca80ed3625b742269f52f0e82b058036fe7cbe2d9de"
+      "size": 5253,
+      "sha256": "4e19a6de794a60b8679f63132f28f2d035996367447163ba5289ca5c0313b1f2"
     },
     {
       "path": "inventory/system.txt",
       "size": 3325,
-      "sha256": "5adb8f81388d9522b10917f5468bc617768dace5d342af574fd229487a00df6a"
+      "sha256": "ed4f6074d21a756dd4f67bd81e5bf1e3a06a2d86852b14e69c6f30d9178f2a1e"
     },
     {
       "path": "inventory/users.txt",
@@ -18054,8 +18605,8 @@
     },
     {
       "path": "scripts/capture.sh",
-      "size": 16012,
-      "sha256": "a3353ddd899e7cd4e84b59eb939cff6f8ea787feaa60f82662e7c5e4e825240e"
+      "size": 17290,
+      "sha256": "2293f3b29cb71c0d143a820272ffc0e3638a01b80c3606f27aafbf7417e9f8ca"
     },
     {
       "path": "scripts/manifest.sh",
@@ -18074,15 +18625,25 @@
     },
     {
       "path": "secrets/secrets.manifest.txt",
-      "size": 26288,
-      "sha256": "b3f3ce30103d0bb5ef44ff7cf295c0d6889e6bd76ceb20bfd6260c9057b97783"
+      "size": 26636,
+      "sha256": "904c81c90be05083bb9c23b12c9bd44d5686ea44f41b67d08b083fad9fc45c97"
     }
   ],
   "symlinks": [
     {
+      "path": "home/.config/discord/Discord",
+      "target": "app-1.0.170/Discord",
+      "target_sha256": "abafb275d23549ff5c9951e5fe762a6f408e252d70201f9debc9b6f270fb4ae6"
+    },
+    {
       "path": "home/.local/bin/bwrap",
       "target": "proot",
       "target_sha256": "5f611c8065f8477a000ba04f664286df6e5743472dad634026d0d7e5f0ac7e51"
+    },
+    {
+      "path": "home/.local/share/apktool/framework/1.apk",
+      "target": "/usr/share/android-framework-res/framework-res.apk",
+      "target_sha256": "cc00f9ce4a24359e442c7532e3f176826be1420b44d866c8fbc33cf44e5eaa52"
     },
     {
       "path": "home/.local/share/icons/Win11-dark/actions@2x",
@@ -26203,6 +26764,11 @@
       "path": "home/.themes/MacDark/unity/unmaximize_unfocused_pressed.svg",
       "target": "window-buttons/maximize_pressed.svg",
       "target_sha256": "ad185c3a5400353c3ff7553d777f8d0fdd716947e86518a0212acc35ee6861d0"
+    },
+    {
+      "path": "home/.var/app/org.prismlauncher.PrismLauncher/.ld.so/active",
+      "target": "8d54ffb9847f143661ccb60c97360c0e8881dba421ef2b6ca99833a7eed7d9d2",
+      "target_sha256": "b3bda75e93200cb5814d0c524475252ee7276ccb18486636ee9bcb915180c265"
     },
     {
       "path": "home/.var/app/org.vinegarhq.Sober/.ld.so/active",

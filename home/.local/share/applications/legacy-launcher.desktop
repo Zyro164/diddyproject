@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Legacy Launcher
+Comment=Minecraft Legacy Launcher (TL)
+Exec=/usr/bin/java -jar /config/.local/share/legacy-launcher/LegacyLauncher.jar
+Icon=/usr/share/icons/Papirus/64x64/apps/minecraft.svg
+Terminal=false
+Categories=Game;Java;
+StartupNotify=true
+StartupWMClass=LegacyLauncher

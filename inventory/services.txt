@@ -120,6 +120,8 @@ man-db
 # desktop entries installed in ~/.local/share/applications
 brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop
 chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop
+discord.desktop
+legacy-launcher.desktop
 mimeapps.list
 mimeinfo.cache
 org.deepai.code.desktop

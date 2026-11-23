@@ -1,2 +1,3 @@
 [MIME Cache]
 x-scheme-handler/deepai-code=org.deepai.code.desktop;
+x-scheme-handler/discord=discord.desktop;

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Discord
+Comment=All-in-one voice and text chat (Vencord patched)
+Exec=/usr/bin/discord --disable-dev-shm-usage --use-angle=swiftshader --use-gl=angle %U
+Icon=/usr/share/discord/discord.png
+Terminal=false
+Categories=Network;InstantMessaging;
+MimeType=x-scheme-handler/discord;
+StartupNotify=true
+StartupWMClass=discord

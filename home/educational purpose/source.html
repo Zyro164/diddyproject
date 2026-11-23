@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recovered source map — W8 teardown</title>
+<meta name="description" content="The seven app-specific files, the Api and AccInfo skeleton, and what decompilation preserved.">
+<meta name="theme-color" content="#070a0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1119'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='23' fill='%23ffb454' text-anchor='middle'%3EW8%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("w8-theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      var q = new URLSearchParams(location.search).get("theme");
+      if (q === "light" || q === "dark") t = q;
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="W8 teardown home">
+      <span class="brand-mark" aria-hidden="true">W8</span>
+      <span class="brand-copy"><strong>FreeFireSpamer</strong><small>static teardown</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="payload.html">Payload</a>
+      <a href="protocol.html">Protocol</a>
+      <a href="spam.html">Spam</a>
+      <a href="farm.html">Farm</a>
+      <a href="detection.html">Detection</a>
+      <a href="source.html" aria-current="page">Source</a>
+      <a href="method.html">Method</a>
+    </nav>
+    <div class="header-tools">
+      <button class="tool" id="searchOpen" type="button" aria-label="Search the teardown" title="Search (Ctrl+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="tool" id="themeToggle" type="button" aria-label="Switch theme" title="Toggle theme"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      <button class="tool menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a href="index.html"><span>01</span>Overview</a>
+      <a href="payload.html"><span>02</span>Payload</a>
+      <a href="protocol.html"><span>03</span>Protocol</a>
+      <a href="spam.html"><span>04</span>Spam</a>
+      <a href="farm.html"><span>05</span>Farm</a>
+      <a href="detection.html"><span>06</span>Detection</a>
+      <a href="source.html" aria-current="page"><span>07</span>Source</a>
+      <a href="method.html"><span>08</span>Method</a>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" aria-label="Page contents">
+    <div class="side-sticky">
+      <p class="eyebrow">On this page</p>
+      <nav id="toc" class="toc" aria-label="On this page"></nav>
+      <div class="side-card">
+        <p class="eyebrow">Sample</p>
+        <p class="mono">5439757b…8733</p>
+        <p class="small muted">7.1 MB · 3,101 classes</p>
+        <p class="small muted">Page 07 / 08</p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main" class="content">
+    <details class="mobile-toc">
+      <summary>On this page</summary>
+      <nav id="tocMobile" class="toc" aria-label="On this page"></nav>
+    </details>
+    <div class="page-head reveal">
+      <div class="page-kicker"><span class="pill">07 / 08</span><span class="dot"></span>Source</div>
+      <h1>Recovered source</h1>
+      <p class="page-lede">The app package is seven files. The protocol layer is readable, the field numbers are intact, and the sensitive constants are still in the binary.</p>
+    </div>
+<section id="map" data-num="01">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Source map</h2></div>
+  <p class="lead">The APK is Kotlin, R8-compiled, and was recovered with JADX. The app package is tiny; the remaining classes are libraries. The decompiled tree lives in a scratch workspace and is not reproduced here because it contains live credentials and keys.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Recovered app-specific files</caption>
+      <thead><tr><th>Recovered file</th><th>Lines</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td><code>MainActivity.java</code></td><td class="num">1,984</td><td>Console UI, account loading, 30-worker spam loop, stats, overlay callbacks</td></tr>
+        <tr><td><code>Api.java</code></td><td class="num">1,221</td><td>OAuth grant, MajorLogin/Register, GetLoginData, friend requests, TCP invites, name lookup</td></tr>
+        <tr><td><code>GeneratorActivity.java</code></td><td class="num">725</td><td>Bulk guest registration UI and worker pool</td></tr>
+        <tr><td><code>SettingsActivity.java</code></td><td class="num">537</td><td>Telegram bot token validation and display</td></tr>
+        <tr><td><code>BubbleService.java</code></td><td class="num">457</td><td>Overlay bubble, UID panel, clipboard paste</td></tr>
+        <tr><td><code>Proto.java</code></td><td class="num">301</td><td>Protobuf wire format, AES-CBC/PKCS5, hex helpers</td></tr>
+        <tr><td><code>Store.java</code></td><td class="num">252</td><td>SharedPreferences, <code>GenAccount.txt</code> append/parse, Telegram upload</td></tr>
+        <tr><td><code>R.java</code> and UI widgets</td><td class="num">~20k</td><td>Generated resources plus custom neon views</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="skeleton" data-num="02">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Class skeleton</h2></div>
+  <p>The public surface of the protocol layer is small enough to summarize. This is a reconstruction, not the original file.</p>
+  <div class="code">
+    <div class="code-head"><span class="code-name">recovered class structure</span><span class="code-tag red">secrets redacted</span><button class="copy" type="button" data-copy-code>Copy</button></div>
+    <pre tabindex="0"><code><span class="k">object</span> Api {
+  <span class="k">private val</span> API_KEY   = <span class="r">‹16-byte static key›</span>
+  <span class="k">private val</span> RRR_TOKEN = <span class="r">‹hardcoded reseller JWT›</span>
+
+  <span class="k">fun</span> loginAccount(uid: Long, password: String): AccInfo?
+  <span class="k">fun</span> registerFreshAccount(name: String, password: String): FreshAccount?
+  <span class="k">fun</span> generateToken(name: String, password: String): FreshAccount?
+  <span class="k">fun</span> fetchNickname(uid: Long): String
+  <span class="k">fun</span> sendFriendRequest(info: AccInfo, target: Long): Int
+  <span class="k">fun</span> sendInvitePrep(info: AccInfo, target: Long): Int
+  <span class="k">fun</span> inviteFromAccount(info: AccInfo, target: Long,
+                          count: Int, groupMode: Int): Long
+}
+
+<span class="k">data class</span> AccInfo(
+  <span class="k">val</span> accountId: Long, <span class="k">val</span> name: String, <span class="k">val</span> region: String,
+  <span class="k">val</span> key: ByteArray, <span class="k">val</span> iv: ByteArray, <span class="k">val</span> ip: String,
+  <span class="k">val</span> port: Int, <span class="k">val</span> pktType: String, <span class="k">val</span> authHex: String,
+  <span class="k">val</span> jwt: String, <span class="k">val</span> base: String
+)
+
+<span class="k">data class</span> FreshAccount(
+  <span class="k">val</span> uid: String, <span class="k">val</span> password: String, <span class="k">val</span> accountId: String,
+  <span class="k">val</span> jwt: String, <span class="k">val</span> name: String
+)</code></pre>
+  </div>
+</section>
+
+<section id="preserved" data-num="03">
+  <div class="sec-head"><span class="sec-num">03</span><h2>What survived decompilation</h2></div>
+  <div class="card-grid two">
+    <div class="card">
+      <h3>Readable</h3>
+      <ul>
+        <li>Method names and control flow.</li>
+        <li>Protobuf field numbers and constants.</li>
+        <li>Endpoints, headers and packet types.</li>
+        <li>Static keys, tokens and device strings.</li>
+        <li>Assets and preference names.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Reconstructed</h3>
+      <ul>
+        <li>Kotlin <code>object</code> / <code>data class</code> structure.</li>
+        <li>Default arguments and nullability.</li>
+        <li>Inline helper names and formatting.</li>
+        <li>Some compiler-generated lambdas.</li>
+        <li>Comments and original formatting.</li>
+      </ul>
+    </div>
+  </div>
+  <p>JADX emits Java, not Kotlin. The metadata annotations and <code>compiled from:</code> lines prove the original language, but the exact Kotlin syntax is not recoverable.</p>
+</section>
+
+<section id="limits" data-num="04">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Decompiler notes</h2></div>
+  <div class="callout">
+    <span class="callout-label">Coverage</span>
+    <p>JADX reported 89 method-level decompilation errors across the whole APK, mostly in library code and synthetic methods. The seven app-specific files disassembled cleanly, and the flow is corroborated by strings, the manifest, and the network field values.</p>
+  </div>
+  <p class="small muted">Line counts refer to the recovered Java files, not the original Kotlin sources. The scratch tree is intentionally excluded from this site.</p>
+</section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="prev" href="detection.html"><span class="pager-label">← Previous</span><span class="pager-title">Detection</span></a>
+      <a class="next" href="method.html"><span class="pager-label">Next →</span><span class="pager-title">Method</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-brand"><span class="brand-mark" aria-hidden="true">W8</span> Static teardown</span>
+    <span class="footer-meta">
+      <span>sha256 5439757b…8733</span><span class="footer-dot"></span>
+      <span>no execution</span><span class="footer-dot"></span>
+      <span>no credentials published</span>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

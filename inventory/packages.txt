@@ -1,7 +1,18 @@
 # dpkg (ii only)
 7zip	26.00+dfsg-1
+aapt	1:14~beta1-5
 adduser	3.153ubuntu1
 adwaita-icon-theme	50.0-1
+android-framework-res	1:14~beta1-5
+android-libaapt:amd64	1:14~beta1-5
+android-libandroidfw:amd64	1:14~beta1-5
+android-libbacktrace:amd64	1:34.0.5-12build1
+android-libbase:amd64	1:34.0.5-12build1
+android-libcutils:amd64	1:34.0.5-12build1
+android-liblog:amd64	1:34.0.5-12build1
+android-libutils:amd64	1:34.0.5-12build1
+android-libziparchive:amd64	1:34.0.5-12build1
+apktool	2.7.0+dfsg-7.1ubuntu1
 apt	3.2.1ubuntu0.1
 apt-transport-https	3.2.1ubuntu0.1
 apt-utils	3.2.1ubuntu0.1
@@ -25,7 +36,9 @@ breeze-cursor-theme	4:6.6.5-0ubuntu0.1
 bsdextrautils	2.41.3-3ubuntu2.2
 bsdutils	1:2.41.3-3ubuntu2.2
 bubblewrap	0.11.1-1ubuntu0.3
+bzip2	1.0.8-6ubuntu0.1
 ca-certificates	20260816ubuntu0.26.04.2
+ca-certificates-java	20260311ubuntu0.26.04.2
 catatonit	0.2.1-2build1
 chromium	156.0.8078.73-1xtradeb1.2604.1
 chromium-common	156.0.8078.73-1xtradeb1.2604.1
@@ -62,10 +75,12 @@ dconf-gsettings-backend:amd64	0.49.0-4
 dconf-service	0.49.0-4
 debconf	1.5.92
 debianutils	5.23.2build1
+default-jre-headless	2:1.25-77
 desktop-file-utils	0.28-1build1
 dictionaries-common	1.31.4
 diffutils	1:3.12-1ubuntu0.1
 dirmngr	2.4.8-4ubuntu3.1
+discord	1.0.170
 distro-info-data	2026.10.12-0ubuntu0.26.04.1
 dmidecode	3.6-2ubuntu1
 docker-buildx-plugin	0.39.0-1~ubuntu.26.04~resolute
@@ -85,6 +100,7 @@ flatpak	1.16.6-1
 fontconfig	2.17.1-3ubuntu1
 fontconfig-config	2.17.1-3ubuntu1
 fonts-dejavu-core	2.37-8build1
+fonts-dejavu-extra	2.37-8build1
 fonts-dejavu-mono	2.37-8build1
 fonts-liberation	1:2.1.5-3build1
 fonts-liberation-sans-narrow	1:1.07.6-4build1
@@ -162,7 +178,10 @@ intel-media-va-driver-non-free:amd64	26.1.2+ds1-1
 iproute2	6.19.0-1ubuntu1.1
 iptables	1.8.11-2ubuntu3
 iso-codes	4.20.1-1
+java-common	0.77
+java-wrappers	0.5build1
 jq	1.8.1-4ubuntu2
+junit	3.8.2-10build1
 kbd	2.7.1-2ubuntu2
 keyboard-configuration	1.237ubuntu3.1
 krb5-locales	1.22.1-2ubuntu4.1
@@ -173,13 +192,18 @@ libabsl20260107:amd64	20260107.0-4
 libaccountsservice0:amd64	23.13.9-8ubuntu5.2
 libacl1:amd64	2.3.2-2
 libadwaita-1-0:amd64	1.9.1-0ubuntu0.2
+libantlr-java	2.7.7+dfsg-14build2
+libantlr3-runtime-java	3.5.3-4
 libaom3:amd64	3.13.1-2ubuntu0.1
+libaopalliance-java	20070526-7
+libapache-pom-java	33-2build1
 libapparmor1:amd64	5.0.2-0ubuntu1~26.04.1
 libappindicator3-1	12.10.1+20.10.20200706.1-0ubuntu7
 libappstream5:amd64	1.1.2-1
 libapt-pkg7.0:amd64	3.2.1ubuntu0.1
 libarchive13t64:amd64	3.8.5-1ubuntu2.3
 libasan8:amd64	16-20260322-1ubuntu1
+libasm-java	9.9.1-1
 libasound2-data	1.2.15.3-1ubuntu1.1
 libasound2-plugins:amd64	1.2.12-2build1
 libasound2t64:amd64	1.2.15.3-1ubuntu1.1
@@ -188,7 +212,10 @@ libass9:amd64	1:0.17.4-2
 libassuan9:amd64	3.0.2-2build1
 libasyncns0:amd64	0.8-7
 libatasmart4:amd64	0.19-6
+libatinject-jsr330-api-java	1.0+ds1-6build1
 libatk-bridge2.0-0t64:amd64	2.60.4-0ubuntu0.1
+libatk-wrapper-java	0.44.0-1
+libatk-wrapper-java-jni:amd64	0.44.0-1
 libatk1.0-0t64:amd64	2.60.4-0ubuntu0.1
 libatomic1:amd64	16-20260322-1ubuntu1
 libatrildocument3t64:amd64	1.28.2-1
@@ -248,6 +275,7 @@ libcap2:amd64	1:2.75-10ubuntu2
 libcap2-bin	1:2.75-10ubuntu2
 libcbor0.10:amd64	0.10.2-2ubuntu3
 libcc1-0:amd64	16-20260322-1ubuntu1
+libcdi-api-java	1.2-4build1
 libcdio-cdda2t64:amd64	10.2+2.0.2-2
 libcdio-paranoia2t64:amd64	10.2+2.0.2-2
 libcdio19t64:amd64	2.2.0-4build1
@@ -257,6 +285,13 @@ libcjson1:amd64	1.7.19-2
 libcodec2-1.2:amd64	1.2.0-4
 libcolord2:amd64	1.4.8-3
 libcom-err2:amd64	1.47.2-3ubuntu4
+libcommons-cli-java	1.6.0-1
+libcommons-codec-java	1.18.0-1
+libcommons-compress-java	1.27.1-2
+libcommons-io-java	2.19.0-1
+libcommons-lang3-java	3.17.0-2
+libcommons-parent-java	56-1build1
+libcommons-text-java	1.13.1-2
 libcomposefs1:amd64	1.0.8-3
 libconfig11:amd64	1.7.3-2.1
 libcrypt1:amd64	1:4.5.1-1
@@ -278,6 +313,7 @@ libdc1394-25:amd64	2.2.6-6
 libdconf1:amd64	0.49.0-4
 libdebconfclient0:amd64	0.280ubuntu1
 libdecor-0-0:amd64	0.2.5-1
+libdee-1.0-4:amd64	1.2.7+17.10.20170616-8build1
 libdeflate0:amd64	1.23-2ubuntu1
 libdevmapper1.02.1:amd64	2:1.02.205-2ubuntu3
 libdisplay-info3:amd64	0.3.0-1
@@ -302,6 +338,7 @@ libelf1t64:amd64	0.194-4
 libenchant-2-2:amd64	2.8.2+dfsg1-3build1
 libepoxy0:amd64	1.5.10-2build1
 liberror-perl	0.17030-1
+liberror-prone-java	2.18.0-1build1
 libev4t64:amd64	1:4.33-2.1build2
 libevdev2:amd64	1.13.6+dfsg-1
 libexif12:amd64	0.6.25-2ubuntu0.1
@@ -337,6 +374,8 @@ libgdbm6t64:amd64	1.26-1build1
 libgdk-pixbuf-2.0-0:amd64	2.44.5+dfsg-4ubuntu1
 libgdk-pixbuf2.0-common	2.44.5+dfsg-4ubuntu1
 libgee-0.8-2:amd64	0.20.8-2
+libgeronimo-annotation-1.3-spec-java	1.3-1build1
+libgeronimo-interceptor-3.0-spec-java	1.0.1-5fakesyncbuild1
 libgif7:amd64	5.2.2-1ubuntu3.2
 libgirepository-1.0-1:amd64	1.86.0-6build1
 libgirepository-2.0-0:amd64	2.88.0-1ubuntu0.1
@@ -385,7 +424,9 @@ libgtksourceview-4-0:amd64	4.8.4-9
 libgtksourceview-4-common	4.8.4-9
 libgtop-2.0-11:amd64	2.41.3-2ubuntu1
 libgtop2-common	2.41.3-2ubuntu1
+libguava-java	32.0.1-1build1
 libgudev-1.0-0:amd64	1:238-7build1
+libguice-java	5.1.0-1build1
 libgxps2t64:amd64	0.3.2-6
 libharfbuzz-gobject0:amd64	12.3.2-2
 libharfbuzz-icu0:amd64	12.3.2-2
@@ -415,11 +456,13 @@ libip6tc2:amd64	1.8.11-2ubuntu3
 libisl23:amd64	0.27-1build1
 libitm1:amd64	16-20260322-1ubuntu1
 libjack-jackd2-0:amd64	1.9.22~dfsg-5build1
+libjansi-java	2.4.2-1
 libjansson4:amd64	2.14-2build4
 libjavascriptcoregtk-4.1-0:amd64	2.52.6-0ubuntu0.26.04.2
 libjavascriptcoregtk-6.0-1:amd64	2.52.6-0ubuntu0.26.04.2
 libjbig0:amd64	2.1-6.1ubuntu3
 libjbig2dec0:amd64	0.20-1ubuntu0.26.04.1
+libjcommander-java	1.71-4build1
 libjpeg-turbo8:amd64	2.1.5-4ubuntu4
 libjpeg8:amd64	8c-2ubuntu12
 libjq1:amd64	1.8.1-4ubuntu2
@@ -428,6 +471,7 @@ libjson-c5:amd64	0.18+ds-3
 libjson-glib-1.0-0:amd64	1.10.8+ds-2
 libjson-glib-1.0-common	1.10.8+ds-2
 libjsoncpp26:amd64	1.9.6-5
+libjsr305-java	0.1~+svn49-12
 libjxl0.11:amd64	0.11.1-6ubuntu4.2
 libjxr-tools	1.2~git20170615.f752187-5.3build1
 libjxr0t64:amd64	1.2~git20170615.f752187-5.3build1
@@ -464,6 +508,14 @@ libmagickwand-7.q16-10:amd64	8:7.1.2.18+dfsg1-1
 libmalcontent-0-0:amd64	0.14.0-0ubuntu1.2
 libmalcontent-common	0.14.0-0ubuntu1.2
 libmate-desktop-2-17t64:amd64	1.28.2-1
+libmaven-archiver-java	3.6.2-1build1
+libmaven-file-management-java	3.0.0-2build1
+libmaven-jar-plugin-java	3.3.0-2build1
+libmaven-parent-java	43-2build1
+libmaven-resolver-java	1.9.25-1
+libmaven-shared-io-java	3.0.0-4build1
+libmaven-shared-utils-java	3.4.2-1build1
+libmaven3-core-java	3.9.12-1
 libmbedcrypto16:amd64	3.6.5-0.1ubuntu2
 libmd0:amd64	1.1.0-2build4
 libminizip1t64:amd64	1:1.3.dfsg+really1.3.1-1ubuntu3.2
@@ -532,6 +584,7 @@ libparted2t64:amd64	3.6-6
 libpci3:amd64	1:3.14.0-1build2
 libpciaccess0:amd64	0.18.1-1ubuntu4.1
 libpcre2-8-0:amd64	10.46-1ubuntu0.1
+libpcsclite1:amd64	2.4.1-1
 libperl5.40:amd64	5.40.1-7ubuntu0.4
 libpgm-5.3-0t64:amd64	5.3.128~dfsg-2.1build2
 libpipeline1:amd64	1.5.8-2
@@ -541,6 +594,14 @@ libpixman-1-0:amd64	0.46.4-1
 libplacebo360:amd64	7.360.0-3
 libplank-common	0.11.89-6ubuntu1
 libplank1:amd64	0.11.89-6ubuntu1
+libplexus-archiver-java	4.6.1-1build1
+libplexus-cipher-java	2.0-1build1
+libplexus-classworlds-java	2.7.0-1build1
+libplexus-component-annotations-java	2.1.1-1build1
+libplexus-interpolation-java	1.27-1build1
+libplexus-io-java	3.3.1-2build1
+libplexus-sec-dispatcher-java	2.0-3build1
+libplexus-utils2-java	3.4.2-1build1
 libplymouth5:amd64	24.004.60+git20250831.4a3c171d-0ubuntu8
 libpng16-16t64:amd64	1.6.57-1ubuntu0.1
 libpolkit-agent-1-0:amd64	127-2ubuntu1.1
@@ -551,6 +612,7 @@ libpoppler156:amd64	26.01.0-2ubuntu0.3
 libppd2:amd64	2:2.1.1-0ubuntu2
 libppd2-common	2:2.1.1-0ubuntu2
 libproc2-0:amd64	2:4.0.4-9ubuntu1
+libprotobuf32t64:amd64	3.21.12-15ubuntu1.1
 libproxy1v5:amd64	0.5.12-1
 libpsl5t64:amd64	0.21.2-1.1build2
 libpulse-mainloop-glib0:amd64	1:17.0+dfsg1-2ubuntu4
@@ -579,6 +641,7 @@ libsasl2-modules-db:amd64	2.1.28+dfsg1-9ubuntu3
 libsass1:amd64	3.6.6-0ubuntu3
 libsdl2-2.0-0:amd64	2.32.10+dfsg-6
 libsdl2-classic:amd64	2.32.10+dfsg-6
+libsdl2-image-2.0-0:amd64	2.8.8+dfsg-2
 libseat1:amd64	0.9.2-2
 libseccomp2:amd64	2.6.0-2ubuntu5
 libsecret-1-0:amd64	0.21.7-2build1
@@ -597,11 +660,17 @@ libshine3:amd64	3.1.1-3build1
 libshout3:amd64	2.4.6-1build3
 libsigc++-3.0-0:amd64	3.6.0-2build1
 libsimdutf31:amd64	8.0.0-1
+libsisu-inject-java	0.3.5-1build1
+libsisu-plexus-java	0.3.5-1build1
 libsixel1:amd64	1.10.5-1build1
 libslang2:amd64	2.3.3-5build1
+libslf4j-java	1.7.32-2
 libsm6:amd64	2:1.2.6-1build1
+libsmali-java	2.5.2.git2771eae-4
 libsmartcols1:amd64	2.41.3-3ubuntu2.2
 libsnapd-glib-2-1:amd64	1.72-0ubuntu3
+libsnappy-java	1.1.10.8-1
+libsnappy-jni	1.1.10.8-1
 libsnappy1v5:amd64	1.2.2-2
 libsndfile1:amd64	1.2.2-4
 libsndio7.0:amd64	1.10.0-0.2
@@ -625,6 +694,7 @@ libstartup-notification0:amd64	0.12-8build1
 libstdc++-15-dev:amd64	15.2.0-16ubuntu1
 libstdc++6:amd64	16-20260322-1ubuntu1
 libstemmer0d:amd64	3.0.1-1
+libstringtemplate-java	3.2.1-4build1
 libsvtav1enc2:amd64	2.3.0+dfsg-1build1
 libswresample6:amd64	7:8.0.1-3ubuntu2
 libswscale9:amd64	7:8.0.1-3ubuntu2
@@ -655,6 +725,9 @@ libudfread3:amd64	1.2.0-2
 libudisks2-0:amd64	2.10.91-1ubuntu2.1
 libunibreak6:amd64	6.1-3build1
 libunistring5:amd64	1.3-2build1
+libunity-protocol-private0:amd64	7.1.4+19.04.20190319-6.1ubuntu1
+libunity-scopes-json-def-desktop	7.1.4+19.04.20190319-6.1ubuntu1
+libunity9	7.1.4+19.04.20190319-6.1ubuntu1
 libunwind8:amd64	1.8.3-0ubuntu1
 libusb-1.0-0:amd64	2:1.0.29-2build1
 libutempter0:amd64	1.2.1-4build1
@@ -681,6 +754,7 @@ libvte-2.91-common	0.84.0-2
 libvulkan1:amd64	1.4.341.0-1
 libwacom-common	2.18.0-1
 libwacom9:amd64	2.18.0-1
+libwagon-provider-api-java	3.5.3-2
 libwavpack1:amd64	5.9.0-1
 libwayland-client0:amd64	1.24.0-2
 libwayland-cursor0:amd64	1.24.0-2
@@ -760,10 +834,12 @@ libxkbfile1:amd64	1:1.1.0-1build5
 libxklavier16:amd64	5.4-6build1
 libxml2-16:amd64	2.15.2+dfsg-0.1ubuntu0.3
 libxmlb2:amd64	0.3.24-2
+libxmlunit-java	1.6-2build1
 libxmu6:amd64	2:1.1.3-4
 libxmuu1:amd64	2:1.1.3-4
 libxnvctrl0:amd64	510.47.03-0ubuntu7
 libxpm4:amd64	1:3.5.17-1ubuntu0.26.04.2
+libxpp3-java	1.1.4c-4
 libxpresent1:amd64	1.0.1-1build1
 libxrandr2:amd64	2:1.5.4-1build1
 libxrender-dev:amd64	1:0.9.12-1build1
@@ -781,7 +857,9 @@ libxvmc1:amd64	2:1.0.12-2build4
 libxxf86dga1:amd64	2:1.1.5-1build2
 libxxf86vm1:amd64	1:1.1.4-2
 libxxhash0:amd64	0.8.3-2build1
+libxz-java	1.11+repack-1
 libyaml-0-2:amd64	0.2.5-2build3
+libyaml-snake-java	2.5+ds-1
 libzimg2:amd64	3.0.6+ds1-1
 libzix-0-0:amd64	0.8.0-1
 libzmq5:amd64	4.3.5-1build3
@@ -815,10 +893,12 @@ netpbm	2:11.10.02-1build1
 nftables	1.1.6-1
 nginx	1.28.3-2ubuntu1.12
 nginx-common	1.28.3-2ubuntu1.12
+nodejs	22.23.5-1nodesource1
 numix-gtk-theme	2.6.7-8ubuntu1
 ocl-icd-libopencl1:amd64	2.3.4-1
 openbox	3.6.1-12ubuntu3
 opencode	2.3.2
+openjdk-25-jre-headless:amd64	25.0.5.1+2-1~26.04.1
 openssh-client	1:10.2p1-2ubuntu3.8
 openssl	3.5.5-1ubuntu3.7
 openssl-provider-legacy	3.5.5-1ubuntu3.7
@@ -828,6 +908,7 @@ packagekit	1.3.4-3ubuntu1.2
 papirus-icon-theme	20250501+git20260316-0ubuntu1
 parted	3.6-6
 passwd	1:4.17.4-2ubuntu3
+patch	2.8-2build1
 pavucontrol	6.1-1build1
 pci.ids	0.0~2026.02.12-1
 pciutils	1:3.14.0-1build2
@@ -942,6 +1023,7 @@ x11proto-dev	2025.1-1
 xarchiver	1:0.5.4.26-1
 xauth	1:1.1.2-1.1build1
 xbitmaps	1.1.1-2.2build1
+xbrzscale	1.8-2build1
 xclip	0.13-4build1
 xcvt	0.1.3-1build1
 xdg-dbus-proxy	0.1.7-1
@@ -1000,6 +1082,8 @@ zstd	1.5.7+dfsg-3
 
 # apt-mark showmanual
 7zip
+aapt
+apktool
 apt
 apt-transport-https
 apt-utils
@@ -1030,7 +1114,9 @@ dash
 dbus-x11
 debconf
 debianutils
+default-jre-headless
 diffutils
+discord
 docker-buildx-plugin
 docker-ce
 docker-ce-cli
@@ -1181,6 +1267,7 @@ ncurses-base
 ncurses-bin
 netcat-openbsd
 nginx
+nodejs
 openbox
 opencode
 openssh-client
@@ -1228,6 +1315,7 @@ x11-xkb-utils
 x11-xserver-utils
 xarchiver
 xauth
+xbrzscale
 xclip
 xcvt
 xdg-user-dirs

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detection and response — W8 teardown</title>
+<meta name="description" content="Weaknesses, the non-Garena token host, copyable IOCs, device response steps and hunt ideas.">
+<meta name="theme-color" content="#070a0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1119'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='23' fill='%23ffb454' text-anchor='middle'%3EW8%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("w8-theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      var q = new URLSearchParams(location.search).get("theme");
+      if (q === "light" || q === "dark") t = q;
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="W8 teardown home">
+      <span class="brand-mark" aria-hidden="true">W8</span>
+      <span class="brand-copy"><strong>FreeFireSpamer</strong><small>static teardown</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="payload.html">Payload</a>
+      <a href="protocol.html">Protocol</a>
+      <a href="spam.html">Spam</a>
+      <a href="farm.html">Farm</a>
+      <a href="detection.html" aria-current="page">Detection</a>
+      <a href="source.html">Source</a>
+      <a href="method.html">Method</a>
+    </nav>
+    <div class="header-tools">
+      <button class="tool" id="searchOpen" type="button" aria-label="Search the teardown" title="Search (Ctrl+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="tool" id="themeToggle" type="button" aria-label="Switch theme" title="Toggle theme"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      <button class="tool menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a href="index.html"><span>01</span>Overview</a>
+      <a href="payload.html"><span>02</span>Payload</a>
+      <a href="protocol.html"><span>03</span>Protocol</a>
+      <a href="spam.html"><span>04</span>Spam</a>
+      <a href="farm.html"><span>05</span>Farm</a>
+      <a href="detection.html" aria-current="page"><span>06</span>Detection</a>
+      <a href="source.html"><span>07</span>Source</a>
+      <a href="method.html"><span>08</span>Method</a>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" aria-label="Page contents">
+    <div class="side-sticky">
+      <p class="eyebrow">On this page</p>
+      <nav id="toc" class="toc" aria-label="On this page"></nav>
+      <div class="side-card">
+        <p class="eyebrow">Sample</p>
+        <p class="mono">5439757b…8733</p>
+        <p class="small muted">7.1 MB · 3,101 classes</p>
+        <p class="small muted">Page 06 / 08</p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main" class="content">
+    <details class="mobile-toc">
+      <summary>On this page</summary>
+      <nav id="tocMobile" class="toc" aria-label="On this page"></nav>
+    </details>
+    <div class="page-head reveal">
+      <div class="page-kicker"><span class="pill">06 / 08</span><span class="dot"></span>Defense</div>
+      <h1>Detection and response</h1>
+      <p class="page-lede">The most important finding is not the spam loop. It is the endpoint that receives account UID and password, and the indicators that follow from it.</p>
+    </div>
+<section id="weaknesses" data-num="01">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Weaknesses</h2></div>
+  <p class="lead">The app is not obfuscated in any meaningful way. Protocol constants, keys, endpoints and the operator’s reseller token are readable after a standard decompile.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Security observations</caption>
+      <thead><tr><th>Weakness</th><th>Observation</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Credential egress</strong></td><td>Guest token grant posts UID + password to <code>ffmconnect.ppmainecoonghj.com</code>, a non-Garena-looking host.</td><td class="muted-cell">Every account used in the app is exposed to whoever controls that host.</td></tr>
+        <tr><td><strong>Static crypto</strong></td><td>AES key/IV and HMAC key are compiled in; no pinning; cleartext allowed.</td><td class="muted-cell">Traffic is decryptable and replayable by a proxy.</td></tr>
+        <tr><td><strong>Burned tokens</strong></td><td>Operator JWT and MSDK client secret are embedded.</td><td class="muted-cell">Third-party API access and protocol cloning are unauthenticated once the APK leaks.</td></tr>
+        <tr><td><strong>Broad storage</strong></td><td><code>MANAGE_EXTERNAL_STORAGE</code> plus legacy flags.</td><td class="muted-cell">Read/write access beyond the app’s own files.</td></tr>
+        <tr><td><strong>Overlay abuse</strong></td><td>Draws over the game, reads clipboard on demand.</td><td class="muted-cell">Tapjacking and UID harvesting risk.</td></tr>
+        <tr><td><strong>Distribution</strong></td><td>Self-signed v2-only certificate; no VCS provenance.</td><td class="muted-cell">No supply-chain integrity; builds are not tied to public source.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="critical" data-num="02">
+  <div class="sec-head"><span class="sec-num">02</span><h2>The critical finding</h2></div>
+  <div class="callout danger">
+    <span class="callout-label">Credential harvesting pattern</span>
+    <p>The token endpoint is not a Garena-owned name. A tool that sends account UID and password to an unofficial domain is a credential-harvesting pattern, regardless of whether it also spams. Any real account used through it should be considered exposed.</p>
+  </div>
+  <p>This matters even if you ignore the spam feature entirely. The app collects a password, forwards it to a third party, and then uses the returned token for its own actions. The same design would work as a standalone harvester.</p>
+</section>
+
+<section id="iocs" data-num="03">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Indicators</h2></div>
+  <p>Copy any value directly. Hashes identify this exact build or its embedded asset.</p>
+  <div class="ioc-list">
+    <div class="ioc"><span class="ioc-label">Package</span><span class="ioc-value">com.w8.w8freefirespamer</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">APK sha256</span><span class="ioc-value">5439757b7e28f73d9965b85b038c665b34a29b0acffe16d00607886d4f208733</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Asset sha256</span><span class="ioc-value">5be986738f3979a75377847c3c8439abb26a43ae73dc06e6bcaae807c24a76ea</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Cert sha256</span><span class="ioc-value">64b6affed2747bbd8e4401e99b066de9cd5ad9d97e4b3490b2896de60db6c9d0</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Cert subject</span><span class="ioc-value">C=BD, O=W8Team, CN=W8</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Token host</span><span class="ioc-value">ffmconnect.ppmainecoonghj.com</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Login hosts</span><span class="ioc-value">loginbp.ggpolarbear.com · 100067.connect.garena.com</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Third-party hosts</span><span class="ioc-value">apis.rrrtopup.com · apis.egytopup.com · apis.ucghor.com</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Telegram</span><span class="ioc-value">api.telegram.org · t.me/W8Teams</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Artifacts</span><span class="ioc-value">assets/accounts1.json · /sdcard/W8FreeFireSpamer/GenAccount.txt</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Strings</span><span class="ioc-value">W8 FREE FIRE SPAMER · W8SOJIB_ · W8Team_W8SOJIB_</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+    <div class="ioc"><span class="ioc-label">Preferences</span><span class="ioc-value">w8ff_config (tg_token, tg_chatid, last_uid)</span><button class="copy" type="button" data-copy-row>Copy</button></div>
+  </div>
+</section>
+
+<section id="response" data-num="04">
+  <div class="sec-head"><span class="sec-num">04</span><h2>If it is installed</h2></div>
+  <ol>
+    <li>Remove overlay and all-files permissions, then uninstall the package.</li>
+    <li>Change the Garena / Free Fire password and revoke active sessions on every linked account.</li>
+    <li>Check for unexpected linked logins, friend requests, and generated-account activity.</li>
+    <li>Delete <code>GenAccount.txt</code> and any Telegram bot the app was configured with.</li>
+    <li>Report the sample, package, certificate hash, and channel to Garena support and Telegram abuse.</li>
+  </ol>
+  <div class="callout info">
+    <span class="callout-label">Order matters</span>
+    <p>Rotate credentials before uninstalling if the device is shared or the app may have already exfiltrated the file. Uninstalling stops future runs; it does not revoke tokens already delivered.</p>
+  </div>
+</section>
+
+<section id="hunting" data-num="05">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Hunting</h2></div>
+  <ul>
+    <li>Alert on the package name, certificate hash, or the <code>accounts1.json</code> asset hash in app inventories.</li>
+    <li>Look for the overlay + <code>MANAGE_EXTERNAL_STORAGE</code> + <code>FOREGROUND_SERVICE_SPECIAL_USE</code> combination on gaming devices.</li>
+    <li>Watch DNS/TLS for the non-Garena token host and for repeated Telegram <code>sendDocument</code> calls from mobile clients.</li>
+    <li>Do not blanket-block Garena domains; scope network rules to the package or device group.</li>
+  </ul>
+  <div class="callout ok">
+    <span class="callout-label">Defensive value</span>
+    <p>Because the protocol is static and unencrypted at the app layer, defenders can fingerprint the client by its MajorLogin field pattern, its fixed device strings, and its unusual token host — even when the IP changes.</p>
+  </div>
+</section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="prev" href="farm.html"><span class="pager-label">← Previous</span><span class="pager-title">Farm</span></a>
+      <a class="next" href="source.html"><span class="pager-label">Next →</span><span class="pager-title">Source</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-brand"><span class="brand-mark" aria-hidden="true">W8</span> Static teardown</span>
+    <span class="footer-meta">
+      <span>sha256 5439757b…8733</span><span class="footer-dot"></span>
+      <span>no execution</span><span class="footer-dot"></span>
+      <span>no credentials published</span>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,4 +1,9 @@
 # path\tsize_bytes\tmtime
+/config/.agents	4096	2026-11-23T06:06:44.1380137440
+/config/.agents/skills	4096	2026-11-23T06:06:44.1380137440
+/config/.agents/skills/reverse-engineer-anything	4096	2026-11-23T06:06:44.1745931360
+/config/.agents/skills/reverse-engineer-anything/references	4096	2026-11-23T06:06:44.1799458440
+/config/.agents/skills/reverse-engineer-anything/SKILL.md	48164	2026-11-23T06:06:44.1397617740
 /config/backups	4096	2026-11-23T01:07:25.3348283510
 /config/backups/backup-to-github.sh	8931	2026-11-22T20:23:50.4725894810
 /config/backups/.bk.pass	45	2026-11-22T20:15:05.7527477290
@@ -54,15 +59,15 @@
 /config/backups/pub/.gitignore	25	2026-11-22T20:29:12.3279592750
 /config/backups/pub/README.md	456	2026-11-22T20:29:12.3205145350
 /config/.bash_history	2605	2026-11-22T06:29:42.9478514210
-/config/.bashrc	74	2026-11-22T05:20:11.2008056880
-/config/.cache	4096	2026-11-22T20:24:05.7550851370
-/config/.config	4096	2026-11-23T02:06:28.5068004830
-/config/.config/ai.opencode.desktop	4096	2026-11-23T02:05:41.3905826270
-/config/.config/ai.opencode.desktop/blob_storage/3026aa3c-6ffc-42ce-aeb9-c1d9aed3e557	4096	2026-11-23T02:01:18.2353362990
-/config/.config/ai.opencode.desktop/blob_storage	4096	2026-11-23T02:01:18.2362597240
+/config/.bashrc	259	2026-11-23T06:11:05.6921300400
+/config/.cache	4096	2026-11-23T06:14:22.6207605430
+/config/.config	4096	2026-11-23T09:49:27.6064245290
+/config/.config/ai.opencode.desktop	4096	2026-11-23T06:14:31.4688022160
+/config/.config/ai.opencode.desktop/blob_storage	4096	2026-11-23T06:13:39.9340483760
+/config/.config/ai.opencode.desktop/blob_storage/a3b26061-357a-4202-9f64-e73facef47db	4096	2026-11-23T06:13:39.9340483760
 /config/.config/ai.opencode.desktop/Cache	4096	2026-11-22T08:52:38.1178126400
-/config/.config/ai.opencode.desktop/Cache/Cache_Data	4096	2026-11-23T02:05:41.3465824240
-/config/.config/ai.opencode.desktop/Cache/No_Vary_Search	4096	2026-11-23T02:01:18.8613595320
+/config/.config/ai.opencode.desktop/Cache/Cache_Data	4096	2026-11-23T06:14:31.4008018950
+/config/.config/ai.opencode.desktop/Cache/No_Vary_Search	4096	2026-11-23T06:13:40.7005630450
 /config/.config/ai.opencode.desktop/cli/2.3.2-x64	4096	2026-11-22T08:52:39.2502736690
 /config/.config/ai.opencode.desktop/cli	4096	2026-11-22T08:52:39.0542725260
 /config/.config/ai.opencode.desktop/Code Cache	4096	2026-11-22T08:52:38.7982710310
@@ -78,37 +83,37 @@
 /config/.config/ai.opencode.desktop/Crashpad/client_id	36	2026-11-22T08:52:38.0579276570
 /config/.config/ai.opencode.desktop/Crashpad/completed	4096	2026-11-22T08:52:39.5102751880
 /config/.config/ai.opencode.desktop/Crashpad/new	4096	2026-11-22T08:53:20.5785148930
-/config/.config/ai.opencode.desktop/Crashpad/pending	4096	2026-11-23T01:54:01.8515233710
-/config/.config/ai.opencode.desktop/Crashpad/settings.dat	40	2026-11-23T02:01:19.0853605820
+/config/.config/ai.opencode.desktop/Crashpad/pending	4096	2026-11-23T05:16:40.5682426190
+/config/.config/ai.opencode.desktop/Crashpad/settings.dat	40	2026-11-23T06:13:40.7245631580
 /config/.config/ai.opencode.desktop/DawnGraphiteCache	4096	2026-11-22T08:52:38.1375619790
 /config/.config/ai.opencode.desktop/DawnGraphiteCache/data_0	8192	2026-11-22T08:52:38.1375619790
-/config/.config/ai.opencode.desktop/DawnGraphiteCache/data_1	270336	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/DawnGraphiteCache/data_1	270336	2026-11-23T06:14:31.3968018770
 /config/.config/ai.opencode.desktop/DawnGraphiteCache/data_2	8192	2026-11-22T08:52:38.1375619790
 /config/.config/ai.opencode.desktop/DawnGraphiteCache/data_3	8192	2026-11-22T08:52:38.1375619790
-/config/.config/ai.opencode.desktop/DawnGraphiteCache/index	262512	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/DawnGraphiteCache/index	262512	2026-11-23T06:14:31.3968018770
 /config/.config/ai.opencode.desktop/DawnWebGPUCache	4096	2026-11-22T08:52:38.1367687840
 /config/.config/ai.opencode.desktop/DawnWebGPUCache/data_0	8192	2026-11-22T08:52:38.1367687840
-/config/.config/ai.opencode.desktop/DawnWebGPUCache/data_1	270336	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/DawnWebGPUCache/data_1	270336	2026-11-23T06:14:31.3968018770
 /config/.config/ai.opencode.desktop/DawnWebGPUCache/data_2	8192	2026-11-22T08:52:38.1367687840
 /config/.config/ai.opencode.desktop/DawnWebGPUCache/data_3	8192	2026-11-22T08:52:38.1367687840
-/config/.config/ai.opencode.desktop/DawnWebGPUCache/index	262512	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/DawnWebGPUCache/index	262512	2026-11-23T06:14:31.3968018770
 /config/.config/ai.opencode.desktop/declarative_performance_observer.db	32768	2026-11-22T08:52:38.3798435820
 /config/.config/ai.opencode.desktop/declarative_performance_observer.db-journal	0	2026-11-22T08:52:38.3798435820
 /config/.config/ai.opencode.desktop/Dictionaries	4096	2026-11-22T08:52:38.9022716380
 /config/.config/ai.opencode.desktop/Dictionaries/en-US-10-1.bdic	451968	2026-11-22T08:52:38.9022716380
-/config/.config/ai.opencode.desktop/DIPS	36864	2026-11-23T02:00:16.2095997210
-/config/.config/ai.opencode.desktop/drafts.sqlite	126976	2026-11-23T02:05:41.3665825160
+/config/.config/ai.opencode.desktop/DIPS	36864	2026-11-23T06:14:31.4688022160
+/config/.config/ai.opencode.desktop/drafts.sqlite	143360	2026-11-23T06:14:31.4328020460
 /config/.config/ai.opencode.desktop/GPUCache	4096	2026-11-22T08:52:38.1359886180
 /config/.config/ai.opencode.desktop/GPUCache/data_0	8192	2026-11-22T08:52:38.1359886180
-/config/.config/ai.opencode.desktop/GPUCache/data_1	270336	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/GPUCache/data_1	270336	2026-11-23T06:14:31.3888018390
 /config/.config/ai.opencode.desktop/GPUCache/data_2	8192	2026-11-22T08:52:38.1359886180
 /config/.config/ai.opencode.desktop/GPUCache/data_3	8192	2026-11-22T08:52:38.1359886180
-/config/.config/ai.opencode.desktop/GPUCache/index	262512	2026-11-23T02:05:41.3625824980
+/config/.config/ai.opencode.desktop/GPUCache/index	262512	2026-11-23T06:14:31.3888018390
 /config/.config/ai.opencode.desktop/GPUPersistentCache	4096	2026-11-22T08:52:38.0627387310
 /config/.config/ai.opencode.desktop/GPUPersistentCache/GPUCache	4096	2026-11-22T08:52:38.0627387310
 /config/.config/ai.opencode.desktop/Local State	57	2026-11-22T08:52:48.0543250640
 /config/.config/ai.opencode.desktop/Local Storage	4096	2026-11-22T08:52:38.1142670370
-/config/.config/ai.opencode.desktop/Local Storage/leveldb	4096	2026-11-23T02:01:18.1653562680
+/config/.config/ai.opencode.desktop/Local Storage/leveldb	4096	2026-11-23T06:13:39.8525590480
 /config/.config/ai.opencode.desktop/logs/20261122T085238	4096	2026-11-22T08:52:40.6622819130
 /config/.config/ai.opencode.desktop/logs/20261122T085301	4096	2026-11-22T08:53:02.1384072700
 /config/.config/ai.opencode.desktop/logs/20261122T085325	4096	2026-11-22T08:53:26.3985488530
@@ -126,63 +131,67 @@
 /config/.config/ai.opencode.desktop/logs/20261123T011446	4096	2026-11-23T01:14:47.9008108400
 /config/.config/ai.opencode.desktop/logs/20261123T014401	4096	2026-11-23T01:44:01.8524520890
 /config/.config/ai.opencode.desktop/logs/20261123T020118	4096	2026-11-23T02:01:19.0853605820
-/config/.config/ai.opencode.desktop/logs	4096	2026-11-23T02:01:18.3933573380
-/config/.config/ai.opencode.desktop/Network Persistent State	712	2026-11-23T02:02:28.9096876650
+/config/.config/ai.opencode.desktop/logs/20261123T035459	4096	2026-11-23T03:55:15.4979532790
+/config/.config/ai.opencode.desktop/logs/20261123T050639	4096	2026-11-23T05:06:41.9780641110
+/config/.config/ai.opencode.desktop/logs/20261123T061340	4096	2026-11-23T06:13:42.8125729980
+/config/.config/ai.opencode.desktop/logs	4096	2026-11-23T06:13:40.1245603300
+/config/.config/ai.opencode.desktop/Network Persistent State	1422	2026-11-23T06:14:31.4688022160
 /config/.config/ai.opencode.desktop/opencode.settings	134	2026-11-22T09:00:03.0768609520
-/config/.config/ai.opencode.desktop/Preferences	161	2026-11-23T02:01:28.1734032340
-/config/.config/ai.opencode.desktop/Session Storage/000003.log	353	2026-11-23T02:05:41.3585824790
-/config/.config/ai.opencode.desktop/Session Storage	4096	2026-11-23T02:01:18.5470964050
+/config/.config/ai.opencode.desktop/Preferences	161	2026-11-23T06:13:49.8566061910
+/config/.config/ai.opencode.desktop/Session Storage/000003.log	410	2026-11-23T06:14:31.2681802950
+/config/.config/ai.opencode.desktop/Session Storage	4096	2026-11-23T06:13:40.5160378350
 /config/.config/ai.opencode.desktop/Session Storage/CURRENT	16	2026-11-22T08:52:39.4905092630
 /config/.config/ai.opencode.desktop/Session Storage/LOCK	0	2026-11-22T08:52:39.4822750240
-/config/.config/ai.opencode.desktop/Session Storage/LOG	267	2026-11-23T02:01:18.5474928260
-/config/.config/ai.opencode.desktop/Session Storage/LOG.old	273	2026-11-23T01:44:01.5879540500
+/config/.config/ai.opencode.desktop/Session Storage/LOG	273	2026-11-23T06:13:40.5166305990
+/config/.config/ai.opencode.desktop/Session Storage/LOG.old	273	2026-11-23T05:06:40.1897180480
 /config/.config/ai.opencode.desktop/Session Storage/MANIFEST-000001	41	2026-11-22T08:52:39.4868853380
 /config/.config/ai.opencode.desktop/Shared Dictionary	4096	2026-11-22T08:52:38.3631194540
 /config/.config/ai.opencode.desktop/Shared Dictionary/cache	4096	2026-11-22T08:52:38.3662685090
 /config/.config/ai.opencode.desktop/Shared Dictionary/db	45056	2026-11-22T08:52:38.3822686020
 /config/.config/ai.opencode.desktop/Shared Dictionary/db-journal	0	2026-11-22T08:52:38.3822686020
-/config/.config/ai.opencode.desktop/TransportSecurity	187	2026-11-23T02:05:41.3898646940
+/config/.config/ai.opencode.desktop/TransportSecurity	188	2026-11-23T06:14:31.4688022160
 /config/.config/ai.opencode.desktop/Trust Tokens	36864	2026-11-22T08:52:38.3742685550
 /config/.config/ai.opencode.desktop/Trust Tokens-journal	0	2026-11-22T08:52:38.3798435820
 /config/.config/ai.opencode.desktop/.updaterId	36	2026-11-22T08:52:39.4662749310
 /config/.config/ai.opencode.desktop/WebStorage	4096	2026-11-22T08:52:40.4085172230
 /config/.config/ai.opencode.desktop/WebStorage/QuotaManager	40960	2026-11-22T08:52:51.8703473380
 /config/.config/ai.opencode.desktop/WebStorage/QuotaManager-journal	0	2026-11-22T08:52:51.8703473380
-/config/.config/ai.opencode.desktop/window-state-167133ed-ee88-4ce6-abfc-23bf2ba1fdeb.json	137	2026-11-23T02:05:41.3507779950
+/config/.config/ai.opencode.desktop/window-state-167133ed-ee88-4ce6-abfc-23bf2ba1fdeb.json	137	2026-11-23T06:14:31.2495937750
 /config/.config/autostart	4096	2026-11-23T02:02:00.5095547960
 /config/.config/BraveSoftware	4096	2026-11-22T17:06:21.4685978530
-/config/.config/BraveSoftware/Brave-Browser	4096	2026-11-23T02:09:38.8396768450
+/config/.config/BraveSoftware/Brave-Browser	4096	2026-11-23T09:58:36.0975004870
 /config/.config/BraveSoftware/Brave-Browser/adcocjohghhfpidemphmcmlmhnfgikei	4096	2026-11-22T17:06:31.0325869880
 /config/.config/BraveSoftware/Brave-Browser/afalakplffnnnlkncjhbmahjfjhmlkal	4096	2026-11-22T17:06:29.6526425500
 /config/.config/BraveSoftware/Brave-Browser/aoojcmojmmcbpfgoecoadbdpnagfchel	4096	2026-11-22T17:06:29.8714249060
 /config/.config/BraveSoftware/Brave-Browser/bfpgedeaaibpoidldhjcknekahbikncb	4096	2026-11-22T17:07:16.2154925160
-/config/.config/BraveSoftware/Brave-Browser/BrowserMetrics	4096	2026-11-23T02:09:35.5716618380
-/config/.config/BraveSoftware/Brave-Browser/cdbbhgbmjhfnhnmgeddbliobbofkgdhe	4096	2026-11-23T02:05:18.8024780280
+/config/.config/BraveSoftware/Brave-Browser/BrowserMetrics	4096	2026-11-23T09:58:34.4134919290
+/config/.config/BraveSoftware/Brave-Browser/cdbbhgbmjhfnhnmgeddbliobbofkgdhe	4096	2026-11-23T09:53:45.7457763060
 /config/.config/BraveSoftware/Brave-Browser/cemdlagocoimleflkfkjoihojfainiho	4096	2026-11-23T01:49:26.8735385580
-/config/.config/BraveSoftware/Brave-Browser/CertificateRevocation	4096	2026-11-22T20:42:32.0019559120
-/config/.config/BraveSoftware/Brave-Browser/component_crx_cache	4096	2026-11-23T02:09:35.9676636570
+/config/.config/BraveSoftware/Brave-Browser/CertificateRevocation	4096	2026-11-23T09:53:43.0072004340
+/config/.config/BraveSoftware/Brave-Browser/component_crx_cache	4096	2026-11-23T09:53:55.2880473720
 /config/.config/BraveSoftware/Brave-Browser/Consent To Send Stats	36	2026-11-22T17:09:43.0416965760
-/config/.config/BraveSoftware/Brave-Browser/CrashpadMetrics-active.pma	1048576	2026-11-23T02:09:35.5848845000
-/config/.config/BraveSoftware/Brave-Browser/CrashpadMetrics.pma	1048576	2026-11-23T02:05:15.6184292130
+/config/.config/BraveSoftware/Brave-Browser/CrashpadMetrics-active.pma	1048576	2026-11-23T09:58:34.4075406720
+/config/.config/BraveSoftware/Brave-Browser/CrashpadMetrics.pma	1048576	2026-11-23T09:55:49.7750871370
 /config/.config/BraveSoftware/Brave-Browser/Crash Reports	4096	2026-11-22T17:06:21.4725978750
 /config/.config/BraveSoftware/Brave-Browser/Crowd Deny	4096	2026-11-22T17:08:49.8118365170
-/config/.config/BraveSoftware/Brave-Browser/Default	4096	2026-11-23T02:09:38.9156771940
+/config/.config/BraveSoftware/Brave-Browser/Default	4096	2026-11-23T09:58:57.8776112420
+/config/.config/BraveSoftware/Brave-Browser/DeferredBrowserMetrics	4096	2026-11-23T09:58:34.4134919290
 /config/.config/BraveSoftware/Brave-Browser/Dictionaries	4096	2026-11-22T17:06:22.2926023560
 /config/.config/BraveSoftware/Brave-Browser/dkpggglmbjhgjhachikgmohmecomjndo	4096	2026-11-22T17:07:15.5607052900
 /config/.config/BraveSoftware/Brave-Browser/eingdhelnaolbpcdkgddekhifcjfkalf	4096	2026-11-22T17:06:29.6326424410
 /config/.config/BraveSoftware/Brave-Browser/extensions_crx_cache	4096	2026-11-22T17:06:31.2166510950
 /config/.config/BraveSoftware/Brave-Browser/FileTypePolicies	4096	2026-11-22T17:06:29.6766426820
 /config/.config/BraveSoftware/Brave-Browser/First Run	0	2026-11-22T17:09:23.4255898390
-/config/.config/BraveSoftware/Brave-Browser/gccbbckogglekeggclmmekihdgdpdgoe	4096	2026-11-22T17:06:30.5972914840
+/config/.config/BraveSoftware/Brave-Browser/gccbbckogglekeggclmmekihdgdpdgoe	4096	2026-11-23T04:17:24.2040403340
 /config/.config/BraveSoftware/Brave-Browser/gkboaolpopklhgplhaaiboijnklogmbc	4096	2026-11-22T17:06:30.4102278030
 /config/.config/BraveSoftware/Brave-Browser/GPUPersistentCache	4096	2026-11-22T17:06:21.7058779520
 /config/.config/BraveSoftware/Brave-Browser/hyphen-data	4096	2026-11-22T17:08:50.1814088550
 /config/.config/BraveSoftware/Brave-Browser/iblokdlgekdjophgeonmanpnjihcjkjj	4096	2026-11-22T17:06:29.6326424410
-/config/.config/BraveSoftware/Brave-Browser/iodkpdagapdfkphljnddpjlldadblomo	4096	2026-11-23T02:05:18.2424754350
+/config/.config/BraveSoftware/Brave-Browser/iodkpdagapdfkphljnddpjlldadblomo	4096	2026-11-23T09:53:45.3279947830
 /config/.config/BraveSoftware/Brave-Browser/jmfhneobcdckobmonkfjkbknnjjnegoh	4096	2026-11-22T17:07:15.2257934090
-/config/.config/BraveSoftware/Brave-Browser/kihnoaefogbkmblfimmibknnmkllbhlf	4096	2026-11-23T02:03:40.7959037610
-/config/.config/BraveSoftware/Brave-Browser/Last Version	12	2026-11-23T02:09:35.9716636750
-/config/.config/BraveSoftware/Brave-Browser/Local State	94696	2026-11-23T02:09:38.8316768080
+/config/.config/BraveSoftware/Brave-Browser/kihnoaefogbkmblfimmibknnmkllbhlf	4096	2026-11-23T09:53:46.1119989340
+/config/.config/BraveSoftware/Brave-Browser/Last Version	12	2026-11-23T09:55:49.9486471260
+/config/.config/BraveSoftware/Brave-Browser/Local State	51915	2026-11-23T09:58:36.0935004670
 /config/.config/BraveSoftware/Brave-Browser/MEIPreload	4096	2026-11-22T17:08:51.0577839270
 /config/.config/BraveSoftware/Brave-Browser/mfddibmblmbccpadfndgakiopmmhebop	4096	2026-11-22T17:06:30.2407805780
 /config/.config/BraveSoftware/Brave-Browser/NativeMessagingHosts	4096	2026-11-22T17:06:21.4725978750
@@ -190,22 +199,24 @@
 /config/.config/BraveSoftware/Brave-Browser/OnDeviceHeadSuggestModel	4096	2026-11-22T17:08:48.6905319630
 /config/.config/BraveSoftware/Brave-Browser/P3AConfig	4096	2026-11-22T17:06:29.6009439060
 /config/.config/BraveSoftware/Brave-Browser/PKIMetadata	4096	2026-11-22T17:08:49.1574032800
-/config/.config/BraveSoftware/Brave-Browser/Safe Browsing	4096	2026-11-23T01:47:33.8944356530
+/config/.config/BraveSoftware/Brave-Browser/Safe Browsing	4096	2026-11-23T09:58:42.2955373210
 /config/.config/BraveSoftware/Brave-Browser/SafetyTips	4096	2026-11-22T17:08:49.5454053920
-/config/.config/BraveSoftware/Brave-Browser/segmentation_platform	4096	2026-11-23T02:09:38.8099217590
+/config/.config/BraveSoftware/Brave-Browser/segmentation_platform	4096	2026-11-23T09:55:49.9526471470
+/config/.config/BraveSoftware/Brave-Browser/SingletonCookie	20	2026-11-23T09:55:49.7766462320
+/config/.config/BraveSoftware/Brave-Browser/SingletonLock	19	2026-11-23T09:55:49.7766462320
+/config/.config/BraveSoftware/Brave-Browser/SingletonSocket	49	2026-11-23T09:55:49.7766462320
 /config/.config/BraveSoftware/Brave-Browser/SSLErrorAssistant	4096	2026-11-22T17:08:49.0251012060
-/config/.config/BraveSoftware/Brave-Browser/Variations	85	2026-11-23T02:09:38.8125674640
-/config/.config/BraveSoftware/Brave-Browser/VariationsSafeSeedV2	7679	2026-11-23T02:09:37.7396717970
-/config/.config/BraveSoftware/Brave-Browser/VariationsSeedV2	171	2026-11-23T02:09:37.7396717970
+/config/.config/BraveSoftware/Brave-Browser/Variations	86	2026-11-23T09:55:49.7806462520
+/config/.config/BraveSoftware/Brave-Browser/VariationsSafeSeedV2	7681	2026-11-23T09:55:51.3166542080
+/config/.config/BraveSoftware/Brave-Browser/VariationsSeedV2	171	2026-11-23T09:55:51.3166542080
 /config/.config/BraveSoftware/Brave-Browser/Webstore Downloads	4096	2026-11-22T17:26:15.5832783410
 /config/.config/BraveSoftware/Brave-Browser/WidevineCdm	4096	2026-11-22T17:06:21.5325982030
 /config/.config/BraveSoftware/Brave-Browser/ZxcvbnData	4096	2026-11-22T17:08:50.6110687250
-/config/.config/chromium	4096	2026-11-23T01:51:08.9767092140
+/config/.config/chromium	4096	2026-11-23T09:55:47.5046344250
 /config/.config/chromium/ActorSafetyLists	4096	2026-11-22T05:32:14.3314804150
 /config/.config/chromium/ActorSafetyLists/9.8200.9609	4096	2026-11-22T05:32:14.3314804150
 /config/.config/chromium/AmountExtractionHeuristicRegexes	4096	2026-11-22T05:32:18.3240643610
 /config/.config/chromium/AmountExtractionHeuristicRegexes/4	4096	2026-11-22T05:32:18.3240643610
-/config/.config/chromium/BrowserMetrics-spare.pma	4194304	2026-11-23T01:51:08.9767092140
 /config/.config/chromium/CaptchaProviders	4096	2026-11-22T05:32:20.8090837640
 /config/.config/chromium/CaptchaProviders/8.5419.4434	4096	2026-11-22T05:32:20.8090837640
 /config/.config/chromium/CertificateRevocation/10925	4096	2026-11-23T00:46:04.2073324480
@@ -237,37 +248,36 @@
 /config/.config/chromium/Crash Reports/completed	4096	2026-11-22T05:21:56.0971939070
 /config/.config/chromium/Crash Reports/new	4096	2026-11-23T02:00:16.2290647870
 /config/.config/chromium/Crash Reports/pending	4096	2026-11-23T02:00:16.2290647870
-/config/.config/chromium/Crash Reports/settings.dat	40	2026-11-23T01:49:39.1139493300
+/config/.config/chromium/Crash Reports/settings.dat	40	2026-11-23T09:55:05.8924178800
 /config/.config/chromium/Crowd Deny/2026.11.12.125	4096	2026-11-22T05:32:16.8222335130
 /config/.config/chromium/Crowd Deny	4096	2026-11-22T05:32:16.8222335130
-/config/.config/chromium/Default	4096	2026-11-23T02:00:01.2849942540
+/config/.config/chromium/Default	4096	2026-11-23T09:55:47.5086344460
 /config/.config/chromium/Default/Account Web Data	75776	2026-11-22T05:21:56.4113598990
 /config/.config/chromium/Default/Account Web Data-journal	0	2026-11-22T05:21:56.4131950550
 /config/.config/chromium/Default/Affiliation Database	53248	2026-11-22T05:21:56.4054083190
 /config/.config/chromium/Default/Affiliation Database-journal	0	2026-11-22T05:21:56.4064870650
-/config/.config/chromium/Default/AutofillAiModelCache	4096	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/AutofillStrikeDatabase	4096	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/blob_storage	4096	2026-11-23T01:49:48.2850595360
-/config/.config/chromium/Default/BookmarkMergedSurfaceOrdering	4	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/BudgetDatabase	4096	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/chrome_cart_db	4096	2026-11-23T01:49:39.1696924160
-/config/.config/chromium/Default/ClientCertificates	4096	2026-11-23T01:49:39.1659495600
-/config/.config/chromium/Default/commerce_subscription_db	4096	2026-11-23T01:49:39.1659495600
-/config/.config/chromium/Default/Cookies	196608	2026-11-23T01:58:52.1766669230
-/config/.config/chromium/Default/Cookies-journal	0	2026-11-23T01:58:52.1766669230
+/config/.config/chromium/Default/AutofillAiModelCache	4096	2026-11-23T09:55:09.0964345910
+/config/.config/chromium/Default/AutofillStrikeDatabase	4096	2026-11-23T09:55:09.0964345910
+/config/.config/chromium/Default/blob_storage	4096	2026-11-23T09:55:09.0644344230
+/config/.config/chromium/Default/BookmarkMergedSurfaceOrdering	4	2026-11-23T09:55:09.0924345700
+/config/.config/chromium/Default/BudgetDatabase	4096	2026-11-23T09:55:09.0964345910
+/config/.config/chromium/Default/chrome_cart_db	4096	2026-11-23T09:55:05.9507084990
+/config/.config/chromium/Default/ClientCertificates	4096	2026-11-23T09:55:05.9444181520
+/config/.config/chromium/Default/commerce_subscription_db	4096	2026-11-23T09:55:05.9507084990
+/config/.config/chromium/Default/Cookies	196608	2026-11-23T09:55:47.4286340320
+/config/.config/chromium/Default/Cookies-journal	0	2026-11-23T09:55:47.4286340320
 /config/.config/chromium/Default/DawnGraphiteCache	4096	2026-11-22T05:21:56.4731952740
 /config/.config/chromium/Default/DawnWebGPUCache	4096	2026-11-22T05:21:56.4692245000
 /config/.config/chromium/Default/declarative_performance_observer.db	32768	2026-11-22T05:21:56.3931949830
 /config/.config/chromium/Default/declarative_performance_observer.db-journal	0	2026-11-22T05:21:56.3931949830
-/config/.config/chromium/Default/DIPS	36864	2026-11-23T01:45:26.7734421870
-/config/.config/chromium/Default/DIPS-wal	0	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/discount_infos_db	4096	2026-11-23T01:49:39.1696924160
-/config/.config/chromium/Default/discounts_db	4096	2026-11-23T01:49:39.1696924160
+/config/.config/chromium/Default/DIPS	36864	2026-11-23T09:55:47.5006344050
+/config/.config/chromium/Default/discount_infos_db	4096	2026-11-23T09:55:05.9524181940
+/config/.config/chromium/Default/discounts_db	4096	2026-11-23T09:55:05.9507084990
 /config/.config/chromium/Default/Download Service	4096	2026-11-22T05:22:56.7991582410
 /config/.config/chromium/Default/Extension Rules	4096	2026-11-22T11:38:05.0635243530
 /config/.config/chromium/Default/Extensions	4096	2026-11-22T11:40:36.7843888290
 /config/.config/chromium/Default/Extension Scripts	4096	2026-11-22T11:38:05.0686224490
-/config/.config/chromium/Default/Extension State	4096	2026-11-23T01:49:39.3899505550
+/config/.config/chromium/Default/Extension State	4096	2026-11-23T09:55:06.4084205700
 /config/.config/chromium/Default/Favicons	327680	2026-11-23T01:45:26.7528288050
 /config/.config/chromium/Default/Favicons-journal	0	2026-11-23T01:45:26.7528288050
 /config/.config/chromium/Default/Feature Engagement Tracker	4096	2026-11-22T05:22:50.3926993910
@@ -276,54 +286,54 @@
 /config/.config/chromium/Default/GPUCache	4096	2026-11-22T05:21:56.4680699650
 /config/.config/chromium/Default/heavy_ad_intervention_opt_out.db	16384	2026-11-22T05:22:50.3813953110
 /config/.config/chromium/Default/heavy_ad_intervention_opt_out.db-journal	0	2026-11-22T05:22:50.3813953110
-/config/.config/chromium/Default/History	917504	2026-11-23T01:49:49.5059954930
-/config/.config/chromium/Default/History-journal	8720	2026-11-23T01:50:39.1782498650
+/config/.config/chromium/Default/History	917504	2026-11-23T09:55:47.4882571400
+/config/.config/chromium/Default/History-journal	0	2026-11-23T09:55:47.4882571400
 /config/.config/chromium/Default/IndexedDB	4096	2026-11-22T16:11:25.4539694550
 /config/.config/chromium/Default/Local Extension Settings	4096	2026-11-22T11:38:05.4053581100
 /config/.config/chromium/Default/Local Storage	4096	2026-11-22T05:21:56.3751440020
 /config/.config/chromium/Default/LOCK	0	2026-11-22T05:21:56.3847106190
-/config/.config/chromium/Default/LOG	0	2026-11-23T01:49:39.1699495780
+/config/.config/chromium/Default/LOG	0	2026-11-23T09:55:05.9524181940
 /config/.config/chromium/Default/Login Data	40960	2026-11-22T12:09:15.7142484330
 /config/.config/chromium/Default/Login Data For Account	40960	2026-11-22T05:21:56.3859527560
 /config/.config/chromium/Default/Login Data For Account-journal	0	2026-11-22T05:21:56.3875476630
 /config/.config/chromium/Default/Login Data-journal	0	2026-11-22T12:09:15.7142484330
-/config/.config/chromium/Default/LOG.old	0	2026-11-23T01:34:28.5579145830
+/config/.config/chromium/Default/LOG.old	0	2026-11-23T05:47:03.1614216510
 /config/.config/chromium/Default/Managed Extension Settings	4096	2026-11-22T11:38:05.3952543700
 /config/.config/chromium/Default/MediaDeviceSalts	24576	2026-11-22T12:07:53.2377744630
 /config/.config/chromium/Default/MediaDeviceSalts-journal	0	2026-11-22T12:07:53.2377744630
-/config/.config/chromium/Default/Network Action Predictor	131072	2026-11-23T01:35:17.2181293370
-/config/.config/chromium/Default/Network Action Predictor-journal	0	2026-11-23T01:35:17.2221293550
-/config/.config/chromium/Default/Network Persistent State	104938	2026-11-23T02:00:01.2769942160
-/config/.config/chromium/Default/optimization_guide_hint_cache_store	4096	2026-11-23T01:49:48.2939901090
-/config/.config/chromium/Default/parcel_tracking_db	4096	2026-11-23T01:49:39.1696924160
-/config/.config/chromium/Default/PersistentOriginTrials	4096	2026-11-23T01:49:39.1699495780
-/config/.config/chromium/Default/Platform Notifications	4096	2026-11-23T01:49:39.2899501110
-/config/.config/chromium/Default/Preferences	47927	2026-11-23T01:59:49.1849370840
+/config/.config/chromium/Default/Network Action Predictor	131072	2026-11-23T09:55:31.6685521600
+/config/.config/chromium/Default/Network Action Predictor-journal	0	2026-11-23T09:55:31.6685521600
+/config/.config/chromium/Default/Network Persistent State	99131	2026-11-23T09:55:47.5086344460
+/config/.config/chromium/Default/optimization_guide_hint_cache_store	4096	2026-11-23T09:55:09.0924345700
+/config/.config/chromium/Default/parcel_tracking_db	4096	2026-11-23T09:55:05.9524181940
+/config/.config/chromium/Default/PersistentOriginTrials	4096	2026-11-23T09:55:05.9524181940
+/config/.config/chromium/Default/Platform Notifications	4096	2026-11-23T09:55:06.1684193210
+/config/.config/chromium/Default/Preferences	48955	2026-11-23T09:55:47.5046344250
 /config/.config/chromium/Default/PreferredApps	33	2026-11-22T05:22:50.3891000740
 /config/.config/chromium/Default/README	170	2026-11-22T05:21:56.3088409810
-/config/.config/chromium/Default/Reporting and NEL	196608	2026-11-23T01:50:09.4580936540
-/config/.config/chromium/Default/Reporting and NEL-journal	0	2026-11-23T01:50:09.4580936540
+/config/.config/chromium/Default/Reporting and NEL	196608	2026-11-23T09:55:40.9686005030
+/config/.config/chromium/Default/Reporting and NEL-journal	0	2026-11-23T09:55:40.9686005030
 /config/.config/chromium/Default/Safe Browsing Cookies	20480	2026-11-22T05:23:10.9854729440
 /config/.config/chromium/Default/Safe Browsing Cookies-journal	0	2026-11-22T05:23:10.9934729740
-/config/.config/chromium/Default/SCT Auditing Pending Reports	2	2026-11-23T01:49:39.1939496850
-/config/.config/chromium/Default/Secure Preferences	95	2026-11-23T01:49:49.1499939110
+/config/.config/chromium/Default/SCT Auditing Pending Reports	2	2026-11-23T09:55:06.0847582550
+/config/.config/chromium/Default/Secure Preferences	95	2026-11-23T09:55:15.9324702230
 /config/.config/chromium/Default/Segmentation Platform	4096	2026-11-22T05:21:56.3844988680
 /config/.config/chromium/Default/ServerCertificate	20480	2026-11-22T05:21:56.3682554190
 /config/.config/chromium/Default/ServerCertificate-journal	0	2026-11-22T05:21:56.3735876050
 /config/.config/chromium/Default/Service Worker	4096	2026-11-22T09:02:30.0257164840
-/config/.config/chromium/Default/Sessions	4096	2026-11-23T01:49:41.7939612350
-/config/.config/chromium/Default/Sessions_Encrypted	4096	2026-11-23T01:49:41.7979612530
-/config/.config/chromium/Default/Session Storage	4096	2026-11-23T01:49:39.5019510530
+/config/.config/chromium/Default/Sessions	4096	2026-11-23T09:55:11.8164487630
+/config/.config/chromium/Default/Sessions_Encrypted	4096	2026-11-23T09:55:11.8164487630
+/config/.config/chromium/Default/Session Storage	4096	2026-11-23T09:55:06.3844204450
 /config/.config/chromium/Default/Shared Dictionary	4096	2026-11-22T05:21:56.6011957450
-/config/.config/chromium/Default/shared_proto_db	4096	2026-11-23T01:49:39.1939496850
-/config/.config/chromium/Default/Shortcuts	32768	2026-11-22T16:48:45.1586649720
-/config/.config/chromium/Default/Shortcuts-journal	0	2026-11-22T16:48:45.1586649720
-/config/.config/chromium/Default/Site Characteristics Database	4096	2026-11-23T01:49:39.1659495600
+/config/.config/chromium/Default/shared_proto_db	4096	2026-11-23T09:55:06.0795187310
+/config/.config/chromium/Default/Shortcuts	32768	2026-11-23T09:55:31.7005523270
+/config/.config/chromium/Default/Shortcuts-journal	0	2026-11-23T09:55:31.7005523270
+/config/.config/chromium/Default/Site Characteristics Database	4096	2026-11-23T09:55:05.9444181520
 /config/.config/chromium/Default/Sync Data	4096	2026-11-22T05:21:56.3571948530
 /config/.config/chromium/Default/Sync Extension Settings	4096	2026-11-22T11:38:05.3875261970
-/config/.config/chromium/Default/Top Sites	24576	2026-11-23T01:49:54.3620170640
-/config/.config/chromium/Default/Top Sites-journal	0	2026-11-23T01:49:54.3660170820
-/config/.config/chromium/Default/TransportSecurity	26597	2026-11-23T01:59:39.4568910670
+/config/.config/chromium/Default/Top Sites	24576	2026-11-23T09:55:21.0884970950
+/config/.config/chromium/Default/Top Sites-journal	0	2026-11-23T09:55:21.0884970950
+/config/.config/chromium/Default/TransportSecurity	26594	2026-11-23T09:55:47.5006344050
 /config/.config/chromium/Default/Trust Tokens	36864	2026-11-22T06:25:52.7225007290
 /config/.config/chromium/Default/Trust Tokens-journal	0	2026-11-22T06:25:52.7225007290
 /config/.config/chromium/Default/VideoDecodeStats	4096	2026-11-23T01:49:42.5899647710
@@ -419,8 +429,8 @@
 /config/.config/chromium-headless/scoped_dirCgLi3U/ZxcvbnData	4096	2026-11-22T09:28:26.9509695820
 /config/.config/chromium/hyphen-data/120.0.6050.0	4096	2026-11-22T05:32:17.2557006640
 /config/.config/chromium/hyphen-data	4096	2026-11-22T05:32:17.2536262790
-/config/.config/chromium/Last Version	13	2026-11-23T01:49:39.1179493470
-/config/.config/chromium/Local State	7089	2026-11-23T01:50:49.2343012480
+/config/.config/chromium/Last Version	13	2026-11-23T09:55:05.8964179010
+/config/.config/chromium/Local State	7117	2026-11-23T09:55:47.5046344250
 /config/.config/chromium/MEIPreload/1.1.0.3	4096	2026-11-22T05:32:16.0585617990
 /config/.config/chromium/MEIPreload	4096	2026-11-22T05:32:16.0585617990
 /config/.config/chromium/NativeMessagingHosts	4096	2026-11-22T05:21:56.2651945180
@@ -438,12 +448,8 @@
 /config/.config/chromium/Safe Browsing	4096	2026-11-22T05:21:56.4024325260
 /config/.config/chromium/SafetyTips/3092	4096	2026-11-22T05:32:16.5423377020
 /config/.config/chromium/SafetyTips	4096	2026-11-22T05:32:16.5423377020
-/config/.config/chromium/segmentation_platform	4096	2026-11-23T01:49:39.1219493650
-/config/.config/chromium/segmentation_platform/ukm_db	163840	2026-11-23T01:51:39.1265543530
-/config/.config/chromium/segmentation_platform/ukm_db-wal	0	2026-11-23T01:51:39.1265543530
-/config/.config/chromium/SingletonCookie	19	2026-11-23T01:49:38.9699486900
-/config/.config/chromium/SingletonLock	19	2026-11-23T01:49:38.9699486900
-/config/.config/chromium/SingletonSocket	49	2026-11-23T01:49:38.9699486900
+/config/.config/chromium/segmentation_platform	4096	2026-11-23T09:55:47.4926343630
+/config/.config/chromium/segmentation_platform/ukm_db	163840	2026-11-23T09:55:47.4926343630
 /config/.config/chromium/SSLErrorAssistant	4096	2026-11-22T05:32:15.0562867290
 /config/.config/chromium/SSLErrorAssistant/7	4096	2026-11-22T05:32:15.0562867290
 /config/.config/chromium/Subresource Filter	4096	2026-11-22T05:32:12.5250253810
@@ -451,23 +457,23 @@
 /config/.config/chromium/Subresource Filter/Unindexed Rules	4096	2026-11-22T05:32:12.5224170470
 /config/.config/chromium/TrustTokenKeyCommitments/2026.10.12.1	4096	2026-11-22T05:32:16.1472308770
 /config/.config/chromium/TrustTokenKeyCommitments	4096	2026-11-22T05:32:16.1472308770
-/config/.config/chromium/Variations	86	2026-11-23T01:49:38.9739487080
+/config/.config/chromium/Variations	85	2026-11-23T09:55:47.4806343010
 /config/.config/chromium/WasmTtsEngine/20261110.1	4096	2026-11-22T05:32:19.5156298090
 /config/.config/chromium/WasmTtsEngine	4096	2026-11-22T05:32:19.5156298090
 /config/.config/chromium/Webstore Downloads	4096	2026-11-22T11:38:05.0555243080
 /config/.config/chromium/ZxcvbnData/3	4096	2026-11-22T05:32:17.7732195090
 /config/.config/chromium/ZxcvbnData	4096	2026-11-22T05:32:17.7732195090
-/config/.config/dconf	4096	2026-11-23T01:10:36.0774316230
-/config/.config/dconf/user	2400	2026-11-23T01:10:36.0764858870
-/config/.config/deepai-code-v2	4096	2026-11-23T02:06:28.4468002060
-/config/.config/deepai-code-v2/blob_storage	4096	2026-11-23T02:06:28.2395344090
-/config/.config/deepai-code-v2/blob_storage/4567a8de-9127-4dbb-a057-2b3ecfbbac7a	4096	2026-11-23T02:06:28.2387992450
+/config/.config/dconf	4096	2026-11-23T07:52:35.0452627830
+/config/.config/dconf/user	2392	2026-11-23T07:52:35.0452627830
+/config/.config/deepai-code-v2	4096	2026-11-23T09:49:27.4945971450
+/config/.config/deepai-code-v2/blob_storage	4096	2026-11-23T09:49:27.2385957230
+/config/.config/deepai-code-v2/blob_storage/8a0ef186-8291-49d6-baf0-f5e9a48e9568	4096	2026-11-23T09:49:27.2385957230
 /config/.config/deepai-code-v2/Cache	4096	2026-11-22T05:25:33.6041001950
-/config/.config/deepai-code-v2/Cache/Cache_Data	4096	2026-11-23T02:06:44.6938884640
-/config/.config/deepai-code-v2/Cache/No_Vary_Search	4096	2026-11-23T02:06:30.9306261760
+/config/.config/deepai-code-v2/Cache/Cache_Data	4096	2026-11-23T09:49:32.5426253190
+/config/.config/deepai-code-v2/Cache/No_Vary_Search	4096	2026-11-23T09:49:30.5586142640
 /config/.config/deepai-code-v2/Code Cache	4096	2026-11-22T05:25:34.2220289510
-/config/.config/deepai-code-v2/Code Cache/electron-preload	20480	2026-11-23T02:06:30.5668099930
-/config/.config/deepai-code-v2/Code Cache/js	12288	2026-11-23T01:09:25.7593674080
+/config/.config/deepai-code-v2/Code Cache/electron-preload	20480	2026-11-23T09:49:30.0186112670
+/config/.config/deepai-code-v2/Code Cache/js	12288	2026-11-23T07:32:05.5723186490
 /config/.config/deepai-code-v2/Code Cache/wasm	4096	2026-11-22T05:25:33.6173426330
 /config/.config/deepai-code-v2/Cookies	20480	2026-11-22T05:25:41.6020582690
 /config/.config/deepai-code-v2/Cookies-journal	0	2026-11-22T05:25:41.6066487030
@@ -477,87 +483,224 @@
 /config/.config/deepai-code-v2/Crashpad/completed	4096	2026-11-22T05:44:31.9189386330
 /config/.config/deepai-code-v2/Crashpad/new	4096	2026-11-22T05:29:42.3590438430
 /config/.config/deepai-code-v2/Crashpad/pending	4096	2026-11-22T05:29:42.3630438610
-/config/.config/deepai-code-v2/Crashpad/settings.dat	40	2026-11-23T02:06:27.9187977660
+/config/.config/deepai-code-v2/Crashpad/settings.dat	40	2026-11-23T09:49:26.8665936560
 /config/.config/deepai-code-v2/DawnGraphiteCache	4096	2026-11-22T05:25:33.6303669720
 /config/.config/deepai-code-v2/DawnGraphiteCache/data_0	8192	2026-11-22T05:25:33.6303669720
-/config/.config/deepai-code-v2/DawnGraphiteCache/data_1	270336	2026-11-23T02:10:30.5599141390
+/config/.config/deepai-code-v2/DawnGraphiteCache/data_1	270336	2026-11-23T09:56:29.9808542680
 /config/.config/deepai-code-v2/DawnGraphiteCache/data_2	8192	2026-11-22T05:25:33.6303669720
 /config/.config/deepai-code-v2/DawnGraphiteCache/data_3	8192	2026-11-22T05:25:33.6303669720
-/config/.config/deepai-code-v2/DawnGraphiteCache/index	262512	2026-11-23T02:06:30.5428098820
+/config/.config/deepai-code-v2/DawnGraphiteCache/index	262512	2026-11-23T09:49:29.9511753490
 /config/.config/deepai-code-v2/DawnWebGPUCache	4096	2026-11-22T05:25:33.6295579770
 /config/.config/deepai-code-v2/DawnWebGPUCache/data_0	8192	2026-11-22T05:25:33.6295579770
-/config/.config/deepai-code-v2/DawnWebGPUCache/data_1	270336	2026-11-23T02:10:30.5599141390
+/config/.config/deepai-code-v2/DawnWebGPUCache/data_1	270336	2026-11-23T09:56:29.9808542680
 /config/.config/deepai-code-v2/DawnWebGPUCache/data_2	8192	2026-11-22T05:25:33.6295579770
 /config/.config/deepai-code-v2/DawnWebGPUCache/data_3	8192	2026-11-22T05:25:33.6295579770
-/config/.config/deepai-code-v2/DawnWebGPUCache/index	262512	2026-11-23T02:06:30.5423111450
+/config/.config/deepai-code-v2/DawnWebGPUCache/index	262512	2026-11-23T09:49:29.9511753490
 /config/.config/deepai-code-v2/declarative_performance_observer.db	32768	2026-11-22T05:25:33.6860268130
 /config/.config/deepai-code-v2/declarative_performance_observer.db-journal	0	2026-11-22T05:25:33.6860268130
 /config/.config/deepai-code-v2/Dictionaries	4096	2026-11-22T05:25:33.9620279130
 /config/.config/deepai-code-v2/Dictionaries/en-US-10-1.bdic	451968	2026-11-22T05:25:33.9620279130
-/config/.config/deepai-code-v2/DIPS	36864	2026-11-23T01:45:32.1088525750
-/config/.config/deepai-code-v2/DIPS-wal	0	2026-11-23T02:06:28.4468002060
+/config/.config/deepai-code-v2/DIPS	36864	2026-11-23T07:52:22.7772070220
+/config/.config/deepai-code-v2/DIPS-wal	8272	2026-11-23T09:49:27.5221133150
 /config/.config/deepai-code-v2/GPUCache	4096	2026-11-22T05:25:33.6287017930
 /config/.config/deepai-code-v2/GPUCache/data_0	8192	2026-11-22T05:25:33.6287017930
-/config/.config/deepai-code-v2/GPUCache/data_1	270336	2026-11-23T02:10:30.5599141390
+/config/.config/deepai-code-v2/GPUCache/data_1	270336	2026-11-23T09:56:29.9808542680
 /config/.config/deepai-code-v2/GPUCache/data_2	8192	2026-11-22T05:25:33.6287017930
 /config/.config/deepai-code-v2/GPUCache/data_3	8192	2026-11-22T05:25:33.6287017930
-/config/.config/deepai-code-v2/GPUCache/index	262512	2026-11-23T02:06:30.5423111450
+/config/.config/deepai-code-v2/GPUCache/index	262512	2026-11-23T09:49:29.9511753490
 /config/.config/deepai-code-v2/GrShaderCache	4096	2026-11-22T05:25:33.9223844750
 /config/.config/deepai-code-v2/GrShaderCache/data_0	8192	2026-11-22T05:25:33.9223844750
-/config/.config/deepai-code-v2/GrShaderCache/data_1	270336	2026-11-23T02:12:28.3644535600
+/config/.config/deepai-code-v2/GrShaderCache/data_1	270336	2026-11-23T09:58:27.4214563120
 /config/.config/deepai-code-v2/GrShaderCache/data_2	8192	2026-11-22T05:25:33.9223844750
 /config/.config/deepai-code-v2/GrShaderCache/data_3	8192	2026-11-22T05:25:33.9223844750
-/config/.config/deepai-code-v2/GrShaderCache/index	262512	2026-11-23T02:06:28.3347996880
+/config/.config/deepai-code-v2/GrShaderCache/index	262512	2026-11-23T09:49:27.3665964340
 /config/.config/deepai-code-v2/IndexedDB	4096	2026-11-22T06:26:06.2865769640
 /config/.config/deepai-code-v2/IndexedDB/deepai-code_app_0.indexeddb.blob	4096	2026-11-22T06:26:06.2865769640
-/config/.config/deepai-code-v2/IndexedDB/deepai-code_app_0.indexeddb.leveldb	4096	2026-11-23T02:12:09.6938437630
+/config/.config/deepai-code-v2/IndexedDB/deepai-code_app_0.indexeddb.leveldb	4096	2026-11-23T09:49:53.4898586330
 /config/.config/deepai-code-v2/Local State	57	2026-11-22T05:25:43.5380659790
 /config/.config/deepai-code-v2/Local Storage	4096	2026-11-22T05:25:33.6060264930
-/config/.config/deepai-code-v2/Local Storage/leveldb	4096	2026-11-23T02:06:28.2307992080
-/config/.config/deepai-code-v2/Network Persistent State	1586	2026-11-22T16:14:53.7472772230
+/config/.config/deepai-code-v2/Local Storage/leveldb	4096	2026-11-23T09:49:27.2185956120
+/config/.config/deepai-code-v2/Network Persistent State	1668	2026-11-23T04:03:46.5444608560
 /config/.config/deepai-code-v2/Partitions	4096	2026-11-22T06:27:07.8869226580
-/config/.config/deepai-code-v2/Partitions/t3code-preview-96832974a9b27948ced2	4096	2026-11-22T16:14:53.7432771990
+/config/.config/deepai-code-v2/Partitions/t3code-preview-96832974a9b27948ced2	4096	2026-11-23T07:52:22.7772070220
 /config/.config/deepai-code-v2/Partitions/t3code-preview-a4d26868017c0ccffe2e	4096	2026-11-22T05:25:53.7461066740
-/config/.config/deepai-code-v2/Preferences	57	2026-11-22T05:25:43.6020662320
-/config/.config/deepai-code-v2/sentry	4096	2026-11-23T01:49:13.6698363130
+/config/.config/deepai-code-v2/Preferences	132	2026-11-23T07:30:50.4920243330
+/config/.config/deepai-code-v2/sentry	4096	2026-11-23T09:49:27.2625958570
 /config/.config/deepai-code-v2/sentry/queue	4096	2026-11-22T05:25:37.7260428590
-/config/.config/deepai-code-v2/sentry/scope_v3.json	11527	2026-11-23T02:11:31.7281943940
-/config/.config/deepai-code-v2/sentry/session.json	220	2026-11-23T02:13:27.9247258000
-/config/.config/deepai-code-v2/Session Storage/000003.log	8279	2026-11-23T02:06:30.7581278780
-/config/.config/deepai-code-v2/Session Storage	4096	2026-11-23T02:06:30.7508108430
+/config/.config/deepai-code-v2/sentry/scope_v3.json	10392	2026-11-23T09:53:30.4879162530
+/config/.config/deepai-code-v2/sentry/session.json	221	2026-11-23T09:58:26.8734535250
+/config/.config/deepai-code-v2/Session Storage/000003.log	10193	2026-11-23T09:49:30.0643459070
+/config/.config/deepai-code-v2/Session Storage	4096	2026-11-23T09:49:30.0546114670
 /config/.config/deepai-code-v2/Session Storage/CURRENT	16	2026-11-22T05:25:38.8737541900
 /config/.config/deepai-code-v2/Session Storage/LOCK	0	2026-11-22T05:25:38.8580473730
-/config/.config/deepai-code-v2/Session Storage/LOG	257	2026-11-23T02:06:30.7581278780
-/config/.config/deepai-code-v2/Session Storage/LOG.old	263	2026-11-23T01:49:16.5301051170
+/config/.config/deepai-code-v2/Session Storage/LOG	263	2026-11-23T09:49:30.0583743560
+/config/.config/deepai-code-v2/Session Storage/LOG.old	263	2026-11-23T07:10:36.8332713490
 /config/.config/deepai-code-v2/Session Storage/MANIFEST-000001	41	2026-11-22T05:25:38.8608210910
 /config/.config/deepai-code-v2/ShaderCache	4096	2026-11-22T05:25:33.5441537820
 /config/.config/deepai-code-v2/ShaderCache/data_0	8192	2026-11-22T05:25:33.5441537820
-/config/.config/deepai-code-v2/ShaderCache/data_1	270336	2026-11-23T02:12:28.3644535600
+/config/.config/deepai-code-v2/ShaderCache/data_1	270336	2026-11-23T09:58:27.4214563120
 /config/.config/deepai-code-v2/ShaderCache/data_2	8192	2026-11-22T05:25:33.5441537820
 /config/.config/deepai-code-v2/ShaderCache/data_3	8192	2026-11-22T05:25:33.5441537820
-/config/.config/deepai-code-v2/ShaderCache/index	262512	2026-11-23T02:06:28.2078381840
+/config/.config/deepai-code-v2/ShaderCache/index	262512	2026-11-23T09:49:27.1948163450
 /config/.config/deepai-code-v2/Shared Dictionary	4096	2026-11-22T05:25:33.7747056050
 /config/.config/deepai-code-v2/Shared Dictionary/cache	4096	2026-11-22T05:25:33.7820271950
 /config/.config/deepai-code-v2/Shared Dictionary/db	45056	2026-11-22T05:25:33.7820271950
 /config/.config/deepai-code-v2/Shared Dictionary/db-journal	0	2026-11-22T05:25:33.7842358340
-/config/.config/deepai-code-v2/SingletonCookie	20	2026-11-23T02:06:28.0947985790
-/config/.config/deepai-code-v2/SingletonLock	17	2026-11-23T02:06:28.0947985790
-/config/.config/deepai-code-v2/SingletonSocket	37	2026-11-23T02:06:28.0947985790
+/config/.config/deepai-code-v2/SingletonCookie	20	2026-11-23T09:49:27.0625947460
+/config/.config/deepai-code-v2/SingletonLock	19	2026-11-23T09:49:27.0625947460
+/config/.config/deepai-code-v2/SingletonSocket	37	2026-11-23T09:49:27.0625947460
 /config/.config/deepai-code-v2/Trust Tokens	36864	2026-11-22T05:25:33.7820271950
 /config/.config/deepai-code-v2/Trust Tokens-journal	0	2026-11-22T05:25:33.7842358340
 /config/.config/deepai-code-v2/WebStorage	4096	2026-11-22T05:25:41.4987417890
-/config/.config/deepai-code-v2/WebStorage/QuotaManager	40960	2026-11-23T02:13:29.7127339700
-/config/.config/deepai-code-v2/WebStorage/QuotaManager-journal	0	2026-11-23T02:13:29.7127339700
+/config/.config/deepai-code-v2/WebStorage/QuotaManager	40960	2026-11-23T09:58:40.3255220050
+/config/.config/deepai-code-v2/WebStorage/QuotaManager-journal	0	2026-11-23T09:58:40.3255220050
+/config/.config/discord/1.0.170	4096	2026-11-23T04:18:08.7522394880
+/config/.config/discord/1.0.170/.first-run	4	2026-11-23T04:18:08.7522394880
+/config/.config/discord	4096	2026-11-23T09:54:46.1923149050
+/config/.config/discord/app-1.0.170	4096	2026-11-23T04:17:44.5121310230
+/config/.config/discord/app-1.0.170/chrome_100_percent.pak	719609	2026-11-23T04:17:44.2888476160
+/config/.config/discord/app-1.0.170/chrome_200_percent.pak	1269057	2026-11-23T04:17:44.2898478610
+/config/.config/discord/app-1.0.170/chrome_crashpad_handler	1918544	2026-11-23T04:17:44.2911004180
+/config/.config/discord/app-1.0.170/chrome-sandbox	15232	2026-11-23T04:17:44.2841300060
+/config/.config/discord/app-1.0.170/Discord	218504520	2026-11-23T04:17:44.2841300060
+/config/.config/discord/app-1.0.170/discord.png	7009	2026-11-23T04:17:44.2927825380
+/config/.config/discord/app-1.0.170/icudtl.dat	10824576	2026-11-23T04:17:44.2961300590
+/config/.config/discord/app-1.0.170/libEGL.so	260560	2026-11-23T04:17:44.2961300590
+/config/.config/discord/app-1.0.170/libffmpeg.so	2197384	2026-11-23T04:17:44.3053400590
+/config/.config/discord/app-1.0.170/libGLESv2.so	5813416	2026-11-23T04:17:44.3007374330
+/config/.config/discord/app-1.0.170/libvk_swiftshader.so	4657496	2026-11-23T04:17:44.3072512010
+/config/.config/discord/app-1.0.170/libvulkan.so.1	651096	2026-11-23T04:17:44.3081301120
+/config/.config/discord/app-1.0.170/locales	4096	2026-11-23T04:17:44.3254810840
+/config/.config/discord/app-1.0.170/modules	4096	2026-11-23T04:18:22.6946322320
+/config/.config/discord/app-1.0.170/resources	4096	2026-11-23T04:17:55.4041797400
+/config/.config/discord/app-1.0.170/resources.pak	12620945	2026-11-23T04:17:44.3721303980
+/config/.config/discord/app-1.0.170/snapshot_blob.bin	369232	2026-11-23T04:17:44.3803476960
+/config/.config/discord/app-1.0.170/updater.node	5926080	2026-11-23T04:17:44.3809554010
+/config/.config/discord/app-1.0.170/v8_context_snapshot.bin	742656	2026-11-23T04:17:44.3859772880
+/config/.config/discord/app-1.0.170/vk_swiftshader_icd.json	107	2026-11-23T04:17:44.3870629650
+/config/.config/discord/blob_storage	4096	2026-11-23T06:19:54.3703205970
+/config/.config/discord/blob_storage/af52749c-d45d-4003-a864-09ca5f28b8a6	4096	2026-11-23T06:19:54.3703205970
+/config/.config/discord/Cache	4096	2026-11-23T04:18:08.6873649410
+/config/.config/discord/Cache/Cache_Data	139264	2026-11-23T09:20:00.6861223310
+/config/.config/discord/Cache/No_Vary_Search	4096	2026-11-23T06:19:54.5464668210
+/config/.config/discord/Code Cache	4096	2026-11-23T04:18:08.6886881080
+/config/.config/discord/Code Cache/js	53248	2026-11-23T06:20:19.7781209590
+/config/.config/discord/Code Cache/wasm	4096	2026-11-23T06:20:16.5802478750
+/config/.config/discord/Cookies	20480	2026-11-23T09:53:37.1039512840
+/config/.config/discord/Cookies-journal	0	2026-11-23T09:53:37.1039512840
+/config/.config/discord/Crashpad	4096	2026-11-23T04:18:08.6222713100
+/config/.config/discord/Crashpad/attachments	4096	2026-11-23T04:18:08.0722364470
+/config/.config/discord/Crashpad/client_id	36	2026-11-23T04:18:08.6222713100
+/config/.config/discord/Crashpad/completed	4096	2026-11-23T05:43:17.6197921920
+/config/.config/discord/Crashpad/new	4096	2026-11-23T04:24:17.8019133020
+/config/.config/discord/Crashpad/pending	4096	2026-11-23T04:24:17.8051836420
+/config/.config/discord/Crashpad/settings.dat	40	2026-11-23T06:19:54.1223194320
+/config/.config/discord/DawnGraphiteCache	4096	2026-11-23T06:19:54.5502512840
+/config/.config/discord/DawnGraphiteCache/data_0	8192	2026-11-23T06:19:54.5502512840
+/config/.config/discord/DawnGraphiteCache/data_1	270336	2026-11-23T09:54:59.5723848570
+/config/.config/discord/DawnGraphiteCache/data_2	8192	2026-11-23T06:19:54.5502512840
+/config/.config/discord/DawnGraphiteCache/data_3	8192	2026-11-23T06:19:54.5502512840
+/config/.config/discord/DawnGraphiteCache/index	262512	2026-11-23T06:19:54.5502512840
+/config/.config/discord/DawnWebGPUCache	4096	2026-11-23T06:19:54.5495455200
+/config/.config/discord/DawnWebGPUCache/data_0	8192	2026-11-23T06:19:54.5495455200
+/config/.config/discord/DawnWebGPUCache/data_1	270336	2026-11-23T09:54:59.5723848570
+/config/.config/discord/DawnWebGPUCache/data_2	8192	2026-11-23T06:19:54.5495455200
+/config/.config/discord/DawnWebGPUCache/data_3	8192	2026-11-23T06:19:54.5495455200
+/config/.config/discord/DawnWebGPUCache/index	262512	2026-11-23T06:19:54.5495455200
+/config/.config/discord/declarative_performance_observer.db	32768	2026-11-23T04:18:08.9242402600
+/config/.config/discord/declarative_performance_observer.db-journal	0	2026-11-23T04:18:08.9242402600
+/config/.config/discord/Dictionaries	4096	2026-11-23T04:18:09.4822072840
+/config/.config/discord/Dictionaries/en-US-10-1.bdic	451968	2026-11-23T04:18:09.4822072840
+/config/.config/discord/DIPS	36864	2026-11-23T06:02:52.1968469940
+/config/.config/discord/DIPS-wal	49472	2026-11-23T09:48:32.2342864350
+/config/.config/discord/Discord	19	2026-11-23T09:20:00.6821223120
+/config/.config/discord/discord_asset_cache	4096	2026-11-23T04:18:27.5803239020
+/config/.config/discord/discord_asset_cache/openh264	4096	2026-11-23T04:18:27.5603238120
+/config/.config/discord/discord_asset_cache/openh264-NpUxv9	4096	2026-11-23T04:18:22.1842997000
+/config/.config/discord/domainMigrated	0	2026-11-23T04:18:23.1643040950
+/config/.config/discord/GPUCache	4096	2026-11-23T06:19:54.5487309850
+/config/.config/discord/GPUCache/data_0	8192	2026-11-23T06:19:54.5487309850
+/config/.config/discord/GPUCache/data_1	270336	2026-11-23T09:54:59.5723848570
+/config/.config/discord/GPUCache/data_2	8192	2026-11-23T06:19:54.5487309850
+/config/.config/discord/GPUCache/data_3	8192	2026-11-23T06:19:54.5487309850
+/config/.config/discord/GPUCache/index	262512	2026-11-23T06:19:54.5487309850
+/config/.config/discord/GPUPersistentCache	4096	2026-11-23T04:18:08.6233573960
+/config/.config/discord/GPUPersistentCache/GPUCache	4096	2026-11-23T04:18:08.6233573960
+/config/.config/discord/installer.db	221184	2026-11-23T09:20:00.6817927430
+/config/.config/discord/install-state	4096	2026-11-23T09:20:00.6821223120
+/config/.config/discord/install-state/app.toml	17	2026-11-23T09:20:00.6821223120
+/config/.config/discord/Local State	57	2026-11-23T04:18:18.6242837410
+/config/.config/discord/Local Storage	4096	2026-11-23T04:18:08.6802391660
+/config/.config/discord/Local Storage/leveldb	4096	2026-11-23T09:36:54.7534551030
+/config/.config/discord/logs	4096	2026-11-23T09:55:22.6846827050
+/config/.config/discord/logs/Discord --disable-dev-shm-usage --use-angle=swiftshader --use-gl=angle_updater_rCURRENT.log	161118	2026-11-23T09:20:00.6843456290
+/config/.config/discord/logs/discord_krisp.log	8655	2026-11-23T06:20:07.2903812810
+/config/.config/discord/logs/discord-last-webrtc_0	4119902	2026-11-23T06:02:52.1334862870
+/config/.config/discord/logs/discord-last-webrtc_1	5000000	2026-11-23T05:58:09.4881215320
+/config/.config/discord/logs/Discord --no-sandbox --disable-dev-shm-usage --use-angle=swiftshader --use-gl=angle --disable-gpu-sandbox --enable-logging_updater_rCURRENT.log	24473	2026-11-23T04:20:21.8968390060
+/config/.config/discord/logs/Discord --no-sandbox --disable-gpu --disable-dev-shm-usage --enable-logging_updater_rCURRENT.log	24248	2026-11-23T04:18:53.2844393370
+/config/.config/discord/logs/Discord --no-sandbox --enable-logging_updater_rCURRENT.log	39218	2026-11-23T04:18:26.3420793070
+/config/.config/discord/logs/discord_utils.log	4117	2026-11-23T06:20:06.4663774130
+/config/.config/discord/logs/discord-webrtc_0	3083321	2026-11-23T09:58:59.2696183040
+/config/.config/discord/logs/discord-webrtc_1	5000000	2026-11-23T09:55:22.6805053870
+/config/.config/discord/logs/renderer_js.log	590858	2026-11-23T09:58:57.0736071510
+/config/.config/discord/module_data	4096	2026-11-23T04:18:20.1922907620
+/config/.config/discord/module_data/crashlogs	4096	2026-11-23T04:26:07.8024181020
+/config/.config/discord/module_data/discord_utils	4096	2026-11-23T04:18:20.1922907620
+/config/.config/discord/module_data/discord_voice	4096	2026-11-23T04:18:20.1562906000
+/config/.config/discord/Network Persistent State	2339	2026-11-23T09:54:46.1843148630
+/config/.config/discord/Preferences	169	2026-11-23T05:36:14.1538613450
+/config/.config/discord/sentry	4096	2026-11-23T04:18:13.0682588280
+/config/.config/discord/sentry/queue	4096	2026-11-23T04:18:13.0682588280
+/config/.config/discord/sentry/scope_v3.json	46167	2026-11-23T09:58:57.5816097360
+/config/.config/discord/Service Worker	4096	2026-11-23T04:18:19.2602865890
+/config/.config/discord/Service Worker/CacheStorage	4096	2026-11-23T04:18:19.2602865890
+/config/.config/discord/Session Storage/000003.log	1751	2026-11-23T06:20:00.8983512600
+/config/.config/discord/Session Storage	4096	2026-11-23T06:19:54.7034885330
+/config/.config/discord/Session Storage/CURRENT	16	2026-11-23T04:18:09.5306419310
+/config/.config/discord/Session Storage/LOCK	0	2026-11-23T04:18:09.5300368970
+/config/.config/discord/Session Storage/LOG	249	2026-11-23T06:19:54.7054299040
+/config/.config/discord/Session Storage/LOG.old	249	2026-11-23T05:43:42.0797641530
+/config/.config/discord/Session Storage/MANIFEST-000001	41	2026-11-23T04:18:09.5306419310
+/config/.config/discord/settings.json	416	2026-11-23T09:48:32.2382864580
+/config/.config/discord/Shared Dictionary	4096	2026-11-23T04:18:08.9564935680
+/config/.config/discord/Shared Dictionary/cache	4096	2026-11-23T05:43:43.2702175010
+/config/.config/discord/Shared Dictionary/db	45056	2026-11-23T06:19:55.7943272860
+/config/.config/discord/Shared Dictionary/db-journal	0	2026-11-23T06:19:55.7943272860
+/config/.config/discord/shared_proto_db/000003.log	56	2026-11-23T05:43:12.9862816020
+/config/.config/discord/shared_proto_db	4096	2026-11-23T05:43:12.9862816020
+/config/.config/discord/shared_proto_db/CURRENT	16	2026-11-23T05:43:12.9853168070
+/config/.config/discord/shared_proto_db/LOCK	0	2026-11-23T05:43:12.9851093560
+/config/.config/discord/shared_proto_db/LOG	207	2026-11-23T05:43:12.9853168070
+/config/.config/discord/shared_proto_db/MANIFEST-000001	41	2026-11-23T05:43:12.9853168070
+/config/.config/discord/shared_proto_db/metadata	4096	2026-11-23T05:43:12.9851093560
+/config/.config/discord/SingletonCookie	19	2026-11-23T06:19:54.1463195450
+/config/.config/discord/SingletonLock	19	2026-11-23T06:19:54.1463195450
+/config/.config/discord/SingletonSocket	37	2026-11-23T06:19:54.1463195450
+/config/.config/discord/TransportSecurity	2523	2026-11-23T09:30:00.7009918670
+/config/.config/discord/Trust Tokens	36864	2026-11-23T04:18:08.9673968310
+/config/.config/discord/Trust Tokens-journal	0	2026-11-23T04:18:08.9682404570
+/config/.config/discord/VideoDecodeStats	4096	2026-11-23T05:43:12.9817672460
+/config/.config/discord/VideoDecodeStats/LOCK	0	2026-11-23T05:43:12.9757709310
+/config/.config/discord/VideoDecodeStats/LOG	0	2026-11-23T05:43:12.9757709310
+/config/.config/discord/WebStorage/2	4096	2026-11-23T05:35:31.0416659750
+/config/.config/discord/WebStorage	4096	2026-11-23T05:35:29.1456573880
+/config/.config/discord/WebStorage/QuotaManager	40960	2026-11-23T06:20:26.0584694120
+/config/.config/discord/WebStorage/QuotaManager-journal	0	2026-11-23T06:20:26.0584694120
 /config/.config/gh	4096	2026-11-22T06:24:57.3529344510
 /config/.config/gh/config.yml	1965	2026-11-22T06:24:57.3529344510
 /config/.config/gh/hosts.yml	206	2026-11-22T06:24:57.3501890000
 /config/.config/gtk-3.0	4096	2026-11-23T01:40:42.4010524210
 /config/.config/gtk-3.0/gtk.css	683	2026-11-23T01:43:09.3864589990
+/config/.config/jadx	4096	2026-11-23T06:14:22.6887608630
+/config/.config/jadx/plugins	4096	2026-11-23T06:14:22.6887608630
+/config/.config/jadx/plugins/dropins	4096	2026-11-23T06:14:22.6887608630
+/config/.config/jadx/plugins/installed	4096	2026-11-23T06:14:22.6887608630
 /config/.config/menus	4096	2026-11-22T09:02:34.9849311550
 /config/.config/menus/applications-merged	4096	2026-11-22T09:02:36.6217548800
 /config/.config/menus/applications-merged/user-chrome-apps.menu	534	2026-11-23T01:34:29.9971263300
 /config/.config/menus/applications-merged/xdg-desktop-menu-dummy.menu	0	2026-11-23T01:34:29.3659181480
-/config/.config/mimeapps.list	152	2026-11-23T02:06:28.5066117620
+/config/.config/mimeapps.list	152	2026-11-23T09:49:27.6025977460
 /config/.config/mpv	4096	2026-11-23T01:17:33.0935148880
 /config/.config/openbox	4096	2026-11-22T05:20:11.1088052660
 /config/.config/openbox/autostart	3	2026-11-22T05:20:11.0327544830
@@ -565,28 +708,46 @@
 /config/.config/openbox/menu.xml.bak	290	2026-11-22T05:20:11.1109030770
 /config/.config/opencode	4096	2026-11-22T08:52:40.0982786200
 /config/.config/opencode/service.json	64	2026-11-22T08:52:40.0942785970
+/config/.config/pavucontrol.ini	108	2026-11-23T09:48:27.5528942630
 /config/.config/picom.conf	1178	2026-11-23T01:19:04.1003512930
 /config/.config/procps	4096	2026-11-23T01:19:16.1219483800
 /config/.config/pulse	4096	2026-11-22T05:20:16.6286449140
 /config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-card-database.tdb	696	2026-11-22T05:20:11.5232624950
-/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-default-sink	1	2026-11-23T02:00:26.9043764470
-/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-default-source	1	2026-11-23T02:00:26.9044539280
-/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-device-volumes.tdb	8192	2026-11-22T05:20:11.6245627950
-/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-stream-volumes.tdb	12288	2026-11-22T17:32:34.5725442050
+/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-default-sink	6	2026-11-23T05:50:04.7804806670
+/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-default-source	1	2026-11-23T05:50:04.7805640170
+/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-device-volumes.tdb	8192	2026-11-23T05:49:55.9416519770
+/config/.config/pulse/47f5f86a1d8e42a0a7f7ade84036a51c-stream-volumes.tdb	12288	2026-11-23T05:48:07.5571219500
 /config/.config/pulse/cookie	256	2026-11-22T05:20:11.5288071920
 /config/.config/sober	4096	2026-11-22T07:33:23.4493508430
 /config/.config/sober/config.json	1197	2026-11-22T07:47:15.3499528890
 /config/.config/Thunar	4096	2026-11-22T05:23:32.7815557450
-/config/.config/Thunar/accels.scm	8561	2026-11-22T05:23:32.7815557450
+/config/.config/Thunar/accels.scm	8703	2026-11-23T03:52:27.5611157730
 /config/.config/Thunar/uca.xml	419	2026-11-22T05:20:13.4372656760
 /config/.config/user-dirs.dirs	633	2026-11-22T05:20:13.4319804250
 /config/.config/user-dirs.locale	5	2026-11-22T05:20:13.4320415950
-/config/.config/xarchiver	4096	2026-11-22T05:23:16.7854948880
-/config/.config/xarchiver/xarchiverrc	541	2026-11-22T05:23:16.7814948730
-/config/.config/xfce4	4096	2026-11-23T00:56:02.4557835660
-/config/.config/xfce4/desktop	4096	2026-11-23T02:04:49.5642978900
-/config/.config/xfce4/desktop/accels.scm	3349	2026-11-23T02:04:48.3453967520
-/config/.config/xfce4/desktop/icons.screen0.yaml	826	2026-11-23T02:04:49.5642978900
+/config/.config/Vencord	4096	2026-11-23T04:18:07.9522359100
+/config/.config/Vencord/dist	4096	2026-11-23T04:17:55.4041797400
+/config/.config/Vencord/dist/package.json	2	2026-11-23T04:17:55.1841787580
+/config/.config/Vencord/dist/patcher.js	36887	2026-11-23T04:17:55.3041792940
+/config/.config/Vencord/dist/patcher.js.LEGAL.txt	964	2026-11-23T04:17:55.2801791860
+/config/.config/Vencord/dist/patcher.js.map	235647	2026-11-23T04:17:55.2881792220
+/config/.config/Vencord/dist/preload.js	2475	2026-11-23T04:17:55.2801791860
+/config/.config/Vencord/dist/preload.js.map	10116	2026-11-23T04:17:55.3241793830
+/config/.config/Vencord/dist/renderer.css	42458	2026-11-23T04:17:55.3041792940
+/config/.config/Vencord/dist/renderer.css.map	90071	2026-11-23T04:17:55.3353342950
+/config/.config/Vencord/dist/renderer.js	712790	2026-11-23T04:17:55.3386090840
+/config/.config/Vencord/dist/renderer.js.LEGAL.txt	1719	2026-11-23T04:17:55.4041797400
+/config/.config/Vencord/dist/renderer.js.map	3108671	2026-11-23T04:17:55.2961792580
+/config/.config/Vencord/settings	4096	2026-11-23T04:18:09.9722449620
+/config/.config/Vencord/settings/quickCss.css	0	2026-11-23T04:18:09.8042442080
+/config/.config/Vencord/settings/settings.json	12506	2026-11-23T04:18:09.9762449800
+/config/.config/Vencord/themes	4096	2026-11-23T04:18:07.9522359100
+/config/.config/xarchiver	4096	2026-11-23T06:13:49.6886053980
+/config/.config/xarchiver/xarchiverrc	541	2026-11-23T06:13:49.6886053980
+/config/.config/xfce4	4096	2026-11-23T04:24:55.1607670420
+/config/.config/xfce4/desktop	4096	2026-11-23T06:18:32.5637452300
+/config/.config/xfce4/desktop/accels.scm	3349	2026-11-23T04:02:01.2885737080
+/config/.config/xfce4/desktop/icons.screen0.yaml	1238	2026-11-23T06:18:32.5637452300
 /config/.config/xfce4/helpers.rc	25	2026-11-22T17:09:29.2896217480
 /config/.config/xfce4/panel	4096	2026-11-23T01:31:21.9730928460
 /config/.config/xfce4/panel/docklike-3.rc	88	2026-11-23T01:15:26.1838136520
@@ -596,9 +757,9 @@
 /config/.config/xfce4/panel/launcher-16	4096	2026-11-23T00:56:02.5477839740
 /config/.config/xfce4/panel/launcher-8	4096	2026-11-23T01:23:37.4914779490
 /config/.config/xfce4/panel/scripts	4096	2026-11-23T01:31:29.5491261510
-/config/.config/xfce4/xfce4-screenshooter	270	2026-11-22T16:43:39.4727319750
+/config/.config/xfce4/xfce4-screenshooter	270	2026-11-23T04:24:55.1607670420
 /config/.config/xfce4/xfconf	4096	2026-11-22T05:20:11.7448081830
-/config/.config/xfce4/xfconf/xfce-perchannel-xml	4096	2026-11-23T02:04:52.5676612250
+/config/.config/xfce4/xfconf/xfce-perchannel-xml	4096	2026-11-23T09:58:39.5670862500
 /config/.config/xfce4/xfwm4	4096	2026-11-22T05:20:12.2008102750
 /config/core	1021956096	2026-11-22T08:53:20.9745172030
 /config/.dbus	4096	2026-11-22T05:20:11.6208076140
@@ -607,19 +768,19 @@
 /config/.deepai-code	4096	2026-11-22T07:03:52.0038606400
 /config/.deepai-code/bin	4096	2026-11-22T05:25:34.4300297800
 /config/.deepai-code/bin/deepai	508	2026-11-22T05:25:34.4300297800
-/config/.deepai-code/caches	4096	2026-11-23T02:11:31.0096599450
-/config/.deepai-code/caches/antigravity.json	672	2026-11-23T02:06:29.5228051790
-/config/.deepai-code/caches/claudeAgent.json	16849	2026-11-23T02:11:29.5078329340
-/config/.deepai-code/caches/codex.json	875	2026-11-23T02:11:29.5078329340
-/config/.deepai-code/caches/cursor.json	600	2026-11-23T02:11:29.5078329340
-/config/.deepai-code/caches/deepai.json	27481	2026-11-23T02:11:31.0096599450
-/config/.deepai-code/caches/grok.json	1000	2026-11-23T02:11:29.5105989490
-/config/.deepai-code/caches/muse.json	829	2026-11-23T02:11:29.5189748780
-/config/.deepai-code/caches/opencode.json	879	2026-11-23T02:06:29.5228051790
+/config/.deepai-code/caches	4096	2026-11-23T09:52:13.2245219960
+/config/.deepai-code/caches/antigravity.json	672	2026-11-23T09:49:28.8946049830
+/config/.deepai-code/caches/claudeAgent.json	16849	2026-11-23T09:49:28.9066050500
+/config/.deepai-code/caches/codex.json	875	2026-11-23T09:49:28.8946049830
+/config/.deepai-code/caches/cursor.json	600	2026-11-23T09:49:28.8946049830
+/config/.deepai-code/caches/deepai.json	28141	2026-11-23T09:52:13.2245219960
+/config/.deepai-code/caches/grok.json	1000	2026-11-23T09:49:28.9066050500
+/config/.deepai-code/caches/muse.json	829	2026-11-23T09:49:28.9066050500
+/config/.deepai-code/caches/opencode.json	879	2026-11-23T09:49:28.8946049830
 /config/.deepai-code/caches/pi-deepai-extension.ts	96825	2026-11-22T05:50:12.4844714990
-/config/.deepai-code/caches/pi.json	1044	2026-11-23T02:11:29.5189748780
+/config/.deepai-code/caches/pi.json	1044	2026-11-23T09:49:28.9066050500
 /config/.deepai-code/caches/pull-requests	4096	2026-11-22T05:50:14.7804818640
-/config/.deepai-code/caches/pull-requests/revisions	126	2026-11-23T01:44:39.9406210750
+/config/.deepai-code/caches/pull-requests/revisions	126	2026-11-23T07:32:29.2683879920
 /config/.deepai-code/diagnostics	4096	2026-11-22T05:25:39.7740510000
 /config/.deepai-code/diagnostics/execution-host	4096	2026-11-22T05:25:39.7740510000
 /config/.deepai-code/scratch/2026-11-22-find-out-the-same-free-34c1b244	4096	2026-11-22T16:06:30.0882574020
@@ -627,16 +788,23 @@
 /config/.deepai-code/tools	4096	2026-11-22T07:03:52.0038606400
 /config/.deepai-code/tools/chrome-headless-shell	4096	2026-11-22T07:03:52.0038606400
 /config/.deepai-code/tools/chrome-headless-shell/linux64	4096	2026-11-22T07:03:56.4038879760
-/config/.deepai-code/userdata	4096	2026-11-23T02:09:30.7716397970
+/config/.deepai-code/userdata	4096	2026-11-23T09:49:29.5596478930
 /config/.deepai-code/userdata/account-clients	4096	2026-11-22T06:14:41.8826370900
 /config/.deepai-code/userdata/account-clients/sessions.sqlite	12288	2026-11-22T06:14:41.8826370900
 /config/.deepai-code/userdata/attachments/02e207c9-cc40-46e1-876e-9fbad3b0b34e-b8455ba2-dcd1-484f-bf61-68df770846e6-html.html	8647	2026-11-22T11:46:28.5824000490
 /config/.deepai-code/userdata/attachments/26527c95-4cee-4e22-8cff-b0143739251c-091e132f-f610-4ef2-94f6-86af7086be6b.png	11169	2026-11-22T13:53:11.5391494760
-/config/.deepai-code/userdata/attachments	4096	2026-11-23T01:29:41.1326501540
+/config/.deepai-code/userdata/attachments	4096	2026-11-23T07:31:55.7442907020
+/config/.deepai-code/userdata/attachments/40d8afbd-22d8-42e2-9982-44822ed66f13-82036ff5-4206-4fcc-9acb-6016fd3291e6-txt.txt	34761	2026-11-23T07:29:27.4834164010
+/config/.deepai-code/userdata/attachments/5d99f405-d632-4aee-b964-302da1b4c794-03715514-7633-460b-b8b3-0e6c9f1dc1b0.png	443223	2026-11-23T04:04:37.2897537770
 /config/.deepai-code/userdata/attachments/8f93d213-ab05-441a-aa16-6e3505d35fd5-08dee47b-9a73-4ab7-b412-b6425be9df3e.png	23935	2026-11-23T00:48:41.1763284030
 /config/.deepai-code/userdata/attachments/8f93d213-ab05-441a-aa16-6e3505d35fd5-c5a994a4-8a8d-4616-97f9-f1ec79237d33.png	99987	2026-11-23T01:29:41.0544845760
 /config/.deepai-code/userdata/attachments/a926ea50-30f7-496c-a4ea-56b649ad4b56-3ab27c63-1f79-4dc1-bbb2-bd52ceb4fbb8.png	63969	2026-11-22T09:43:02.5886700710
 /config/.deepai-code/userdata/attachments/a926ea50-30f7-496c-a4ea-56b649ad4b56-e0aa4345-e68a-40a1-85f9-b9680127b166-webm.webm	940621	2026-11-22T09:26:37.5648747510
+/config/.deepai-code/userdata/attachments/de0bb6c8-ae94-424a-8d7f-c76c8a727d85-112315db-fdb8-4baa-9391-406de5fddcb7-apk.apk	7391712	2026-11-23T06:13:30.9915761990
+/config/.deepai-code/userdata/attachments/de0bb6c8-ae94-424a-8d7f-c76c8a727d85-5b7afc0f-1067-4617-9ed5-86bcac0f643a-txt.txt	34761	2026-11-23T07:31:55.4916846230
+/config/.deepai-code/userdata/attachments/pending-28c971f1-fdd7-43d6-9eaa-fa13c6c7e64d-txt.txt	34761	2026-11-23T07:31:45.5253283260
+/config/.deepai-code/userdata/attachments/pending-9777a3f6-6e63-4b69-b889-054b2463d7c2-txt.txt	34761	2026-11-23T07:31:51.2116623360
+/config/.deepai-code/userdata/attachments/pending-e939b99a-df59-4ce6-b6e1-185caa8ac184-txt.txt	34761	2026-11-23T07:30:30.0359225420
 /config/.deepai-code/userdata/attachments/thread-project-4b1318ee-a7fc-4518-be5f-3903aa3a19bc-ad529e77-1f15-4caf-b9ce-ceb6-cef9508b-02e0-4716-b3b5-b402e4fe02ea.png	177986	2026-11-23T00:41:06.8051464200
 /config/.deepai-code/userdata/browser-artifacts	4096	2026-11-22T12:24:39.6756607680
 /config/.deepai-code/userdata/browser-artifacts/browser-screenshot-kick-com-mwrserzh-858ebdfe.png	7455	2026-11-22T12:02:30.3119189630
@@ -645,90 +813,121 @@
 /config/.deepai-code/userdata/browser-artifacts/browser-screenshot-www-youtube-com-mwrgflrh-85fdb63f.png	15162	2026-11-22T06:27:13.5149542000
 /config/.deepai-code/userdata/client-settings.json	1942	2026-11-22T05:37:11.9547659360
 /config/.deepai-code/userdata/deepai	4096	2026-11-22T05:25:37.8380433060
-/config/.deepai-code/userdata/deepai-collaboration	4096	2026-11-23T02:06:44.6436591110
+/config/.deepai-code/userdata/deepai-collaboration	4096	2026-11-23T09:49:30.0734057280
 /config/.deepai-code/userdata/deepai-collaboration/585a561efae2e106c1738a0c869a5ebd240522d75e991974a120e459fef43d9f.json	353	2026-11-22T05:50:12.4164711930
 /config/.deepai-code/userdata/deepai-collaboration/6a3db70009caba9640af6d60b828f95485d1d515e20ba83c56db4036eed8e4ca.json	353	2026-11-22T06:06:04.4753682820
-/config/.deepai-code/userdata/deepai-collaboration/d1c61c523b5bc023bc950d9bb2b2848f04ad1c9222a0d3c61af885dad86fbe8d.json	7866	2026-11-23T02:06:44.6436591110
-/config/.deepai-code/userdata/deepai-history	4096	2026-11-23T02:06:45.0546818840
-/config/.deepai-code/userdata/deepai-history/ownership.json	9827	2026-11-23T02:06:45.0468768550
-/config/.deepai-code/userdata/deepai-history/preferences	4096	2026-11-23T02:13:22.3407002870
+/config/.deepai-code/userdata/deepai-collaboration/d1c61c523b5bc023bc950d9bb2b2848f04ad1c9222a0d3c61af885dad86fbe8d.json	12453	2026-11-23T09:49:30.0733740880
+/config/.deepai-code/userdata/deepai-history	4096	2026-11-23T09:49:33.6026312500
+/config/.deepai-code/userdata/deepai-history/deleted	4096	2026-11-23T05:28:53.2438817930
+/config/.deepai-code/userdata/deepai-history/ownership.json	12615	2026-11-23T09:49:33.5946312050
+/config/.deepai-code/userdata/deepai-history/preferences	4096	2026-11-23T09:58:24.4294410650
+/config/.deepai-code/userdata/deepai-optional-provenance/06937fe20a28c14c5789f203f757df22bea79dd53053ca6916c537eb4c1ca207.json	244	2026-11-23T04:56:15.7030763230
 /config/.deepai-code/userdata/deepai-optional-provenance/070334a857457d3f5b40cb40df01a0d895fd7a7189186f52e59668d3d29af4f0.json	244	2026-11-22T08:50:56.4216731140
-/config/.deepai-code/userdata/deepai-optional-provenance	12288	2026-11-23T02:06:46.4188831890
+/config/.deepai-code/userdata/deepai-optional-provenance	12288	2026-11-23T09:49:33.3026295720
 /config/.deepai-code/userdata/deepai-optional-provenance/137a4ca8acea3132a134133739dfd516b7bac4c6946512bb1ea399e82a11a15c.json	244	2026-11-23T01:42:19.4119977730
 /config/.deepai-code/userdata/deepai-optional-provenance/148c9e99ffc12a70fb097d7a5826262adfa64da08763511d22e1197878b38601.json	244	2026-11-22T06:21:59.7251827400
 /config/.deepai-code/userdata/deepai-optional-provenance/174f7b24b76c82a2beafa4d30fa622f7c02e5b8f4238b419e9476834b3aea368.json	244	2026-11-22T08:48:18.8007512880
 /config/.deepai-code/userdata/deepai-optional-provenance/1b352f4f80385144ec70ecd143a70f06c86faf9374f954035559caaeee4febfa.json	244	2026-11-22T05:50:46.0286229630
+/config/.deepai-code/userdata/deepai-optional-provenance/1c333742762eef924d1fef8dee0200cabb2c79802330e9dd61e242c744165f44.json	354	2026-11-23T09:49:33.2946295270
 /config/.deepai-code/userdata/deepai-optional-provenance/20dc2cd541375e7736aca4b0f585268bae2a32a0afd3f9e54c849989c2a2cefe.json	244	2026-11-22T16:07:55.3406938110
 /config/.deepai-code/userdata/deepai-optional-provenance/2c5f64afd265f3520e15609b41e668e3bebf68600f0206d4ce51a68bf3e6b651.json	244	2026-11-22T06:03:57.6904833260
+/config/.deepai-code/userdata/deepai-optional-provenance/2eb199526fd4245b77248f956a36eb7c31291859b1f1af00d47b07b9e77c1377.json	244	2026-11-23T04:15:53.4956374420
 /config/.deepai-code/userdata/deepai-optional-provenance/2f8e5d7f0d78fc9b15dfdf49918202c47de5537de7b1d56475bde7702e9e5627.json	244	2026-11-22T08:59:45.0367558950
 /config/.deepai-code/userdata/deepai-optional-provenance/323eac49d6356ab20fc3317a6e9b028e0fdb7f588d740241e01c9628f2effa17.json	354	2026-11-23T00:42:58.8203682310
+/config/.deepai-code/userdata/deepai-optional-provenance/39e30e8b68147a5e4d2465a8ed8186bd2930a12277649597142c610a4ec31e0a.json	244	2026-11-23T04:16:56.3319161450
+/config/.deepai-code/userdata/deepai-optional-provenance/3bad9edf2688273ad751f6a02cbe3b9c84153e4f10c06c994dd50bfa96f834a0.json	245	2026-11-23T05:03:31.7131594250
 /config/.deepai-code/userdata/deepai-optional-provenance/3c0e5e146fc30c03e6f0b883908687ad8b4efc8712af4741ef618ec8f631a604.json	244	2026-11-22T20:23:04.9828079340
+/config/.deepai-code/userdata/deepai-optional-provenance/3dea33e9a0267f05144b1cf687e6ef3e4d92ba74e7fb57fe1907c6d53032fdb9.json	245	2026-11-23T05:04:43.6615017470
 /config/.deepai-code/userdata/deepai-optional-provenance/4141ba4ca6a856993aea52bcbca10213d278fea66f5306e34bdfb971433b2139.json	244	2026-11-22T12:02:02.8597612510
 /config/.deepai-code/userdata/deepai-optional-provenance/4169a8e494d87a22ac1d2438f99ae4e2d2451b99e9a7bbc01e722918b5bdd14c.json	244	2026-11-22T06:58:17.3619331160
 /config/.deepai-code/userdata/deepai-optional-provenance/42b4850d85124ece37b855e774c441256532274cd544a2e87cb078974ee802ad.json	244	2026-11-23T01:01:36.7652708020
 /config/.deepai-code/userdata/deepai-optional-provenance/4db4301e18f4768f523c9e45f9af25a196b895188b4f9b7fd6175b82d0791663.json	244	2026-11-23T01:27:06.4479736520
+/config/.deepai-code/userdata/deepai-optional-provenance/4fa32330fdd3cec9d8d74fd332f6edb077b8b02fb5524ffcc28b531565a08d07.json	244	2026-11-23T04:06:17.1331928870
 /config/.deepai-code/userdata/deepai-optional-provenance/537e2222fed007402fd38b3d87f813daebb02b6cf510fc4c20ba99e23c173884.json	244	2026-11-23T01:28:41.8083902950
 /config/.deepai-code/userdata/deepai-optional-provenance/55f2b3b9ddae0fcc99ad550794fc1261bca8b11a3154e99f50e1262c6efdad01.json	244	2026-11-22T17:44:11.2652423850
 /config/.deepai-code/userdata/deepai-optional-provenance/599b24d9d97e3346a9137f59b1e92a3c4771042b8bea551caf13004bb705c2ee.json	244	2026-11-22T20:13:06.2642875770
+/config/.deepai-code/userdata/deepai-optional-provenance/5da574d826dcdfe355aa22fc4c1d83818cef6102c102f90e98e6075f6bb2f83f.json	245	2026-11-23T05:14:29.7322827320
 /config/.deepai-code/userdata/deepai-optional-provenance/6779a2804f62af42228c1dfc08da37a565f38cde533bb6cfc4f70da40c80c1ea.json	244	2026-11-22T17:05:16.3122416700
+/config/.deepai-code/userdata/deepai-optional-provenance/6b569e07649c59c011d62bb6a3ea2565e5b048e21f9dace282c3db6fb60cd502.json	245	2026-11-23T05:25:13.9149202490
 /config/.deepai-code/userdata/deepai-optional-provenance/6c92d8b96370b9ed70c90825ec499289ab3865f2c52d508498e244c3dce1d04d.json	244	2026-11-22T13:56:54.9955246550
+/config/.deepai-code/userdata/deepai-optional-provenance/6c94fe239129fea73892d0842a86947cbf1db73cc5bf1e15c7a7a891f884f93c.json	244	2026-11-23T04:47:47.9486126240
 /config/.deepai-code/userdata/deepai-optional-provenance/6e1182d0e9ad05f5321b26e1003206563382cf80d2822939904332ffecff94d2.json	354	2026-11-23T00:41:07.4318907200
+/config/.deepai-code/userdata/deepai-optional-provenance/70abaacb73faa8a8dc0c733113ce3ad3e6df875061a2bf1d04bb892f911f26d1.json	244	2026-11-23T04:52:50.1660861260
 /config/.deepai-code/userdata/deepai-optional-provenance/73bf1d09fa765ecabf96cd5361f948116fe0f8b93b5056c166bf023d04dd3dea.json	244	2026-11-22T12:28:36.3210335750
 /config/.deepai-code/userdata/deepai-optional-provenance/73c872bb566c9b27147943379f972938c5fbd8e22bb138d04b6cbcc14caa6645.json	244	2026-11-22T07:12:33.8350031630
 /config/.deepai-code/userdata/deepai-optional-provenance/75675f2091b4de0a205416365e62952289d5d2b0af8c76d8c84bfd1106ba5dcf.json	244	2026-11-22T08:41:47.4944700010
+/config/.deepai-code/userdata/deepai-optional-provenance/75a4a0f2b7d75d9eaf7ba5b9a413de89ba225f957d7cb34f5a9ee6d8b76eee79.json	244	2026-11-23T04:02:34.0161074770
 /config/.deepai-code/userdata/deepai-optional-provenance/75a69c4fb2f4d997aa21f18ace8da49e8c0110af7d0f88ad39a6386cb2293b23.json	244	2026-11-22T07:20:11.4656662510
+/config/.deepai-code/userdata/deepai-optional-provenance/75eceb6582d5007d0ac86e3017616a428148d74f8e2fbe9face18e5db97b66ee.json	244	2026-11-23T04:22:52.0015210930
 /config/.deepai-code/userdata/deepai-optional-provenance/7914880aef911291855faffc45b94211f7e6ff6309a3e0d828d756e3f9d2c112.json	244	2026-11-22T06:03:47.0384068140
 /config/.deepai-code/userdata/deepai-optional-provenance/7fd5cc7e42de463a893a20148b0cf71ede959c9edab70b018ab12322b2dc55fc.json	244	2026-11-22T05:50:14.0982639720
 /config/.deepai-code/userdata/deepai-optional-provenance/8041cd7f1282bd67a6b6940fa801e84962bbef89ec5635bc417d52ad87364149.json	244	2026-11-23T01:24:12.2432167460
 /config/.deepai-code/userdata/deepai-optional-provenance/80ce83fa4136ae8c63879ed9c95c65c26e537c697dfa459eaf430a1d6f392b39.json	244	2026-11-22T06:15:40.1549834960
+/config/.deepai-code/userdata/deepai-optional-provenance/83e7fabb589c1141d0bdcc8793b3143f50eb5bf87e1c408d8dc798b0dabdf368.json	244	2026-11-23T07:29:28.8276178760
+/config/.deepai-code/userdata/deepai-optional-provenance/910ab6256394a4526668c98ce53a285d6214b647525e4ec01b04bd907b94081a.json	244	2026-11-23T07:30:55.8000507420
+/config/.deepai-code/userdata/deepai-optional-provenance/95feb2acdb29152838400db45923d4b264a6b658110446197e533ef46bd53e8b.json	244	2026-11-23T06:13:31.1005178030
 /config/.deepai-code/userdata/deepai-optional-provenance/98ae8b093eda0d64a12251066100dfa58f77ef7511d588d4ec8d64119be15130.json	244	2026-11-22T11:55:24.5094735050
+/config/.deepai-code/userdata/deepai-optional-provenance/997cdd5b7bbb1ef8350034ddf7053d197411b3729dfffc4f88d5aa18ba348e72.json	244	2026-11-23T04:50:42.8694685910
 /config/.deepai-code/userdata/deepai-optional-provenance/9b1c17e2c77d458ccf38f108a7fa3d76f76b43f252fe4a7252c54407b62f8065.json	244	2026-11-22T12:22:06.0627676400
 /config/.deepai-code/userdata/deepai-optional-provenance/9e138185a3d279ee393b81a0f492564868527dde8ec9ca2ca7c4408ec5dd07a3.json	244	2026-11-22T17:53:30.5123441020
 /config/.deepai-code/userdata/deepai-optional-provenance/a2c540b3004d1a7d2beef9efdef97f54601e0dddc905fa4dfba2d76691c738ab.json	244	2026-11-23T01:29:24.1129698480
 /config/.deepai-code/userdata/deepai-optional-provenance/a54e7bec034f68c0f4e7f71d1511b974527427542fca1736a89b92f3bc60e607.json	244	2026-11-23T00:48:42.2938461520
 /config/.deepai-code/userdata/deepai-optional-provenance/a6935f47d9dab2169d8bd128fa0971a8966b23d811040b5f402d111ea1595e3e.json	244	2026-11-22T06:26:59.6748766220
+/config/.deepai-code/userdata/deepai-optional-provenance/af1e000061555590dbb477c4e058e2c47607447b9cf9dddda634dc9abc8f8bb6.json	244	2026-11-23T06:04:01.5538184340
+/config/.deepai-code/userdata/deepai-optional-provenance/b19064d4e73b648883386d49e0d07c48ca53a0633d0313cef8f135128f2b4e4a.json	244	2026-11-23T07:31:55.9762913900
+/config/.deepai-code/userdata/deepai-optional-provenance/b7a2a221065c40e40cfee5ee4b319cd5015be331489e20638c9b670f74b6c951.json	244	2026-11-23T05:02:24.4208389750
+/config/.deepai-code/userdata/deepai-optional-provenance/b9fddfa4b09205b4665c1bcce033f2d8cfdfd53e7f54662f1eb38b150a6a35b3.json	244	2026-11-23T04:04:37.3447080360
+/config/.deepai-code/userdata/deepai-optional-provenance/bfd8c9b586611ab68108cfab7efc3bd6818a5fe3008cf4215b3d1f7e88e996ee.json	244	2026-11-23T07:23:10.4017298490
 /config/.deepai-code/userdata/deepai-optional-provenance/c846c6d089a8eb9637480f50eec68ccf9a95878dfb27f97da14086312c7d8a43.json	244	2026-11-22T11:33:03.1537963750
 /config/.deepai-code/userdata/deepai-optional-provenance/cb57c754e2bf2d68aa1d870b0365b46a0e736edab35863c509cf6821a356b54c.json	354	2026-11-23T02:06:46.4148831700
+/config/.deepai-code/userdata/deepai-optional-provenance/ccaacc55e32352af5d475feb4d0656be825bc0fa66cf3bee2df75d388371ea1f.json	244	2026-11-23T05:00:44.5363627370
 /config/.deepai-code/userdata/deepai-optional-provenance/cd69061c0a1a9d9d251562358d562faa2e9d01685275a2058bf231994a022d40.json	244	2026-11-22T17:10:50.3860627820
 /config/.deepai-code/userdata/deepai-optional-provenance/ce6585e286aceea6f940d221f71028d0ca920ecdb9b0674c146ffda1a7489c0d.json	244	2026-11-23T00:50:07.9982205890
 /config/.deepai-code/userdata/deepai-optional-provenance/d155e508c09b8ed90a2fe49bd96565723c23e420bb91bc704df1bfcea4728812.json	244	2026-11-22T18:21:44.3898332110
 /config/.deepai-code/userdata/deepai-optional-provenance/d33ae0913bdead097e9bf72dbcaa3914264a967e634ddb10435ea4c72941bc24.json	244	2026-11-22T16:06:31.1442628130
+/config/.deepai-code/userdata/deepai-optional-provenance/d4d49c52457da5e9da3982ab23a0e90f9273eccba81fe5dac93a509519ca9eff.json	244	2026-11-23T07:32:57.5404732550
 /config/.deepai-code/userdata/deepai-optional-provenance/d86cdb86552648865b101710c62c98807cdd00a502a49f665b14e38479ce6394.json	244	2026-11-22T17:06:55.4727835190
 /config/.deepai-code/userdata/deepai-optional-provenance/da303ebcb53e769e89837a8cdaea567c7e1c0e7108739fd2d94f75b4c606edbb.json	244	2026-11-22T09:26:39.3141233430
 /config/.deepai-code/userdata/deepai-optional-provenance/dbf178ab368ae6338c122082c6e32174ce98e2535512e3a3fd87818ea4417272.json	244	2026-11-22T13:53:12.4422432840
+/config/.deepai-code/userdata/deepai-optional-provenance/dc56041ea9cf1956ce4382c50be5314e8696be3808ac34b4c1a35c6721709a41.json	244	2026-11-23T04:12:35.9027750710
 /config/.deepai-code/userdata/deepai-optional-provenance/e675090cfa7ddd59fb03a98e69f1b6a8ae810153ed6e35550a44f7cede6700fb.json	244	2026-11-23T01:29:54.0931700030
 /config/.deepai-code/userdata/deepai-optional-provenance/e9bb2193b39a0c13fc9834adf60a0e0176dd10a04ae7e33d87a9d8feff2b9092.json	354	2026-11-23T00:43:40.6405456900
 /config/.deepai-code/userdata/deepai-optional-provenance/e9e19c87d15d46a7dc3f884bed05e833c80c0bccf1773cb92b1ff1abcfa17775.json	244	2026-11-22T06:06:05.5553755900
+/config/.deepai-code/userdata/deepai-optional-provenance/ea5cc3659aecc074065c809b8b81dc981ade739a38c3124c148c3dbbe1fbee40.json	244	2026-11-23T04:27:31.6628041830
+/config/.deepai-code/userdata/deepai-optional-provenance/eeb3c114835cd1d78f1a76602eddfd297bebd8c9bf325f9bbe7581ecfcb6ea40.json	244	2026-11-23T07:11:29.2661864730
 /config/.deepai-code/userdata/deepai-optional-provenance/f8b1d7316a584b58d3428c8939b627c0bd0e59438d0d793eccd3bb8ef6701ae2.json	244	2026-11-22T06:25:03.5622240100
 /config/.deepai-code/userdata/deepai-optional-provenance/f909a8852607df04ae366d4bc7c86d40502881d6a8d6694652827e37181d9590.json	244	2026-11-22T08:57:58.7201366070
 /config/.deepai-code/userdata/deepai-optional-provenance/fe8ad15261bc785d4e92f4033eeed242236744e10b71d28c27af0a6a3634564f.json	244	2026-11-22T12:23:23.4032175470
 /config/.deepai-code/userdata/deepai-optional-provenance/ff2e19ba78c52e413dc92efc14c962694d6c17b0017311b56b0cce436bc8b9e9.json	244	2026-11-22T09:34:28.9288411370
 /config/.deepai-code/userdata/deepai/pi	4096	2026-11-22T05:25:37.8380433060
 /config/.deepai-code/userdata/deepai-renderer-origin-v1	1	2026-11-22T05:25:38.8864194450
-/config/.deepai-code/userdata/desktop-browser-tabs.json	2	2026-11-22T16:14:37.4627458550
-/config/.deepai-code/userdata/desktop-settings.json	88	2026-11-23T02:09:30.7676397790
+/config/.deepai-code/userdata/desktop-browser-tabs.json	2	2026-11-23T07:46:49.3277151740
+/config/.deepai-code/userdata/desktop-settings.json	61	2026-11-23T07:52:19.4251917920
 /config/.deepai-code/userdata/environment-id	37	2026-11-22T05:25:37.4740418520
 /config/.deepai-code/userdata/execution-owner.sqlite	8192	2026-11-22T05:25:37.3100411970
 /config/.deepai-code/userdata/keybindings.json	9636	2026-11-22T05:25:38.2820450800
 /config/.deepai-code/userdata/keybindings-migrations	34	2026-11-22T05:25:38.4500457510
-/config/.deepai-code/userdata/logs	4096	2026-11-23T01:22:06.6386753630
+/config/.deepai-code/userdata/logs	4096	2026-11-23T07:14:00.4269590100
 /config/.deepai-code/userdata/logs/provider	4096	2026-11-22T05:25:37.2820410860
-/config/.deepai-code/userdata/logs/renderer-history.ndjson	111390	2026-11-23T02:13:29.4407327270
 /config/.deepai-code/userdata/logs/renderer-history.ndjson.1	261846	2026-11-22T17:11:04.2541381560
+/config/.deepai-code/userdata/logs/renderer-history.ndjson	227328	2026-11-23T09:58:58.7696157690
 /config/.deepai-code/userdata/logs/server-child.log	40513	2026-11-22T05:34:09.3321838500
-/config/.deepai-code/userdata/logs/server.trace.ndjson	10464862	2026-11-23T02:13:36.5647652690
-/config/.deepai-code/userdata/logs/server.trace.ndjson.1	10482560	2026-11-23T01:22:04.6346667670
-/config/.deepai-code/userdata/logs/server.trace.ndjson.2	10485184	2026-11-23T00:55:55.8837544320
-/config/.deepai-code/userdata/logs/server.trace.ndjson.3	10483606	2026-11-22T18:13:25.5310688840
-/config/.deepai-code/userdata/logs/server.trace.ndjson.4	10442388	2026-11-22T13:50:58.8694742230
-/config/.deepai-code/userdata/logs/server.trace.ndjson.5	10485041	2026-11-22T09:42:14.7475419600
-/config/.deepai-code/userdata/logs/server.trace.ndjson.6	10481279	2026-11-22T07:27:38.3122339460
+/config/.deepai-code/userdata/logs/server.trace.ndjson.1	10471779	2026-11-23T07:13:59.4269539150
+/config/.deepai-code/userdata/logs/server.trace.ndjson.2	10481782	2026-11-23T04:48:44.2368891590
+/config/.deepai-code/userdata/logs/server.trace.ndjson.3	10483261	2026-11-23T02:14:04.5728931720
+/config/.deepai-code/userdata/logs/server.trace.ndjson.4	10482560	2026-11-23T01:22:04.6346667670
+/config/.deepai-code/userdata/logs/server.trace.ndjson.5	10485184	2026-11-23T00:55:55.8837544320
+/config/.deepai-code/userdata/logs/server.trace.ndjson.6	10483606	2026-11-22T18:13:25.5310688840
+/config/.deepai-code/userdata/logs/server.trace.ndjson.7	10442388	2026-11-22T13:50:58.8694742230
+/config/.deepai-code/userdata/logs/server.trace.ndjson.8	10485041	2026-11-22T09:42:14.7475419600
+/config/.deepai-code/userdata/logs/server.trace.ndjson	8905522	2026-11-23T09:58:42.1495312980
+/config/.deepai-code/userdata/logs/server.trace.ndjson.9	10481279	2026-11-22T07:27:38.3122339460
 /config/.deepai-code/userdata/logs/terminals	4096	2026-11-22T05:25:37.2820410860
-/config/.deepai-code/userdata/managed	4096	2026-11-23T02:06:29.8668067660
+/config/.deepai-code/userdata/managed	4096	2026-11-23T09:49:29.4386080310
 /config/.deepai-code/userdata/managed/identity.json	304	2026-11-22T05:25:38.5420461180
 /config/.deepai-code/userdata/managed/state.sqlite	12288	2026-11-22T05:25:53.2741047790
-/config/.deepai-code/userdata/managed/state.sqlite-shm	32768	2026-11-23T02:06:29.8719487300
-/config/.deepai-code/userdata/managed/state.sqlite-wal	0	2026-11-23T02:06:29.8668067660
+/config/.deepai-code/userdata/managed/state.sqlite-shm	32768	2026-11-23T09:49:29.4426019640
+/config/.deepai-code/userdata/managed/state.sqlite-wal	0	2026-11-23T09:49:29.4386080310
 /config/.deepai-code/userdata/secrets	4096	2026-11-22T06:27:18.5909826360
 /config/.deepai-code/userdata/secrets/asset-access-signing-key.bin	32	2026-11-22T06:27:18.5949826590
 /config/.deepai-code/userdata/secrets/deepai-account.bin	205	2026-11-22T06:14:42.5386410100
@@ -738,17 +937,18 @@
 /config/.deepai-code/userdata/secrets/mcp-oauth-signing-key.bin	32	2026-11-22T05:25:38.4460457350
 /config/.deepai-code/userdata/secrets/secret-request-salt.bin	32	2026-11-22T05:25:38.2100447920
 /config/.deepai-code/userdata/secrets/server-signing-key.bin	32	2026-11-22T05:25:37.7900431140
-/config/.deepai-code/userdata/server-runtime.json	128	2026-11-23T02:06:29.8748068030
+/config/.deepai-code/userdata/server-runtime.json	130	2026-11-23T09:49:29.4826082770
 /config/.deepai-code/userdata/settings.json	75	2026-11-23T00:44:36.0882005470
-/config/.deepai-code/userdata/statev2.sqlite	237424640	2026-11-23T02:13:09.1926402070
-/config/.deepai-code/userdata/statev2.sqlite-shm	32768	2026-11-23T02:12:51.2971559610
-/config/.deepai-code/userdata/statev2.sqlite-wal	4251872	2026-11-23T02:13:19.4806872180
+/config/.deepai-code/userdata/statev2.sqlite	348737536	2026-11-23T09:58:14.6413911740
+/config/.deepai-code/userdata/statev2.sqlite-shm	32768	2026-11-23T09:58:14.8373921710
+/config/.deepai-code/userdata/statev2.sqlite-wal	4301312	2026-11-23T09:58:24.0334390440
 /config/.deepai-code/userdata/themes	4096	2026-11-22T05:25:38.0300440730
 /config/.deepai-code/worktrees	4096	2026-11-23T00:43:39.9205426330
-/config/.deepai-code/worktrees/diddyproject	4096	2026-11-23T02:06:45.0948770770
+/config/.deepai-code/worktrees/diddyproject	4096	2026-11-23T09:49:30.7036172120
+/config/.deepai-code/worktrees/diddyproject/t3-29238d5b	4096	2026-11-23T09:49:30.8226157300
 /config/.deepai-code/worktrees/diddyproject/t3-37fd0a47	4096	2026-11-23T00:43:39.9249385680
 /config/.deepai-code/worktrees/diddyproject/t3-cbadc05a	4096	2026-11-23T02:06:45.1890871410
-/config/Desktop	4096	2026-11-23T02:01:03.5492875910
+/config/Desktop	4096	2026-11-23T09:53:40.4559690100
 /config/desktop-backup-20261123-005150	4096	2026-11-23T00:51:50.3986700340
 /config/desktop-backup-20261123-005150/xfce4	4096	2026-11-22T17:09:29.2976217920
 /config/desktop-backup-20261123-005150/xfce4/desktop	4096	2026-11-22T17:32:12.7853082140
@@ -761,31 +961,34 @@
 /config/desktop-backup-20261123-005150/xfce4/xfwm4	4096	2026-11-22T05:20:12.2008102750
 /config/Desktop/brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop	341	2026-11-22T17:32:01.0132142890
 /config/Desktop/Brave.desktop	377	2026-11-22T17:10:58.4421122620
-/config/Desktop/chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop	1064	2026-11-23T01:34:29.9330608080
 /config/Desktop/DeepAI-Code.desktop	240	2026-11-22T05:30:11.2458428780
+/config/Desktop/discord.desktop	368	2026-11-23T04:23:49.1257820530
 /config/Desktop/OpenCode.desktop	292	2026-11-22T08:54:17.7348483700
-/config/diddyproject	4096	2026-11-23T01:22:41.5228252890
-/config/diddyproject/AGENTS.md	4555	2026-11-23T01:09:19.6473400370
-/config/diddyproject/assets	4096	2026-11-23T01:18:01.6296344460
+/config/Desktop/W8FreeFireSpamer.apk	7391712	2026-11-23T06:12:45.9003047040
+/config/diddyproject	4096	2026-11-23T02:14:45.9210818910
+/config/diddyproject/AGENTS.md	34761	2026-11-23T07:30:03.3877899150
+/config/diddyproject/assets	4096	2026-11-23T02:14:45.9210818910
 /config/diddyproject/assets/local-share-icons-Win11-actions.tar.zst	915558	2026-11-23T01:17:57.9136188500
 /config/diddyproject/assets/local-share-icons-Win11-dark-actions.tar.zst	917097	2026-11-23T01:18:01.2096326860
-/config/diddyproject/assets/local-share-icons-Win11.tar.zst	4034141	2026-11-23T01:18:09.4536673010
+/config/diddyproject/assets/local-share-icons-Win11.tar.zst	3848765	2026-11-23T02:14:45.9250819090
 /config/diddyproject/BACKUP-PROMPT.md	9515	2026-11-23T01:30:31.6488717750
-/config/diddyproject/.git	4096	2026-11-23T02:13:09.9975716740
+/config/diddyproject/.git	4096	2026-11-23T09:49:33.1906289450
 /config/diddyproject/.githooks	4096	2026-11-23T01:22:41.5268253060
 /config/diddyproject/.githooks/pre-commit	296	2026-11-23T01:22:41.5343402590
-/config/diddyproject/.gitignore	327	2026-11-23T01:21:18.2317944270
+/config/diddyproject/.gitignore	786	2026-11-23T02:14:45.9181074820
 /config/diddyproject/home	4096	2026-11-23T01:17:53.7016011860
 /config/diddyproject/home/.bash_history.redacted	2605	2026-11-23T01:17:53.7052286100
 /config/diddyproject/home/.bashrc	74	2026-11-22T05:20:11.0000000000
-/config/diddyproject/home/.config	4096	2026-11-23T01:17:52.8902852060
-/config/diddyproject/home/.config/ai.opencode.desktop	4096	2026-11-23T01:18:11.2336747690
+/config/diddyproject/home/.config	4096	2026-11-23T02:14:45.9250819090
+/config/diddyproject/home/.config/ai.opencode.desktop	4096	2026-11-23T02:14:45.9250819090
 /config/diddyproject/home/.config/dconf	4096	2026-11-23T01:10:36.0000000000
-/config/diddyproject/home/.config/deepai-code-v2	4096	2026-11-23T01:18:11.2336747690
+/config/diddyproject/home/.config/deepai-code-v2	4096	2026-11-23T02:14:45.9250819090
+/config/diddyproject/home/.config/gtk-3.0	4096	2026-11-23T02:14:45.9250819090
 /config/diddyproject/home/.config/menus	4096	2026-11-22T09:02:34.0000000000
 /config/diddyproject/home/.config/mimeapps.list	152	2026-11-23T01:14:46.0000000000
 /config/diddyproject/home/.config/openbox	4096	2026-11-22T05:20:11.0000000000
 /config/diddyproject/home/.config/opencode	4096	2026-11-22T08:52:40.0000000000
+/config/diddyproject/home/.config/picom.conf	1178	2026-11-23T02:14:45.9250819090
 /config/diddyproject/home/.config/Thunar	4096	2026-11-22T05:23:32.0000000000
 /config/diddyproject/home/.config/user-dirs.dirs	633	2026-11-22T05:20:13.0000000000
 /config/diddyproject/home/.config/user-dirs.locale	5	2026-11-22T05:20:13.0000000000
@@ -808,13 +1011,14 @@
 /config/diddyproject/home/.gitconfig	305	2026-11-23T00:41:36.0000000000
 /config/diddyproject/home/launch-deepai-code.sh	74	2026-11-22T05:30:11.0000000000
 /config/diddyproject/home/.local	4096	2026-11-22T05:20:13.0000000000
-/config/diddyproject/home/.local/bin	4096	2026-11-23T01:17:53.6016007670
-/config/diddyproject/home/.local/share	4096	2026-11-23T00:54:03.0000000000
+/config/diddyproject/home/.local/bin	4096	2026-11-23T02:14:45.9250819090
+/config/diddyproject/home/.local/share	4096	2026-11-23T02:14:45.9181074820
 /config/diddyproject/home/.local/state	4096	2026-11-23T01:17:52.8920603260
-/config/diddyproject/home/Pictures	4096	2026-11-22T16:46:31.0000000000
+/config/diddyproject/home/Pictures	4096	2026-11-23T02:14:45.9250819090
 /config/diddyproject/home/Pictures/Screenshot_2026-11-22_13-52-43.png	11169	2026-11-22T13:52:49.0000000000
 /config/diddyproject/home/Pictures/Screenshot_2026-11-22_16-43-36.png	423522	2026-11-22T16:43:39.0000000000
 /config/diddyproject/home/Pictures/wallpapers	4096	2026-11-23T01:10:27.0000000000
+/config/diddyproject/home/Pictures/Wallpapers	4096	2026-11-23T02:14:45.9305378350
 /config/diddyproject/home/.themes	4096	2026-11-23T01:08:03.0000000000
 /config/diddyproject/home/.themes/Fluent-round-grey-Dark	4096	2026-11-23T01:08:03.0000000000
 /config/diddyproject/home/.themes/Fluent-round-grey-Dark-compact	4096	2026-11-23T01:08:04.0000000000
@@ -822,11 +1026,11 @@
 /config/diddyproject/home/.var	4096	2026-11-22T07:27:41.0000000000
 /config/diddyproject/home/.var/app	4096	2026-11-22T07:27:41.0000000000
 /config/diddyproject/home/.Xresources	22	2026-11-22T05:20:11.0000000000
-/config/diddyproject/inventory	4096	2026-11-23T01:20:30.0222621530
-/config/diddyproject/inventory/bulk-dirs.txt	435	2026-11-23T01:18:09.4896674510
-/config/diddyproject/inventory/bulk.txt	1257	2026-11-23T01:17:53.6656010350
+/config/diddyproject/inventory	4096	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/bulk-dirs.txt	435	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/bulk.txt	1017	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/download-hints.md	790	2026-11-23T01:17:23.4174744340
-/config/diddyproject/inventory/etc	4096	2026-11-23T01:17:32.1735110370
+/config/diddyproject/inventory/etc	4096	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/etc/alternatives	4096	2026-11-23T01:04:11.7899628980
 /config/diddyproject/inventory/etc/apparmor.d	4096	2026-11-23T01:04:11.9739637200
 /config/diddyproject/inventory/etc/apt	4096	2026-11-23T01:04:12.7699672770
@@ -858,8 +1062,8 @@
 /config/diddyproject/inventory/etc/gai.conf	2584	2026-11-23T01:17:28.3734951510
 /config/diddyproject/inventory/etc/gnutls	4096	2026-11-23T01:04:16.6419845800
 /config/diddyproject/inventory/etc/gprofng.rc	3986	2026-11-23T01:17:28.4854956200
-/config/diddyproject/inventory/etc/group-	733	2026-11-23T01:17:28.5854960390
 /config/diddyproject/inventory/etc/group	749	2026-11-23T01:17:28.5334958220
+/config/diddyproject/inventory/etc/group-	749	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/etc/gtk-3.0	4096	2026-11-23T01:04:16.9379859020
 /config/diddyproject/inventory/etc/host.conf	92	2026-11-23T01:17:28.7734968270
 /config/diddyproject/inventory/etc/hostname	13	2026-11-23T01:17:28.8294970610
@@ -897,7 +1101,7 @@
 /config/diddyproject/inventory/etc/PackageKit	4096	2026-11-23T01:04:20.3540011670
 /config/diddyproject/inventory/etc/pam.d	4096	2026-11-23T01:04:20.8260032760
 /config/diddyproject/inventory/etc/paperspecs	1309	2026-11-23T01:17:32.8335138030
-/config/diddyproject/inventory/etc/passwd-	1234	2026-11-23T01:17:32.9375142370
+/config/diddyproject/inventory/etc/passwd-	1271	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/etc/passwd	1273	2026-11-23T01:17:32.8815140030
 /config/diddyproject/inventory/etc/plymouth	4096	2026-11-23T01:04:21.0420042410
 /config/diddyproject/inventory/etc/profile	641	2026-11-23T01:17:33.0415146710
@@ -913,11 +1117,11 @@
 /config/diddyproject/inventory/etc/selinux	4096	2026-11-23T01:04:29.5300421710
 /config/diddyproject/inventory/etc/sensors3.conf	10749	2026-11-23T01:17:41.9535519590
 /config/diddyproject/inventory/etc/sensors.d	4096	2026-11-23T01:04:29.6460426890
-/config/diddyproject/inventory/etc-sha256.txt	48322	2026-11-23T01:17:50.1255861910
+/config/diddyproject/inventory/etc-sha256.txt	48322	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/etc/shells	118	2026-11-23T01:17:42.0695524430
 /config/diddyproject/inventory/etc/skel	4096	2026-11-23T01:04:30.3500458350
 /config/diddyproject/inventory/etc/ssh	4096	2026-11-23T01:04:30.4020460670
-/config/diddyproject/inventory/etc/ssl	4096	2026-11-23T01:04:30.6220470500
+/config/diddyproject/inventory/etc/ssl	4096	2026-11-23T02:14:45.9181074820
 /config/diddyproject/inventory/etc/subgid-	0	2026-11-23T01:17:43.1415569270
 /config/diddyproject/inventory/etc/subgid	46	2026-11-23T01:17:43.0935567250
 /config/diddyproject/inventory/etc/subuid-	0	2026-11-23T01:17:43.2655574470
@@ -940,16 +1144,16 @@
 /config/diddyproject/inventory/etc/xemacs21	4096	2026-11-23T01:04:37.2380766170
 /config/diddyproject/inventory/etc/xfce4	4096	2026-11-23T01:04:37.2940768670
 /config/diddyproject/inventory/etc/xml	4096	2026-11-23T01:04:37.6180783150
-/config/diddyproject/inventory/home-tree.txt	144582	2026-11-23T01:17:50.7015886010
+/config/diddyproject/inventory/home-tree.txt	129742	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/host-config.txt	5880	2026-11-23T01:17:50.7689243870
-/config/diddyproject/inventory/packages.txt	35917	2026-11-23T01:17:23.0494728940
-/config/diddyproject/inventory/recent-changes.txt	38114	2026-11-23T01:17:50.6775885000
-/config/diddyproject/inventory/release-assets.txt	426	2026-11-23T01:20:30.2022629180
-/config/diddyproject/inventory/secrets-sweep.txt	518	2026-11-23T01:18:11.2096746680
-/config/diddyproject/inventory/services.txt	5220	2026-11-23T01:17:23.4134744180
-/config/diddyproject/inventory/system.txt	3325	2026-11-23T01:17:22.1614691900
+/config/diddyproject/inventory/packages.txt	36018	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/recent-changes.txt	51004	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/release-assets.txt	817	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/secrets-sweep.txt	499	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/services.txt	5213	2026-11-23T02:14:45.9305378350
+/config/diddyproject/inventory/system.txt	3325	2026-11-23T02:14:45.9305378350
 /config/diddyproject/inventory/users.txt	2376	2026-11-23T01:17:22.1894693060
-/config/diddyproject/MANIFEST.json	1122681	2026-11-23T01:30:35.7168896350
+/config/diddyproject/MANIFEST.json	1116387	2026-11-23T02:14:45.9210818910
 /config/diddyproject/project	4096	2026-11-23T01:04:06.6076882780
 /config/diddyproject/project/backup-to-github.sh	8931	2026-11-22T20:19:14.1175060700
 /config/diddyproject/project/bootstrap-restore.sh	4469	2026-11-22T20:24:58.9473297060
@@ -959,17 +1163,17 @@
 /config/diddyproject/project/free-fire-guild-glory-bot-2026.html	34818	2026-11-22T11:45:25.6984150650
 /config/diddyproject/project/mobile-emulators-linux-2026.html	33367	2026-11-22T08:42:35.1667467620
 /config/diddyproject/project/picom_12.5-1build1_amd64.deb	291914	2026-01-27T13:44:18.0000000000
-/config/diddyproject/README.md	3537	2026-11-23T01:08:52.5272186160
+/config/diddyproject/README.md	3849	2026-11-23T02:14:45.9210818910
 /config/diddyproject/RESTORE.md	3878	2026-11-23T01:10:36.5961191940
-/config/diddyproject/scripts	4096	2026-11-23T01:10:10.4195674050
-/config/diddyproject/scripts/bundle.sh	6995	2026-11-23T01:18:34.2331425840
-/config/diddyproject/scripts/capture.sh	14881	2026-11-23T01:17:22.0290353270
+/config/diddyproject/scripts	4096	2026-11-23T02:14:45.9305378350
+/config/diddyproject/scripts/bundle.sh	7012	2026-11-23T02:14:45.9305378350
+/config/diddyproject/scripts/capture.sh	16012	2026-11-23T02:14:45.9305378350
 /config/diddyproject/scripts/manifest.sh	6450	2026-11-23T01:23:08.3580870230
-/config/diddyproject/scripts/restore.sh	9894	2026-11-23T01:20:37.8135847620
-/config/diddyproject/secrets	4096	2026-11-23T01:10:21.4676168950
-/config/diddyproject/secrets/README.md	2295	2026-11-23T01:10:21.4676168950
-/config/diddyproject/secrets/secrets.manifest.txt	26343	2026-11-23T01:18:11.5416760660
-/config/diddyproject/.sha256sums	482689	2026-11-23T01:30:35.5248887920
+/config/diddyproject/scripts/restore.sh	10310	2026-11-23T02:14:45.9305378350
+/config/diddyproject/secrets	4096	2026-11-23T02:14:45.9305378350
+/config/diddyproject/secrets/README.md	2403	2026-11-23T02:14:45.9305378350
+/config/diddyproject/secrets/secrets.manifest.txt	26288	2026-11-23T02:14:45.9305378350
+/config/diddyproject/.sha256sums	478912	2026-11-23T02:14:45.9181074820
 /config/Documents	4096	2026-11-22T17:34:02.3818880420
 /config/Documents/Default Project	4096	2026-11-23T01:15:28.8449944080
 /config/Documents/Default Project/free-fire-guild-glory-bot-report.md	19019	2026-11-22T11:47:04.5266059110
@@ -977,7 +1181,7 @@
 /config/Documents/Default Project/page3.html	154685	2026-11-23T01:15:28.8504953990
 /config/Documents/Default Project/page.html	20629	2026-11-23T01:15:15.7008560520
 /config/Downloads/1345576.jpeg	32717697	2026-11-22T16:50:09.7631621780
-/config/Downloads	4096	2026-11-22T17:24:27.8222435250
+/config/Downloads	4096	2026-11-23T05:27:29.1595106760
 /config/Downloads/885027764309711605.jpeg	69161	2026-11-22T17:24:19.6146195100
 /config/Downloads/brave-browser_1.100.58_amd64.deb	160374384	2026-11-22T17:05:48.5324178790
 /config/Downloads/DeepAI-Code-0.3.45-x86_64.AppImage	183761681	2026-11-22T05:23:10.6494716800
@@ -1020,6 +1224,20 @@
 /config/Downloads/squashfs-root/usr/share	4096	2026-11-22T05:25:06.6179197950
 /config/Downloads/squashfs-root/v8_context_snapshot.bin	742200	2026-11-22T04:18:06.0000000000
 /config/Downloads/squashfs-root/vk_swiftshader_icd.json	107	2026-11-22T04:18:06.0000000000
+/config/educational purpose	4096	2026-11-23T07:48:49.4442464740
+/config/educational purpose/assets	4096	2026-11-23T07:38:21.0576023240
+/config/educational purpose/assets/app.js	14740	2026-11-23T07:51:41.6818871490
+/config/educational purpose/assets/search-index.js	8246	2026-11-23T07:38:21.0576023240
+/config/educational purpose/assets/style.css	35994	2026-11-23T07:52:08.6602690640
+/config/educational purpose/detection.html	12820	2026-11-23T07:47:20.5029661580
+/config/educational purpose/farm.html	13268	2026-11-23T07:47:20.5026504560
+/config/educational purpose/index.html	17830	2026-11-23T07:47:20.4992530570
+/config/educational purpose/method.html	10848	2026-11-23T07:47:20.5034245310
+/config/educational purpose/payload.html	12548	2026-11-23T07:47:20.4995918690
+/config/educational purpose/protocol.html	19934	2026-11-23T07:47:20.4998674800
+/config/educational purpose/source.html	11260	2026-11-23T07:47:20.5031939790
+/config/educational purpose/spam.html	12503	2026-11-23T07:47:20.5023016840
+/config/educational purpose/_widthcheck.html	1283	2026-11-23T07:48:49.4482464920
 /config/.gitconfig	305	2026-11-23T00:41:36.6069278040
 /config/.gnupg	4096	2026-11-23T02:12:47.6245416200
 /config/.gnupg/private-keys-v1.d	4096	2026-11-22T05:20:12.0608096330
@@ -1031,6 +1249,10 @@
 /config/.gnupg/S.gpg-agent.ssh	0	2026-11-23T02:00:22.0530922480
 /config/.gnupg/trustdb.gpg	1200	2026-11-22T20:13:55.2652156500
 /config/.ICEauthority	0	2026-11-22T05:20:11.9928093210
+/config/.java	4096	2026-11-23T05:11:28.4314234650
+/config/.java/fonts/25.0.5.1	4096	2026-11-23T05:12:42.0317723720
+/config/.java/fonts/25.0.5.1/fcinfo-1-4552801cdcb3-Ubuntu-26.04-en-US.properties	169032	2026-11-23T05:12:42.0317723720
+/config/.java/fonts	4096	2026-11-23T05:11:28.4314234650
 /config/launch-deepai-code.sh	74	2026-11-22T05:30:11.2182888790
 /config/.local	4096	2026-11-22T05:20:13.4871904460
 /config/.local/bin	4096	2026-11-23T01:45:41.9445767480
@@ -1044,38 +1266,42 @@
 /config/.local/bin/proot-apps	30736	2026-11-22T05:20:11.1899887270
 /config/.local/bin/pversion	7	2026-11-22T05:20:11.1902044580
 /config/.local/bin/xw.log	222531	2026-11-23T01:57:58.1564096220
-/config/.local/share	4096	2026-11-23T00:54:03.6164887260
-/config/.local/share/applications	4096	2026-11-23T02:06:28.4742613530
+/config/.local/share	4096	2026-11-23T06:13:49.6966209340
+/config/.local/share/apktool	4096	2026-11-23T06:06:32.0740587360
+/config/.local/share/apktool/framework	4096	2026-11-23T06:06:32.0745356320
+/config/.local/share/applications	4096	2026-11-23T09:49:27.5381260640
 /config/.local/share/applications/brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop	341	2026-11-22T17:32:01.2646639080
 /config/.local/share/applications/chrome-agimnkijcaahngcdmfeangaknmldooml-Default.desktop	1064	2026-11-23T01:34:30.0659212360
+/config/.local/share/applications/discord.desktop	368	2026-11-23T04:23:49.1257820530
+/config/.local/share/applications/legacy-launcher.desktop	326	2026-11-23T05:12:39.1437586820
 /config/.local/share/applications/mimeapps.list	0	2026-11-22T17:06:21.4125975480
-/config/.local/share/applications/mimeinfo.cache	67	2026-11-23T02:06:28.4741961730
-/config/.local/share/applications/org.deepai.code.desktop	253	2026-11-23T02:06:28.0907985610
+/config/.local/share/applications/mimeinfo.cache	109	2026-11-23T09:49:27.5380399740
+/config/.local/share/applications/org.deepai.code.desktop	253	2026-11-23T09:49:27.0585947230
 /config/.local/share/desktop-directories	4096	2026-11-22T09:02:36.6817552290
 /config/.local/share/desktop-directories/chrome-apps.directory	84	2026-11-23T01:34:30.0091877180
-/config/.local/share/flatpak	4096	2026-11-22T13:46:53.9240639290
-/config/.local/share/gvfs-metadata	4096	2026-11-23T02:13:08.5757498880
-/config/.local/share/gvfs-metadata/home-9242e951.log	32768	2026-11-23T01:35:28.7883167360
-/config/.local/share/gvfs-metadata/home	928	2026-11-23T01:35:28.7861804130
-/config/.local/share/gvfs-metadata/root-44dbc74d.log	32768	2026-11-23T02:13:13.5790986330
-/config/.local/share/gvfs-metadata/root	64	2026-11-23T02:13:08.5726373740
+/config/.local/share/flatpak	4096	2026-11-23T04:58:26.1317014330
+/config/.local/share/gvfs-metadata	4096	2026-11-23T09:58:23.5644741980
+/config/.local/share/gvfs-metadata/home	1228	2026-11-23T05:00:52.5604010240
+/config/.local/share/gvfs-metadata/home-7a6e99aa.log	32768	2026-11-23T05:00:52.5604010240
+/config/.local/share/gvfs-metadata/root	64	2026-11-23T09:58:23.5614366430
+/config/.local/share/gvfs-metadata/root-6cf5e95a.log	32768	2026-11-23T09:58:28.5974623020
 /config/.local/share/icons	4096	2026-11-23T01:34:34.4899407540
 /config/.local/share/icons/hicolor	4096	2026-11-23T01:34:29.9299206360
-/config/.local/share/icons/org.deepai.code.desktop.png	97238	2026-11-23T02:06:28.4668002990
+/config/.local/share/icons/org.deepai.code.desktop.png	97238	2026-11-23T09:49:27.5265973230
 /config/.local/share/icons/Win11	4096	2026-11-23T01:08:56.0000000000
 /config/.local/share/icons/Win11-dark	4096	2026-11-23T01:37:51.0000000000
 /config/.local/share/icons/win11-search-light.png	408	2026-11-23T01:34:34.4941430340
 /config/.local/share/icons/win11-search.png	940	2026-11-23T01:34:50.2942033660
 /config/.local/share/opencode	4096	2026-11-23T02:01:19.0213602820
-/config/.local/share/opencode/log	4096	2026-11-23T02:01:18.8453594570
-/config/.local/share/opencode/opencode.db	31248384	2026-11-23T02:03:29.2619692420
-/config/.local/share/opencode/opencode.db-shm	32768	2026-11-23T02:11:19.3801378520
-/config/.local/share/opencode/opencode.db-wal	4140632	2026-11-23T02:11:19.3801378520
+/config/.local/share/opencode/log	4096	2026-11-23T09:01:18.8608010420
+/config/.local/share/opencode/opencode.db	31961088	2026-11-23T06:51:44.8759613210
+/config/.local/share/opencode/opencode.db-shm	65536	2026-11-23T07:11:45.7502710610
+/config/.local/share/opencode/opencode.db-wal	16892032	2026-11-23T07:11:45.7502710610
 /config/.local/share/opencode/repos	4096	2026-11-22T08:52:39.6342759120
-/config/.local/share/opencode/shell	4096	2026-11-22T16:51:25.7556034510
+/config/.local/share/opencode/shell	4096	2026-11-23T04:00:31.9315111650
 /config/.local/share/pki	4096	2026-11-22T05:21:56.6755029550
 /config/.local/share/pki/nssdb	4096	2026-11-22T05:21:56.6931960850
-/config/.local/share/recently-used.xbel	3656	2026-11-23T00:54:03.6164887260
+/config/.local/share/recently-used.xbel	5828	2026-11-23T06:13:49.6966209340
 /config/.local/share/sober	4096	2026-11-22T07:47:14.2204531610
 /config/.local/share/sober/asset_overlay	4096	2026-11-22T07:33:23.4483660960
 /config/.local/share/sober/assets	4096	2026-11-22T07:33:23.4483660960
@@ -1097,12 +1323,52 @@
 /config/.local/state/opencode/service.json	162	2026-11-23T02:01:19.0013601880
 /config/.local/state/selkies	4096	2026-11-22T05:20:13.4871904460
 /config/.local/state/selkies/print	4096	2026-11-22T05:20:13.4871904460
+/config/.minecraft	4096	2026-11-23T05:12:28.9317102770
+/config/.minecraft/launcher_profiles.json	596	2026-11-23T05:11:34.8634539610
+/config/.minecraft/versions	4096	2026-11-23T05:11:34.3514515340
 /config/Music	4096	2026-11-22T05:20:13.4316713630
+/config/.npm	4096	2026-11-23T06:05:05.1701220040
+/config/.npm/_cacache	4096	2026-11-23T06:05:05.0021212030
+/config/.npm/_cacache/content-v2	4096	2026-11-23T06:05:04.9981211840
+/config/.npm/_cacache/content-v2/sha512	4096	2026-11-23T06:05:05.7661248470
+/config/.npm/_cacache/index-v5/12	4096	2026-11-23T06:05:05.4741234540
+/config/.npm/_cacache/index-v5/2a	4096	2026-11-23T06:05:05.4101231490
+/config/.npm/_cacache/index-v5/30	4096	2026-11-23T06:05:05.6411844260
+/config/.npm/_cacache/index-v5/38	4096	2026-11-23T06:05:05.6021240640
+/config/.npm/_cacache/index-v5	4096	2026-11-23T06:05:05.7686274410
+/config/.npm/_cacache/index-v5/46	4096	2026-11-23T06:05:05.0021212030
+/config/.npm/_cacache/index-v5/4b	4096	2026-11-23T06:05:05.5901240070
+/config/.npm/_cacache/index-v5/5a	4096	2026-11-23T06:05:05.7686274410
+/config/.npm/_cacache/index-v5/5d	4096	2026-11-23T06:05:05.3298174480
+/config/.npm/_cacache/index-v5/6f	4096	2026-11-23T06:05:05.3453020510
+/config/.npm/_cacache/index-v5/71	4096	2026-11-23T06:05:05.5661238930
+/config/.npm/_cacache/index-v5/7e	4096	2026-11-23T06:05:05.5823685430
+/config/.npm/_cacache/index-v5/83	4096	2026-11-23T06:05:05.3162941570
+/config/.npm/_cacache/index-v5/87	4096	2026-11-23T06:05:05.6344839360
+/config/.npm/_cacache/index-v5/e6	4096	2026-11-23T06:05:05.3221227290
+/config/.npm/_cacache/index-v5/ee	4096	2026-11-23T06:05:05.2614667680
+/config/.npm/_cacache/index-v5/f7	4096	2026-11-23T06:05:05.6786493620
+/config/.npm/_cacache/tmp	4096	2026-11-23T06:11:05.9360570530
+/config/.npm/_logs/2026-11-23T06_05_04_554Z-debug-0.log	9100	2026-11-23T06:05:06.0701262960
+/config/.npm/_logs/2026-11-23T06_05_12_216Z-debug-0.log	1292	2026-11-23T06:05:12.8341585290
+/config/.npm/_logs/2026-11-23T06_11_05_733Z-debug-0.log	1299	2026-11-23T06:11:06.3718349710
+/config/.npm/_logs	4096	2026-11-23T06:11:05.7558320610
+/config/.npm/_npx	4096	2026-11-23T06:05:05.1701220040
+/config/.npm/_npx/4b0e2640fe917ac8	4096	2026-11-23T06:05:05.7861249420
+/config/.npm/_npx/4b0e2640fe917ac8/node_modules	4096	2026-11-23T06:05:05.7901249610
+/config/.npm/_npx/4b0e2640fe917ac8/package.json	59	2026-11-23T06:05:05.7821249230
+/config/.npm/_npx/4b0e2640fe917ac8/package-lock.json	4186	2026-11-23T06:05:05.7861249420
+/config/.npm/_update-notifier-last-checked	0	2026-11-23T06:05:04.9101207640
+/config/.openjfx	4096	2026-11-23T05:11:34.5827041920
+/config/.openjfx/cache	4096	2026-11-23T05:11:34.5827041920
+/config/.openjfx/cache/versionless	4096	2026-11-23T05:11:34.5827041920
+/config/.openjfx/cache/versionless/amd64	4096	2026-11-23T05:11:37.5756414360
 /config/Pictures	4096	2026-11-23T02:01:51.8455142190
 /config/Pictures/Screenshot_2026-11-22_13-52-43.png	11169	2026-11-22T13:52:49.7896972700
 /config/Pictures/Screenshot_2026-11-22_16-43-36.png	423522	2026-11-22T16:43:39.4430348680
-/config/Pictures/wallpapers	4096	2026-11-23T01:10:27.8796430160
-/config/Pictures/Wallpapers	4096	2026-11-23T02:04:45.6583243730
+/config/Pictures/Wallpapers	4096	2026-11-23T04:01:42.9118581090
+/config/Pictures/wallpapers	4096	2026-11-23T04:07:55.7096047640
+/config/Pictures/wallpapers/akira-red.png	2470627	2026-11-23T04:03:41.3324354820
 /config/Pictures/wallpapers/anime-dusk-girl.png	1736105	2026-11-22T16:48:54.5050897030
 /config/Pictures/wallpapers/anime-night-office.png	1652053	2026-11-22T16:48:54.5099596070
 /config/Pictures/wallpapers/anime-seaside-girl.png	937106	2026-11-22T16:48:54.5078337620
@@ -1110,13 +1376,20 @@
 /config/Pictures/wallpapers/midnight-aurora.png	432437	2026-11-22T16:47:06.6420767230
 /config/Pictures/wallpapers/midnight-aurora.py	5592	2026-11-22T16:47:02.0180488350
 /config/Pictures/Wallpapers/new-wallpaper.jpg	30981	2026-11-23T02:01:51.9535147250
-/config/Pictures/wallpapers/README.md	1748	2026-11-22T16:49:37.5629737330
+/config/Pictures/wallpapers/README.md	2373	2026-11-23T04:08:39.9577842020
+/config/Pictures/wallpapers/takamura-katana.png	620624	2026-11-23T04:07:56.2736070240
+/config/Pictures/Wallpapers/uploaded_hr.png	1942160	2026-11-23T04:00:55.9796287900
+/config/Pictures/Wallpapers/uploaded.png	447821	2026-11-23T04:00:37.3993541340
+/config/Pictures/Wallpapers/uploaded_sharp.png	1928875	2026-11-23T04:01:26.7077789670
+/config/Pictures/Wallpapers/uploaded_xbrz.png	3462844	2026-11-23T04:01:43.8438626620
 /config/Pictures/wallpapers/user-wallpaper.png	2028479	2026-11-22T16:53:31.8363263630
 /config/Pictures/Wallpapers/wall2.jpg	37365	2026-11-23T02:03:24.5280338590
 /config/Pictures/Wallpapers/wall3_hr.jpg	77656	2026-11-23T02:04:45.6743244470
 /config/Pictures/Wallpapers/wall3.jpg	22206	2026-11-23T02:04:09.5719328760
+/config/Pictures/Wallpapers/wall4.jpg	58869	2026-11-23T03:59:50.2780888530
 /config/Pictures/wallpapers/wallpaper-before.txt	49	2026-11-22T16:47:12.7781136660
 /config/Pictures/wallpapers/win11-bloom-dark.jpg	1383556	2026-11-23T01:10:27.8803326000
+/config/Pictures/wallpapers/yuji-sukuna-red.png	1905776	2026-11-23T04:05:04.6208406530
 /config/Public	4096	2026-11-22T05:20:13.4316713630
 /config/.ssh	4096	2026-11-22T05:20:12.0208094490
 /config/.ssh/agent	4096	2026-11-23T02:00:22.0410921920
@@ -1361,8 +1634,33 @@
 /config/.themes/Fluent-round-grey-Dark/xfwm4/top-left-inactive.png	154	2026-11-23T01:08:03.7431917320
 /config/.themes/Fluent-round-grey-Dark/xfwm4/top-right-active.png	154	2026-11-23T01:08:03.7432380920
 /config/.themes/Fluent-round-grey-Dark/xfwm4/top-right-inactive.png	154	2026-11-23T01:08:03.7432893230
+/config/.tlauncher	4096	2026-11-23T05:14:35.2190166340
+/config/.tlauncher/bin	4096	2026-11-23T05:12:43.8597810360
+/config/.tlauncher/bin/legacy.jar	5500318	2026-11-23T05:12:43.8637810550
+/config/.tlauncher/bin/lib	4096	2026-11-23T05:12:46.0317913290
+/config/.tlauncher/bin/lib/com	4096	2026-11-23T05:12:46.2837925240
+/config/.tlauncher/bin/lib/commons-codec	4096	2026-11-23T05:12:45.6557895470
+/config/.tlauncher/bin/lib/commons-io	4096	2026-11-23T05:12:44.4557838600
+/config/.tlauncher/bin/lib/de	4096	2026-11-23T05:12:46.0317913290
+/config/.tlauncher/bin/lib/io	4096	2026-11-23T05:12:46.0877915950
+/config/.tlauncher/bin/lib/me	4096	2026-11-23T05:12:44.8717858320
+/config/.tlauncher/bin/lib/net	4096	2026-11-23T05:12:45.6437894900
+/config/.tlauncher/bin/lib/org	4096	2026-11-23T05:12:46.1717919930
+/config/.tlauncher/bin/lib/ru	4096	2026-11-23T05:12:45.0997869110
+/config/.tlauncher/legacy.properties	1421	2026-11-23T05:14:35.2188655330
+/config/.tlauncher/logs	4096	2026-11-23T05:12:46.9837958420
+/config/.tlauncher/logs/launcher.log	2211591	2026-11-23T05:14:35.6483107620
+/config/.tlauncher/mojang_jre	4096	2026-11-23T05:13:20.7319557850
+/config/.tlauncher/mojang_jre/java-runtime-epsilon	4096	2026-11-23T05:13:20.7319557850
+/config/.tlauncher/mojang_jre/java-runtime-epsilon/linux	4096	2026-11-23T05:13:20.7592362230
 /config/.var	4096	2026-11-22T07:27:41.9402547220
-/config/.var/app	4096	2026-11-22T07:27:41.9402547220
+/config/.var/app	4096	2026-11-23T04:57:28.3994249970
+/config/.var/app/org.prismlauncher.PrismLauncher	4096	2026-11-23T04:57:28.3994249970
+/config/.var/app/org.prismlauncher.PrismLauncher/cache	4096	2026-11-23T04:57:28.3994249970
+/config/.var/app/org.prismlauncher.PrismLauncher/config	4096	2026-11-23T04:57:28.5475622210
+/config/.var/app/org.prismlauncher.PrismLauncher/data	4096	2026-11-23T04:57:28.3994249970
+/config/.var/app/org.prismlauncher.PrismLauncher/.ld.so	4096	2026-11-23T04:57:28.4514252460
+/config/.var/app/org.prismlauncher.PrismLauncher/.local	4096	2026-11-23T04:57:28.3994249970
 /config/.var/app/org.vinegarhq.Sober	4096	2026-11-22T07:27:41.9442547450
 /config/.var/app/org.vinegarhq.Sober/cache	4096	2026-11-22T07:27:41.9402547220
 /config/.var/app/org.vinegarhq.Sober/config	4096	2026-11-22T07:27:41.9402547220
@@ -1372,16 +1670,42 @@
 /config/Videos	4096	2026-11-23T01:17:20.5134623170
 /config/Videos/castle-dimitrescu.mp4	10108998	2026-11-23T01:15:58.2131258530
 /config/Wallpapers	4096	2026-11-23T01:45:27.6488327820
-/config/.XDG	4096	2026-11-23T02:01:18.3025057470
+/config/.XDG	4096	2026-11-23T06:19:57.7983366990
+/config/.XDG/app	4096	2026-11-23T04:57:28.4849180440
+/config/.XDG/app/com.discordapp.Discord	4096	2026-11-23T04:57:28.4794253800
+/config/.XDG/app/org.prismlauncher.PrismLauncher	4096	2026-11-23T04:57:28.4794253800
 /config/.XDG/at-spi	4096	2026-11-23T02:00:22.0090920410
 /config/.XDG/at-spi/bus_1	0	2026-11-23T02:00:22.0090920410
 /config/.XDG/dbus-1	4096	2026-11-23T02:00:21.9000658260
 /config/.XDG/dbus-1/services	4096	2026-11-23T02:00:21.8970915140
-/config/.XDG/dconf	4096	2026-11-23T02:00:22.0050920230
-/config/.XDG/dconf/user	2	2026-11-23T02:01:22.0413744650
+/config/.XDG/.dbus-proxy	4096	2026-11-23T04:57:28.5562879940
+/config/.XDG/dconf	4096	2026-11-23T07:52:35.0692628920
+/config/.XDG/dconf/user	2	2026-11-23T09:57:24.3771340940
+/config/.XDG/discord-ipc-0	0	2026-11-23T06:19:57.7983366990
 /config/.XDG/doc	4096	2026-11-23T02:01:18.3025057470
+/config/.XDG/.flatpak	4096	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak/4224850151	4096	2026-11-23T04:57:28.5194255720
+/config/.XDG/.flatpak/4224850151/bwrapinfo.json	93	2026-11-23T04:57:28.5194255720
+/config/.XDG/.flatpak/4224850151/info	2381	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak/4224850151/pid	5	2026-11-23T04:57:28.5194255720
+/config/.XDG/.flatpak/4224850151-private	4096	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak/4224850151-private/run-environ	3198	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak/4224850151/.ref	0	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak-helper	4096	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor	4096	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/gai.conf	2584	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/host.conf	92	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/hosts	172	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/localtime	114	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/resolv.conf	220	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/monitor/timezone	8	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak-helper/pkcs11-flatpak-80538	0	2026-11-23T04:57:28.4634253030
+/config/.XDG/.flatpak/org.prismlauncher.PrismLauncher	4096	2026-11-23T04:57:28.4794253800
+/config/.XDG/.flatpak/org.prismlauncher.PrismLauncher/.ref	0	2026-11-23T04:57:28.4719344760
+/config/.XDG/.flatpak/org.prismlauncher.PrismLauncher/tmp	4096	2026-11-23T04:57:28.5475622210
+/config/.XDG/.flatpak/org.prismlauncher.PrismLauncher/xdg-run	4096	2026-11-23T04:57:28.5194255720
 /config/.XDG/gvfs	4096	2026-11-23T02:00:22.0890924180
-/config/.XDG/gvfsd	4096	2026-11-23T02:04:48.3663369350
+/config/.XDG/gvfsd	4096	2026-11-23T09:48:36.9785107700
 /config/.XDG/ICEauthority	338	2026-11-23T02:00:22.0383595580
 /config/.XDG/selkies-cups	4096	2026-11-23T02:00:55.2912449480
 /config/.XDG/selkies-cups/bin	4096	2026-11-23T02:00:24.2394369530

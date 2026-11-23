@@ -69,6 +69,9 @@
       <property name="button-title" type="string" value="Start"/>
       <property name="show-button-title" type="bool" value="false"/>
       <property name="recent" type="array">
+        <value type="string" value="brave-akpamiohjfcnimfljfndmaldlcfphjmp-Default.desktop"/>
+        <value type="string" value="chromium.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
         <value type="string" value="ai.opencode.desktop.desktop"/>
       </property>
     </property>
@@ -89,6 +92,9 @@
       <property name="digital-time-format" type="string" value="%a %e %b  %H:%M"/>
       <property name="digital-layout" type="uint" value="3"/>
       <property name="square-icons" type="bool" value="true"/>
+      <property name="known-items" type="array">
+        <value type="string" value="discord_status_icon_1"/>
+      </property>
     </property>
     <property name="plugin-6" type="string" value="pulseaudio">
       <property name="icon-size" type="uint" value="44"/>

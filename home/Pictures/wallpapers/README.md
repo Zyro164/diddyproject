@@ -6,7 +6,10 @@ Everything lives in `/config/Pictures/wallpapers/`. The current theme is **Anime
 
 | File | Look | Source |
 |---|---|---|
-| `anime-dusk-girl.png` | **Active** — girl with balloons under a shooting star, deep blue dusk sky; icon gutter stays dark | wallhaven `jerwwy` (anime) |
+| `takamura-katana.png` | **Active** — Takamura (*Sakamoto Days*) behind his katana, near-black B&W; icon gutter is pure black | Pinterest pin `1116329826378168364` (art: CrainArt) |
+| `yuji-sukuna-red.png` | Yuji/Sukuna hooded figure, red duotone manga art, 1920x1080 | Pinterest pin `1141169993115751924` |
+| `akira-red.png` | Akira-style red/black poster art, 1920x1080; icon gutter stays dark | Pinterest pin `1150317929848837959` (MinzuVisuals) |
+| `anime-dusk-girl.png` | girl with balloons under a shooting star, deep blue dusk sky | wallhaven `jerwwy` (anime) |
 | `anime-seaside-girl.png` | anime girl on a seawall at sunset, bright blue sky | wallhaven `k8rx7q` (anime) |
 | `anime-night-office.png` | anime girl coding late, neon night-city window | wallhaven `6l7d6q` (anime) |
 | `midnight-aurora.png` | procedural aurora/starfield made locally (`midnight-aurora.py`) | generated |
@@ -37,6 +40,9 @@ Original layout is backed up at `icons.screen0.yaml.bak` (single left column,
 plus a stale `DeepAI CODE.desktop` entry that is now removed).
 
 ## Rollback
+
+Previous wallpaper (before `takamura-katana.png`): `/config/Pictures/wallpapers/yuji-sukuna-red.png`.
+Before that: `/config/Pictures/wallpapers/akira-red.png`, then `/config/Pictures/Wallpapers/uploaded.png`.
 
 ```bash
 export DISPLAY=:1.0

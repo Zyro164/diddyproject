@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W8FreeFireSpamer — static teardown</title>
+<meta name="description" content="A static teardown of a 7.1 MB Free Fire spammer: a 6,190-account dump, a 30-thread invite bot, a guest-account farm and Telegram exfiltration.">
+<meta name="theme-color" content="#070a0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1119'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='23' fill='%23ffb454' text-anchor='middle'%3EW8%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("w8-theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      var q = new URLSearchParams(location.search).get("theme");
+      if (q === "light" || q === "dark") t = q;
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="W8 teardown home">
+      <span class="brand-mark" aria-hidden="true">W8</span>
+      <span class="brand-copy"><strong>FreeFireSpamer</strong><small>static teardown</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="payload.html">Payload</a>
+      <a href="protocol.html">Protocol</a>
+      <a href="spam.html">Spam</a>
+      <a href="farm.html">Farm</a>
+      <a href="detection.html">Detection</a>
+      <a href="source.html">Source</a>
+      <a href="method.html">Method</a>
+    </nav>
+    <div class="header-tools">
+      <button class="tool" id="searchOpen" type="button" aria-label="Search the teardown" title="Search (Ctrl+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="tool" id="themeToggle" type="button" aria-label="Switch theme" title="Toggle theme"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      <button class="tool menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile" hidden>
+    <div class="wrap">
+      <a href="index.html" aria-current="page"><span>01</span>Overview</a>
+      <a href="payload.html"><span>02</span>Payload</a>
+      <a href="protocol.html"><span>03</span>Protocol</a>
+      <a href="spam.html"><span>04</span>Spam</a>
+      <a href="farm.html"><span>05</span>Farm</a>
+      <a href="detection.html"><span>06</span>Detection</a>
+      <a href="source.html"><span>07</span>Source</a>
+      <a href="method.html"><span>08</span>Method</a>
+    </div>
+  </nav>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" aria-label="Page contents">
+    <div class="side-sticky">
+      <p class="eyebrow">On this page</p>
+      <nav id="toc" class="toc" aria-label="On this page"></nav>
+      <div class="side-card">
+        <p class="eyebrow">Sample</p>
+        <p class="mono">5439757b…8733</p>
+        <p class="small muted">7.1 MB · 3,101 classes</p>
+        <p class="small muted">Page 01 / 08</p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main" class="content">
+    <details class="mobile-toc">
+      <summary>On this page</summary>
+      <nav id="tocMobile" class="toc" aria-label="On this page"></nav>
+    </details>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-top reveal">
+    <div class="page-kicker"><span class="pill">Teardown 01 / 08</span><span class="dot"></span>Android · Kotlin · static</div>
+    <h1 id="hero-title">W8FreeFireSpamer<span class="dim">.apk</span></h1>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-copy reveal" style="--i:1">
+      <p class="page-lede">A 7.1 MB app that presents itself as a Free Fire “spammer.” Under the neon UI: a 6,190-account credential dump, a 30-thread invite bot, a guest-account farm, and Telegram exfiltration.</p>
+      <div class="hero-badges">
+        <span class="badge hot">not a game cheat</span>
+        <span class="badge">sha256 5439757b…8733</span>
+        <span class="badge cool">3,101 classes</span>
+        <span class="badge cool">no native code</span>
+        <span class="badge">static analysis only</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="payload.html">Start with the payload <span aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="detection.html">IOCs &amp; response</a>
+      </div>
+    </div>
+    <aside class="evidence reveal" style="--i:2" aria-label="Sample evidence card">
+      <div class="evidence-top">
+        <span>Evidence / APK</span>
+        <span class="live">dump inside</span>
+      </div>
+      <div class="evidence-body">
+        <p class="evidence-title">com.w8.w8freefirespamer</p>
+        <p class="evidence-sub">v1.0 (1) · min 24 · target 36</p>
+        <dl class="evidence-rows">
+          <div class="evidence-row"><dt>Size</dt><dd>7,391,712 B</dd></div>
+          <div class="evidence-row"><dt>Classes</dt><dd>3,101 · 2 DEX</dd></div>
+          <div class="evidence-row"><dt>Native libs</dt><dd>0</dd></div>
+          <div class="evidence-row"><dt>Accounts</dt><dd>6,190</dd></div>
+          <div class="evidence-row"><dt>Signature</dt><dd>v2 only</dd></div>
+          <div class="evidence-row"><dt>Signer</dt><dd>O=W8Team, CN=W8</dd></div>
+        </dl>
+      </div>
+      <div class="evidence-foot">
+        <span class="mono">5439757b…8733</span>
+        <span>no execution</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="verdict" data-num="01">
+  <div class="sec-head"><span class="sec-num">01</span><h2>What this actually is</h2></div>
+  <div class="stats">
+    <div class="stat"><span class="stat-num count" data-target="6190" data-format="comma">6,190</span><span class="stat-label">Embedded accounts</span><span class="stat-sub">UID + password + JWT, all region BD</span></div>
+    <div class="stat"><span class="stat-num count" data-target="30">30</span><span class="stat-label">Spam workers</span><span class="stat-sub">concurrent login + invite threads</span></div>
+    <div class="stat"><span class="stat-num count" data-target="8">8</span><span class="stat-label">Farm workers</span><span class="stat-sub">parallel guest registration</span></div>
+    <div class="stat"><span class="stat-num count" data-target="0">0</span><span class="stat-label">Native libraries</span><span class="stat-sub">pure HTTP and raw TCP, no injection</span></div>
+  </div>
+
+  <div class="callout danger">
+    <span class="callout-label">Verdict</span>
+    <p>This is an <strong>account-spam and account-farming toolkit</strong>. It does not patch Free Fire, hook a process, or touch game memory. It logs into thousands of accounts and abuses Garena’s own OAuth and social endpoints to flood one target UID with friend requests and duo/squad invites. It can also mint new guest accounts and upload them to a Telegram bot.</p>
+  </div>
+
+  <div class="card-grid two">
+    <div class="card">
+      <h3>What it does</h3>
+      <ul>
+        <li>Loads a bundled JSON dump of pre-authenticated accounts.</li>
+        <li>Re-logs each account through Garena MSDK to obtain a session.</li>
+        <li>Sends friend requests or raw-TCP duo/squad invites to a target.</li>
+        <li>Registers fresh guest accounts and saves them to external storage.</li>
+        <li>Uploads generated accounts through a Telegram bot.</li>
+        <li>Floats an overlay so it can run while the game is open.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What it is not</h3>
+      <ul>
+        <li>No native <code>.so</code> libraries, no Frida, no injection.</li>
+        <li>No memory editing, aimbot, ESP, or game-state modification.</li>
+        <li>No original public source repository; this is a private Kotlin build.</li>
+        <li>No proof the embedded accounts belong to the app’s users — they look machine-generated.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="findings" data-num="02">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Headline findings</h2></div>
+  <p class="lead">Six facts explain almost everything the app does.</p>
+  <div class="card-grid two">
+    <div class="card">
+      <div class="card-kicker"><b>01</b> Critical</div>
+      <h3>Live credential dump in assets</h3>
+      <p>6,190 records with passwords and signed JWTs are extractable by anyone who has the APK. The dump is in <code>assets/accounts1.json</code>.</p>
+    </div>
+    <div class="card">
+      <div class="card-kicker"><b>02</b> Critical</div>
+      <h3>Credentials sent to a non-Garena host</h3>
+      <p>The token grant posts UID and password to <code>ffmconnect.ppmainecoonghj.com</code>, not a Garena-owned name. Treat it as a harvesting risk.</p>
+    </div>
+    <div class="card">
+      <div class="card-kicker"><b>03</b> High</div>
+      <h3>Hardcoded operator material</h3>
+      <p>Static MSDK client secret, AES key/IV, HMAC key, and a reseller bearer JWT are compiled in and burned.</p>
+    </div>
+    <div class="card">
+      <div class="card-kicker"><b>04</b> High</div>
+      <h3>Account farm with exfiltration</h3>
+      <p>New accounts are registered, written to <code>GenAccount.txt</code>, and uploaded to a Telegram bot.</p>
+    </div>
+    <div class="card">
+      <div class="card-kicker"><b>05</b> Medium</div>
+      <h3>Overlay plus all-files access</h3>
+      <p>Draws over other apps, reads the clipboard, and writes to shared storage from a foreground service.</p>
+    </div>
+    <div class="card">
+      <div class="card-kicker"><b>06</b> Medium</div>
+      <h3>Self-signed, v2-only, cleartext allowed</h3>
+      <p>No v1 signature, no pinning, <code>usesCleartextTraffic=true</code>, and an exported launcher activity.</p>
+    </div>
+  </div>
+</section>
+
+<section id="architecture" data-num="03">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Architecture</h2></div>
+  <p class="lead">The app is small: four UI units, one protocol class, one file/preferences store, and a hand-rolled protobuf/AES helper. Everything else is AndroidX, Kotlin and JSON plumbing.</p>
+
+  <div class="diagram" role="img" aria-label="UI units call Api and Store, which communicate with Garena, the game TCP socket, Telegram and top-up APIs">
+    <div class="diagram-row">
+      <div class="node gold"><span class="node-kicker">UI</span><strong>MainActivity</strong><small>spam console</small></div>
+      <div class="node gold"><span class="node-kicker">UI</span><strong>GeneratorActivity</strong><small>account farm</small></div>
+      <div class="node gold"><span class="node-kicker">UI</span><strong>SettingsActivity</strong><small>Telegram bot</small></div>
+      <div class="node gold"><span class="node-kicker">Overlay</span><strong>BubbleService</strong><small>floating UID panel</small></div>
+    </div>
+    <div class="diagram-flow"><span>calls</span></div>
+    <div class="diagram-row">
+      <div class="node"><span class="node-kicker">Core</span><strong>Api.kt</strong><small>OAuth + social</small></div>
+      <div class="node"><span class="node-kicker">Core</span><strong>Proto.kt</strong><small>protobuf + AES</small></div>
+      <div class="node"><span class="node-kicker">Store</span><strong>Store.kt</strong><small>prefs + files</small></div>
+      <div class="node"><span class="node-kicker">Data</span><strong>accounts1.json</strong><small>6,190 records</small></div>
+    </div>
+    <div class="diagram-flow"><span>HTTPS / raw TCP</span></div>
+    <div class="diagram-row">
+      <div class="node"><span class="node-kicker">Garena</span><strong>MSDK OAuth</strong><small>guest token grant</small></div>
+      <div class="node"><span class="node-kicker">Garena</span><strong>loginbp</strong><small>MajorLogin / Register</small></div>
+      <div class="node"><span class="node-kicker">Game</span><strong>TCP ip:port</strong><small>authHex + invites</small></div>
+      <div class="node"><span class="node-kicker">Third party</span><strong>Telegram</strong><small>exfil + top-up APIs</small></div>
+    </div>
+  </div>
+  <p class="diagram-caption">The only unusual component is the protocol layer. There is no native bridge, no injected library, and no hooking framework.</p>
+</section>
+
+<section id="explore" data-num="04">
+  <div class="sec-head"><span class="sec-num">04</span><h2>Explore the teardown</h2></div>
+  <div class="card-grid two">
+    <a class="card" href="payload.html">
+      <div class="card-kicker">02 · Data</div>
+      <h3>The payload</h3>
+      <p>What is in the 6,190-record asset, how it is shaped, and what the tokens claim.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="protocol.html">
+      <div class="card-kicker">03 · Protocol</div>
+      <h3>Login and invite</h3>
+      <p>The five-stage MSDK handshake, protobuf field maps, auth blob and TCP invite frames.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="spam.html">
+      <div class="card-kicker">04 · Engine</div>
+      <h3>The spam loop</h3>
+      <p>Thirty workers, four modes, random delays, and the overlay that starts it from inside the game.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="farm.html">
+      <div class="card-kicker">05 · Farm</div>
+      <h3>Accounts and exfiltration</h3>
+      <p>Guest registration, password policy, <code>GenAccount.txt</code>, and the Telegram upload path.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="detection.html">
+      <div class="card-kicker">06 · Defense</div>
+      <h3>Detection and response</h3>
+      <p>Weaknesses, IOC table with copy buttons, device response steps and hunt ideas.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="card" href="source.html">
+      <div class="card-kicker">07 · Source</div>
+      <h3>Recovered source map</h3>
+      <p>The seven app-specific files, the Api skeleton, and what decompilation preserved.</p>
+      <span class="card-arrow">Open section <span aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
+
+<section id="timeline" data-num="05">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Timeline</h2></div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-date">2026-08-04 · 01:59 → 02:45</span>
+      <strong>6,190 accounts created in 46 minutes</strong>
+      <p>Every record shares the same region, item mix, password marker and emulator-minted JWT shape.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2026-08-04 · 15:07</span>
+      <strong>Signing certificate issued</strong>
+      <p>Self-signed <code>C=BD, O=W8Team, CN=W8</code>. The APK is signed for distribution, not for a store.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-date">2026-11-23</span>
+      <strong>Static teardown</strong>
+      <p>Hashes, manifest, resources, JADX decompile and asset parsing. No execution and no network calls.</p>
+    </div>
+  </div>
+</section>
+
+<section id="handling" data-num="06">
+  <div class="sec-head"><span class="sec-num">06</span><h2>Handling the sample</h2></div>
+  <div class="callout danger">
+    <span class="callout-label">Sensitive material</span>
+    <p>The records are live authentication material. Do not import, replay or test them. Possession of the APK is possession of the dump; treat every embedded account as compromised and report the artifact rather than using it.</p>
+  </div>
+  <p>This site publishes the structure, not the credentials. See <a href="detection.html">Detection &amp; response</a> for indicators and containment steps, and <a href="method.html">Method</a> for the redaction policy.</p>
+</section>
+    <nav class="pager" aria-label="Page navigation">
+      <span></span>
+      <a class="next" href="payload.html"><span class="pager-label">Next →</span><span class="pager-title">Payload</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-brand"><span class="brand-mark" aria-hidden="true">W8</span> Static teardown</span>
+    <span class="footer-meta">
+      <span>sha256 5439757b…8733</span><span class="footer-dot"></span>
+      <span>no execution</span><span class="footer-dot"></span>
+      <span>no credentials published</span>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

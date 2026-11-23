@@ -160,6 +160,12 @@ if (( CAPTURE_HOME )); then
     --exclude='./.config/ai.opencode.desktop/GPUCache'
     --exclude='./.config/ai.opencode.desktop/compile-cache'
     --exclude='./.config/ai.opencode.desktop/logs'
+    --exclude='./.config/discord/app-*'   --exclude='./.config/discord/1.*'
+    --exclude='./.config/discord/logs'    --exclude='./.config/discord/sentry'
+    --exclude='./.config/discord/discord_asset_cache'
+    --exclude='./.npm'            --exclude='./.openjfx'
+    --exclude='./.tlauncher/bin'  --exclude='./.tlauncher/logs'
+    --exclude='./.tlauncher/mojang_jre'
     --exclude='./.local/share/opencode'
     --exclude='./.config/sober'     --exclude='./.config/pulse'
     --exclude='./.deepai-code'      --exclude='./.dbus'
@@ -199,6 +205,13 @@ if (( CAPTURE_HOME )); then
          "$REPO"/home/.config/*/Crashpad \
          "$REPO"/home/.config/*/GPUPersistentCache \
          "$REPO"/home/.config/*/component_crx_cache \
+         "$REPO"/home/.config/*/'Cache' \
+         "$REPO"/home/.config/*/'Code Cache' \
+         "$REPO"/home/.config/*/'Service Worker' \
+         "$REPO"/home/.config/*/'Shared Dictionary' \
+         "$REPO"/home/.config/*/logs \
+         "$REPO"/home/.config/*/sentry \
+         "$REPO"/home/.config/*/discord_asset_cache \
          "$REPO"/home/.local/share/gvfs-metadata
   find "$REPO/home" -name 'icon-theme.cache' -delete 2>/dev/null || true
   # never keep empty junk dirs in git
@@ -279,6 +292,14 @@ while IFS= read -r f; do
   case "$f" in \#*|"") continue ;; esac
   rm -f "$f"
 done < "$REPO/inventory/secrets-sweep.txt"
+find "$REPO/home" -type d -empty -delete 2>/dev/null || true
+# the packer must never consume cache dirs even when they cross the file-count rule:
+# prune every profile cache class before packing so REGENERABLE data cannot reach git
+find "$REPO/home/.config" -maxdepth 2 -type d \( -name 'Cache' -o -name 'Code Cache' \
+     -o -name 'GPUCache' -o -name 'Service Worker' -o -name 'Dawn*Cache' \
+     -o -name 'GrShaderCache' -o -name 'ShaderCache' -o -name 'Crashpad' \
+     -o -name 'GPUPersistentCache' -o -name 'component_crx_cache' \) \
+  -exec rm -rf {} + 2>/dev/null || true
 find "$REPO/home" -type d -empty -delete 2>/dev/null || true
 ok "$(grep -vc '^#' "$REPO/inventory/secrets-sweep.txt" || true) credential-shaped files kept out of git"
 

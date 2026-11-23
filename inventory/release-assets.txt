@@ -1,9 +1,12 @@
-# Encrypted assets on the Latest release 'backup-20261123T020932Z'
-# Fetch: gh release download backup-20261123T020932Z --repo Zyro164/diddyproject --dir assets-remote
-# Older generations kept on this release / on tag backup-20261123T0120Z as fallback:
-#   secrets-20261123T011834Z.tar.zst.gpg  userdata-20261123T011834Z.tar.zst.gpg
+# Encrypted assets on the Latest release 'backup-20261123T095929Z'
+# Fetch: gh release download backup-20261123T095929Z --repo Zyro164/diddyproject --dir assets-remote
+# Older generations kept on this release as fallback (each decryptable with the same passphrase):
+#   secrets/userdata 20261123T021150Z, 20261123T020932Z, 20261123T011834Z
 # size_bytes  sha256  asset
+26793  6e66d578d2529eafa83a2ef223fd25097d7c966f253919c3c0a64fdd2868c767  secrets-20261123T011834Z.tar.zst.gpg
+30825  2926e494cc1ae6757cf24beef332741f505895a2f7032420bc00a7f4aa11d1ed  secrets-20261123T020932Z.tar.zst.gpg
 32197  0e8a0a6db2b4a8180d73820414f6086c584a82cf8db7ec13ac32a34d836fbb52  secrets-20261123T021150Z.tar.zst.gpg
-103  21d045bdb3df87f7946f0c5b806bea21cb11ae14fffe87b03beda606ff8d9196  secrets-20261123T021150Z.tar.zst.gpg.sha256
+64353  093ae11b6e2ffe5455ab91dfe78c79165c5b1b0bf0a521cce3be83371e035ff1  secrets-20261123T095929Z.tar.zst.gpg
+187061873  901ff5c126cfe4e0cf6bb20b0599176754e04c58adedf6c2d9d6e01e5a010ca9  userdata-20261123T011834Z.tar.zst.gpg
 194733408  fffc04e48bf4b56266ce8e3520b434509283b864a2f2fa7e012609aa94bf2d0d  userdata-20261123T020932Z.tar.zst.gpg
-104  99aef7d6a15f08073a7955bb64b7c77cf277448928c9d6b99c91288ea2880284  userdata-20261123T020932Z.tar.zst.gpg.sha256
+226654803  5361aa97d4bffefc9da49a76868f64a9aa9db0673d1d139966e33ec9bc6be26e  userdata-20261123T095929Z.tar.zst.gpg

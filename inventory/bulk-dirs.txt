@@ -1,3 +1,3 @@
 77f38ee17664afe26a5e13184a594dabc515712f728e99c15cda7d49fd7f898f  .local/share/icons/Win11/actions  assets/local-share-icons-Win11-actions.tar.zst
 4ac6aa818ed8104814b5f229922e58c8761e62b2d2edad40e6e2a1fc13cb92d4  .local/share/icons/Win11-dark/actions  assets/local-share-icons-Win11-dark-actions.tar.zst
-ad0d40239d38f2e6d64e8970e3b0acba3899b7e79352a7fc844110feb4d035f8  .local/share/icons/Win11  assets/local-share-icons-Win11.tar.zst
+ed092919dfcabdf52473d07e2a0cd790ca09bbfbd27a3e372329cb7f93a9081c  .local/share/icons/Win11  assets/local-share-icons-Win11.tar.zst

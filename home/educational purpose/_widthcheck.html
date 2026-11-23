@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>width check</title>
+<body style="margin:0;font:12px monospace;background:#111;color:#eee">
+<div id="out">running…</div>
+<script>
+const pages=["index.html","payload.html","protocol.html","spam.html","farm.html","detection.html","source.html","method.html"];
+const out=document.getElementById("out"); const lines=[];
+let done=0;
+pages.forEach((p)=>{
+  const f=document.createElement("iframe");
+  f.style.cssText="width:390px;height:900px;border:0;position:absolute;left:-9999px";
+  f.src=p+"?theme=dark";
+  f.onload=()=>{
+    try{
+      const d=f.contentDocument, w=d.documentElement.clientWidth;
+      const sw=d.documentElement.scrollWidth;
+      const bad=[...d.querySelectorAll("body *")].filter(el=>{
+        const r=el.getBoundingClientRect(); return r.width>0 && (r.right>w+1 || r.left<-1);
+      }).slice(0,6).map(el=>el.tagName.toLowerCase()+"."+(el.className&&el.className.toString().split(" ")[0]||"")+"@"+Math.round(el.getBoundingClientRect().right));
+      lines.push(p+" client="+w+" scroll="+sw+(sw>w?" OVERFLOW ":" ok ")+bad.join(" | "));
+    }catch(e){lines.push(p+" ERR "+e.message)}
+    if(++done===pages.length){out.textContent=lines.join("\n");document.title="DONE"}
+  };
+  document.body.appendChild(f);
+});
+</script>

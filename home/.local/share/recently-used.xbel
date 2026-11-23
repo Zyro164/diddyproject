@@ -64,4 +64,44 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="file:///config/Downloads/horizon-launcher-0.2.107.zip" added="2026-11-23T04:09:11.479618Z" modified="2026-11-23T04:09:11.729730Z" visited="2026-11-23T04:09:11.479619Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2026-11-23T04:09:11.729727Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Downloads/server.jar" added="2026-11-23T04:56:34.243097Z" modified="2026-11-23T04:56:34.493314Z" visited="2026-11-23T04:56:34.243098Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gtk" exec="&apos;gio open %u&apos;" modified="2026-11-23T04:56:34.493312Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Desktop/OpenCode.desktop" added="2026-11-23T06:13:39.550138Z" modified="2026-11-23T06:13:39.550143Z" visited="2026-11-23T06:13:39.550139Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-desktop"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar-real %u&apos;" modified="2026-11-23T06:13:39.550141Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///config/Desktop/W8FreeFireSpamer.apk" added="2026-11-23T06:13:46.488032Z" modified="2026-11-23T06:13:46.488035Z" visited="2026-11-23T06:13:46.488033Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.android.package-archive"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar-real %u&apos;" modified="2026-11-23T06:13:46.488034Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
