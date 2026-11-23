@@ -5,6 +5,7 @@ core
 *.gpg
 *.part-*
 *.deb
+!project/*.deb
 *.AppImage
 *.iso
 
