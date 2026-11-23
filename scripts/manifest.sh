@@ -11,10 +11,18 @@ STAMP="$(date -u +%Y%m%dT%H%M%SZ)"
 TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
 # --------------------------------------------------------------- checksums
-# fingerprint exactly what git tracks — never untracked/ignored files, or the
-# checksum file would fail on a fresh clone
-git ls-files -z \
-  | grep -zvE '^(MANIFEST\.json|\.sha256sums)$' \
+# Fingerprint exactly what git tracks, and only regular files: sha256sum cannot
+# read a symlink whose target was not restored, and a silently dropped entry is
+# worse than an explicit one. Symlinks are recorded (target + hash of target) in
+# MANIFEST.json instead, so coverage stays complete without false failures.
+git ls-files -s -z \
+  | while IFS= read -r -d '' rec; do
+      mode="${rec%% *}"; rest="${rec#* }"; path="${rest#*$'\t'}"
+      case "$path" in MANIFEST.json|.sha256sums) continue ;; esac
+      [[ "$mode" == "120000" ]] && continue          # symlink: see MANIFEST.json
+      [[ -f "$path" ]] || continue                    # skip vanished/odd entries
+      printf '%s\0' "$path"
+    done \
   | xargs -0 -r sha256sum > .sha256sums || true
 printf '  ok %s files fingerprinted\n' "$(wc -l < .sha256sums)"
 
@@ -37,12 +45,21 @@ def sh(cmd, default=''):
     except Exception:
         return default
 
-tracked = sh('git ls-files').splitlines()
-files = []
-for p in tracked:
-    if not os.path.isfile(p):
+files, links, missing = [], [], []
+for rec in sh('git ls-files -s').splitlines():
+    meta, _, path = rec.partition('\t')
+    mode = meta.split()[0]
+    if path in ('MANIFEST.json', '.sha256sums'):
         continue
-    files.append({'path': p, 'size': os.path.getsize(p), 'sha256': sha(p)})
+    if mode == '120000':                      # symlink: record the target it points at
+        target = os.readlink(path) if os.path.islink(path) else '(missing)'
+        links.append({'path': path, 'target': target,
+                      'target_sha256': hashlib.sha256(target.encode()).hexdigest()})
+        continue
+    if not os.path.isfile(path):
+        missing.append(path)
+        continue
+    files.append({'path': path, 'size': os.path.getsize(path), 'sha256': sha(path)})
 
 # NOTE: MANIFEST.json and .sha256sums cannot hash themselves; they are covered by
 # the git commit id in snapshot.commit and by .sha256sums for everything else.
@@ -120,10 +137,13 @@ m = {
     'kept_out_of_git_for_credentials': swept,
     'etc_modified': etc_modified,
     'files': files,
+    'symlinks': links,
+    'missing_at_capture': missing,
 }
 
 json.dump(m, open('MANIFEST.json', 'w'), indent=2)
-print(f"  ok MANIFEST.json: {len(files)} files, {len(bulk)} bulk entries, {len(etc_modified)} modified /etc files")
+print(f"  ok MANIFEST.json: {len(files)} files, {len(links)} symlinks, {len(missing)} missing, "
+      f"{len(bulk)} bulk entries, {len(etc_modified)} modified /etc files")
 PY
 
 printf 'done\n'
